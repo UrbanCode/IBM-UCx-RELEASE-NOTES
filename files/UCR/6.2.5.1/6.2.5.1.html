@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><head><title>6.2.5.1</title></head>
+<body>
+<p><b>This article was originaly published in 2020.12.17</b></p>
+<p><h1>6.2.5.1</h1></p>
+<p>This release of IBM UrbanCode Release is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+
+<h3>Security enhancements</h3>
+Updates to fix security vulnerabilities. 
+<ul>
+	<li>Upgraded Groovy and <code>groovy-all</code> from 2.1.9 to 2.4.16. Fixes security vulnerabilities CVE-2015-3253 and sonatype-2017-0493.</li>
+         <li>Removed the unused XStream library from the Groovy package. Fixes security vulnerability CVE-2013-7285,CVE-2016-3674,CVE-2017-7957</li>
+	<li>Resolved CWE 295-298 Strict Transport Security Misconfiguration</li>
+</ul>
+
+<h3>Oracle JRE support for macOS</h3>
+You can specify to use the Oracle JRE when installing UrbanCode Release on a macOS machine.  The installation process now includes a prompt to specify the location of JRE. 
+
+<!-- h3>Application process improvements</h3>
+Application load process improved to handle applications with large amount of data.  -->
+
+<h3>Plug-in updates</h3>
+<ul>
+	<li>New plug-in to integrate with Ansible Tower to support the execution of workflows and templates through deployment tasks.</li>
+	<li>Jira plug-in enhanced to support mapping of Jira status types instead of an individual status.</li>
+</ul>
+</p></body>
+</html>

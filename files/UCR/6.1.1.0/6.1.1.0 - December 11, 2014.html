@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html><head><title>6.1.1.0</title></head>
+<body>
+<p><b>This article was originaly published in 2014.12.11</b></p>
+<p><h1>6.1.1.0 - December 11, 2014</h1></p>
+<p><div class="new_release_cont">IBM UrbanCode Release 6.1.1.0 is a major release containing new features, improvements, and fixes. This release is recommended for all customers.</div>
+<div class="new_release_cont">
+<h2>Third-party Plugin Support</h2>
+<p>We have a new and improved system for building your own plugins to work with UrbanCode Release!</p>
+<p>If you are familiar with writing plug-ins for IBM UrbanCode Deploy, writing plug-ins for IBM UrbanCode Release will be straight forward. It consists of defining the UI and steps in a plugin.xml and use groovy scripts to handle the integration.</p>
+<p>Plugins can be uploaded as a .zip on the Integration Provider page by clicking on the Upload Plug-in button. Once imported you can select the plugin as an Integration Provider type when creating a new Integration.</p>
+<p>The IBM Installation Manager provides Groovy 2.1.9 which is necessary to write your own plugins.</p>
+<p>For some linux environments an extra manual step might be needed to setup the GROOVY_HOME on the environment path:</p>
+<p>It can be done by running the following command =&gt; export GROOVY_HOME=$GROOVY_HOME: /ucr…location<em>/</em>UCRelease/groovy-2.1.9/
+</p></div>
+<div class="new_release_cont">
+<h2>Real-time Updates on Scheduled Deployment Page</h2>
+<p>Scheduled deployments now update automatically when not editing a task.  Performance on that page has also been improved.
+</p></div>
+<div class="new_release_cont">
+<h2>Release Application Version Filters</h2>
+<p>You can now apply filters to application versions within a release.  On the release page, you can add a filter to each application to set appropriate versions.
+</p></div>
+<div class="new_release_cont">
+<h2>RTC Integration Synchronizes Defect Severity and Maps RTC Work Items to Initiatives</h2>
+<p>You can now synchronize Severities in RTC to track Severity 1 or Severity 2 defects in UrbanCode Release.  The count of S1 and S2 defects associated with an Application on a Release can now be seen on the release detail page.</p>
+<p><a href="image3adb13197e914679.jpg"><img alt="IMAGE$3ADB13197E914679" class="alignnone wp-image-7064 size-large" height="139" sizes="(max-width: 980px) 100vw, 980px" src="image3adb13197e914679.jpg" srcset="IMAGE3ADB13197E914679-1024x146.jpg 1024w, IMAGE3ADB13197E914679-300x43.jpg 300w" width="980"/></a></p>
+<p>When setting up an integration with RTC, you can choose work item types that you want to be synchronized as Initiatives, rather than Changes, in UrbanCode Release.  Work Items that are children of Work Items that are integrated as Initiatives will become Changes assigned to those Initiatives in UrbanCodeRelease.
+</p></div>
+<div class="new_release_cont">
+<h2>Track Red/Yellow/Green status for Applications on a Release</h2>
+<p>You can now track the state of individual applications on a give release, setting them to red/yellow/green status to provide a better at-a-glance state of the release.  Each status change can be accompanied by a short commentary elaborating on the reason for the change, and will indicate which user made the last change.
+</p></div>
+<div class="new_release_cont">
+<h2>Create and Use Custom Change Types for Changes</h2>
+<p>You can now create and manage change types on a new tab on the integrations page.  You can assign them to changes on the changes page and use the custom types to filter in Release Impact Analysis.
+</p></div>
+<div class="new_release_cont">
+<h2>Enterprise View</h2>
+<p>The Enterprise View on the Releases page allows you to view the status of multiple releases simultaneously.  You can see the status of applications across those releases as well as the progress of all phases in any of the selected releases.
+</p></div>
+<div class="new_release_cont">
+<h2>Can Use Pipeline with Unintegrated Applications</h2>
+<p>The pipeline view now works with applications and versions that did not come from an IBM UrbanCode Deploy integration.
+</p></div>
+</p></body>
+</html>

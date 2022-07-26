@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head><title>6.2.2.6_ifix01</title></head>
+<body>
+<p><b>This article was originaly published in 2019.07.26</b></p>
+<p><h1>6.2.2.6_ifix01</h1></p>
+<p>This release of IBM UrbanCode Release is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+<div class="new_release_cont">
+<h2>New features</h2>
+<h3>Improvements to audit logs</h3>
+New settings for managing audit logs.
+<ul>
+ 	<li>Export audit log within a specified data range as a CVS file. Click <strong>Settings</strong> &gt; <strong>Audit Logs</strong>.</li>
+ 	<li>Delete audit log history by setting a cleanup schedule. Click <strong>Settings</strong> &gt; <strong>System Maintenance</strong> &gt; <strong>Audit Log History Cleanup</strong>.</li>
+</ul>
+&nbsp;
+
+The <code>log4j.properties</code> file can be modified. The following properties can be set to value that are appropriate for your environment.
+<pre><code>
+log4j.appender.audit=org.apache.log4j.RollingFileAppender 
+log4j.appender.audit.File=../var/log/user_audit.log 
+log4j.appender.audit.MaxFileSize=10MB 
+log4j.appender.audit.MaxBackupIndex=5 
+log4j.appender.audit.layout=org.apache.log4j.PatternLayout 
+log4j.appender.audit.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss,SSS zzz} - %m
+log4j.additivity.com.urbancode.urelease.domain.AuditAction=false
+log4j.logger.com.urbancode.urelease.domain.AuditAction=DEBUG, audit
+</code></pre>
+<h3>Deployment Overview dashboard improvement</h3>
+There is now a hierarchy view on the Deployment Overview dashboard. Deployments are grouped into a hierarchy view so that you can see how specific teams and line of businesses are performing with their deployments. This view is available when the <strong>Overview Hierarchy View</strong> feature flag is enabled.
+
+<a href="ucr6226_dashboard.png"><img class="alignnone size-medium wp-image-39283" src="ucr6226_dashboard.png" alt="" width="300" height="194" /></a>
+<h3>Add owner to a scheduled deployment</h3>
+You can now set the owner for a scheduled deployment. The owner can be specified manually or the owner can be set automatically to the user who starts the deployment.
+
+<!-- h3>Upload deployment plan</h3>
+Description: upload deployment plan csv permission
+Where to find/enable: role configuration
+<h3>Phase approval</h3>
+Description: Edit phase approval permission
+Where to find/enable: role configuration
+-->
+<h3>Stop dashboard refresh</h3>
+Specify the amount of time to stop refreshing the dashboard. To use this feature, enable the <strong>Stop Refreshing The User Dashboard</strong> feature flag.
+<h3>Late to start task warning</h3>
+You can now set a threshold on how long a manual task can be in the <strong>Waiting to start</strong> state before it is set to the <strong>Late to start</strong> state. This feature provides insight as to why deployments exceed their planned time. To use this feature, enable the <strong>Late to start warning</strong> feature flag. When enable a new warning icon is visible on the Scheduled Deployment page.
+<h3>New plug-ins</h3>
+<ul>
+ 	<li>XL Deploy Plugin</li>
+ 	<li>Slack</li>
+</ul>
+</div>
+</p></body>
+</html>

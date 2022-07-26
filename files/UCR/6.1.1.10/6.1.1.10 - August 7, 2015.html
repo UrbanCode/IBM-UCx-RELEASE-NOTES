@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html><head><title>6.1.1.10</title></head>
+<body>
+<p><b>This article was originaly published in 2015.08.07</b></p>
+<p><h1>6.1.1.10 - August 7, 2015</h1></p>
+<p><div class="new_release_cont">This release of IBM UrbanCode Release is a maintenance release containing bug fixes and new features.</div>
+<div class="new_release_cont">
+<h2>Task Filtering</h2>
+<p><a href="filter-screenshot.png"><img alt="filter screenshot" class="alignright size-full wp-image-18264" height="751" sizes="(max-width: 273px) 100vw, 273px" src="filter-screenshot.png" srcset="filter-screenshot.png 273w, filter-screenshot-109x300.png 109w" width="273"/></a></p>
+<p>Tasks can be filtered on the scheduled deployment page.<br/>
+Tasks can be filtered by role/group, user, type, status, application, or tag.</p>
+<p>You can enable this feature by adding the following line to your server.properties file: feature.filter.tasks.enabled=yes</p>
+</div>
+<div class="new_release_cont">
+<h2>Scheduled Deployment Caching</h2>
+<p>Data from scheduled deployments is now cached on the server.  This greatly improves performance when a large number of users are viewing the same deployment simultaneously.<br/>
+You can adjust the lifespan of the cache with the following property in your server.properties: caching.deployment.execution.lifespan=<time in="" seconds=""><br/>
+The default lifespan is 60 seconds.
+</time></p></div>
+<div class="new_release_cont">
+<h2>Task Tags can now be imported from a .CSV</h2>
+<p>When importing a deployment plan, you can now include existing task tags with each task.
+</p></div>
+<div class="new_release_cont">
+<h2>Notification Emails Include Links to Specific Tasks</h2>
+<p>The link in each notification email will now expand the related task and collapse other tasks.  This makes it far easier to find the task mentioned in an email.
+</p></div>
+</p></body>
+</html>

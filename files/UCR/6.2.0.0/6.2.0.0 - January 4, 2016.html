@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html><head><title>6.2.0.0</title></head>
+<body>
+<p><b>This article was originaly published in 2016.01.04</b></p>
+<p><h1>6.2.0.0 - January 4, 2016</h1></p>
+<p><div class="new_release_cont">IBM UrbanCode Release 6.2.0.0 is a Major release containing fixes and new features</div>
+<div class="new_release_cont">
+<h2>Modifications on Permissions</h2>
+<p>The permissions associated with user’s roles have been updated to offer more fine-grain controls on specific actions performed across UrbanCode Release.</p>
+<p><a href="permissionstable.png"><img alt="permissions" class="alignnone size-full wp-image-20573" src="permissionstable.png" width="500"/></a></p>
+<h2>Scheduled Deployment Version Detail</h2>
+<p>An application’s current version and component versions are now displayed in the scheduled deployment contents tab.</p>
+<p>–    An application’s version can be found to the right of an application’s name within a task row.<br/>
+–    Version details, including application name, version, components and quality statuses, are displayed in a dialog. This dialog shows when an application with a version is selected within a task row.</p>
+<p><a href="displayversionincontentandnotification.jpg"><img alt="displayversionincontentandnotification" class="alignnone size-large wp-image-20576" height="417" sizes="(max-width: 980px) 100vw, 980px" src="displayversionincontentandnotification.jpg" srcset="displayversionincontentandnotification-1024x436.jpg 1024w, displayversionincontentandnotification-300x128.jpg 300w" width="980"/></a></p>
+<p>A user can now view an application’s current task progress and version components from a scheduled deployment’s Content &amp; Notifications page.<br/>
+–    A progress bar is used to represent an application’s task progress. The bar shows the number of tasks within each state as well as the number of total tasks.</p>
+<p><a href="displayversionontaskrow.jpg"><img alt="displayversionontaskrow" class="alignnone size-full wp-image-20566" height="393" sizes="(max-width: 761px) 100vw, 761px" src="displayversionontaskrow.jpg" srcset="displayversionontaskrow.jpg 761w, displayversionontaskrow-300x155.jpg 300w" width="761"/></a></p>
+<p> </p>
+<h2>Insert Tasks and Segments</h2>
+<p>New segments and tasks can now be created inline within a deployment plan.<br/>
+–  An icon appears above or below an existing task that allows a new task to be created in the specified location.<br/>
+–  The same icon that is displayed for the insertion of tasks also appears above or below segments to create a new segment in the specified location</p>
+<p>Insert Tasks</p>
+<p><a href="inserttask.jpg"><img alt="inserttask" class="alignnone size-large wp-image-20567" sizes="(max-width: 1024px) 100vw, 1024px" src="inserttask.jpg" srcset="inserttask-1024x292.jpg 1024w, inserttask-300x86.jpg 300w"/></a></p>
+<p>Insert Segments</p>
+<p><a href="insertsegment.jpg"><img alt="insertsegment" class="alignnone size-full wp-image-20568" height="257" sizes="(max-width: 748px) 100vw, 748px" src="insertsegment.jpg" srcset="insertsegment.jpg 748w, insertsegment-300x103.jpg 300w" width="748"/></a></p>
+<div class="new_release_cont">
+<h2>Auto-start Segments</h2>
+<p>As long as a segment doesn’t have any prerequisites and there is no role or override start time assigned to a segment the segment will automatically start once the deployment plan is started. Additionally, if there is no role assigned but there is an override start time the segment will start at that given time.</p>
+<p> </p>
+<h2>UCD Process Properties on Automated Tasks</h2>
+<p>Users can now set UCD process properties from UCR tasks. At the bottom of the advanced tab on an automated task, there is a text box titled “UCD Process Properties.” Here you can enter properties in the following format:</p>
+<p>Property name 1 = value<br/>
+Property name 2 = value<br/>
+etc.</p>
+<p>These properties will be copied from a deployment plan to new scheduled deployments but will not affect other existing deployments. This allows the user to use the deployment plan as a template by setting the property names but leaving the values blank. When creating a new deployment, the property names will appear and the user can set the values. Any changes made to the scheduled deployment will not affect the deployment plan or any other deployment.</p>
+<p><a href="task_properties.png"><img alt="task_properties" class="alignnone size-full wp-image-20633" height="582" sizes="(max-width: 595px) 100vw, 595px" src="task_properties.png" srcset="task_properties.png 595w, task_properties-300x293.png 300w" width="595"/></a></p>
+<p>To enable this feature, the following feature flag in your server.properties:</p>
+<p><strong>feature.ucd.task.properties.enabled=yes</strong><br/>
+ </p>
+<h2>A task associated to an application can run without having selected a version</h2>
+<p>– There is a new option in the add/edit task dialog box which allows a user with permissions to disable the need for an application version before an application can be run.<br/>
+– This can also allow a user to run an automated task without an available snapshot version.</p>
+<p><a href="requireversin.jpg"><img alt="requireversin" class="alignnone size-full wp-image-20570" sizes="(max-width: 859px) 100vw, 859px" src="requireversin.jpg" srcset="requireversin.jpg 859w, requireversin-300x220.jpg 300w" width="659"/></a></p>
+<p> </p>
+<h2>Improve Conflict Detection for Environment Reservation</h2>
+<p>Users now have more detail on environment reservation conflicts.  Conflicts have now been split into two categories. These are warnings and notes:<br/>
+– Notes are conflicts that arise when two or more release reservations are scheduled at overlapping time frames on the same the same application deployment environment. However, they do not share the same application.<br/>
+– Warnings are conflicts that arise when two or more release reservations are scheduled at overlapping time frames on the same the same application deployment environment and, they share one or more application in the same application.</p>
+<p> </p>
+<div dir="ltr"><a href="environmentconflictsandwarnings.jpg"><img alt="environmentconflictsandwarnings" class="alignnone size-large wp-image-20572" height="308" sizes="(max-width: 980px) 100vw, 980px" src="environmentconflictsandwarnings.jpg" srcset="environmentconflictsandwarnings-1024x322.jpg 1024w, environmentconflictsandwarnings-300x94.jpg 300w, environmentconflictsandwarnings.jpg 1156w" width="980"/></a></div>
+<div dir="ltr"></div>
+<div class="new_release_cont">
+<h2></h2>
+<p> </p>
+<h2>New way to add trusted self-signed certificates for integration with external tools</h2>
+<p>In some scenarios IBM UrbanCode Release needs to connect to external tools like IBM UrbanCode Deploy, Rational Team Concert… using SSL. If those external tools are installed using a self signed certificate it might be necessary to add those certificates to the <strong>JRE/lib/security/cacerts</strong> if that error occurs:</p>
+<p><em>“Caught: javax.net.ssl.SSLHandshakeException: com.ibm.jsse2.util.h: PKIX path building failed: java.security.cert.CertPathBuilderException: unable to find valid certification path to requested target”</em></p>
+<p>Importing the self-signed certificate to the JRE cacerts would solve it. Nevertheless in some versions of IBM UrbanCode Release a new JRE can be installed and will override the cacerts truststore.</p>
+<p>In 6.2 the installation manager does make a copy of the cacerts before upgrading and saves it as ibm_ucr.truststore at the following location: <strong>UCRelease/server/tomcat/conf/ibm_ucr.truststore</strong>.</p>
+<p><strong>/!\ Important</strong></p>
+<p><strong>If you need to add new self-signed certificate in the future to the list of trusted certificate for IBM UrbanCode Release, they can be added directly to that file  ibm_ucr.truststore in order to make sure that they won’t be overridden every time the installation manager is upgrading the JRE.</strong></p>
+</div>
+</div>
+</div>
+</p></body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head><title>6.2.1.1</title></head>
+<body>
+<p><b>This article was originaly published in 2016.06.17</b></p>
+<p><h1>6.2.1.1 - June 17, 2016</h1></p>
+<p><div class="new_release_cont">IBM UrbanCode Release 6.2.1.1 is a <span>Fix Pack release containing performance improvements and bug fixes.</span></div>
+<div class="new_release_cont">
+<h2>Force Redeployment Option</h2>
+<p>A new option is available for both scheduled deployments and recurring deployments called “Force Redeployment”.  Deployments that autoselect versions will no longer select a version if the latest version passing gates and matching filters is the currently deployed version.  It will now select nothing instead.  If you enable the new force redeployment option, the deployment will select the latest version as it did in prior versions of IBM UrbanCode Release.  All existing deployments will have force redeployment enabled but this option will be disabled by default for all newly created deployments.  Along with this new option when creating a deployment, you can also see who selected each version from the Applications &amp; Versions tab. </p>
+<h2>Additional timing information on Scheduled Deployments</h2>
+<p>After a deployment is completed, the clock widget displays the end time as well as the total time<br/>
+Example dashboard:<br/>
+<a href="6211-timing.png"><img alt="UCR 6211 timing" class="alignnone size-medium wp-image-24472" sizes="(max-width: 1262px) 100vw, 1262px" src="6211-timing.png" srcset="6211-timing.png 1262w, 6211-timing-300x44.png 300w, 6211-timing-1024x151.png 1024w"/></a></p>
+<h2>Version Creation Date on Pipeline</h2>
+<p>Versions on the pipeline view will now display when they were created.<br/>
+<a href="6211-pipeline.png"><img alt="UCR 6.2.1.1 Pipeline Versions" class="alignnone size-medium wp-image-24473" sizes="(max-width: 946px) 100vw, 946px" src="6211-pipeline.png" srcset="6211-pipeline.png 946w, 6211-pipeline-300x159.png 300w"/></a></p>
+<h2>Auto refresh on related deployments</h2>
+<p>Widgets on the related deployment dashboard will refresh automatically.
+</p></div>
+</p></body>
+</html>

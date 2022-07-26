@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html><head><title>6.2.2.5</title></head>
+<body>
+<p><b>This article was originaly published in 2018.12.11</b></p>
+<p><h1>6.2.2.5 - December, 2018</h1></p>
+<p>This release of IBM UrbanCode Release is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+<div class="new_release_cont">
+<h2>New features</h2>
+
+<hr />
+
+<h3>Hover help available for initiatives imported from RTC</h3>
+Hovering over a work item imported from RTC displays in a preview window some details of the work item.
+<h3>Task Dependency graph for deployment plans</h3>
+You can now view a Dependency Graph of a deployment plan. This complements the Scheduled Deployment Dependency graphs that were already available in an earlier release.
+
+<a href="task_dependency_graph.jpg"><img class="size-full wp-image-36859" src="task_dependency_graph.jpg" sizes="(max-width: 602px) 100vw, 602px" srcset="task_dependency_graph.jpg 602w, task_dependency_graph-300x136.jpg 300w" alt="Graph showing task dependencies" width="602" height="273" /></a>
+<h3>Improved auditing for scheduled deployments</h3>
+The Change History tab of a scheduled deployment now list more events during the execution of a deployment.
+<h3>Allow editing of failed task</h3>
+Failed task description can be edited allowing you to update instructions that would need to be synced with the deployment plan for future deployments.
+<h3>Allow manual versions to be created from the Application and Versions tabs of a scheduled deployment</h3>
+Manual versions that can be used for manually created applications can be created directly create from the Scheduled Deployment page.
+
+<a href="manual_version.jpg"><img class="size-full wp-image-36864" src="manual_version.jpg" alt="" width="627" height="556" /></a>
+<h3>Task owners can be changed while the task is executing</h3>
+If multiple users work (for example, a shift change occurs while the task is executing) are working on the same task that is in progress, they can assign the task to each other while the task is in progress. Switching users is audited.
+<h3>Permission to lock and unlock deployments</h3>
+Permissions have been added locking and unlocking deployments. There is one permission to lock and another one to unlock a deployment.
+
+<a href="lock_permissions-1.jpg"><img class="size-full wp-image-36882" src="lock_permissions-1.jpg" sizes="(max-width: 606px) 100vw, 606px" srcset="lock_permissions-1.jpg 606w, lock_permissions-1-300x64.jpg 300w" alt="" width="606" height="129" /></a>
+<h3>Permission to edit release dates</h3>
+New permission available to allow you to edit release dates.
+
+<a href="release_date_permission.jpg"><img class="alignnone size-full wp-image-36892" src="release_date_permission.jpg" alt="" width="243" height="79" /></a>
+<h3>New notification rules</h3>
+Additional notification rules are now available. For example: Task Re-Opened or when Comments are added to Tasks.
+<h3>Performance and usability improvements</h3>
+<ul>
+ 	<li>Search functionality in “Copy From” field in “Create New Deployment Plan” dialog</li>
+ 	<li>Performance improved on the Environment Reservation dialog</li>
+</ul>
+
+<hr />
+
+</div>
+<div class="new_release_cont">
+<h2>Beta features</h2>
+The following features have been added as a Beta feature. These features require the enabling of a feature flag to use.
+<h3>Ability to archive started scheduled deployments using the Rest API</h3>
+In previous versions, only scheduled deployment not started can be removed from the user interface. This beta feature provides a rest endpoint so that in progress or completed deployments can be be cleaned up.
+<h3>Reset Approval On Version Change</h3>
+If a scheduled deployment has been approved and later versions selected changed then the approval will be reset and a new approval will be required for the deployment to start
+<h3>Ability to act on a task from an email</h3>
+It is now possible to start and complete tasks from emails. Buttons for each action can be added to the email notification templates. It simplifies the user experience and facilitate on-boarding
+
+<a href="email_task.jpg"><img class="size-full wp-image-36867" src="email_task.jpg" alt="" width="627" height="556" /></a>
+
+&lt;/h3"&gt;
+
+</div>
+</p></body>
+</html>

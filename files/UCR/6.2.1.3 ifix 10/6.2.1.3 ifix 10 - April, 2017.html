@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html><head><title>6.2.1.3 ifix 10</title></head>
+<body>
+<p><b>This article was originaly published in 2017.04.01</b></p>
+<p><h1>6.2.1.3 ifix 10 - April, 2017</h1></p>
+<p><p>IBM UrbanCode Release 6.2.1.3 contains new features, performance improvements, and bug fixes.</p>
+<div class="key-features">
+<div class="subtitle"><strong>Latest ifix available on version 6.2.1.3 ifix 30:</strong></div>
+<div>Download in Fix Portal: <a href="ftp://ftp.software.ibm.com/software/rational/private/UCR-4H15dzP8l6tF">ftp://ftp.software.ibm.com/software/rational/private/UCR-4H15dzP8l6tF</a>
+</div>
+<div>Full details on bug fixes, RFEs available here: <a href="ftp://ftp.software.ibm.com/software/rational/private/UCR-PCrFLz2Nk4Dh/Read-Me.txt">ftp://ftp.software.ibm.com/software/rational/private/UCR-PCrFLz2Nk4Dh/Read-Me.txt</a></div>
+</div>
+<div class="horizontal-rule" style="height: 20px; "></div>
+<h2>Service level agreement tasks (beta feature)</h2>
+<p>You can use three new task types to manage service level agreements (SLA), such as time-critical events, and planned outages.</p>
+<h3>Outage tasks</h3>
+<p>Use outage tasks to manage systems that can only be down for a specified time period. When you create an outage, a begin task and an end task are inserted into the deployment plan. You can add related tasks between the begin and end tasks, and you are alerted if the total duration exceeds the planned-for time. In the following figure, you can see that the outage of 1 hour is exceeded by 5 minutes due to the duration of the related tasks.</p>
+<div class="wp-caption alignnone" id="attachment_27361" style="width: 990px"><a href="outage-tasks.png"><img alt="Outage tasks" class="size-large wp-image-27361" height="332" sizes="(max-width: 980px) 100vw, 980px" src="outage-tasks.png" srcset="outage-tasks-1024x347.png 1024w, outage-tasks-300x102.png 300w, outage-tasks.png 1109w" width="980"/></a><p class="wp-caption-text">Outage tasks</p></div>
+<h3>Critical event tasks</h3>
+<p>Use critical event tasks to manage service level agreements that require events to occur at specified times. If tasks are expected to be late, an alert suggests an earlier start time. In the following figure, the server must be back online by 11:30 but the deployment is running behind schedule.</p>
+<div class="wp-caption alignnone" id="attachment_27363" style="width: 990px"><a href="critical-task.png"><img alt="Critical task alerts" class="size-large wp-image-27363" height="313" sizes="(max-width: 980px) 100vw, 980px" src="critical-task.png" srcset="critical-task-1024x327.png 1024w, critical-task-300x96.png 300w, critical-task.png 1218w" width="980"/></a><p class="wp-caption-text">Critical task alerts</p></div>
+<h3>Wait-for-time tasks</h3>
+<p>Wait-for-time tasks do not complete until a specified time. You can use wait-for-time tasks as buffers to control the deployment pace. </p>
+<h3>SLA reports</h3>
+<p>The scheduled deployment’s Overview tab now lists all outages and critical events, and alerts you when they are running ahead or behind schedule, as shown in the following figure. The <span>Overview tab </span>displays progress bars for tasks that fall within an outage or that are on the path of critical events. You can export reports that compare actual to planned service level agreements.</p>
+<div class="wp-caption alignnone" id="attachment_27368" style="width: 616px"><a href="sla-reports.png"><img alt="SLA reports" class="size-full wp-image-27368" height="161" sizes="(max-width: 606px) 100vw, 606px" src="sla-reports.png" srcset="sla-reports.png 606w, SLA-reports-300x80.png 300w" width="606"/></a><p class="wp-caption-text">SLA reports</p></div>
+<h3>SLA notifications</h3>
+<p>There are four new notification rules for service level agreement tasks that let you know when SLA-related events happen in your scheduled deployments. You can configure notifications to be sent when outages or critical events finish late or if they are estimated to be more than <em>x</em> minutes late.</p>
+<h2>Banner messages</h2>
+<p>Messages can be displayed in page headers that notify users about important events. Links can be included in the messages. Banner messages are managed on the <strong>System Settings</strong> page.</p>
+<h2>User dashboard</h2>
+<p>The user dashboard is your IBM UrbanCode Release home page. The dashboard home page displays information that is customized for you. From the dashboard, you can access your applications and tasks, schedule deployments, and provide approvals.</p>
+<p>The dashboard organizes information by calendar events and tasks. Today’s important events are displayed in one area, where you can claim and edit tasks. Other areas display the events that are scheduled for later this week or later in the month. Depending on your role, other dashboard areas provide links where you can use product features, such as creating releases and scheduling deployments.</p>
+<p>The dashboard’s Getting Started area, as shown in the following figure, contains tutorials about important product features, such as creating releases. Each tutorial step provides a link to an associated topic in the online product documentation for IBM UrbanCode Release in IBM Knowledge Center.</p>
+<div class="wp-caption alignnone" id="attachment_27372" style="width: 990px"><a href="dashboard-getting-started.jpg"><img alt="User dashboard" class="size-large wp-image-27372" height="510" sizes="(max-width: 980px) 100vw, 980px" src="dashboard-getting-started.jpg" srcset="dashboard-getting-started-1024x533.jpg 1024w, dashboard-getting-started-300x156.jpg 300w" width="980"/></a><p class="wp-caption-text">User dashboard</p></div>
+<p>The <strong>Today</strong> section shows your important items for today. Summaries of today’s deployments with links to them are provided. You can access tasks in the <strong>Waiting</strong> section and claim <strong>Unclaimed</strong> tasks. <br/><a href="dashboard-today.jpg"><img alt="dashboard-today" class="alignnone size-large wp-image-27373" height="499" sizes="(max-width: 980px) 100vw, 980px" src="dashboard-today.jpg" srcset="dashboard-today-1024x521.jpg 1024w, dashboard-today-300x153.jpg 300w" width="980"/></a><br/>You can act on pending approvals on the dashboard, which also shows the applications gates statuses, as shown in the following figure.</p>
+<p><a href="dashboard-approval-popup.png"><img alt="dashboard-approval-popup" class="alignnone size-full wp-image-27408" height="246" sizes="(max-width: 839px) 100vw, 839px" src="dashboard-approval-popup.png" srcset="dashboard-approval-popup.png 839w, dashboard-approval-popup-300x88.png 300w" width="839"/></a></p><a href="dashboard-approval-popup.png">
+</a><p><a href="dashboard-approval-popup.png"></a></p>
+<p>The <strong>Quality Status Signoffs</strong> sections show deployments with missing quality statuses. The <strong>Process Checklists</strong> section displays the process checklists either assigned to you, claimable by you, or all other process checklists in your teams. The last section is the list of deployments for the day.</p>
+<h2>Miscellaneous enhancements</h2>
+<h3>Login differentiation</h3>
+<p>The audit log now distinguishes a user login from a plug-in login. This makes it easier to distinguish between the two login types. </p>
+<h3>New process checklist permissions</h3>
+<p>The edit process checklists permission is a separate permission and is no longer part of the edit lifecycles permission. More fine-grained permissions give you more control of the product.</p>
+<h3>User last login date</h3>
+<p>You can now sort or filter users by the last time they logged in. </p>
+<h3>Deployment plans filtered by release team</h3>
+<p>When you create a deployment plan, you can now choose to filter the <strong>Copy From</strong> list by the currently selected release team. </p>
+</p></body>
+</html>
