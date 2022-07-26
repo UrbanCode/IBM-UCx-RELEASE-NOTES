@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head><title>2.5.3</title></head>
+<body>
+<p><b>This article was originaly published in 2022.02.14</b></p>
+<p><h1>2.5.3</h1></p>
+<p>This release of IBM UrbanCode Velocity is a maintenance release and includes bug fixes. This release is recommended for all customers.
+<h4>Releases</h4>
+On the <b>Releases</b> page, when you perform the following:
+<ul>
+ 	<li>Click a release activity.</li>
+ 	<li>Click a deployment plan.</li>
+ 	<li>Click the <b>Create task</b> button.</li>
+ 	<li>Click the <b>Type</b> drop-down and select <b>Email</b>.</li>
+ 	<li>In the <b>Create task</b> window, fill in the required fields.</li>
+ 	<li>Click the <b>Save</b> button.</li>
+ 	<li>For the <b>Email</b> task, click the <b>Start task</b> icon.</li>
+ 	<li>Receive the email and either click the <b>Approve</b> or <b>Reject</b> button. The default function is no security enforcement via login before task is accepted or rejected.</li>
+</ul>
+To enable the feature flag for this functionality, perform the following:
+<ul>
+ 	<li>In a browser window, enter <code>HTTPS://hostname:port/featureflags</code></li>
+ 	<li>In the <b>Enter a feature name to enable it</b> text field enter authorized-approval.</li>
+ 	<li>Click the <b>Enable</b> button.</li>
+</ul>
+<h4>Ingress controller</h4>
+Installation issues for Kubernetes version 1.22 and later are resolved and upgrading from previous versions is recommended. Starting with Kubernetes version 1.19, the new resource type <code>IngressClass</code> is available. If your Ingress controller utilizes the <code>IngressClass</code> functionality, the default setting of <code>ingress.className="nginx"</code> works with the <code>IngressClass</code> functionality out of the box. If your Ingress controller does not utilizes the <code>IngressClass</code> functionality, specify <code>--set ingress.className=""</code> for it to properly function. <strong>Note:</strong> For Kubernetes version 1.19, the <code>networking.k8s.io/v1</code> API was added for the Ingress resource and is utilized for the IBM&#x2122; UrbanCode Velocity Ingress installation. For Kubernetes version 1.22, the previous <code>networking.k8s.io/v1beta1</code> API is deprecated and removed. For details on the differences between the <code>networking.k8s.io/v1</code> API and <code>networking.k8s.io/v1beta1</code> API, see this <a href="https://docs.konghq.com/kubernetes-ingress-controller/1.3.x/concepts/ingress-versions/">page</a>.
+<h4>OpenShift template to Helm migration</h4>
+The OpenShift template to Helm migration is planned for IBM UrbanCode Velocity version 2.5.4 when the OpenShift template installation is no longer available. At your earliest opportunity, make the required preparations for the migration to Helm. If you require additional assistance, contact <a href="https://www.ibm.com/mysupport/s/?language=en_US">support</a>.
+<h4>Security</h4>
+Fixed security vulnerability.
+</p></body>
+</html>

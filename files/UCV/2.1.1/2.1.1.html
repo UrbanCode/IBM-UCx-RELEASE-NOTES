@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head><title>2.1.1</title></head>
+<body>
+<p><b>This article was originaly published in 2020.10.19</b></p>
+<p><h1>2.1.1</h1></p>
+<p>The following enhancements are included in each release. In addition to various bug fixes.
+<h2><strong>Key Features and Enhancements in 2.1.1</strong></h2>
+<dl>
+<dt>Value stream updates</dt>
+<dd>Long value stream names now wrap in table on <strong>All Value Streams</strong> tab when displayed in <strong>View list</strong> layout.</dd>
+<dd>On <strong>Value stream</strong> tab under Legend, sprints are now displayed with the current sprint first followed by the previous four sprints.</dd>
+<dd>When creating a new value stream and an integration using a VSM JSON file that defines a single integration and an associated link rule, the JSON file is accepted and the corresponding link rule between the two integrations is created.</dd>
+<dt>Improved DLQ validation</dt>
+<dd>The DQL queries containing double equal signs (==) are identified during validation, preventing the uploading of an incorrect VSM file.</dd>
+<dt>Bug fixes</dt>
+<dd>
+<ul>
+	<li>Fixed inaccurate display of Dashboards bar chart representations for a single run or multiple runs in a single day.</li>
+	<li>Corrected issue of the Pipeline page not loading when navigating to the <strong>Value stream </strong>tab and then quickly switching to the Pipeline tab while the value stream is still loading.</li>
+	<li>For a Jenkins version that has been successfully deployed to an environment, repeat deployments are eliminated when there are numerous applications in the pipeline. <strong>None</strong> is displayed for the selected version instead of the same version available for a repeat deployment.</li>
+	<li>Issue with pull request (PR) history loss for an issue in the VSM has been fixed to link and access any PR historical data attached to the item.</li>
+</ul>
+</dd>
+</dl>
+</p></body>
+</html>

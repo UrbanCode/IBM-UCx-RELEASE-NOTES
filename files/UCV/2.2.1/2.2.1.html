@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><head><title>2.2.1</title></head>
+<body>
+<p><b>This article was originaly published in 2021.01.14</b></p>
+<p><h1>2.2.1</h1></p>
+<p>This release of IBM UrbanCode Velocity is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+<h2>Key Features and Enhancements</h2>
+<dl>
+ 	<dt>Documentation improvement</dt>
+ 	<dd>Documentation for several Insight metric as been updated for clarity. See <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.1.x/com.ibm.uvelocity.doc/topics/port_interpretdata.html" target="_blank" rel="noopener">Insights metric chart reference</a>.</dd>
+</dl>
+<!-- issue 2079 -->
+<dl>
+ 	<dt>Software updates</dt>
+ 	<dd>
+<ul>
+ 	<li>RabbitMQ upgraded to version 3.8.9</li>
+ 	<li>Nginx upgraded to version 1.19</li>
+</ul>
+</dd>
+ 	<dt>Bug fixes</dt>
+ 	<dd>
+<ul>
+ 	<li>All associated applications are deleted when deleting a pipeline.</li>
+ 	<li>When deleting an integration, a confirmation dialogue is displayed before the deletion is completed.</li>
+ 	<li>The The pre-install.yaml file has been renamed to pre-install-for-cluster.yml.</li>
+ 	<li>When copying a release all templates are copied.</li>
+ 	<li>When installing on OpenShift version 4.4 and later, the OpenShift templates no longer need to be manually modified prior to installation.</li>
+ 	<li>Performance improvements made for faster loading of the Home page.</li>
+ 	<li>Selecting versions for a deployment template displays its own values versus those of a previously selected version.</li>
+ 	<li>LDAP connections timing out corrected with added reconnect setting to the client.</li>
+ 	<li>Permission needed to create cluster resources and to create resources at the namespace level permission is needed at the namespace level.</li>
+</ul>
+</dd>
+</dl>
+<strong>Note:</strong> Red Hat dropped support for OpenShift version 4.3 in December 2020. Beginning with this release, it is no longer supported in UrbanCode Velocity.
+</p></body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><title>2.3.1</title></head>
+<body>
+<p><b>This article was originaly published in 2021.03.31</b></p>
+<p><h1>2.3.1</h1></p>
+<p>This release of IBM UrbanCode Velocity is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+
+<h2>Key Features and Enhancements</h2>
+<dl>
+<!-- Issue 4414 -->
+<dt>Change to plug-in index file</dt>
+<dd>
+The list of available plug-ins is controlled by the plug-in index file locate at the following URL.  
+<code>https://raw.githubusercontent.com/UrbanCode/velocity-plugins-index/master</code>.  
+This is location is referenced during installation. The location of the plug-in is configurable through the <strong>PLUGINS_INDEX_URL</strong> environment variable on the <code>reporting-consumer</code> microservice. You do not need to change the environment variable unless your environment is behind a firewall.
+</dd>
+<!-- Issue 5235 -->
+<dt>Bug fix</dt>
+<dd>
+On the Pipeline page, the application's snapshot rows display correct alternating background colors starting with white and then gray. 
+</dd>
+</dl>
+</p></body>
+</html>

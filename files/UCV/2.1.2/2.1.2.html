@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><head><title>2.1.2</title></head>
+<body>
+<p><b>This article was originaly published in 2020.11.06</b></p>
+<p><h1>2.1.2</h1></p>
+<p>The following enhancements are included in each release. In addition to various bug fixes.
+
+<h2><Key Features and Enhancements in 2.1.2</strong></h2>
+<dl>
+<dt>Auto-promotion of UrbanCode Deploy Applications</dt>
+<dd>You can now auto-promote UrbanCode Deploy applications that are in the pipeline from the input to stage environments.</dd>
+<dt>Known problems</dt>
+<dd>
+The <code>release-events-api</code> performance issues in Kubernetes or OpenShift installations with explicit overrides of limits and requests for memory allocations in the deployment might be caused by the overrides. The following workaround provides guidelines to address the loss of system stability that is associated with the non-default settings that were set during configuration. This issue is typical only when the preceding explicit overrides are implemented in the configuration. If more than 2 GBs of memory are required, perform the following procedure:
+<ol>
+	<li>Determine the memory requirement.</li>
+	<li>Under <strong>spec</strong> > <strong>template</strong> > <strong>spec</strong> > <strong>containers</strong> in your YAML file, locate the following line. 
+<code>image: urbancode/velocity-se-release-events-api:x.x.x.xx
+ </code></li>
+	<li>Add the command override as a sibling entry to the line located in the previous step. The command is shown below.
+    <code>
+     image: urbancode/velocity-se-release-events-api:x.x.x.xx
+     command:
+       - node
+       - --max-old-space-size=<em>maximum_size</em>
+       - /release-events-api/release-events-api.min.js
+  </code>
+       </li>
+	<li>Enter the maximum memory requirement in the appropriate units on the command line. Replace the <em>maximum_size</em> variable with your value.</li>
+</ol>
+</dd>
+<dt>Bug fixes</dt>
+<dd>
+Corrected the following error VSM load error when ParticleViewMode.sprints is stored as null.
+<code>GraphQL Error: Expected Iterable, but did not find one for field ParticleViewMode.sprints</code></dd>
+</dl>
+</p></body>
+</html>

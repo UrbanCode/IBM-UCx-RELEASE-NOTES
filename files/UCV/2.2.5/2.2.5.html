@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html><head><title>2.2.5</title></head>
+<body>
+<p><b>This article was originaly published in 2021.03.03</b></p>
+<p><h1>2.2.5</h1></p>
+<p>This release of IBM UrbanCode Velocity is a maintenance release. There are no new enhancements. This release is recommended for all customers.
+
+<!-- h2>Key Features and Enhancements</h2 -->
+<h2>MongoDB version 3.6 end of support</h2>
+
+The MongoDB version 3.6 has reached end of life and all MongoDB 3.6 instances must be upgraded to MongoDB 4.0 for IBM UrbanCode Velocity 2.3.0 to start. This upgrade applies only if you are running UrbanCode Velocity in a Docker Compose environment.
+
+If you are upgrading or have ever upgraded from a UrbanCode Velocity version prior to v1.4.5, which was released in March 2020, you must migrate your MongoDB. The procedure to complete is described in the following table. The procedure depends on several items.
+
+<table>
+<tbody>
+<tr>
+<th></th>
+<th>Scenario 1</th>
+<th>Scenario 2</th>
+<th>Scenario 3</th>
+</tr>
+<tr>
+<td><strong>IBM UrbanCode Velocity version</strong></td>
+<td>1.4.4 or earlier</td>
+<td>Upgraded from 1.4.4 or earlier to a version between 1.4.5 to 2.2.4</td>
+<td>New installation of 1.4.5 or higher</td>
+</tr>
+<tr>
+<td><strong>MongoDB version</strong></td>
+<td> 3.4</td>
+<td> 3.6</td>
+<td> 3.6</td>
+</tr>
+<tr>
+<td><strong>MongoDB compatibility flag version</strong></td>
+<td> 3.4</td>
+<td> 3.4</td>
+<td> 3.6</td>
+</tr>
+<tr>
+<td><strong>Solution A</strong></td>
+<td>Upgrade to version 2.2.5, then to 2.3.0</td>
+<td>Upgrade to version 2.2.5, then to 2.3.0</td>
+<td>Upgrade directly to version 2.3.0</td>
+</tr>
+<tr>
+<td><strong>Solution B</strong></td>
+<td> N/A</td>
+<td>Run MongoDB command:
+<pre><code>db.adminCommand( { setFeatureCompatibilityVersion: 3.6 } )</code></pre>
+to set compatibility flag to version 3.6</td>
+<td> N/A</td>
+</tr>
+<tr>
+<td><strong>Solution C</strong></td>
+<td> Contact <a href="https://www.ibm.com/support/home/">support</a>.</td>
+<td>Contact <a href="https://www.ibm.com/support/home/">support</a>.</td>
+<td> N/A</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Note:</strong> Refer to the <a href="https://docs.mongodb.com/manual/reference/command/setFeatureCompatibilityVersion/" target="_blank" rel="noopener">MongoDB site</a> for details about the <code>setFeatureCompatibilityVersion</code> flag.
+</p></body>
+</html>

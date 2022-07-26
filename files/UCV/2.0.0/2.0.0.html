@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head><title>2.0.0</title></head>
+<body>
+<p><b>This article was originaly published in 2020.06.23</b></p>
+<p><h1>2.0.0</h1></p>
+<p>The following enhancements are included in each release. In addition to various bug fixes.
+<h4>Scalability of services</h4>
+The main UrbanCode Velocity services can now scale to handle larger installations and greater amounts of data.
+<h4>Locking of releases</h4>
+The release manger can change a release status to lock. No changes can be made to the release after it is locked. Request for changes must be This gives the release manager control over last minute changes and ensures no changes are made after a final review. The lock is set on the Release Overflow page.
+<h4>Environment gating</h4>
+Users can now manually approve versions and gate environments based on approvals. The gate fails if approval requirements are not met. If a version does not pass all approvals the release manager can override the deployment. This feature provides for governance and compliance of open source tools and fragmented tools. This feature is located on the Environment Overflow page.
+<h4>Built in reports</h4>
+A new State of Sprint report allows for gathering statics of the value stream in relationship to a sprint. This report is helpful to a scrum master or manager in reducing risk of the current sprint and look at older sprints. You can access the report on the Reports page.
+<h4>Plug-in SDK</h4>
+Using the plug-in SDK you can create your own plug-ins and upload them to UrbanCode Velocity. To access to the plug-in SDK, click <strong>Settings</strong> &gt; <strong>Integrations</strong> &gt; <strong>Download Plugin SDK</strong>.
+<h4>Bottleneck detection</h4>
+Using machine learning, the model looks at current and previous state of a value stream to determine which stage the user should focus on first. This algorithm is always updating with new information to locate the next largest bottleneck. Types of bottlenecks include:
+<ul>
+ 	<li>Long Wait Time - the average time of stage is longer than any other by a substantial amount</li>
+ 	<li>Batching - items pile up then are released at the same time</li>
+ 	<li>In-Flow and out-flow mismatch</li>
+</ul>
+See the Value Stream page <strong>Metrics Bar</strong> or <strong>Metrics Table</strong> fields.
+<h4>Contributor and Load Metrics</h4>
+Two new metrics are now available: Contributor Count and Load Count
+<ul>
+ 	<li>Contributor count shows how many users are working on items in the Value Stream. The metric is based off the stages in Lead Time (work select -&gt; customer) and counts how many unique individual owned items in those stages. Allows the tool to compare other metrics to rationalize about other metrics.</li>
+ 	<li>Load is also based off Lead Time and is a count of all the items in the stages at any given time. This allows you to see if there is a correlation of how much work is truly in progress vs how much is getting done. Usually there is a sweet spot to not give too much work and get the right amount out. With both our metrics are in a state where we can start rationalizing about different strategies without customers and how to use them correctly. See the Value Stream page <strong>Metrics Bar</strong> or <strong>Metrics Table</strong> fields.</li>
+</ul>
+<h4>Software upgrades</h4>
+UrbanCode Velocity v2.0.0 supports MongoDB server versions: 3.6, 4.0, and 4.2.
+Docker Compose installations automatically upgrade to 3.6. Helm installations require manual upgrade or installation of the MongoDB server to 3.6 or later. New Helm installations use MongoDB 4.2 according to the Helm chart.
+</p></body>
+</html>

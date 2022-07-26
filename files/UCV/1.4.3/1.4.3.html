@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head><title>1.4.3</title></head>
+<body>
+<p><b>This article was originaly published in 2020.01.10</b></p>
+<p><h1>1.4.3</h1></p>
+<p>Starting with the March 1, 2019 release, UrbanCode Velocity is using semantic versioning for product releases. The semantic versioning contains a three-part version number: major version, minor version, and patch. At any given time, only the latest two releases are available. Always download the latest version. For download information, see the <strong>Getting Started</strong> tab.
+<b>Note:</b> UrbanCode Deploy v7+ users, please review the release note titled "UrbanCode Deploy Integration Creating Large Audit Database Entries" in the v1.4.3 release.
+<div class="horizontal-rule"></div>
+<h2>Key Features in 1.4.3</h2>
+<h3>UrbanCode Deploy Integration Creating Large Audit Database Entries</h3>
+APAR PI99803 identified a significant performance issue where the UrbanCode Deploy Integration was creating a large amount of login requests when gathering deployment information. If using UrbanCode Deploy v7.0.0.0 or greater, it is highly recommended that you contact the L2 support team to obtain a performance related patch.
+<h3>Last Sync Integration Notification</h3>
+Resolved issue where the Integration's last sync was not updating properly.
+<h2>Key Features in 1.4.2</h2>
+<h3>Email Notifications</h3>
+Notify the user in the header of the remaining days in the Trial. New properties are now available such as: <code>${release.name}</code>, <code>${deployment.startTime}</code>, <code>${deployment.status}</code>, <code>${deployment.versions}</code>, and <code>${deployment.task}</code>.
+<h3>Community and Trial Edition Updates</h3>
+Notify the user in the header of the remaining days in the Trial.
+<h3>Various Bug Fixes</h3>
+Properties are now considered optional when configuring a Jenkins Job. The Default value defined in Jenkins will be ignored.
+<h2>Key Features in 1.4.1</h2>
+<h3>Various Bug Fixes</h3>
+Remove stale, lingering sessions from the database.
+<h2>Key Features in 1.4.0</h2>
+The following enhancements are included in each release. In addition to various bug fixes.
+<h3>New Community Edition</h3>
+In UrbanCode Velocity v1.4.0, we have reimagined our Community Edition. Now, the IBM UrbanCode Velocity Community Edition is combined into the primary install to create a simplified experience. Instead of being limited to the UrbanCode Deploy Audit Reports, the Community Edition opens the entire product, limited to two users, for free.
+
+<strong>Note:</strong> This Community Edition version replaces the original Community Edition. The older version is no longer supported. You must migrate to the new version.
+
+<!--
+<h3>Work Type Distribution and Throughput</h3>
+Two metrics have been added to the Value Streams and Insights dashboards.
+<ul>
+ 	<li><strong>Work Type Distribution</strong> - The percentage of items by type in the value stream.</li>
+ 	<li><strong>Throughout</strong> - The number of items that have reached a specified stage in a given amount of time.</li>
+</ul>
+-->
+</p></body>
+</html>

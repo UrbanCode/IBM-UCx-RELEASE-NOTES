@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head><title>2.5.4</title></head>
+<body>
+<p><b>This article was originaly published in 2022.02.25</b></p>
+<p><h1>2.5.4</h1></p>
+<p>This release of IBM UrbanCode Velocity is a maintenance release and includes bug fixes. This release is recommended for all customers.
+<h4>LDAP</h4>
+On the <strong>Settings</strong> page, when you click <strong>Authentication</strong> &gt; <strong>LDAP</strong>, the required fields are obvious and indicated with red asterisks for admins for readily editing and configuring LDAP.
+<h4>Plugins</h4>
+Based on the your installed version of IBM UrbanCode Velocity, plugins not compatible with that version are prevented from installing in the product. If the installed version of IBM UrbanCode Velocity is equal or greater than the product version that the plugin supports, the installation of the plugin is possible. Plugins prevented from installation are detailed for the following three scenarios:
+<ul>
+ 	<li>On the <strong>Settings</strong> page, click the <strong>Plugins</strong> tab.</li>
+ 	<li>Locate the required plugin in the list and click the <strong>Install</strong> button.</li>
+ 	<li>The error <strong>Plugin &lt;name&gt; is only supported on IBM UrbanCode Velocity versions equal to or greater than x.x.x</strong> is displayed on the right side of the <strong>Status</strong> field for that plugin.</li>
+ 	<li>On the <strong>Settings</strong> page, click the <strong>Plugins</strong> tab.</li>
+ 	<li>Click the <strong>Load plugin</strong> button.</li>
+ 	<li>In the <strong>Load a custom plu</strong>gin window, click in the <strong>Plugin Image</strong> field and enter the required plugin.</li>
+ 	<li>Click the <strong>Submit</strong> button.</li>
+ 	<li>The error <strong>Plugin &lt;name&gt; is only supported on IBM UrbanCode Velocity versions equal to or greater than x.x.x</strong> is displayed in the Load a custom plugin window.</li>
+ 	<li>On the <strong>Settings</strong> page, click the <strong>Integrations</strong> tab.</li>
+ 	<li>Locate the required plugin and then click on the overflow menu and select <strong>Upgrade</strong>.</li>
+ 	<li>In the <strong>Status</strong> field for the plugin, <strong>Upgrade failed</strong> is displayed.</li>
+</ul>
+For scheduled events plugins, perform the following steps:
+<ul>
+ 	<li>On the <strong>Settings</strong> page, click the <strong>Plugins</strong> tab.</li>
+ 	<li>Locate the required plugin and then click the <strong>Add integration</strong> button.</li>
+ 	<li>In the <strong>Add Integration</strong> window, click the <strong>Show hidden properties</strong> check box.</li>
+ 	<li>Click in the <strong>Initial Sync Date</strong> field to specify only pulling data after the selected date on the initial run.</li>
+ 	<li>Fill in the remaining required fields in the <strong>Add Integration</strong> window.</li>
+ 	<li>Click the <strong>Add</strong> button.</li>
+</ul>
+If the plugin does not support the sync feature, the <strong>Initial Sync Date</strong> field is not displayed when you click the <strong>Show hidden properties</strong> check box in the <strong>Add Integration</strong> window.
+<h4>Kubernetes</h4>
+Based on the responsiveness of a given Kubernetes environment, you are able to configure liveness and readiness probes and specify dynamic timeouts to prevent persistent removal of pods.
+
+&nbsp;
+</p></body>
+</html>
