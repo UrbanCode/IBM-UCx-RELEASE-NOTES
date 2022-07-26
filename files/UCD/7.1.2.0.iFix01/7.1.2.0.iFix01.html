@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html><head><title>7.1.2.0.iFix01</title></head>
+<body>
+<p><b>This article was originaly published in 2021.04.21</b></p>
+<p><h1>7.1.2.0.iFix01</h1></p>
+<p>This release replaces the Urbancode Deploy version 7.1.2.0 release. It includes all updates made in the 7.1.2.0 release. Version 7.1.2.0 has been removed and not available to download. If you have installed version 7.1.2.0, install this iFix to prevent potential problems.
+
+The following updates and enhancements are included.
+
+<h2>7.1.2.0.iFix01</h2>
+No new features are included in this release. This ifix addresses multiple issues with tables based on resource tree information.
+
+<h2>7.1.2.0</h2>
+
+This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+
+<h2>Key Features and Enhancements</h2>
+<dl>
+<!-- RFE: RTC 106801 -->
+
+<dt>Improvement to environment gate</dt>
+<dd>
+Environment gates can now be configured to obtain snapshot of statuses. Previously, only snapshot for version statuses was available.
+</dd>
+<!-- RFE: 136409 -->
+<dt>Improved post-processing scripts security</dt>
+<dd>
+Starting with this release, Post Processing Scripts are fully secured objects, which means that the scripts can be assigned to teams and types. Fully secured objects are also provides subject to more specific permissions than the previous <strong>Manage Post-Processing Scripts</strong> permission. Role-based permissions such as <strong>Create</strong>, <strong>Edit</strong>, <strong>Delete</strong>, <strong>View</strong>, and <strong>Manage Teams</strong> can be assigned to post-processing scripts. During the upgrade, all roles are granted View permissions for post-processing scripts and roles that were assigned the Manage Post Processing Script permission are granted all the new permissions.
+
+With the added permissions, you can control which users can create, view, or modify post-processing scripts. In prior releases, users did not require permission to view post-processing scripts. Users with Manage Post Processing Scripts permission could change them. In this release, users must be assigned the appropriate permissions to perform these tasks. When you upgrade to this release, teams are not automatically assigned to post-processing scripts. Users who require permission must be assigned to teams with access. After you upgrade to version 7.1.2.0, a System Team user must make the required assignments. 
+</dd>
+<!-- RFE: 144551 -->
+<dt>Improved searching for users in LDAP Group support</dt>
+<dd>You can now search for users in LDAP recursively through user subtrees by setting the <strong>Search User Subtree</strong> option when configuring the LDAP connection. The default for this featuare is off.
+</dd>
+<!-- RFE:  143496 -->
+<dt>Rename properties</dt>
+<dd>When editing properties, you can change the name of the property.</dd>
+</dl>
+</p></body>
+</html>

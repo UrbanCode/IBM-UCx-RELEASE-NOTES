@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head><title>6.0.1</title></head>
+<body>
+<p><b>This article was originaly published in 2013.11.27</b></p>
+<p><h1>6.0.1 - November 27, 2013</h1></p>
+<p><p>IBM UrbanCode Deploy 6.0.1, formally uDeploy, provides a number of key new features and capabilities alongside significant usability enhancements.</p>
+<div class="new_release_cont">
+<h2>New and Updated Integrations</h2>
+<ul>
+<li><strong>z/OS support</strong>: This release is begins our work integrating UrbanCode Deploy with z/OS. This expanded z/OS support using Rexx scripts to extend deployable target environments of your multi-tier applications</li>
+<li><strong>More flavors of WebSphere: </strong>Portal, BPM, and Liberty Profile plugins were all released alongside updates to the core WebSphere Application Server plugin.</li>
+<li><strong></strong><strong>WebSphere Configuration:</strong> A new plugin delivers capabilities focused on capturing, comparing and promoting WebSphere configuration alongside applications.</li>
+<li><strong><b>Other notable updated integrations: </b></strong>JBoss, ServiceNow, Windows Failover Clusters, and Rational Team Concert (Work Items) integrations all received updates.</li>
+</ul>
+</div>
+<div class="new_release_cont">
+<h2>Property Autocomplete</h2>
+<p><img alt="Property Autocomplete" class="alignright size-medium wp-image-681 screenshot" height="270" src="autocomplete.png" width="266"/></p>
+<p>In UrbanCode Deploy, properties are a big deal. They help us parameterize things so that a process works on various targets or environment or versions. Ever forget the capitalization used in the property name? Or its scope? Or whether words were separated by a dash or period?</p>
+<p>Now you don’t have to worry about typos or forgetting the name of something. With autocomplete, simply start typing a reference to a property and a number of suggestions will appear. This is simple, and very nice change to the experience of using UrbanCode Deploy.</p>
+</div>
+<div class="new_release_cont">
+<h2>Historical Inventory</h2>
+<p>What was in QA last week? Answering that question used to take a bit of snooping around. You would basically look at the history of deployments into QA and could reverse engineer the state at any time.</p>
+<p>The IBM UrbanCode Team thought that the tool could do that work for you and provide a clear historical view of what versions of any component where in which application environments when. It looks like this:</p>
+<p><a href="historical-inventory.png"><img alt="historical-inventory" class="alignleft size-medium wp-image-4614" height="172" sizes="(max-width: 300px) 100vw, 300px" src="historical-inventory.png" srcset="historical-inventory-300x172.png 300w, historical-inventory-1024x590.png 1024w, historical-inventory.png 1541w" width="300"/></a><br/> This view can always provide some insights into how versions tend to flow through environments. Altogether less work than piecing it together yourself.</p>
+</div>
+<div class="new_release_cont">
+<h2>More and Better Comparisons</h2>
+<p>A big focus in IBM UrbanCode Deploy is keeping track of what is where. Our clients love to compare various elements and we are regularly adding more comparisons views. 6.0.1 brings the latest batch of new view.</p>
+<p>When comparing environments or snapshots, it’s now easier to view differences in properties at various scopes. The deeper property comparisons extends to deployment previews as well. It’ll now show which properties on which resources (deployment targets) will be updated as part of the deployment.</p>
+<p><a href="comparisons.png"><img alt="comparisons" class="alignleft size-medium wp-image-4615" height="228" sizes="(max-width: 300px) 100vw, 300px" src="comparisons.png" srcset="comparisons-300x228.png 300w, comparisons-1024x780.png 1024w, comparisons.png 1298w" width="300"/></a></p>
+<p>Finally, we’ve taken the environment level File comparison to the next level. While it’s identified which files changed in the past, UrbanCode Deploy will now provide a graphical diff for text files.</p>
+</div>
+<div class="new_release_cont">
+<h2>Tagging support for applications, components, and agents</h2>
+<p>To provide additional flexibility to your deployments, we have now enhanced UrbanCode Deploy to allow for tags to be added to applications, components and agents. You can then define your process to deploy based on applied tags. For more ideas on how to leverage this capability, <a href="https://developer.ibm.com/urbancode/docs/blue-green-deployments-using-tags-ibm-urbancode-deploy/">review this doc</a>.</p>
+</div>
+<div class="new_release_cont">
+<h2>Artifact Sources are now Plugins</h2>
+<p>We’re excited that now the “source configs” that define how IBM UrbanCode Deploy discovers and imports files to deploy are now plugins just like automation steps. The easy wins are the standard plugin benefits. New versions of the integrations can be loaded without upgrading the application or restarting and our customers can create their own source types. The work of checking for new versions of components has also been offloaded away from the master server and onto the agents.</p>
+</div>
+</p></body>
+</html>

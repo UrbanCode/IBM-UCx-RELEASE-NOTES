@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head><title>6.1.1.5</title></head>
+<body>
+<p><b>This article was originaly published in 2015.05.29</b></p>
+<p><h1>6.1.1.5 - May 29, 2015</h1></p>
+<p><div class="new_release_cont">
+This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.<p></p>
+<h2>AES Encryption for Secure Properties</h2>
+<p>
+Secure properties are now encrypted using AES with a 128-bit key. Existing property values encrypted with 3DES will be re-encrypted as they are updated. New installations will use AES exclusively.
+</p>
+<h2>Improved Installation for HA Instances</h2>
+<p>
+New installations use a single ‘appdata’ directory for data files and directories that must be shared between HA instances. The location of ‘appdata’ is configurable during installation so it can be easily pointed into network storage. Upgrades preserve the previous storage layout.
+</p>
+<p>
+The default location for ‘appdata’ is <code>&lt;server&gt;/appdata</code>.
+</p>
+</div>
+</p></body>
+</html>

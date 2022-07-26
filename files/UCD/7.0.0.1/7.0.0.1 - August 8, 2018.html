@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html><head><title>7.0.0.1</title></head>
+<body>
+<p><b>This article was originaly published in 2018.08.08</b></p>
+<p><h1>7.0.0.1 - August 8, 2018</h1></p>
+<p>IBM UrbanCode Deploy 7.0.0.1 is a maintenance release and includes various bug fixes. This release is recommended for all customers.
+<h2>New keystore property</h2>
+A new property identifying the keystore alias has been added to the <code>server.xml</code> file. The default for this property is <strong>server</strong>. If the keystore is not using <strong>server</strong> as the alias, change the value for the <strong>tomcat.key.alias</strong> property to the alias being used in the <code>installed.properties</code> file. Otherwise, a failure occurs with starting UrbanCode Deploy after an upgrade.
+</p></body>
+</html>

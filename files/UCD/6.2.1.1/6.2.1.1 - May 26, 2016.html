@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html><head><title>6.2.1.1</title></head>
+<body>
+<p><b>This article was originaly published in 2016.05.26</b></p>
+<p><h1>6.2.1.1 - May 26, 2016</h1></p>
+<p><p><b>IMPORTANT</b> UCD 6.2.1.1 does not support upgrades when using DB2 on a z/OS server. Attempting to upgrade using this fixpack will display an error message and the upgrade will not occur.  Do not upgrade to the 6.2.1.1 fixpack if you use DB2 on z/OS. A fix will be provided in UCD 6.2.1.2.</p>
+<div class="new_release_cont">
+<div class="deploy-bullets">
+<ul>
+<h2>New Azure Image Provisioning</h2>
+<li>You can now provision Linux images to Microsoft Azure whether or not those images have<br/>
+          the <samp class="ph codeph">cloud-init</samp> package installed.</li>
+<li>You can now use Windows images on Azure. See <a class="xref" href="https://www.ibm.com/support/knowledgecenter/en/SS4GSP_6.2.1/com.ibm.edt.doc/topics/blueprint_edit_azure.html" target="_blank" title="To model a Microsoft Azure environment, log in with an Azure cloud project and specify the Azure-specific information in a blueprint." rel="noopener noreferrer">Modeling environments for Microsoft Azure</a>.</li>
+</ul>
+</div>
+</div>
+<div class="new_release_cont">
+<h2>Deployment history cleanup</h2>
+<p>You can now configure environments so that process history from that environment is deleted after a certain number of days. Deployment history deletion can decrease the size requirements of both the database and the server’s filesystem. See <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=deploying-cleaning-up-deployment-history-files" target="_blank" rel="noopener noreferrer">Cleaning up deployment history files.</a> </p>
+</div>
+<div class="new_release_cont">
+<h2>Stronger Approvals</h2>
+<p>
+Can now require that the requester and approver cannot be the same user. A checkbox labeled “No Self-Approvals” is present on each environment or environment template requiring approvals. If an environment is using an environment template then the environment will inherit the setting.</p>
+<p>For example, user A requests an application process on an environment where this is enabled: User A does not get a notification that approvals are waiting on him/her, cannot see the approval present in his/her work items tab, and cannot respond to the approval request.
+</p>
+</div>
+<div class="new_release_cont">
+<h2>Silent Install Relay</h2>
+<p>
+Run the agent relay installation silently and store configuration in an properties file! See <a href="https://www.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.udeploy.install.doc/topics/install_agentrelay_silent.html" target="_blank" rel="noopener noreferrer">Installing agent relays in silent mode.</a>
+</p>
+</div>
+<h2><a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=overview-whats-new-in-urbancode-deploy" target="_blank" rel="noopener noreferrer">See What’s New documentation for more details!</a> </h2>
+<p></p>
+</p></body>
+</html>

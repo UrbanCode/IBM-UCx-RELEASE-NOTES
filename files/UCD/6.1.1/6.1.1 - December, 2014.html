@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html><head><title>6.1.1</title></head>
+<body>
+<p><b>This article was originaly published in 2014.12.01</b></p>
+<p><h1>6.1.1 - December, 2014</h1></p>
+<p><div class="new_release_cont">The 6.1.1.0 release of UrbanCode Deploy includes the following new features, as well as a significant number of stability and performance improvements.</div>
+<div class="new_release_cont">
+<h2>Compare &amp; synchronize between two parts of the resource tree<br/>
+</h2>
+<p>Users can now generate a side-by-side view comparing two parts of the resource tree, allowing them to quickly identify changes and additions and optionally select changes to copy from one part of the resource tree to another. These new capabilities extend the resource tree to make it an increasingly powerful configuration management tool.</p>
+<p><b>Getting Started:</b> Select the “Compare or Synchronize” action on any resource to show a side-by-side view of it and any other resource. All children and properties of the selected resources will be shown, and all differences are highlighted. From this view, changes can be copied from one resource to the other by simply checking the box for each change and applying the selected changes to the other set of resources.
+</p>
+</div>
+<div class="new_release_cont">
+<h2>Deployment impact analysis during approvals<br/>
+</h2>
+<p>While deciding whether to approve a deployment, users can now view a thorough list of configuration changes which will be made if the deployment executes, allowing decision-makers to quickly measure the risk, impact, and correctness of a deployment before they allow it to proceed.</p>
+<p><b>Getting Started:</b> While viewing an application process request which is awaiting approval, use the Configuration Changes tab to view all property values which have been added or changed since the last deployment, or the Inventory Changes tab to view a list of all components which will be updated on each resource in the environment.
+</p>
+</div>
+<div class="new_release_cont">
+<h2>Support for IBM Pure Application Systems 2.0<br/>
+</h2>
+<p>The built-in IBM cloud integration in UrbanCode Deploy now supports IBM Pure Application Systems 2.0, including the updated Virtual System Patterns included in that release.</p>
+<p><b>Getting Started:</b> On the Resource Templates page, set up a Cloud Connection to a Pure Application Systems 2.0 server. All patterns created in that server will be available for import and provisioning as Resource Templates in UrbanCode Deploy.
+</p>
+</div>
+<div class="new_release_cont">
+<h2>Support for deployments to IBM i<br/>
+</h2>
+<p>UrbanCode Deploy brings standardized, fully automated deployments to IBM i, allowing deployment activities on IBM i to be orchestrated along with processes executing on any other supported platform(s).</p>
+<p><b>Includes:</b></p>
+<ul>
+<li style="font-style: italic;">Ability to interact with the Integrated File System and deploy Java applications</li>
+<li style="font-style: italic;">Automate the execution of shell commands during deployments</li>
+<li style="font-style: italic;">Application deployment and configuration using the WebSphere Application Server plugin</li>
+</ul>
+</div>
+<div class="new_release_cont">
+<h2>Improved z/OS deployment support<br/>
+</h2>
+<ul>
+<li style="font-style: italic;">The z/OS agent and deployment tools can be installed using System Modification Program/Extended (SMP/E). There’s also a new toolkit install script which simplifies the setup.</li>
+<li style="font-style: italic;">Job Monitor is included in UCD 6.1.1 for submitting and monitoring jobs. The Submit Job step is enhanced to support JCL parameter replacing.</li>
+<li style="font-style: italic;">Support custom properties on PDSs and members in a version</li>
+<li style="font-style: italic;">z/OS Utility plug-in includes a component template with default processes for deploying z/OS artifacts.</li>
+</ul>
+</div>
+<div class="new_release_cont">
+<h2>Expanded multicultural support<br/>
+</h2>
+<p>UrbanCode Deploy now supports right-to-left text orientation, as well as dual-byte character sets on agent machines.
+</p>
+</div>
+</p></body>
+</html>

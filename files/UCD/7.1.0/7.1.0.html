@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><head><title>7.1.0</title></head>
+<body>
+<p><b>This article was originaly published in 2020.06.18</b></p>
+<p><h1>7.1.0</h1></p>
+<p>This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+<h3>Deployment triggers</h3>
+On the Environment configuration page, you can configure deployment triggers on an environment. The deployment trigger causes the specified App Proc Request to run whenever a specified component imports a new version. This results in deploying the newly imported version automatically to all environments that have configured triggers.
+
+<iframe src="https://www.youtube.com/embed/v5iwRvhI8P8" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+This feature replaces the run process after version import functionality on a component.
+<h3></h3>
+<h3>External approval process</h3>
+The external approval process is a pre-deployment process that allows or prevents the deployment from running based on the status of the external approval process. The process runs on an agent and has access to all plug-in steps. This feature can be used for or reaching out to change management systems. Access to the feature is on the Environment Configuration page under Require approvals.
+<iframe src="https://www.youtube.com/embed/bPu2iEYioAo" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<h3></h3>
+<h3>Server cluster management improvements</h3>
+Server to server communication now uses the new websocket communication technology. Front end servers are now displayed on the Networks tab. Additionally, connectivity status for all servers in a cluster can be viewed on the Networks tab.
+<h3></h3>
+<h3>Resource tree performance improvements</h3>
+The performance when loading many resources has been improved.
+<h3></h3>
+<h3>Merge z/OS Version</h3>
+Incremental z/OS versions can be consolidated into a single version. The most recent files are kept and older files of the same name/extension are replaced by the most recent version. Only version that follow the new z/OS package format can be merged. Merge versions can be accessed through the Snapshots page.
+<h3></h3>
+<h3>Deployment Wizard</h3>
+The new Deployment Dialog page improves the process of requesting an application. The page includes four sections: Process + property selection, version selection, scheduling, and review. The final review section allows you to verify all inputs before starting your deployment.
+<h3></h3>
+<h3>Enhancements to containers</h3>
+The following enhancements added to UrbanCode Deploy containers.
+<ul>
+ 	<li>Kubernetes Operator Models for Agent, Relay, and Server</li>
+ 	<li>Helm V3 support (no need for Tiller!)</li>
+ 	<li>You can now configure the file system group ID used when accessing persistent storage required for deployment of the UrbanCode Deploy server, agent and agent relays.  This support is important for multi-cloud environments where the persistent storage support may differ in implementation and require the use of a specific file system group ID.</li>
+ 	<li>The Openshift plug-in now supports OpenShift Container Platform 4.x. In addition, new plug-in steps have been added to provide a complete integration scenario.</li>
+</ul>
+</p></body>
+</html>

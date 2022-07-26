@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head><title>6.2.2</title></head>
+<body>
+<p><b>This article was originaly published in 2016.09.20</b></p>
+<p><h1>6.2.2 - September 20, 2016</h1></p>
+<p><p>
+IBM® UrbanCode&#x2122; Deploy 6.2.2 is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.
+</p>
+<div class="new_release_cont">
+<div class="deploy-bullets">
+<h2>New version of Java required</h2>
+<li>Beginning in version 6.2.2, the IBM UrbanCode Deploy server and agent relays require Java&#x2122; Runtime Environment (JRE) or Java Development Kit (JDK) version 8.</li>
+<h2>Process Editor is easier to use</h2>
+<li>The step palette has been enhanced to make it easier to navigate. Steps can be added without specifying properties. Properties can be added later.</li>
+<li>The new Auto Layout feature automatically lays out the diagram when you drop steps into the diagram.</li>
+<li>Scripts on a step can be open from the property dialog, using the Script Editor. The editor provides syntax coloring and a search and replace feature. Layouts from earlier UrbanCode Deploy versions can be convert into the new process layout. You can revert to the original layout if desired.</li>
+<h2>New integration with VRealize Automation</h2>
+<li>
+The UrbanCode Deploy Blueprint Designer now provides integration with VRealize Automation (vRA). You can create a cloud blueprint in UrbanCode Deploy that incorporates vCenter IaaS constructs managed through vRA, including virtual machine templates and network profiles. Additionally, you can add vRA software components and UrbanCode Deploy software components to create a full stack blueprint that can be executed through UrbanCode Deploy to create and deploy a vRA blueprint. Then, you can manage the created resources from vRA in UrbanCode Deploy to view environment status and delete the environment in vRA when it is no longer needed.
+</li>
+<li>
+The key benefits of using UrbanCode Deploy with vRA is that the combination of using UrbanCode Deploy for the deployment automation and VRA to manage the infrastructure. UrbanCode Deploy also allows VMware users to seamlessly move their vRA/vCenter blueprints to other cloud providers, including OpenStack, SoftLayer, and others.
+</li>
+<h2>Improved support for middleware deployments and configuration management</h2>
+<li>
+The Deploy, Configure, and Install WebSphere Application Server plug-ins have been updated to include the ability to migrate captured configurations to a new version of WebSphere Application Server.</li>
+<li>Support for WebSphere Liberty Collectives has been added to the UrbanCode Deploy IBM WebSphere Liberty plug-in.
+</li>
+<h2>Enhancements to full stack provisioning</h2>
+<li>Application processes can now be run from an UrbanCode Deploy cloud blueprint to provision Windows or Linux VMs on multiple clouds (Softlayer, AWS, Azure).</li>
+<h2>Monitor key deployment metrics</h2>
+<li>The ability to monitor key deployment metrics through integration with applications such as New Relic and IBM Application Performance Management has been added. This includes key metrics that cover agents, individual components and applications, as well as component summary metrics.
+</li>
+<h2>New community for developers</h2>
+<li>The new <a href="http://www.developer.ibm.com/urbancode/plugins/development" target="_blank" rel="noopener noreferrer">Open Development Community for Plugins</a> provides information for contributing plug-ins.</li>
+<h2>New and improved integrations</h2>
+<li>New Jenkins Pipeline plug-in adds support for creating components, invoking UrbanCode Deploy component imports, running steps multiple times in a single job, deploying snapshots or component versions; compatible with Jenkins Pipeline DSL</li>
+<li>New API Management plug-in</li>
+<li>Improved Docker Compose plug-in</li>
+<li>New IBM Operational Decision Manager (ODM) source plug-in and support for deploying RuleApps remotely with the existing plug-in.</li>
+<li>New Configuration management for Microsoft Internet Information Server (IIS) plug-in (BETA) allows you to use UrbanCode Deploy to manage a heterogeneous application server environment.</li>
+<li>Artifactory plug-in updated to improve governance and metadata exchange and handling of Maven snapshot.</li>
+<li>Cloud Foundry plug-in improved support for manifest deployments and managing User Provided Services.</li>
+<h2>Improvements for the mainframe environment</h2>
+<li>UrbanCode Deploy can now manage the deployment of both MVS data sets and HFS files in a single component version.</li>
+<h2>UrbanCode Deploy as a service</h2>
+<li>The new IBM Cloud UrbanCode Deploy offering allows you to using applications in the cloud and automate deployment without investing in the infrastructure or administration. See<br/>
+<a href="https://developer.ibm.com/urbancode/2016/09/20/urbancode-deploy-new-features-092016/" target="_blank" rel="noopener noreferrer">The Best of the UrbanCode Deploy 6.2.2</a> for more details about UrbanCode Deploy 6.2.2 cloud offering and new features.</li>
+</div>
+</div>
+</p></body>
+</html>

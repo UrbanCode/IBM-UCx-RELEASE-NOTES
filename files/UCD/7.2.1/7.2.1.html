@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html><head><title>7.2.1</title></head>
+<body>
+<p><b>This article was originaly published in 2021.10.26</b></p>
+<p><h1>7.2.1</h1></p>
+<p>This release of IBM UrbanCode Deploy is a major release and includes various bug fixes. This release is recommended for all customers.
+<dl>
+ 	<dt>A new UI for running an application process</dt>
+ 	<dd>The new UI for deploying applications is a single-page form that has collapsible sections rather than a multi-page wizard. The existing deployment wizard is not removed to allow you to configure each application to use the wizard or the form.</dd>
+        <dt>OAuth 2.0 support</dt>
+ 	<dd>Added support for user authentication with OpenID Connect that allows administrators to create an OpenID Connect authentication realm. This feature provides users the ability to login to the UrbanCode Deploy from a central OpenID Provider.</dd>
+ 	<dd></dd>
+ 	<dt>Scheduled system blackouts</dt>
+ 	<dd>Maintenance mode can now be scheduled on the system calendar. These calendar events are called maintenance blackouts that consists of a start time and a planned duration. At the start time, maintenance mode gets engaged, but does not end automatically. Processes cannot be scheduled during a planned maintenance mode. When the administrator turns off the maintenance mode, the calendar
+event is updated with the actual duration of the event.</dd>
+ 	<dd></dd>
+        <dt>Start and end time of a plug-in step in the output log</dt>
+ 	<dd>Three new timestamps are provided in the output log of the plug-in step. The first timestamp logs the time prior to the step running but after the plug-in has been staged. The second timestamp logs the time plug-in step completes. The third timestamp is logged after the post processing script has been evaluated on the plug-in step.</dd>
+ 	<dd></dd>
+ 	<dt>CLI to download full set of execution logs</dt>
+ 	<dd>API support is available for downloading the execution logs of a workflow trace. Workflow trace is a generic name for a process. Processes such as generic process, component process, and application process have a workflow trace.</dd>
+ 	<dd></dd>
+ 	<dt>Approver name in a manual task as a property</dt>
+ 	<dd>When a manual task is approved, the approver name and display name are now exposed as output properties in the step. These properties can be referenced using:<code>${p:ManualTask/ApproverDisplayName}</code> and <code>${p:ManualTask/ApproverName}</code></dd>
+ 	<dd></dd>
+ 	<dt>Trimmed whitespace in properties files</dt>
+ 	<dd>The server’s installed.properties values are now trimmed of whitespace to prevent install and deploy problems.</dd>
+ 	<dd></dd>
+ 	<dt>Install and update information of plug-ins is recorded in the audit log</dt>
+ 	<dd>The audit logs entries when plug-ins are loaded and updated.</dd>
+ 	<dd></dd>
+ 	<dt>Script tool_env, that sets the appropriate <code>ANT_HOME</code> and <code>GROOVY_HOME</code></dt>
+ 	<dt></dt>
+ 	<dd></dd>
+ 	<dt>Added ability to specify a default state for the 'only changed versions' check box on per application basis</dt>
+ 	<dd>You can now specify if the 'only changed versions' check box should be enabled by default or not for your applications.</dd>
+ 	<dd></dd>
+ 	
+</dl>
+</p></body>
+</html>

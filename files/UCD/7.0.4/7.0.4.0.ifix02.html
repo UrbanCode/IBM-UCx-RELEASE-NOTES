@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html><head><title>7.0.4</title></head>
+<body>
+<p><b>This article was originaly published in 2019.10.08</b></p>
+<p><h1>7.0.4.0.ifix02</h1></p>
+<p>This release of IBM UrbanCode Deploy contains a number feature enhancements and bug fixes. This release is recommended for all customers.
+
+For a detailed list of feature enhancements and bug fixes, click <strong>Release Notes</strong>.
+
+7.0.4.0 has been replaced by 7.0.4.0.ifix01 as of October 20th, 2019. All customers currently on 7.0.4.0 are recommended to upgrade to 7.0.4.0.ifix01. More information can be found on the <strong>Release Notes</strong> page.
+<h2>New features</h2>
+The following are new features added in this release.
+<h3>Improved upgrade experience</h3>
+The process for handling plug-in upgrades has been changed, allowing the server to come on line faster post upgrade. Steps using automation plugins are now upgraded to the latest version either when the process is ran, or when the process is saved.
+<h3>Added agent relay actions to user interface</h3>
+Agent relay actions (Restart, Test Connection, Download Logs) are now available through the user interface. These actions are available when using the new web type agent relay.
+<h3>Set warning on a deployment</h3>
+Processes can be configured to add a warning status steps. These warnings are displayed alongside the Success or Failure status of the step.
+<h3>Map token restrictions to user tokens</h3>
+User Token usage can be restricted down to specific REST API endpoints.
+<h3>Hide empty roles from the user interface</h3>
+Roles that have no users or groups added can be hidden from the user interface on a per-role basis.
+<h3>Agent environment variables</h3>
+A UrbanCode Deploy Windows agent, installed as a service, will now pick up new environment variables after restart.
+<h3>Allow setting Import Agent as part of the Component template</h3>
+The version import agent can be preset as part of the Component Template.
+<h3>Process property additions</h3>
+Added <code>version.description</code> as a default property to a process.
+<h3>Breadcrumb Links</h3>
+Breadcrumb links can now be opened in a new tab.
+<h3>Container Enhancements</h3>
+<ul>
+ 	<li>Agents/Relays are now IBM Container Certified</li>
+ 	<li>Openshift operator support for UrbanCode Deploy in Containers</li>
+</ul>
+</p></body>
+</html>
