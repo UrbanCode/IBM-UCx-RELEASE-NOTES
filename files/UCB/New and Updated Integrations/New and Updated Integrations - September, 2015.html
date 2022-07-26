@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><title>New and Updated Integrations</title></head>
+<body>
+<p><b>This article was originaly published in 2015.09.01</b></p>
+<p><h1>New and Updated Integrations - September, 2015</h1></p>
+<p><div class="new_release_cont">
+<h3>FileUtils (Updated)</h3>
+<ul>
+<li>Added step for retrieving properties from an XML file</li>
+<li>Added Include and Exclude fields to the unzip plugin step</li>
+<li>Added Destination Directory field to the Update XML File with XPath step</li>
+<li>Update Property File step to have text area inputs for includes and excludes to allow editing multiple property files.</li>
+<li>Modified Untar step to allow wildcards for tarball name.</li>
+<li>Updated Unzip step to use the system default encoding.</li>
+<li>Updated the ‘Update XML File with XPath’ plugin step to correctly get the encoding from the prolog of the XML Document.e</li>
+<li>Updated the ‘Update INI File’ plugin step. Added option to allow users to add comments to sections. Added an option to give the user a choice between ‘;’ and ‘#’ for comments. The default comment character will now be ‘;’. Fixed a bug where sections were deleted if they did not have a property. Multiple comments are allowed but empty lines between comments will not be preserved.</li>
+<li>Added an option to the ‘Update Property File’ plugin step which causes it to read the properties file using the agent’s native encoding or a custom character encoding</li>
+<li>Changed name of the ‘Update Property File’ step to be ‘Update Java Properties File’ to clarify that it is used with Java Properties files. Fixed an issue in the ‘Update INI File’ step where comments at the end of the file would be deleted. Added option to the ‘Update INI File’ step to allow the user to specify the encoding of the INI file and added an option to let them delete sections from an INI file.</li>
+<li>Fixed APAR PI31431 – the ‘Replace Tokens’ properties file was not being deleted if the step failed.</li>
+<li>Fixed APAR PI37793 – Update Java Properties File was throwing NullPointerException if property value was empty</li>
+<li>Fix broken upgrades so the plugin can be loaded into servers with older versions of the plugin</li>
+<li>Learn more about this plug-in <a href="https://developer.ibm.com/urbancode/plugin/file-utils-ubuild/">for version 6.1 and later</a></li>
+</ul>
+</div>
+<div class="new_release_cont">
+<h3>Rally (Updated)</h3>
+<ul>
+<li>Fix some issues when creating defects and changing Rally artifact properties when using Rally’s v2.0 API</li>
+<li>Learn more about this plug-in <a href="https://developer.ibm.com/urbancode/plugin/rally-ubuild/">for version 6.1 and later</a></li>
+</ul>
+</div>
+</p></body>
+</html>
