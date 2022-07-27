@@ -1,29 +1,388 @@
 <!DOCTYPE html>
-<html><head><title>7.1.1.1</title></head>
-<body>
-<p><b>This article was originaly published in 2020.11.18</b></p>
-<p><h1>7.1.1.1</h1></p>
-<p>This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
-<h2>Key Features and Enhancements</h2>
-<dl>
-<dt>Ability to disable a snapshot</dt>
-<dd>New field added to the application configuration. The <strong>Disable Deploying Snapshots</strong> field on the Create Process page allows you to disable snapshot versions, only component versions are deployed.  
-</dd>
-<!-- 12305 --> 
-<dt>Links view enhancement</dt>
-<dd>From the Versions page, you can click <strong>Version Links</strong> to view a table of links resulting from searches, filters, and favorites. You can sort links by name or date.
-<!-- 12651 -->
-<dt>Process Designer Explorer mode removed</dt>
-<dd>The Process Design Editor user interface no longer contains the Explorer mode.</dd>
-<!--  12426  12427 -->
-<dt>Enhancement to Process as Code feature</dt>
-<dd>Component and Application template processes can now be downloaded and uploaded.</dd>
-</dl>
-<!-- dt>Bug fixes</dt>
+<html>
+ <head>
+  <title>
+   7.1.1.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2020.11.18
+   </b>
+  </p>
+  <p>
+   <h1>
+    7.1.1.1
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <h2>
+    Key Features and Enhancements
+   </h2>
+   <dl>
+    <dt>
+     Ability to disable a snapshot
+    </dt>
+    <dd>
+     New field added to the application configuration. The
+     <strong>
+      Disable Deploying Snapshots
+     </strong>
+     field on the Create Process page allows you to disable snapshot versions, only component versions are deployed.
+    </dd>
+    <!-- 12305 -->
+    <dt>
+     Links view enhancement
+    </dt>
+    <dd>
+     From the Versions page, you can click
+     <strong>
+      Version Links
+     </strong>
+     to view a table of links resulting from searches, filters, and favorites. You can sort links by name or date.
+     <!-- 12651 -->
+     <dt>
+      Process Designer Explorer mode removed
+     </dt>
+     <dd>
+      The Process Design Editor user interface no longer contains the Explorer mode.
+     </dd>
+     <!--  12426  12427 -->
+     <dt>
+      Enhancement to Process as Code feature
+     </dt>
+     <dd>
+      Component and Application template processes can now be downloaded and uploaded.
+     </dd>
+    </dd>
+   </dl>
+   <!-- dt>Bug fixes</dt>
  	<dd>
 <ul>
  	<li>xx.</li>
 </ul>
 </dd -->
-</p></body>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Processes as code updates
+    </li>
+    <li>
+     Explorer mode removed
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h2>
+    Fixes
+   </h2>
+   A cumulative list of fixes in this release, and any future fix packs can be found in the
+   <a href="https://www.urbancode.com/whats-new/deployfixlist/" rel="noopener" target="_blank">
+    Fixlist
+   </a>
+   document.
+   <h3>
+    7.1.1.1
+   </h3>
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH30713" target="_blank">
+        PH30713
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       WHEN STARTING UCD SERVER  INSTALLED ON LINUX ON Z ENCOUNTERING
+NULLPOINTEREXCEPTION
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH30432" target="_blank">
+        PH30432
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       AUTOMATIONPLUGINMIGRATORLOOKUP HOLDS LOCK FOR TOO LONG
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH30152" target="_blank">
+        PH30152
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       PERFORMANCE DEGRADATION DUE TO LOCK CONTENTION WITH
+UCDWEBAPPCLASSLOADER
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH30032" target="_blank">
+        PH30032
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       ENVIRONMENT INVENTORY DISPLAYS WRONG MESSAGE ON SEARCHING A
+SPECIFIC COMPONENT THAT DOES NOT EXIST.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH28700" target="_blank">
+        PH28700
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       POST UPGRADE ISSUE - EVEN THOUGH USERS HAVE THEIR TEAMS IN PREFE
+RENCES, ITS SHOWING ALL THE TEAMS WHILE INSTALLING THE AGENTS
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH28387" target="_blank">
+        PH28387
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       S3 MIGRATOR DOES NOT WORK WITH USER AND PASSWORD ON COMMAND LINE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH27652" target="_blank">
+        PH27652
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UNABLE TO OPEN WORK ITEMS TAB DUE TO ERROR.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH27441" target="_blank">
+        PH27441
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       AGENT CONFIGURATION TEMPLATES CANNOT BE EDITED.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH23187" target="_blank">
+        PH23187
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       REST CALL TO GET INFORMATION ABOUT ALL ENVIRONMENTS IN AN
+APPLICATION IS MISSING "CONDITIONS"
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH20834" target="_blank">
+        PH20834
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       ENVIRONMENT TEMPLATE NOT APPLYING ENVIRONMENT "TYPE" WHEN
+CREATED DIRECTLY FROM "CREATE ENVIRONMENT" DIALOGUE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH20267" target="_blank">
+        PH20267
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       WHEN SUBMITTING APPLICATION PROCESS REQUESTS THROUGH THE API, PR
+OCESS PROPERTIES WILL NOT BE VALIDATED AGAINST 'SELECT' OPTIONS
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI99188" target="_blank">
+        PI99188
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       CANNOT CREATE SNAPSHOT FROM CLI USING COMPONENT ID
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h3>
+    7.1.1.0.iFix01
+   </h3>
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH31361" rel="noopener" target="_blank">
+        PH31361
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       COMPONENT LIST WILL NOT LOAD IF A COMPONENT THAT WOULD SHOW UP
+ON THE TABLE IS CURRENTLY IMPORTING A VERSION.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h3>
+    7.1.1.0
+   </h3>
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH29644" rel="noopener" target="_blank">
+        PH29644
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       AUTH TOKENS ARE NOT ACCEPTED FOR REST METHODS WITH DUPLICATE QUERY PARAMETERS.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH28841" rel="noopener" target="_blank">
+        PH28841
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       SNAPSHOT NOT DEPLOYING CORRECTLY WHEN APPLICATION VERSION PRESET IS SPECIFIED
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH27920" rel="noopener" target="_blank">
+        PH27920
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UCD SERVER INCORRECTLY SHOWS UNLICENSED DESPITE THE LICENSE SERVER HOSTING AN 'IBMUCD_SS_AGENT_Z' LICENSE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH26573" rel="noopener" target="_blank">
+        PH26573
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       THE DATABASE PASSWORD IS VISIBLE ON CONSOLE DURING UCD INSTALLATION AND MIGRATING DB FROM DERBY TO OTHER DATABASES.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH24278" rel="noopener" target="_blank">
+        PH24278
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       FROM AN APPLICATION PROCESS, A RUN COMPONENT PROCESS'S IGNORE FAILURE PROPERTY MAY DISPLAY UNCHECKED EVEN WHEN CHECKED
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH20874" rel="noopener" target="_blank">
+        PH20874
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       MAINFRAME (ZOS) AGENT IN DIFFERENT TIMEZONE THAN SERVER INCORRECTLY REPORTS LASTMODIFIED TIMESTAMP OF RESOURCES
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <!-- h2>RFEs</h2>
+<ul>
+ </ul -->
+   <h2>
+    Known problems and workarounds
+   </h2>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   For supported platforms and requirements, see the reports that can be dynamically generated using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <strong>
+    Note:
+   </strong>
+   Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+
+To get started quickly, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+   <a href="https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Rational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    Fix Central
+   </a>
+   , requiring authentication.
+
+Information for installing the server, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_7.1.1/com.ibm.udeploy.install.doc/topics/install_ch.html" rel="noopener" target="_blank">
+    Installing server
+   </a>
+   section in the product documentation.
+
+For information on installing licenses, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SS4GSP_7.1.1/com.ibm.udeploy.doc/topics/licenseManage.html" rel="noopener" target="_blank">
+    Managing Licenses
+   </a>
+   .
+   <h3>
+    Learn
+   </h3>
+   To learn more about IBM UrbanCode Deploy, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_7.1.1/com.ibm.udeploy.doc/ucd_version_welcome.html" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using IBM UrbanCode Deploy, post your questions in the
+   <a href="https://developer.ibm.com/answers?community=urbancode" rel="noopener" target="_blank">
+    forums
+   </a>
+   or contact
+   <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+    support
+   </a>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   .
+   <h3>
+    Get support
+   </h3>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

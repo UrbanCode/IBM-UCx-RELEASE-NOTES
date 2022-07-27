@@ -1,42 +1,297 @@
 <!DOCTYPE html>
-<html><head><title>6.1.0.1</title></head>
-<body>
-<p><b>This article was originaly published in 2014.07.22</b></p>
-<p><h1>6.1.0.1 - July 22, 2014</h1></p>
-<p><div class="new_release_cont">This release of IBM UrbanCode Release is a maintenance release containing bug fixes. This release is recommended for all customers.</div>
-<div class="new_release_cont">
-<h2>Tomcat Security Updates</h2>
-<p>The Tomcat 7 container provided by the installation manager has been upgraded to solve security issues.</p>
-</div>
-<div class="new_release_cont">
-<h2>IBM UrbanCode Deploy Integration Fixes</h2>
-<p>Users using the Release plugin will no longer sometimes create duplicate objects from the integration.</p>
-</div>
-<div class="new_release_cont">
-<h2>DB2 Fixes</h2>
-<p>Users with a DB2 database can now view a deployment plan, add automated tasks, manually create applications, and receive automatic updates to automated task statuses.</p>
-</div>
-<div class="new_release_cont">
-<h2>Environment Reservation Improvements</h2>
-<p>Environment reservation now shows conflicts for release environments with no application environments.</p>
-</div>
-<div class="new_release_cont">
-<h2>Delete Lifecycles</h2>
-<p>Lifecycles not used by any release can now be deleted.</p>
-</div>
-<div class="new_release_cont">
-<h2>Can Change Deployment End Time</h2>
-<p>Users can now edit the end time of a deployment while the deployment is in progress.</p>
-</div>
-<div class="new_release_cont">
-<h1>Experimental Features</h1>
-<p>The following features are experimental, and are available only if a special product configuration is enabled. They are offered for testing and feedback, without support, and are not guaranteed to continue in any form in a future release. Please consider enabling these features in a testing environment and provide feedback via the developerWorks Q&amp;A forum.</p>
-</div>
-<div class="new_release_cont">
-<h2>{Experimental} Can Use Pipeline with Unintegrated Applications</h2>
-<p>The pipeline view now works with applications and versions that did not come from an IBM UrbanCode Deploy integration.</p>
-<p>To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory:</p>
-<p>feature.manual.application.inventory=yes</p>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.0.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2014.07.22
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.0.1 - July 22, 2014
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Release is a maintenance release containing bug fixes. This release is recommended for all customers.
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Tomcat Security Updates
+    </h2>
+    <p>
+     The Tomcat 7 container provided by the installation manager has been upgraded to solve security issues.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     IBM UrbanCode Deploy Integration Fixes
+    </h2>
+    <p>
+     Users using the Release plugin will no longer sometimes create duplicate objects from the integration.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     DB2 Fixes
+    </h2>
+    <p>
+     Users with a DB2 database can now view a deployment plan, add automated tasks, manually create applications, and receive automatic updates to automated task statuses.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Environment Reservation Improvements
+    </h2>
+    <p>
+     Environment reservation now shows conflicts for release environments with no application environments.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Delete Lifecycles
+    </h2>
+    <p>
+     Lifecycles not used by any release can now be deleted.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Can Change Deployment End Time
+    </h2>
+    <p>
+     Users can now edit the end time of a deployment while the deployment is in progress.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h1>
+     Experimental Features
+    </h1>
+    <p>
+     The following features are experimental, and are available only if a special product configuration is enabled. They are offered for testing and feedback, without support, and are not guaranteed to continue in any form in a future release. Please consider enabling these features in a testing environment and provide feedback via the developerWorks Q&amp;A forum.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     {Experimental} Can Use Pipeline with Unintegrated Applications
+    </h2>
+    <p>
+     The pipeline view now works with applications and versions that did not come from an IBM UrbanCode Deploy integration.
+    </p>
+    <p>
+     To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory:
+    </p>
+    <p>
+     feature.manual.application.inventory=yes
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Tomcat Security Updates
+    </li>
+    <li>
+     IBM UrbanCode Deploy Integration Fixes
+    </li>
+    <li>
+     DB2 Fixes
+    </li>
+    <li>
+     Environment Reservation Improvements
+    </li>
+    <li>
+     Deletable Lifecycles
+    </li>
+    <li>
+     Can Change Deployment End Time
+    </li>
+    <li>
+     Can Use Pipeline with Unintegrated Applications
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="http://developer.ibm.com/urbancode/products/urbancode-release/whats-new/whats-new-urbancode-release-6-1-0-1/getting-started/">
+      Getting Started
+     </a>
+     page.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     There are no known behavioral changes.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release, and any future fix packs can be found
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27039116" target="_blank">
+      in this document
+     </a>
+     .
+    </p>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+        APAR
+       </td>
+       <td valign="bottom" width="78%">
+        Description
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+        PI20812
+       </td>
+       <td valign="bottom" width="78%">
+        DUPLICATED UCD APPLICATION SNAPSHOTS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+        PI20327
+       </td>
+       <td valign="bottom" width="78%">
+        BUTTONS DO NOT APPEAR ON MANUAL TASK
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+        PI19780
+       </td>
+       <td valign="bottom" width="78%">
+        INVALID USER ADDRESS MESSAGE WHEN ENTERING A NON .COM EMAIL
+        <br>
+         ADDRESS IN THE USER MANAGEMENT PAGE OF URBANCODE RELEASE
+        </br>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+    <p>
+     To search for additional post-release issues that IBM Rational Support documented, visit the
+     <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+    </p>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="http://developer.ibm.com/urbancode/products/urbancode-release/whats-new/whats-new-urbancode-release-6-1-0-1/release-notes/">
+      release notes
+     </a>
+     . For supported platforms and requirements, see the
+     <a href="http://www-03.ibm.com/software/products/en/ucrel#tab_othertab1" target="_blank">
+      system requirements
+     </a>
+     . To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://pic.dhe.ibm.com/infocenter/ucrel/v6r0m1/topic/com.ibm.urelease.doc/topics/install_ch.html" target="_blank">
+      installation guide
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release requires IBM Installation Manager version 1.7.2 or later for installation. See
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg24036814">
+      download document
+     </a>
+     for details on this download. This release is available for download on Fix Central for current customers, requiring authentication. This download is
+     <a href="http://www-933.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Rational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=all">
+      available here.
+     </a>
+     Information for installing the server, see the
+     <a href="http://pic.dhe.ibm.com/infocenter/ucrel/v6r0m1/topic/com.ibm.urelease.doc/topics/install_ch.html">
+      Installing server
+     </a>
+     section in the product documentation.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="../">
+      What’s New
+     </a>
+     To learn more about IBM UrbanCode Release, see the
+     <a href="http://pic.dhe.ibm.com/infocenter/ucrel/v6r0m1/topic/com.ibm.urelease.doc/topics/c_node_overview.html" target="_blank">
+      documentation
+     </a>
+     For help installing or using IBM UrbanCode Release, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

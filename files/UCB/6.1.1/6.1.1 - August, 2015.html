@@ -1,37 +1,528 @@
 <!DOCTYPE html>
-<html><head><title>6.1.1</title></head>
-<body>
-<p><b>This article was originaly published in 2015.08.01</b></p>
-<p><h1>6.1.1 - August, 2015</h1></p>
-<p><div class="new_release_cont">
-<h2>Information Radiator</h2>
-<ul>
-<li>Simplified view into what is going on <i>right now</i> for the team.</li>
-<li>Customizable view of project process builds and their current status.</li>
-<li>Ability to claim failed builds so the team knows who is fixing the issue.</li>
-<li>Send the URL to other team members so they can quickly copy your view and then edit it to their liking.</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<h2>Email Subscriptions</h2>
-<ul>
-<li>Opt in or opt out of notification emails from the server.</li>
-<li>Choose what events you would like to be notified about after a build completes.</li>
-<li>Settings act as an additional filter to add or remove people after Notification Schemes have chosen who should be notified.</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<h2>Customizable Success Boxes</h2>
-<ul>
-<li>Choose how much history you would like included in the success percentage boxes for a build process.</li>
-<li>Set the default history you would like included when viewing a particular build process.</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<h2>Shipped Reports</h2>
-<ul>
-<li>Default reports are shipped with the server to provide guidance on what types of reports can be created.</li>
-</ul>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2015.08.01
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.1 - August, 2015
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    <h2>
+     Information Radiator
+    </h2>
+    <ul>
+     <li>
+      Simplified view into what is going on
+      <i>
+       right now
+      </i>
+      for the team.
+     </li>
+     <li>
+      Customizable view of project process builds and their current status.
+     </li>
+     <li>
+      Ability to claim failed builds so the team knows who is fixing the issue.
+     </li>
+     <li>
+      Send the URL to other team members so they can quickly copy your view and then edit it to their liking.
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Email Subscriptions
+    </h2>
+    <ul>
+     <li>
+      Opt in or opt out of notification emails from the server.
+     </li>
+     <li>
+      Choose what events you would like to be notified about after a build completes.
+     </li>
+     <li>
+      Settings act as an additional filter to add or remove people after Notification Schemes have chosen who should be notified.
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Customizable Success Boxes
+    </h2>
+    <ul>
+     <li>
+      Choose how much history you would like included in the success percentage boxes for a build process.
+     </li>
+     <li>
+      Set the default history you would like included when viewing a particular build process.
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Shipped Reports
+    </h2>
+    <ul>
+     <li>
+      Default reports are shipped with the server to provide guidance on what types of reports can be created.
+     </li>
+    </ul>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Information Radiator
+    </li>
+    <li>
+     Email Subscriptions
+    </li>
+    <li>
+     More information...
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     This release of UrbanCode Build contains new features, quality improvements, and updates to supported platforms, as described in the
+     <a href="http://www-03.ibm.com/software/products/en/ucbuild" target="_blank">
+      system requirements
+     </a>
+    </p>
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="../getting-started">
+      Getting Started
+     </a>
+     page.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     We recommend updating all agents and plugins when upgrading to this version. Agents have been updated with Apache Ant 1.9.4.
+    </p>
+    <p>
+     A change was made to CodeStation to avoid accidental orphaning of files during build life cleanup. As part of the fix, the upgrade from older versions of IBM UrbanCode Build will involve rewriting files that may be missing. Because of this, we recommend backing up the IBM UrbanCode Build server’s
+     <code>
+      opt/codestation
+     </code>
+     directory before upgrading to 6.1.1.0. The length of the upgrade will also vary by how many build artifacts exist on the file system. While we expect most upgrades to complete in around 30 to 45 minutes, please plan for up to one or two extra hours if your server has many projects, processes, and build artifacts.
+    </p>
+    <p>
+     This release also contains updated versions of the
+     <a href="https://developer.ibm.com/urbancode/plugin/codestation-ubuild/" target="_blank">
+      CodeStation
+     </a>
+     ,
+     <a href="https://developer.ibm.com/urbancode/plugin/groovy-ubuild/" target="_blank">
+      Groovy
+     </a>
+     , and
+     <a href="https://developer.ibm.com/urbancode/plugin/ibm-urbancode-deploy/" target="_blank">
+      IBM UrbanCode Deploy
+     </a>
+     plugins.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Features in this Release
+    </div>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=68934" target="_blank">
+         68934
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Support unsubscribing from emails
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release:
+    </p>
+    <table border="0" cellpadding="0" cellspacing="0" class="ibm-data-table ibm-alternate" rules="">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        APAR
+       </td>
+       <td valign="bottom" width="80%">
+        Description
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI32370" target="_blank">
+         PI32370
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PROJECT DASHBOARD SHOWS SEVERAL WORKFLOWS WITH ‘NO BUILDS’ STATUS AFTER UPGRADE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI36165" target="_blank">
+         PI36165
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        THE UBUILD UI CAN BREAK WHEN USING COMPATIBILITY MODE IN IE11
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI36804" target="_blank">
+         PI36804
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        FILTER OUT SECURE PROPERTY VALUES WHERE READ
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI36897" target="_blank">
+         PI36897
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ONLY FIXED ITERATIONS CAN HAVE PROPERTIES SET ON THEM CURRENTLY
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI37027" target="_blank">
+         PI37027
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SELECT AND MUTLI-SELECT PROPERTIES THAT DO NOT SET THE ALLOWED VALUES CAUSE THE PROCESS TEMPLATES PAGE TO SHOW AN ERROR
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI37031" target="_blank">
+         PI37031
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        IE11 AGGRESSIVELY CACHES JAVASCRIPT PAGES IN THE UI KEEPING THEM FROM BEING UP-TO-DATE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI38435" target="_blank">
+         PI38435
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        JUMPING TO THE LAST PAGE OF SOME TABLES THROWS NAN ERROR
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI38184" target="_blank">
+         PI38184
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        NULLPOINTEREXCEPTION WITH PROPSHEETS UPON EXPORT OF PROJECT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI38231" target="_blank">
+         PI38231
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CHANGING TEMPLATE PROPERTIES FROM SELECT TO TEXT MAY CAUSE ERRORS WHEN SETTING VALUES ON OBJECTS USING THOSE TEMPLATES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI38435" target="_blank">
+         PI38435
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        JUMPING TO THE LAST PAGE OF SOME TABLES THROWS NAN ERROR
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI39577" target="_blank">
+         PI39577
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO IMPORT PROJECTS FROM UBUILD 4.2.X INTO IBM UBUILD OR IBM URBANCODE BUILD
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI40005" target="_blank">
+         PI40005
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        EXPORTING A WORKFLOW THAT USES A PROPERTY FOR THE AGENT SELECTION THROWS AN EXCEPTION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI40285" target="_blank">
+         PI40285
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PROCESS TEMPLATE USAGES AND SOURCE TEMPLATE USAGES TABLES DO NOT RENDER WHEN USING ORACLE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI40286" target="_blank">
+         PI40286
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ARTIFACT FILES CAN BE ORPHANED DURING CLEANUP IF THERE ARE PROBLEMS WITH THE REFERENCES FILE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI42340" target="_blank">
+         PI42340
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        COPYING A PROJECT DOES NOT UPDATE REFERENCES TO SECONDARY PROCESSES IN POST-PROCESS TRIGGERS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI42445" target="_blank">
+         PI42445
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        WORKFLOW RUNTIME UNNECESSARILY STORES WORKFLOW TRACES IN MEMORY
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI45473" target="_blank">
+         PI45473
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        INSTALL-AGENT-FROM-FILE.BAT DOES NOT INSTALL WINDOWS SERVICE EVEN THOUGH CONFIGURED IN PROPERTIES FILE
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+    <table border="0" cellpadding="0" cellspacing="0" class="ibm-data-table ibm-alternate" rules="">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        Description
+       </td>
+       <td valign="bottom" width="80%">
+        Workaround
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="80%">
+        A process with multiple source configs will only show the log for the last source step that ran
+       </td>
+       <td valign="bottom" width="20%">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="80%">
+        Build life properties with values longer than 255 characters but shorter than 400 characters will error when being saved
+       </td>
+       <td valign="bottom" width="20%">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="80%">
+        The build life analytics tab no longer shows finding information under the charts
+       </td>
+       <td valign="bottom" width="20%">
+       </td>
+      </tr>
+      <tr>
+       <td valign="bottom" width="80%">
+        The UCB server may be unable to start when looking for ServerBundle_en_US
+       </td>
+       <td valign="bottom" width="20%">
+        <a href="http://www-01.ibm.com/support/docview.wss?uid=swg1IV09999">
+         IV09999
+        </a>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     To search for additional post-release issues that IBM Rational Support documented, visit the
+     <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+    </p>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www-03.ibm.com/software/products/en/ucbuild" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Build is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.1/com.ibm.ucbuild.doc/topics/arch_ch.html" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Build supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+     <a href="https://developer.ibm.com/urbancode/plugins/ubuild/" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release is available for download for Passport Advantage and Passport Advantage Express clients, requiring authentication. This download is
+     <a href="https://www-112.ibm.com/software/howtobuy/softwareandservices/passportadvantage" target="_blank">
+      available here.
+     </a>
+    </p>
+    <p>
+     Information for installing the server, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.1/com.ibm.ucbuild.doc/topics/install_ch.html">
+      Installing servers and agents
+     </a>
+     section in the product documentation.
+    </p>
+    <p>
+     For information on installing and managing licenses, see
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.1/com.ibm.ucbuild.doc/topics/licenseManage.html">
+      Managing licenses
+     </a>
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="..">
+      What’s New
+     </a>
+    </p>
+    <p>
+     To learn more about IBM UrbanCode Build, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.1/com.ibm.ucbuild.doc/ucb61_welcome.html" target="_blank">
+      documentation
+     </a>
+    </p>
+    <p>
+     For help installing or using IBM UrbanCode Build, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+    </p>
+    <p>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

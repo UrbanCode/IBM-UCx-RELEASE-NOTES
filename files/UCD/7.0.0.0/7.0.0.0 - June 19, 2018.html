@@ -1,59 +1,499 @@
 <!DOCTYPE html>
-<html><head><title>7.0.0.0</title></head>
-<body>
-<p><b>This article was originaly published in 2018.06.19</b></p>
-<p><h1>7.0.0.0 - June 19, 2018</h1></p>
-<p><h1>IBM UrbanCode Deploy 7.0: No Limits!</h1>
-&nbsp;
+<html>
+ <head>
+  <title>
+   7.0.0.0
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2018.06.19
+   </b>
+  </p>
+  <p>
+   <h1>
+    7.0.0.0 - June 19, 2018
+   </h1>
+  </p>
+  <p>
+   <h1>
+    IBM UrbanCode Deploy 7.0: No Limits!
+   </h1>
+   IBM UrbanCode Deploy 7.0 delivers product scalability and capabilities for enterprises who are rapidly advancing their IT transformation. With this new version, UrbanCode Deploy enables you to manage every application in your enterprise with consistency security, visibility, lower cost and at the scale you need.
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="features_multiple_env.png"/>
+    </div>
+    <h2>
+     Scale Without Boundary
+    </h2>
+    UrbanCode Deploy 7.0 has new server/agent communication technology that has been tested to support up to 100,000 online agents, which is about a 10x increase over prior versions! This new communication technology is based on websockets and will be the default setting for new installations. Customers upgrading from prior versions will need to opt-in to this capability.
+   </div>
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="integration.png"/>
+    </div>
+    <h2>
+     Advanced Continuous Delivery Insights
+    </h2>
+    Leverage your UCD data to gain visibility into your deployments and to easily generate audit reports using the new UrbanCode Velocity Community Edition. Reports visualize how long deployments take, which fail and succeed and many important trends based on your deployment data. Learn how to download the no-fee community version of Velocity
+    <a href="https://www.ibm.com/products/urbancode-velocity">
+     here.
+    </a>
+   </div>
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="features_cloud.png"/>
+    </div>
+    <h2>
+     Run UCD in Containers
+    </h2>
+    You can now choose to run UrbanCode Deploy in containers on IBM Cloud Private or OpenShift. Container support is available on zLinux, x86 or Power LE platforms. See further documentation at
+    <a href="http://www.urbancodelabs.com/2018/03/16/ibm-urbancode-deploy-ibm-cloud-private-now-available/">
+     IBM Cloud Private
+    </a>
+    and
+    <a href="http://www.urbancodelabs.com/2018/04/13/running-urbancode-deploy-openshift/">
+     OpenShift.
+    </a>
+   </div>
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="features_multiple_env.png"/>
+    </div>
+    <h2>
+     Delta Deploy and Merge for Mainframe
+    </h2>
+    For deployments to the mainframe, UrbanCode Deploy 7.0 allows you to deploy only changed data set members as well as to merge multiple incremental versions into one for moving to the next environment. A PDF manual of z/OS agent security settings with sample RACF commands is also available.
+   </div>
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="features_cloud.png"/>
+    </div>
+    <h2>
+     Full Stack Terraform Template Support
+    </h2>
+    Leverage the rich graphical and text-based editing experience in the UrbanCode Deploy’s BluePrint Designer to create full-stack Terraform templates including infrastructure, middleware, and application resources. Also create, publish, and update Terraform templates into IBM Cloud Automation Manager (CAM), IBM Cloud Private’s Hybrid Cloud management solution. See more on the
+    <a href="https://developer.ibm.com/cloudautomation/">
+     integration
+    </a>
+    .
+   </div>
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="features_check.png"/>
+    </div>
+    <h2>
+     Modernized User Interface
+    </h2>
+    Enjoy an updated user interface layout that brings a fresh look and feel while providing design consistency across the UrbanCode portfolio. Current customers will also appreciate the continuity of the user experience from prior versions to ensure minimal transitional impact.
+   </div>
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="features_test_integrations.png"/>
+    </div>
+    <h2>
+     Safe Edit (BETA)
+    </h2>
+    UrbanCode is looking for feedback on its new Safe Edit functionality which introduces change management functionality into the process designer, making it easy to lock processes for editing, and approve process changes. If you are interested learning more or trying this functionality, please contact you sales representative and have them put you in touch with our development team.
+   </div>
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="integration.png"/>
+    </div>
+    <h2>
+     New integration with CyberArk
+    </h2>
+    UCD 7.0 makes it easy to use CyberArk Application Identity Manager, part of the CyberArk Privileged Account Security Solution, in your deployment processes. CyberArk enables organizations to protect critical business systems by eliminating hard-coded credentials from application scripts, configuration files and software code, and removing SSH keys from servers where they are used by applications and scripts.
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     New Server/Agent Communication
+    </li>
+    <li>
+     UI Refresh
+    </li>
+    <li>
+     Support for UCD running in Containers
+    </li>
+    <li>
+     Safe Edit (BETA)
+    </li>
+    <li>
+     z/OS Delta Deploy and Merge
+    </li>
+    <li>
+     CyberArk Support
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   For information on documentation and support resources, software and hardware requirements and installation steps, see the
+   <a href="../getting-started">
+    Getting Started
+   </a>
+   page.
+   <h3>
+    Fixes in this Release
+   </h3>
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI97296" rel="noopener" target="_blank">
+        PI97296
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       NO AUDIT ENTRY FOR TOKEN RESTRICTION CREATION/DELETION/MODIFICATION
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI96680" rel="noopener" target="_blank">
+        PI96680
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       PERFORMANCE ISSUE RUNNING VERSION IMPORTS
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI95364" rel="noopener" target="_blank">
+        PI95364
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       WILDCARDS ALLOWED IN LOGIN ATTEMPTS AND THE SERVER ATTEMPTS TO BIND AS EACH POSSIBLE USER
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI94746" rel="noopener" target="_blank">
+        PI94746
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       FULL OUTPUT LOG IS LOADED MULTIPLE TIMES WHEN VIEWED FROM THE WEB UI
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI85316" rel="noopener" target="_blank">
+        PI85316
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       DB2 RUNS OUT OF TEMPORARY TABLE SPACE WHEN DOWNLOADING DIAGNOSTICS BUNDLE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI84803" rel="noopener" target="_blank">
+        PI84803
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       DEFAULT IMPERSONATION CONFIGURED AT GROUP RESOURCE DISAPPEARED IN VERSION 6.2.3.0
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI90695" rel="noopener" target="_blank">
+        PI90695
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UC AUTO DISCOVERY DOES NOT HAVE THE MANAGE PROPERTIES PERMISSION BY DEFAULT
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI83112" rel="noopener" target="_blank">
+        PI83112
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       DEPLOYMENT MAY FAIL WHEN DEPLOYING A LOCKED SNAPSHOT AFTER COMPONENT TEMPLATE CHANGE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI79778" rel="noopener" target="_blank">
+        PI79778
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       PERMISSION ISSUE WITH CALENDAR
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI77918" rel="noopener" target="_blank">
+        PI77918
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UPDATERESOURCE DOES NOT UPDATE ROLE PROPERTY IF NO ROLE SPECIFIED
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI57090" rel="noopener" target="_blank">
+        PI57090
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UDCLIENT DOES NOT VERIFY SOURCECONFIGPLUGIN AGAINST THE COMPONENT TEMPLATE WHEN CREATING A COMPONENT
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI45504" rel="noopener" target="_blank">
+        PI45504
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UCD CAN BE IMPROPERLY CACHED BY THE BROWSER
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI95169" rel="noopener" target="_blank">
+        PI95169
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       DELETED COMPONENT TEMPLATE IS STILL BEING USED BY COMPONENTS AND CHANGED BY HITTING ITS URL DIRECTLY
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI97584" rel="noopener" target="_blank">
+        PI97584
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       STEPS NEVER COMPLETING SHOW RUNNING
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI99494" rel="noopener" target="_blank">
+        PI99494
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       COMPONENT PROPERTIES FROM TEMPLATE ARE NOT VISIBLE
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Upgrade Notes
+   </h2>
+   <h3>
+    Starting in 7.0.0.0
+   </h3>
+   UrbanCode Deploy 7.0 introduces new functionality that allows you to add process change management to your deployment processes. This functionality is still in BETA, and we are actively looking for customer feedback. If you would like to access a cloud instance of UCD, to use and provide feedback without having to set it up, please reach out to your IBM representative and let them know!
 
-IBM UrbanCode Deploy 7.0 delivers product scalability and capabilities for enterprises who are rapidly advancing their IT transformation. With this new version, UrbanCode Deploy enables you to manage every application in your enterprise with consistency security, visibility, lower cost and at the scale you need.
-<div class="new_release_cont">
-<div class="inline-block"><img src="features_multiple_env.png" alt="" /></div>
-<h2>Scale Without Boundary</h2>
-UrbanCode Deploy 7.0 has new server/agent communication technology that has been tested to support up to 100,000 online agents, which is about a 10x increase over prior versions! This new communication technology is based on websockets and will be the default setting for new installations. Customers upgrading from prior versions will need to opt-in to this capability.
+UrbanCode Deploy 7.0 also introduces new server/agent communication protocols.
+   <ul>
+    <li>
+     For new installations of the Deploy server users will be prompted for additional information unconditionally (all new installs will default to the web socket protocol).
+    </li>
+    <li>
+     When installing new Deploy agents, users will be asked for their preference, either JMS or web sockets. The default is web.
+    </li>
+    <li>
+     When upgrading the Deploy server, the user will be prompted for additional information to support the web socket protocol, however, no agents will change communication protocols as part of the upgrade.
+    </li>
+    <li>
+     An interactive (manual) upgrade of an agent will also prompt for new information to support the web sockets protocol. Upgrading through the web-ui will upgrade existing agents and keep them on the current server/agent communication (JMS)
+    </li>
+    <li>
+     It should be noted that in all scenarios, UrbanCode Deploy supports running both the new agent communication (web sockets) with the older model (JMS) in parallel.
+    </li>
+   </ul>
+   <h3>
+    Starting in 6.2.7.1
+   </h3>
+   API-breaking changes have been made to the supported REST endpoints that set properties in UCD, including the addEnvironmentProperty, setAgentProperty, setApplicationProperty,setComponentEnvironmentProperty, setComponentProperty, setComponentVersionPropDef, setEnvironmentProperty,setResourceProperty, setSystemConfiguration, setSystemProperty, and setVe&gt;rsionProperty endpoints. Any scripts that need to set properties on components, agents, the system, processes, process requests, applications, or environments will need to be adjusted. Consult the
+   <a href="https://www.ibm.com/support/knowledgecenter/SS4GSP_6.2.7/com.ibm.udeploy.api.doc/topics/rest_cli_environment_propvalue_put.html" rel="noopener" target="_blank">
+    documentation
+   </a>
+   for the new syntax.
 
-</div>
-<div class="new_release_cont">
-<div class="inline-block"><img src="integration.png" alt="" /></div>
-<h2>Advanced Continuous Delivery Insights</h2>
-Leverage your UCD data to gain visibility into your deployments and to easily generate audit reports using the new UrbanCode Velocity Community Edition. Reports visualize how long deployments take, which fail and succeed and many important trends based on your deployment data. Learn how to download the no-fee community version of Velocity <a href="https://developer.ibm.com/urbancode/products/urbancode-velocity/">here.</a>
+Also, because of these API changes, the plugins that set properties in UCD are not backwards compatible. In the following list of plugins, any plugin version before the version listed is not compatible with UCD 6.2.7.1 or later, and and any plugin version after the version listed is not compatible with 6.2.7.0 or earlier. On upgrading to UCD 6.2.7.1, the plugins will automatically be updated to a supported version. However, using old versions of processes that are locked in snapshots or downgrading the UCD plugin version may cause steps to fail.
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="50%">
+       Plugin
+      </td>
+      <td valign="bottom" width="50%">
+       6.2.7.1+ compatible versions
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="50%">
+       IBM UrbanCode Deploy Applications
+      </td>
+      <td valign="bottom" width="50%">
+       77+
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="50%">
+       IBM UrbanCode Deploy Components
+      </td>
+      <td valign="bottom" width="50%">
+       71+
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="50%">
+       IBM UrbanCode Deploy Environments
+      </td>
+      <td valign="bottom" width="50%">
+       77+
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="50%">
+       IBM UrbanCode Deploy Resources
+      </td>
+      <td valign="bottom" width="50%">
+       74+
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h3>
+    <b>
+    </b>
+    Starting in 6.2.5.2
+   </h3>
+   Starting the server for the first time may take longer than usual. For very large installations, allow an extra hour for the first server startup. Subsequent startups will take the regular amount of time.
 
-</div>
-<div class="new_release_cont">
-<div class="inline-block"><img src="features_cloud.png" alt="" /></div>
-<h2>Run UCD in Containers</h2>
-You can now choose to run UrbanCode Deploy in containers on IBM Cloud Private or OpenShift. Container support is available on zLinux, x86 or Power LE platforms. See further documentation at <a href="http://www.urbancodelabs.com/2018/03/16/ibm-urbancode-deploy-ibm-cloud-private-now-available/">IBM Cloud Private</a> and <a href="http://www.urbancodelabs.com/2018/04/13/running-urbancode-deploy-openshift/">OpenShift.</a>
+Users now do not receive notifications based on their membership in a role on the System Team. Users will have to be added to the correct role on a different team as well to receive notifications.
 
-</div>
-<div class="new_release_cont">
-<div class="inline-block"><img src="features_multiple_env.png" alt="" /></div>
-<h2>Delta Deploy and Merge for Mainframe</h2>
-For deployments to the mainframe, UrbanCode Deploy 7.0 allows you to deploy only changed data set members as well as to merge multiple incremental versions into one for moving to the next environment. A PDF manual of z/OS agent security settings with sample RACF commands is also available.
+The server now deletes all contents of the var/temp directory on server startup.
+   <h3>
+    Starting in 6.2.5.1
+   </h3>
+   Process requests from deleted environments will now be deleted. To keep process requests from deleted environments, add this property to the installed.properties file: com.urbancode.ds.cleanup.HistoryCleanup.disableDeletedEnvironmentCleanup=true
+   <h3>
+    Starting in 6.2.5.0
+   </h3>
+   The UCD_SESSION_KEY header has been renamed to UCD_CSRF_TOKEN. The previous name is also accepted until 6.3 when it will be removed from the product.
 
-</div>
-<div class="new_release_cont">
-<div class="inline-block"><img src="features_cloud.png" alt="" /></div>
-<h2>Full Stack Terraform Template Support</h2>
-Leverage the rich graphical and text-based editing experience in the UrbanCode Deploy’s BluePrint Designer to create full-stack Terraform templates including infrastructure, middleware, and application resources. Also create, publish, and update Terraform templates into IBM Cloud Automation Manager (CAM), IBM Cloud Private’s Hybrid Cloud management solution. See more on the <a href="https://developer.ibm.com/cloudautomation/">integration</a>.
+Users now require the “Execute” permission on agents in order to run processes against them. All existing user roles will receive this permission when upgrading from a version before 6.2.5.0. When upgrading, ensure that any user that needs to execute processes is on the same team as the agents required to run those processes.
+   <h3>
+    Starting in 6.2.4.0
+   </h3>
+   You must upgrade Agent Relays when upgrading from a version below 6.2.4.0. Also, the TLS protocol 3DES is no longer supported.
 
-</div>
-<div class="new_release_cont">
-<div class="inline-block"><img src="features_check.png" alt="" /></div>
-<h2>Modernized User Interface</h2>
-Enjoy an updated user interface layout that brings a fresh look and feel while providing design consistency across the UrbanCode portfolio. Current customers will also appreciate the continuity of the user experience from prior versions to ensure minimal transitional impact.
+After upgrading from before 6.2.4.0, users will not be able to view or delete agent relays until they have been granted permission to those relays. Relays that existed before the upgrade are only added to the System Team by default. For users to view agent relays, a user with Manage Security permission should give the correct roles the new For relays that existed before the upgrade, a user with Manage Security permissions will have to add the agent relays to the correct teams and give the correct roles the Agent Relay view and edit permissions.
 
-</div>
-<div class="new_release_cont">
-<div class="inline-block"><img src="features_test_integrations.png" alt="" /></div>
-<h2>Safe Edit (BETA)</h2>
-UrbanCode is looking for feedback on its new Safe Edit functionality which introduces change management functionality into the process designer, making it easy to lock processes for editing, and approve process changes. If you are interested learning more or trying this functionality, please contact you sales representative and have them put you in touch with our development team.
+When upgrading an IBM UrbanCode Deploy agent, end-to-end JMS encryption will automatically be enabled on all agents. In order for agent communication to function properly with end-to-end encryption enabled, the IBM UrbanCode Deploy server and agent clocks need to be synchronized to within a few minutes. To disable this feature, add the line
+   <code>
+    agent.jms.disable_full_encryption=true
+   </code>
+   ” to the agent’s
+   <code>
+    conf/agent/installed.properties
+   </code>
+   file before upgrading the agent.
+   <h3>
+    Starting in 6.2.3.0
+   </h3>
+   If you are upgrading from version 6.2.3.0 and earlier, servers and relays must be upgraded at the same time. Agents connected through relays may not connect successfully until both server and relay are upgraded. This is due to an incompatibility between versions of an library used by UCD.
 
-</div>
-<div class="new_release_cont">
-<div class="inline-block"><img src="integration.png" alt="" /></div>
-<h2>New integration with CyberArk</h2>
-UCD 7.0 makes it easy to use CyberArk Application Identity Manager, part of the CyberArk Privileged Account Security Solution, in your deployment processes. CyberArk enables organizations to protect critical business systems by eliminating hard-coded credentials from application scripts, configuration files and software code, and removing SSH keys from servers where they are used by applications and scripts.
+Starting in 6.2.3.0, authentication tokens will be obfuscated in the UI and REST API after their initial creation. Scripts and users will only be able to retrieve the full authentication token immediately after creating it.
 
-</div>
-</p></body>
+The silent install of the IBM UrbanCode Deploy server hangs when prompting for the value of the server installation directory (
+   <code>
+    install.server.dir
+   </code>
+   ). To workaround the problem, run the following instead of calling
+   <code>
+    ./install-server.sh
+   </code>
+   directly:
+   <code>
+    echo "" &gt; answerFile.txt echo "" &gt;&gt; answerFile.txt ./install-server.sh &lt; answerFile.txt (or install-server.bat &lt; answerFile.txt for Windows installations)
+   </code>
+   <h3>
+    Starting in 6.2.2.0
+   </h3>
+   The IBM UrbanCode Deploy server and agent relays now require a Java Runtime Environment (JRE) or Java Development Kit (JDK) version 8. If you are updating or changing the JRE to the latest version, see
+   <a href="http://www.ibm.com/support/knowledgecenter/en/SS4GSP_6.2.4/com.ibm.udeploy.doc/topics/jre_change.html#jre_change" rel="noopener" target="_blank">
+    Changing or updating the JRE of servers
+   </a>
+   and
+   <a href="http://www.ibm.com/support/knowledgecenter/en/SS4GSP_6.2.4/com.ibm.udeploy.doc/topics/update_JRE_agent_relays.html#update_JRE_agent_relays" rel="noopener" target="_blank">
+    Updating the JRE location for agent relays
+   </a>
+   for instructions. For documentation on the IBM JRE, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SSYKE2/welcome_javasdk_family.html" rel="noopener" target="_blank">
+    IBM SDK, Java Technology Edition
+   </a>
+   .
+   <h3>
+    Starting in 6.2.1.1
+   </h3>
+   To ensure that all secure property values are obscured, the values of all properties in the history for existing deployments are obscured. In the deployment history for deployments that you run after you upgrade, only secure properties are obscured in the logs.
+
+New security features erase old component version import logs to hide secure information. If you want to keep the logs, in the installed.properties file, set the
+   <strong>
+    com.urbancode.ds.cleanup.sourceConfig.fullCleanupSkip
+   </strong>
+   property to
+   <strong>
+    true
+   </strong>
+   .
+   <h3>
+    Plan &amp; Prepare
+   </h3>
+   For fixes contained in this release, and any known issues, review the
+   <a href="https://github.com/UrbanCode/IBM-UCx-RELEASE-NOTES">
+    release notes
+   </a>
+   .
+
+For supported platforms and requirements, see the reports that can be dynamically generated using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <strong>
+    Note:
+   </strong>
+   Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+
+To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+   <a href="https://www.ibm.com/support/knowledgecenter/SS4GSP_7.0.0/com.ibm.udeploy.install.doc/topics/install_ch.html">
+    installation guide
+   </a>
+   .
+  </p>
+ </body>
 </html>

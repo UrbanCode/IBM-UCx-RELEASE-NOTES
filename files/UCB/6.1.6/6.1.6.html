@@ -1,28 +1,324 @@
 <!DOCTYPE html>
-<html><head><title>6.1.6</title></head>
-<body>
-<p><b>This article was originaly published in 2019.12.17</b></p>
-<p><h1>6.1.6</h1></p>
-<p>This release of UrbanCode Build is a maintenance release and contains a number of new features, feature enhancements and bug fixes. This release is recommended for all customers. 
-
-<h2>New Features</h2>
-
-<h3>Agent Workspace viewer</h3>
-Use the View Workspace feature to view the contents of an agent's workspace related to a job for a build. The workspace viewer displays real-time content of a agent directory structure and files. You can expand directory structures and view individual file contents. There is no need to use another tool such as Remote Connect to view files on the agent. 
-
-<a href="agent_viewfile.png"><img src="agent_viewfile-300x203.png" alt="" width="300" height="203" class="alignnone size-medium wp-image-40560" /></a>
-
-<h2>Visual request context view</h2>
-<p>
-The Request Context page displays information about related process requests. Displayed is the tree view of the build requests in a single context. Child nodes can be hidden, by clicking on the parent node. When nodes are hidden, a black border is shown on the parent node. Click the parent node to expand its child nodes.
-<img src="visual_context-300x214.png" alt="" width="300" height="214" class="alignnone size-medium wp-image-1003561" />
-</p>
-
-<h3>Define artifacts at build process level</h3>
-<p>
-Build artifacts can now be configured on a build process in addition to a process template. Configuring artifacts for a build process on templates provides for standardization across build processes. However, there are times when a more specific configuration is needed for a given project. Configuring artifacts on the build process allows for this specialization. The artifacts configured at the build process level are combined with those defined at the process template level and applied to the relevant build.
-
-<img src="newartifactconfig-300x177.png" alt="" width="300" height="177" class="alignnone size-medium wp-image-1003560" />
-</p>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.6
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2019.12.17
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.6
+   </h1>
+  </p>
+  <p>
+   This release of UrbanCode Build is a maintenance release and contains a number of new features, feature enhancements and bug fixes. This release is recommended for all customers.
+   <h2>
+    New Features
+   </h2>
+   <h3>
+    Agent Workspace viewer
+   </h3>
+   Use the View Workspace feature to view the contents of an agent's workspace related to a job for a build. The workspace viewer displays real-time content of a agent directory structure and files. You can expand directory structures and view individual file contents. There is no need to use another tool such as Remote Connect to view files on the agent.
+   <a href="agent_viewfile.png">
+    <img alt="" class="alignnone size-medium wp-image-40560" height="203" src="agent_viewfile-300x203.png" width="300"/>
+   </a>
+   <h2>
+    Visual request context view
+   </h2>
+   <p>
+    The Request Context page displays information about related process requests. Displayed is the tree view of the build requests in a single context. Child nodes can be hidden, by clicking on the parent node. When nodes are hidden, a black border is shown on the parent node. Click the parent node to expand its child nodes.
+    <img alt="" class="alignnone size-medium wp-image-1003561" height="214" src="visual_context-300x214.png" width="300"/>
+   </p>
+   <h3>
+    Define artifacts at build process level
+   </h3>
+   <p>
+    Build artifacts can now be configured on a build process in addition to a process template. Configuring artifacts for a build process on templates provides for standardization across build processes. However, there are times when a more specific configuration is needed for a given project. Configuring artifacts on the build process allows for this specialization. The artifacts configured at the build process level are combined with those defined at the process template level and applied to the relevant build.
+    <img alt="" class="alignnone size-medium wp-image-1003560" height="177" src="newartifactconfig-300x177.png" width="300"/>
+   </p>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Agent Workspace Viewer
+    </li>
+    <li>
+     Visual Request Context View
+    </li>
+    <li>
+     Artifact Configuration At Process Level
+    </li>
+    <li>
+     Recommended Fixes and Improvements
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   For information on documentation and support resources, software and hardware requirements and installation steps, click the Getting Started tab.
+   <div class="new_release_cont">
+    <div class="subtitle">
+     <strong>
+      New features and enhancements
+     </strong>
+    </div>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom">
+        <a bottom"="" href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=92790" target="_blank&gt;RFE 92790&lt;/a&gt;&lt;/td&gt;
+&lt;td valign=">
+         Add ability to define artifact sets at the build process level
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        <a bottom"="" href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=134715" target="_blank&gt;RFE 134715&lt;/a&gt;&lt;/td&gt;
+&lt;td valign=">
+         UCBuild Notification event for build starts
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        <a bottom"="" href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=131495" target="_blank&gt;RFE 131495&lt;/a&gt;&lt;/td&gt;
+&lt;td valign=">
+         User interface enhancements to source Changes lists
+        </a>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="new_release_cont">
+    <div class="subtitle">
+     <strong>
+      Fixes
+     </strong>
+    </div>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH16417" target="_blank">
+         PH16417
+        </a>
+       </td>
+       <td valign="bottom">
+        Property values and definitions that are non-secure but have an encrypted value are decrypted
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH17999" target="_blank">
+         PH17999
+        </a>
+       </td>
+       <td valign="bottom">
+        Fixed recipient generators table has a number of issues
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH18675" target="_blank">
+         PH18675
+        </a>
+       </td>
+       <td valign="bottom">
+        UrbanCode Deploy plug-in version 48 ignores time out settings
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="new_release_cont">
+    <div class="subtitle">
+     <strong>
+      Additional fixes
+     </strong>
+    </div>
+    <ul>
+     <li>
+      Adding a job to a process template definition with "No Agent" setting yields exception
+     </li>
+     <li>
+      UCD plugin bug when parsing the list of properties in "Deploy Component Version" and "Deploy with Snapshot" steps (plugin update)
+     </li>
+     <li>
+      Pagination buttons in the agents tab has issues
+     </li>
+     <li>
+      Expanding a job trace in the build life dashboard jumps to the top of the page
+     </li>
+     <li>
+      Unable to restart a process only by having "Process Restart" permission
+     </li>
+     <li>
+      Broken download link for z/OS agent zip
+     </li>
+     <li>
+      Report data exported to CSV does not sanitize data
+     </li>
+     <li>
+      Non-secure property values and definitions with an encrypted value are decrypted
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <div class="subtitle">
+     <strong>
+      Improvements
+     </strong>
+    </div>
+    <ul>
+     <li>
+      Enhance user interface for the Current Activity page
+     </li>
+     <li>
+      Improve JobConfig and StepConfig json/model handling within the user interface
+     </li>
+     <li>
+      Update ActiveMQ jARs [multiple CVEs]
+     </li>
+     <li>
+      Docker plug-in enhancement
+     </li>
+     <li>
+      Collapse Env Vars/Additional Options by default in step edit page
+     </li>
+     <li>
+      Add versionName to the build information uploaded to Velocity (plugin update)
+     </li>
+     <li>
+      Add margin on top of filter area in current activity
+     </li>
+     <li>
+      Simplify container configuration by eliminating DB validation query
+     </li>
+     <li>
+      Migrate Agent Table front end away from YAHOO (YUI)
+     </li>
+     <li>
+      Minor README change for z/OS agent install
+     </li>
+     <li>
+      Use openjdk base layer for Docker images
+     </li>
+     <li>
+      Remove any unused references and simple substitutions for YAHOO.
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <div class="subtitle">
+     <strong>
+      Known issues
+     </strong>
+    </div>
+    <ul>
+     <li>
+      When using Internet Explorer version 11, the updated visual request context view fails to display. While at this time there are no fixes available, we are looking more into this issue.
+     </li>
+    </ul>
+   </div>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For supported platforms and requirements, see the reports that can be dynamically generated using the
+     <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener noreferrer" target="_blank">
+      Software Product Compatibility Reports (SPCR)
+     </a>
+     tool.
+    </p>
+    <p>
+     <strong>
+      Note:
+     </strong>
+     Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly, IBM UrbanCode Build is shipped with an Apache Derby database. Apache Derby is not supported for production environments. As you plan your production topology, review the product documentation.
+    </p>
+    <p>
+     IBM UrbanCode Build supports integrations with many different tools in the form of job steps. Each IBM UrbanCode Build plug-in is a separate download and installation available on our
+     <a href="https://developer.ibm.com/urbancode/plugins/ibm-urbancode-build/" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="key-features">
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, click the What’s New tab.
+    </p>
+    <strong>
+     Need updating
+    </strong>
+    <p>
+     To learn more about IBM UrbanCode Build, see the
+     <a href="https://www.ibm.com/support/knowledgecenter/SS8NMD" target="_blank">
+      documentation
+     </a>
+     .
+    </p>
+    <p>
+     For help installing or using IBM UrbanCode Build, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode" target="_blank">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     .
+    </p>
+    <p>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

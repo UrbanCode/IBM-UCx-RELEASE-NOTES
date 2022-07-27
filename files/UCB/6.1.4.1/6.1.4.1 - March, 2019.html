@@ -1,20 +1,336 @@
 <!DOCTYPE html>
-<html><head><title>6.1.4.1</title></head>
-<body>
-<p><b>This article was originaly published in 2019.03.01</b></p>
-<p><h1>6.1.4.1 - March, 2019</h1></p>
-<p><div class="new_release_cont">This release of UrbanCode Build is a maintenance release and contains a number of new features, feature enhancements and bug fixes. This release is recommended for all customers.</div>
-<div></div>
-<div class="new_release_cont">
-<div class="subtitle"><strong>Enhancements:</strong></div>
-<ul>
- 	<li>Support added for BitBucket repository push events. (<a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=127632">RFE 127632</a>)</li>
- 	<li>Eliminate redundant project list restore in back-end when viewing the list of Codestation projects.</li>
- 	<li>Error message displayed when creating a process template property that already exists on a process using the template.</li>
- 	<li>Improvements to the endpoints for updating build process properties.</li>
- 	<li>Added <strong>Fail on error</strong> checkbox to FileUtils plug-in’s <strong>Copy Directory</strong> step.</li>
- 	<li>Added the ability to dynamically trigger builds for different branches using the Git plugin.</li>
-</ul>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.4.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2019.03.01
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.4.1 - March, 2019
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of UrbanCode Build is a maintenance release and contains a number of new features, feature enhancements and bug fixes. This release is recommended for all customers.
+   </div>
+   <div>
+   </div>
+   <div class="new_release_cont">
+    <div class="subtitle">
+     <strong>
+      Enhancements:
+     </strong>
+    </div>
+    <ul>
+     <li>
+      Support added for BitBucket repository push events. (
+      <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=127632">
+       RFE 127632
+      </a>
+      )
+     </li>
+     <li>
+      Eliminate redundant project list restore in back-end when viewing the list of Codestation projects.
+     </li>
+     <li>
+      Error message displayed when creating a process template property that already exists on a process using the template.
+     </li>
+     <li>
+      Improvements to the endpoints for updating build process properties.
+     </li>
+     <li>
+      Added
+      <strong>
+       Fail on error
+      </strong>
+      checkbox to FileUtils plug-in’s
+      <strong>
+       Copy Directory
+      </strong>
+      step.
+     </li>
+     <li>
+      Added the ability to dynamically trigger builds for different branches using the Git plugin.
+     </li>
+    </ul>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     New Features and Enhancements
+    </li>
+    <li>
+     Recommended Fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started">
+     Getting Started
+    </a>
+    page.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     APARs
+    </div>
+    The following table list the APARs included in this release.
+    <div class="new_release_cont">
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH08420" rel="noopener" target="_blank">
+          PH08420
+         </a>
+        </td>
+        <td valign="bottom">
+         JSP compile error when the server’s installation directory contains space characters
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH06948" rel="noopener" target="_blank">
+          PH06948
+         </a>
+        </td>
+        <td valign="bottom">
+         Information radiator may fail due to large number of parameters when using MS SQL Server
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH07296" rel="noopener" target="_blank">
+          PH07296
+         </a>
+        </td>
+        <td valign="bottom">
+         NullPointerException in StepJSONRenderer#toJSON
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH07385" rel="noopener" target="_blank">
+          PH07385
+         </a>
+        </td>
+        <td valign="bottom">
+         Missing order-by clause in BuildConfigurationDaoSql
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH08494" rel="noopener" target="_blank">
+          PH08494
+         </a>
+        </td>
+        <td valign="bottom">
+         Missing horizontal scroll bar in process template’s definition tab
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH08498" rel="noopener" target="_blank">
+          PH08498
+         </a>
+        </td>
+        <td valign="bottom">
+         Inconsistent filtering behavior in templates tabs
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH08145" rel="noopener" target="_blank">
+          PH08145
+         </a>
+        </td>
+        <td valign="bottom">
+         Unable to save/modify the script of a scripted property at process level
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH09129" rel="noopener" target="_blank">
+          PH09129
+         </a>
+        </td>
+        <td valign="bottom">
+         Allowed values’ field of “Select” property type is converted to a single comma-delimited value
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH09137" rel="noopener" target="_blank">
+          PH09137
+         </a>
+        </td>
+        <td valign="bottom">
+         JUnit plugin’s report step may encounter “java.net.SocketTimeoutException: Read timed out”
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH07611" rel="noopener" target="_blank">
+          PH07611
+         </a>
+        </td>
+        <td valign="bottom">
+         Harvest plugin’s changelog step does not retrieve nested artifacts
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH08342" rel="noopener" target="_blank">
+          PH08342
+         </a>
+        </td>
+        <td valign="bottom">
+         Harvest plugin’s changelog parser does not account for empty data columns
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH08492" rel="noopener" target="_blank">
+          PH08492
+         </a>
+        </td>
+        <td valign="bottom">
+         Process template/process properties are missing drag handles in UI
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="new_release_cont">
+     <div>
+     </div>
+     <div class="subtitle">
+      <strong>
+       F
+      </strong>
+      <strong>
+       ixes:
+      </strong>
+     </div>
+     <ul>
+      <li>
+       Use correct type when creating job config template audit records.
+      </li>
+      <li>
+       Fix empty pre-condition column in the job template’s step table.
+      </li>
+      <li>
+       Fix job configuration’s pre-condition field bug in UI.
+      </li>
+      <li>
+       Fix an error during message processing that can lead to ignoring valid retries.
+      </li>
+      <li>
+       Fix property collision checks for source config templates.
+      </li>
+     </ul>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Plan &amp; Prepare
+    </h3>
+    For fixes contained in this release, and any known issues, review the
+    <a href="#release-notes">
+     release notes
+    </a>
+    .
+
+For supported platforms and requirements, see the
+    <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" rel="noopener" target="_blank">
+     system requirements
+    </a>
+    . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+
+To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+    <a href="http://pic.dhe.ibm.com/infocenter/ucdeploy/v6r0m1/index.jsp" rel="noopener" target="_blank">
+     installation guide
+    </a>
+    For advanced enterprise deployments that require high availability, review our options in the
+    <a href="http://pic.dhe.ibm.com/infocenter/ucdeploy/v6r0m1/index.jsp" rel="noopener" target="_blank">
+     information center.
+    </a>
+    IBM UrbanCode Deploy supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+    <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" rel="noopener" target="_blank">
+     plug-in page
+    </a>
+    .
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Install the server
+    </h3>
+    This release is available for download from Fix Central, requiring authentication. This download is
+    <a href="http://www.ibm.com/support/fixcentral/swg/quickorder?parent=ibm~Rational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=6.0.1.0&amp;platform=All&amp;function=all&amp;source=fc" rel="noopener" target="_blank">
+     available here.
+    </a>
+    Information for installing the server, see the
+    <a href="http://pic.dhe.ibm.com/infocenter/ucdeploy/v6r0m1/topic/com.ibm.udeploy.install.doc/topics/install_ch.html">
+     Installing servers and agents
+    </a>
+    section in the product documentation.
+
+For information on installing and managing licenses, see
+    <a href="http://pic.dhe.ibm.com/infocenter/ucdeploy/v6r0m1/topic/com.ibm.udeploy.install.doc/topics/licenseManage.html">
+     Managing licenses
+    </a>
+    <div class="horizontal-rule">
+    </div>
+    <h3 class="subtitle">
+     Learn
+    </h3>
+    To learn more about IBM UrbanCode Deploy, see the
+    <a href="http://pic.dhe.ibm.com/infocenter/ucdeploy/v6r0m1/index.jsp" rel="noopener" target="_blank">
+     documentation
+    </a>
+    For help installing or using IBM UrbanCode Deploy, contact
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+     support
+    </a>
+    To suggest an enhancement to the product, visit the
+    <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+     RFE Community
+    </a>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Get support
+    </h3>
+    For information from support, including FAQs, visit the
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+     IBM Support portal.
+    </a>
+    You can configure the support portal to view information about specific products.
+   </div>
+  </p>
+ </body>
 </html>

@@ -1,22 +1,289 @@
 <!DOCTYPE html>
-<html><head><title>2.2.3</title></head>
-<body>
-<p><b>This article was originaly published in 2021.02.05</b></p>
-<p><h1>2.2.3</h1></p>
-<p>This release of IBM UrbanCode Velocity is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+<html>
+ <head>
+  <title>
+   2.2.3
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2021.02.05
+   </b>
+  </p>
+  <p>
+   <h1>
+    2.2.3
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Velocity is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <h2>
+    Key Features and Enhancements
+   </h2>
+   <dl>
+    <dt>
+     User management enhancement
+    </dt>
+    <dd>
+     You are now able to delete LDAP and SSO users from the Users page. When deleted the user is removed from any groups or teams that the user is a member.
+    </dd>
+    <dt>
+     Enhancement to lead-time and cycle-time metrics
+    </dt>
+    <dd>
+     Different end stages for gathering lead-time and cycle-time metrics can now be specified.
+    </dd>
+    <dt>
+     Modify configuration enhancement
+    </dt>
+    <dd>
+     Prior to this release to modify a configuration, you must delete it and reconfigure. Now, an
+     <strong>
+      Edit Configuration
+     </strong>
+     action item is now available to add and remove environments.
+    </dd>
+    <dt>
+     Bug fixes
+    </dt>
+    <dd>
+     Custom metrics now support calculation of average and mean data. The setting
+     <code>
+      collapseMultipleDailyRuns
+     </code>
+     must be set to
+     <code>
+      true
+     </code>
+     .
+    </dd>
+   </dl>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Delete LDAP and SSO users
+    </li>
+    <li>
+     Modify configuration enhancement
+    </li>
+    <li>
+     Lead-time and cycle-time metric enhancement
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   The following table is a cumulative list of fixes in the 2.0.x version stream.
+   <table>
+    <tbody>
+     <!-- tr valign="top">
+<td valign="bottom" width="20%">PI99839</td>
+<td valign="bottom" width="80%"> </td>
+</tr -->
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99838
+      </td>
+      <td valign="bottom" width="80%">
+       Custom metrics need to support average and mean
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99819
+      </td>
+      <td valign="bottom" width="80%">
+       Velocity license checkout does not handle multiple RCL servers
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99829
+      </td>
+      <td valign="bottom" width="80%">
+       Support offline scenarios for GraphQL  Playground
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       Selecting versions for a deployment template picks the previous selected version
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99806
+      </td>
+      <td valign="bottom" width="80%">
+       Velocity 1.5.1 Upgrade could Prevent Access to Deployment Plans and Reports (Fixed with v1.5.2)
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99820
+      </td>
+      <td valign="bottom" width="80%">
+       Delete app option in release pipeline deletes all other apps
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99820
+      </td>
+      <td valign="bottom" width="80%">
+       Deployment template tasks get deleted when pipeline app is deleted
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99811
+      </td>
+      <td valign="bottom" width="80%">
+       Add initContainer to kube config so release-events-api is last to start
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99814
+      </td>
+      <td valign="bottom" width="80%">
+       Force lowercase for emails imported from UCD
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99817
+      </td>
+      <td valign="bottom" width="80%">
+       Can schedule or join a release on pipeline of Jenkins apps if any of the deploy stage app have not yet run cell
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99809
+      </td>
+      <td valign="bottom" width="80%">
+       Safely downgrade customers from CE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99805
+      </td>
+      <td valign="bottom" width="80%">
+       Fixed Jenkins plugin that could break Jenkins Server
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99803
+      </td>
+      <td valign="bottom" width="80%">
+       Fixes a performance issue that could occur when integrating with an UrbanCode Deploy version older than v7.0.5.1
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan and prepare
+   </h2>
+   For supported platforms and requirements you can dynamically
+generate a system requirements report using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <h2>
+    Install the server
+   </h2>
+   There are two option to obtaining the installation package: online installer and offline installer. Both options require a master license key, which can be acquired from
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    IBM Passport Advantage
+   </a>
+   .
+   <h2>
+    Online installer
+   </h2>
+   The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
 
-<h2>Key Features and Enhancements</h2>
-<dl>
-<dt>User management enhancement</dt>
-<dd>You are now able to delete LDAP and SSO users from the Users page. When deleted the user is removed from any groups or teams that the user is a member. 
-</dd>
-<dt>Enhancement to lead-time and cycle-time metrics</dt>
-<dd>Different end stages for gathering lead-time and cycle-time metrics can now be specified.
-</dd>
-<dt>Modify configuration enhancement</dt>
-<dd>Prior to this release to modify a configuration, you must delete it and reconfigure. Now, an <strong>Edit Configuration</strong> action item is now available to add and remove environments.</dd>
-<dt>Bug fixes</dt>
-<dd>Custom metrics now support calculation of average and mean data. The setting <code>collapseMultipleDailyRuns</code> must be set to <code>true</code>.</dd>
-</dl>
-</p></body>
+Download the online installer package depending on the platform, the product is being installed.
+   <ul>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-linux" rel="noopener" target="_blank">
+      Linux
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-macos" rel="noopener" target="_blank">
+      Mac OS
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+      Windows
+     </a>
+    </li>
+   </ul>
+   After the download completes, start the executable file to begin the install process.
+   <h2>
+    Offline installer
+   </h2>
+   Use the offline installer to install Velocity without internet connection. You will still need internet connection at some point to download the installer itself. Once downloaded, the installer will include all containers needed to successfully install the product. For this reason, the offline installer is larger than the online installer and will require more time/bandwidth and disk space when downloading.
+
+The installation package is available from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Velocity&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    IBM Fix Central
+   </a>
+   . Search and select the installation package appropriate for the installation platform.
+
+After downloading the installation package, decompress the contents into two directories: one for Kubernetes and the other for Docker Compose. See the
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.1.x/com.ibm.uvelocity.doc/topics/c_install_se_roadmap.html" target="_blank">
+    Installation
+   </a>
+   topics in the product documentation for instructions about how to install the server.
+
+A product license key is required to install the product. To obtain a key, you must agree to the terms and conditions provided on Passport Advantage.
+   <h2>
+    Learn
+   </h2>
+   To learn more about UrbanCode Velocity, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using UrbanCode Velocity, post your questions in the
+   <a href="https://community.ibm.com/community/user/middleware/communities/community-home?CommunityKey=9adfe6b6-2e23-4895-8b27-38b93b5e152c" rel="noopener" target="_blank">
+    UrbanCode forums
+   </a>
+   . Tag your question with
+   <strong>
+    velocity
+   </strong>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="https://www.ibm.com/developerworks/rfe/" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   <h2>
+    Get support
+   </h2>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

@@ -1,56 +1,642 @@
 <!DOCTYPE html>
-<html><head><title>6.1.1</title></head>
-<body>
-<p><b>This article was originaly published in 2014.12.01</b></p>
-<p><h1>6.1.1 - December, 2014</h1></p>
-<p><div class="new_release_cont">The 6.1.1.0 release of UrbanCode Deploy includes the following new features, as well as a significant number of stability and performance improvements.</div>
-<div class="new_release_cont">
-<h2>Compare &amp; synchronize between two parts of the resource tree<br/>
-</h2>
-<p>Users can now generate a side-by-side view comparing two parts of the resource tree, allowing them to quickly identify changes and additions and optionally select changes to copy from one part of the resource tree to another. These new capabilities extend the resource tree to make it an increasingly powerful configuration management tool.</p>
-<p><b>Getting Started:</b> Select the “Compare or Synchronize” action on any resource to show a side-by-side view of it and any other resource. All children and properties of the selected resources will be shown, and all differences are highlighted. From this view, changes can be copied from one resource to the other by simply checking the box for each change and applying the selected changes to the other set of resources.
-</p>
-</div>
-<div class="new_release_cont">
-<h2>Deployment impact analysis during approvals<br/>
-</h2>
-<p>While deciding whether to approve a deployment, users can now view a thorough list of configuration changes which will be made if the deployment executes, allowing decision-makers to quickly measure the risk, impact, and correctness of a deployment before they allow it to proceed.</p>
-<p><b>Getting Started:</b> While viewing an application process request which is awaiting approval, use the Configuration Changes tab to view all property values which have been added or changed since the last deployment, or the Inventory Changes tab to view a list of all components which will be updated on each resource in the environment.
-</p>
-</div>
-<div class="new_release_cont">
-<h2>Support for IBM Pure Application Systems 2.0<br/>
-</h2>
-<p>The built-in IBM cloud integration in UrbanCode Deploy now supports IBM Pure Application Systems 2.0, including the updated Virtual System Patterns included in that release.</p>
-<p><b>Getting Started:</b> On the Resource Templates page, set up a Cloud Connection to a Pure Application Systems 2.0 server. All patterns created in that server will be available for import and provisioning as Resource Templates in UrbanCode Deploy.
-</p>
-</div>
-<div class="new_release_cont">
-<h2>Support for deployments to IBM i<br/>
-</h2>
-<p>UrbanCode Deploy brings standardized, fully automated deployments to IBM i, allowing deployment activities on IBM i to be orchestrated along with processes executing on any other supported platform(s).</p>
-<p><b>Includes:</b></p>
-<ul>
-<li style="font-style: italic;">Ability to interact with the Integrated File System and deploy Java applications</li>
-<li style="font-style: italic;">Automate the execution of shell commands during deployments</li>
-<li style="font-style: italic;">Application deployment and configuration using the WebSphere Application Server plugin</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<h2>Improved z/OS deployment support<br/>
-</h2>
-<ul>
-<li style="font-style: italic;">The z/OS agent and deployment tools can be installed using System Modification Program/Extended (SMP/E). There’s also a new toolkit install script which simplifies the setup.</li>
-<li style="font-style: italic;">Job Monitor is included in UCD 6.1.1 for submitting and monitoring jobs. The Submit Job step is enhanced to support JCL parameter replacing.</li>
-<li style="font-style: italic;">Support custom properties on PDSs and members in a version</li>
-<li style="font-style: italic;">z/OS Utility plug-in includes a component template with default processes for deploying z/OS artifacts.</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<h2>Expanded multicultural support<br/>
-</h2>
-<p>UrbanCode Deploy now supports right-to-left text orientation, as well as dual-byte character sets on agent machines.
-</p>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2014.12.01
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.1 - December, 2014
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    The 6.1.1.0 release of UrbanCode Deploy includes the following new features, as well as a significant number of stability and performance improvements.
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Compare &amp; synchronize between two parts of the resource tree
+     <br/>
+    </h2>
+    <p>
+     Users can now generate a side-by-side view comparing two parts of the resource tree, allowing them to quickly identify changes and additions and optionally select changes to copy from one part of the resource tree to another. These new capabilities extend the resource tree to make it an increasingly powerful configuration management tool.
+    </p>
+    <p>
+     <b>
+      Getting Started:
+     </b>
+     Select the “Compare or Synchronize” action on any resource to show a side-by-side view of it and any other resource. All children and properties of the selected resources will be shown, and all differences are highlighted. From this view, changes can be copied from one resource to the other by simply checking the box for each change and applying the selected changes to the other set of resources.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Deployment impact analysis during approvals
+     <br/>
+    </h2>
+    <p>
+     While deciding whether to approve a deployment, users can now view a thorough list of configuration changes which will be made if the deployment executes, allowing decision-makers to quickly measure the risk, impact, and correctness of a deployment before they allow it to proceed.
+    </p>
+    <p>
+     <b>
+      Getting Started:
+     </b>
+     While viewing an application process request which is awaiting approval, use the Configuration Changes tab to view all property values which have been added or changed since the last deployment, or the Inventory Changes tab to view a list of all components which will be updated on each resource in the environment.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Support for IBM Pure Application Systems 2.0
+     <br/>
+    </h2>
+    <p>
+     The built-in IBM cloud integration in UrbanCode Deploy now supports IBM Pure Application Systems 2.0, including the updated Virtual System Patterns included in that release.
+    </p>
+    <p>
+     <b>
+      Getting Started:
+     </b>
+     On the Resource Templates page, set up a Cloud Connection to a Pure Application Systems 2.0 server. All patterns created in that server will be available for import and provisioning as Resource Templates in UrbanCode Deploy.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Support for deployments to IBM i
+     <br/>
+    </h2>
+    <p>
+     UrbanCode Deploy brings standardized, fully automated deployments to IBM i, allowing deployment activities on IBM i to be orchestrated along with processes executing on any other supported platform(s).
+    </p>
+    <p>
+     <b>
+      Includes:
+     </b>
+    </p>
+    <ul>
+     <li style="font-style: italic;">
+      Ability to interact with the Integrated File System and deploy Java applications
+     </li>
+     <li style="font-style: italic;">
+      Automate the execution of shell commands during deployments
+     </li>
+     <li style="font-style: italic;">
+      Application deployment and configuration using the WebSphere Application Server plugin
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Improved z/OS deployment support
+     <br/>
+    </h2>
+    <ul>
+     <li style="font-style: italic;">
+      The z/OS agent and deployment tools can be installed using System Modification Program/Extended (SMP/E). There’s also a new toolkit install script which simplifies the setup.
+     </li>
+     <li style="font-style: italic;">
+      Job Monitor is included in UCD 6.1.1 for submitting and monitoring jobs. The Submit Job step is enhanced to support JCL parameter replacing.
+     </li>
+     <li style="font-style: italic;">
+      Support custom properties on PDSs and members in a version
+     </li>
+     <li style="font-style: italic;">
+      z/OS Utility plug-in includes a component template with default processes for deploying z/OS artifacts.
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Expanded multicultural support
+     <br/>
+    </h2>
+    <p>
+     UrbanCode Deploy now supports right-to-left text orientation, as well as dual-byte character sets on agent machines.
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Compare &amp; synchronize between two parts of the resource tree
+    </li>
+    <li>
+     Improved z/OS deployment support
+    </li>
+    <li>
+     Expanded multicultural support
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     This release of UrbanCode Deploy contains new features, quality improvements, and updates to supported platforms, as described in the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+      system requirements
+     </a>
+    </p>
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="../getting-started">
+      Getting Started
+     </a>
+     page.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release, and any future fix packs can be found
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038759#601" target="_blank">
+      in this document
+     </a>
+     .
+    </p>
+    <table border="0" cellpadding="0" cellspacing="0" class="ibm-data-table ibm-alternate" rules="">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        APAR
+       </td>
+       <td valign="bottom" width="80%">
+        Description
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI09093" target="_blank">
+         PI09093
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        COMPONENT PROCESS FAILS IF PROPERTY CONTAINS JAPANESE CHARACTERS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI17468" target="_blank">
+         PI17468
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        COMPONENT TEMPLATE EDIT TAB PAGE IS SLOW TO LOAD
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI20093" target="_blank">
+         PI20093
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO DELETE RESOURCE TEMPLATES USING THE CLI
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI20525" target="_blank">
+         PI20525
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “CLI DOCUMENTATION SHOULD INCLUDE INSTRUCTIONS FOR MODIFYING .JSONS USED IN CLI COMMANDS”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI21802" target="_blank">
+         PI21802
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CAN’T MAP ENVIRONMENTS TO TEAM WHEN THEY HAVE THE SAME NAME
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI24093" target="_blank">
+         PI24093
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “PRECONDITION STATEMENT FAILS TO EVALUATE WHEN USING AN INSTALL MULTIPLE COMPONENTS STEP”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI24525" target="_blank">
+         PI24525
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UPDATES NEEDED FOR “AUTHENTICATING WITH A SESSION KEY” HELP
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI24540" target="_blank">
+         PI24540
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        POST-PROCESSING SCRIPT EXAMPLE IS INCORRECT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI24993" target="_blank">
+         PI24993
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        MISSING INFORMATION ABOUT JAVA_HOME
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI25937" target="_blank">
+         PI25937
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “AGENT CAN REPEATEDLY SEND JMS MESSAGES TO THE SERVER AFTER A PLUGIN STEP HAS COMPLETED RESULTING IN SACONTAINER ERRORS”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI26259" target="_blank">
+         PI26259
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        THE CLEARCASE UCM PLUGIN ALSO WORKS WITH BASE CLEARCASE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI26814" target="_blank">
+         PI26814
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        KNOWLEDGE CENTER REFERS TO ROLE INSTEAD OF TYPE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI26864" target="_blank">
+         PI26864
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UDCLIENT DOCUMENTATION DOES NOT MENTION PROXY OPTIONS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI26995" target="_blank">
+         PI26995
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “COMPONENT PROCESS PROPERTIES ARE NOT RESOLVED WHEN RUNNING A COMPONENT PROCESS INDEPENDENT OF AN APPLICATION PROESS”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI27377" target="_blank">
+         PI27377
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        MEMORY LEAK ERROR ON SERVER SHUTDOWN
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI27472" target="_blank">
+         PI27472
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “LASTMODIFIEDTIMESTAMP MISSING WHEN SHIPLIST USES FULL MEMBER NAME”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI27473" target="_blank">
+         PI27473
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “VERSION CREATION USING Z/OS URBANCODE TOOLKIT FAILED WHEN USER SPECIFIES THE FULL MEMBER NAME”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI27723" target="_blank">
+         PI27723
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “CANNOT USE PROCESS DESIGN PALETTE AFTER DELETING COMPONENT FROM COPIED STEP”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI27727" target="_blank">
+         PI27727
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        IMPORT GROUP DOCUMENTATION IS INCONSISTENT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI27758" target="_blank">
+         PI27758
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        GETTING NOT MAPPED WHEN EXECUTING APPLICATION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI28758" target="_blank">
+         PI28758
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        INCORRECT CONTENT TYPE ON 404 WHEN APPLICATION DOES NOT EXIST
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI28799" target="_blank">
+         PI28799
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        COMPONENT RESOURCE PROPERTIES NOT EXPORTED OR IMPORTED
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI28833" target="_blank">
+         PI28833
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DELETED USERS CAUSE NPES IN 4.8.4
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI28902" target="_blank">
+         PI28902
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ESCAPE CHARACTERS IN PROPERTY SHEET CAUSE LOADING ERROR
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI28943" target="_blank">
+         PI28943
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “REST API DOWNLOADARTIFACTS DOES NOT HANDLE DBCS CHARACTERS CORRECTLY”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI29050" target="_blank">
+         PI29050
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        WAS USER PASSWORD DISPLAYED IN LOG FILE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI29066" target="_blank">
+         PI29066
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “JIRA PLUG-IN: CHECK STATUS STEP FAILS WITH ERROR “ASSERTION FAILED””
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI29094" target="_blank">
+         PI29094
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “ORACLE SQL *PLUS PLUG-IN DOES NOT HANDLE WILDCARDS IN FILE NAMES CORRECTLY”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI29513" target="_blank">
+         PI29513
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “A USER MAY SEE AN ERROR RELATED TO READ ACCESS TO A COMPONENT OR TEMPLATE WHEN REQUESTING AN APPLICATION PROCESS”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI29648" target="_blank">
+         PI29648
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “EMAIL NOTIFICATION FAILS TO SEND WITH NULL POINTER EXCEPTION IN THE LOGS”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI30178" target="_blank">
+         PI30178
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DOCUMENTATION REFERS TO INACTIVE AGENTS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI28766" target="_blank">
+         PI28766
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        IMPORT PROPERTIES STEP DOES NOT WORK
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI30262" target="_blank">
+         PI30262
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “DOCUMENTATION INCORRECTLY STATES STORAGE LOCATION FOR AGENT RESOURCE INVENTORY”
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+   </div>
+   <p>
+    To search for additional post-release issues that IBM Rational Support documented, visit the
+    <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+     IBM Support portal.
+    </a>
+   </p>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=installing" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     For advanced enterprise deployments that require high availability, review our options in the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.1" target="_blank">
+      information center.
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Deploy supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+     <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release is available for download for Passport Advantage and Passport Advantage Express clients, requiring authentication. This download is
+     <a href="https://www-112.ibm.com/software/howtobuy/softwareandservices/passportadvantage" target="_blank">
+      available here.
+     </a>
+    </p>
+    <p>
+     Information for installing the server, see the
+     <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=installing">
+      Installing servers and agents
+     </a>
+     section in the product documentation.
+    </p>
+    <p>
+     For information on installing and managing licenses, see
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.1/com.ibm.udeploy.install.doc/topics/licenseManage.html">
+      Managing licenses
+     </a>
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="..">
+      What’s New
+     </a>
+    </p>
+    <p>
+     To learn more about IBM UrbanCode Deploy, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.1" target="_blank">
+      documentation
+     </a>
+    </p>
+    <p>
+     For help installing or using IBM UrbanCode Deploy, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+    </p>
+    <p>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

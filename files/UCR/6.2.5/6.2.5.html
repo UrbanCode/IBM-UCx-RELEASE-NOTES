@@ -1,20 +1,170 @@
 <!DOCTYPE html>
-<html><head><title>6.2.5</title></head>
-<body>
-<p><b>This article was originaly published in 2020.09.29</b></p>
-<p><h1>6.2.5</h1></p>
-<p>This release of IBM UrbanCode Release is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+<html>
+ <head>
+  <title>
+   6.2.5
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2020.09.29
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.5
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Release is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <h3>
+    Mark a release as complete
+   </h3>
+   The status of a release can be changed to complete when all deployments are complete or when no deployments are associated with the release. By marking the release complete, no further actions can be performed on it. All release and deployment related operations are disabled for the release.
 
-<h3>Mark a release as complete</h3>
-The status of a release can be changed to complete when all deployments are complete or when no deployments are associated with the release. By marking the release complete, no further actions can be performed on it. All release and deployment related operations are disabled for the release.
+This feature requires that the
+   <strong>
+    Release Completion
+   </strong>
+   permission be assigned. By default, this permission is assigned to the Release Manager role.
+   <img alt="" class="alignnone size-full wp-image-1005505" height="254" src="releasecomplete.png" width="881"/>
+   <h3>
+    Support added for Security Assertion Markup Language (SAML) SSO connection
+   </h3>
+   <p>
+    You can now connect the UrbanCode Release server using a SAML SSO connection. SAML version 2.0 or later is supported.
+   </p>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Mark a release as complete
+    </li>
+    <li>
+     SAML SSO connection supported
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   For information on documentation and support resources, software and hardware requirements and installation steps, click the
+   <strong>
+    Getting Started
+   </strong>
+   tab.
+   <h3>
+    Fixes in this Release
+   </h3>
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="990">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH29507" rel="noopener noreferrer" target="_blank">
+        PH29507
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       When a segment has no tasks or tasks are marked as NA, message "TIMING IS BEING CALCULATED" is always displayed.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH27948" rel="noopener noreferrer" target="_blank">
+        PH27948
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       Fix the Unexpected end of ZLIB input stream and Jira Project IDs issue fetching from different project issue
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH29221" rel="noopener noreferrer" target="_blank">
+        PH29221
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       Derby Db failing on 6.2.4.1 upgrade
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH29222" rel="noopener noreferrer" target="_blank">
+        PH29222
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       JIRA UCR plugin OOM issue
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h3>
+    Install the server
+   </h3>
+   This release is available for download from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=all&amp;source=fc" rel="noopener" target="_blank">
+    Fix Central
+   </a>
+   and
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    Passport Advantage
+   </a>
+   , requiring authentication.
+   <!-- This download is <a href="http://www-933.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&product=ibm/Rational/UrbanCode+Release&release=All&platform=All&function=fixId&fixids=6.2.5-UrbanCode-Release&includeRequisites=1&includeSupersedes=0&downloadMethod=http">available here.</a -->
+   Information for installing the server, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.5/com.ibm.urelease.doc/topics/install_ov.html" rel="noopener" target="_blank">
+    Installing server
+   </a>
+   section in the product documentation.
 
-This feature requires that the <strong>Release Completion</strong> permission be assigned. By default, this permission is assigned to the Release Manager role.
+For information on installing licenses, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SS4GCC_6.2.5/com.ibm.urelease.doc/topics/licenseManage.html" rel="noopener" target="_blank">
+    Managing Licenses
+   </a>
+   .
+   <h3>
+    Learn
+   </h3>
+   To learn more about new enhancements in this release, click What’s New..
 
-<img src="releasecomplete.png" alt="" width="881" height="254" class="alignnone size-full wp-image-1005505" />
+To learn more about IBM UrbanCode Release, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.5/com.ibm.urelease.doc/ucr_version_welcome.html" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
 
-<h3>Support added for Security Assertion Markup Language (SAML) SSO connection</h3>
-<p>
-You can now connect the UrbanCode Release server using a SAML SSO connection. SAML version 2.0 or later is supported.
-</p>
-</p></body>
+For help installing or using IBM UrbanCode Release, post your questions in the
+   <a href="https://developer.ibm.com/answers?community=urbancode" rel="noopener" target="_blank">
+    forums
+   </a>
+   or contact
+   <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+    support
+   </a>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   .
+   <h3>
+    Get support
+   </h3>
+   For information from support, including FAQs, visit the
+   <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

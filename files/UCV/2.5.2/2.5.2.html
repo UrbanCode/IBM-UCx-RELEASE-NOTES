@@ -1,27 +1,520 @@
 <!DOCTYPE html>
-<html><head><title>2.5.2</title></head>
-<body>
-<p><b>This article was originaly published in 2022.01.10</b></p>
-<p><h1>2.5.2</h1></p>
-<p>This release of IBM UrbanCode Velocity is a maintenance release and includes bug fixes. This release is recommended for all customers.
-<h4>Pipelines</h4>
-On the <b>Pipeline</b> page, when you click the overflow menu on any environment except <b>Input</b>, you can select <b>Override Inventory</b> to manually modify and update a pipeline.
-<h4>Releases</h4>
-On the <b>Releases</b> page, an overall performance improvement is achieved for page loading. Functionally, the dialog box below the calendar now lists only events versus releases and events.
-<h4>Roles</h4>
-General performance improvements across the entire product.
-<h4>Passwords</h4>
-Regardless of the global permissions assigned to a user, you can modify your own password for the following conditions:
-<ul>
- 	<li>Your <b>User type</b> is <b>Local</b>.</li>
- 	<li>Click <b>Settings &gt; </b><b>Authorization &gt; </b><b>Users</b> and then click the overflow menu and select <b>Change password</b>.</li>
-</ul>
-<h4>Security</h4>
-Corrected the security issues including the following:
-<ul>
- 	<li>Fixed various security vulnerabilities prior to IBM UrbanCode Velocity version 2.5.2.</li>
- 	<li>Resolved <a tabindex="-1" title="https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2021-45105" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45105" target="_blank" rel="noopener noreferrer" aria-label="Link CVE-2021-45105">CVE-2021-45105</a>, <a tabindex="-1" title="https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2021-45046" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046" target="_blank" rel="noopener noreferrer" aria-label="Link CVE-2021-45046">CVE-2021-45046</a>, and <a tabindex="-1" title="https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2021-44228" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228" target="_blank" rel="noopener noreferrer" aria-label="Link CVE-2021-44228">CVE-2021-44228</a> log4j security vulnerabilities.</li>
-</ul>
-&nbsp;
-</p></body>
+<html>
+ <head>
+  <title>
+   2.5.2
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2022.01.10
+   </b>
+  </p>
+  <p>
+   <h1>
+    2.5.2
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Velocity is a maintenance release and includes bug fixes. This release is recommended for all customers.
+   <h4>
+    Pipelines
+   </h4>
+   On the
+   <b>
+    Pipeline
+   </b>
+   page, when you click the overflow menu on any environment except
+   <b>
+    Input
+   </b>
+   , you can select
+   <b>
+    Override Inventory
+   </b>
+   to manually modify and update a pipeline.
+   <h4>
+    Releases
+   </h4>
+   On the
+   <b>
+    Releases
+   </b>
+   page, an overall performance improvement is achieved for page loading. Functionally, the dialog box below the calendar now lists only events versus releases and events.
+   <h4>
+    Roles
+   </h4>
+   General performance improvements across the entire product.
+   <h4>
+    Passwords
+   </h4>
+   Regardless of the global permissions assigned to a user, you can modify your own password for the following conditions:
+   <ul>
+    <li>
+     Your
+     <b>
+      User type
+     </b>
+     is
+     <b>
+      Local
+     </b>
+     .
+    </li>
+    <li>
+     Click
+     <b>
+      Settings &gt;
+     </b>
+     <b>
+      Authorization &gt;
+     </b>
+     <b>
+      Users
+     </b>
+     and then click the overflow menu and select
+     <b>
+      Change password
+     </b>
+     .
+    </li>
+   </ul>
+   <h4>
+    Security
+   </h4>
+   Corrected the security issues including the following:
+   <ul>
+    <li>
+     Fixed various security vulnerabilities prior to IBM UrbanCode Velocity version 2.5.2.
+    </li>
+    <li>
+     Resolved
+     <a aria-label="Link CVE-2021-45105" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45105" rel="noopener noreferrer" tabindex="-1" target="_blank" title="https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2021-45105">
+      CVE-2021-45105
+     </a>
+     ,
+     <a aria-label="Link CVE-2021-45046" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046" rel="noopener noreferrer" tabindex="-1" target="_blank" title="https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2021-45046">
+      CVE-2021-45046
+     </a>
+     , and
+     <a aria-label="Link CVE-2021-44228" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228" rel="noopener noreferrer" tabindex="-1" target="_blank" title="https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2021-44228">
+      CVE-2021-44228
+     </a>
+     log4j security vulnerabilities.
+    </li>
+   </ul>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Pipelines
+    </li>
+    <li>
+     Releases
+    </li>
+    <li>
+     Roles
+    </li>
+    <li>
+     Passwords
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <!-- A cumulative list of fixes in this release, and any future fix packs can be found in the <a href="https://www.urbancode.com/whats-new/velocity-fixlist/" target="_blank" rel="noopener">Fixlist</a> document. -->
+   The following table is a cumulative list of fixes in the 2.5.2 version.
+   <table>
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <b>
+        Value streams
+       </b>
+       page, if there is a back end query running for 60 seconds that does not return to the front end no longer monitoring for a response, the VSM page does not crash and display the
+       <b>
+        There was a problem loading this workflow. The system is experiencing a problem right now. Try again later.
+       </b>
+       message.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <b>
+        Pipeline
+       </b>
+       page, when you perform the following:
+       <ul>
+        <li>
+         Click
+         <b>
+          Add application
+         </b>
+         and add a Jenkins integration with a long
+         <b>
+          Application name
+         </b>
+         .
+        </li>
+        <li>
+         On the Jenkins app for the
+         <b>
+          Input
+         </b>
+         environment, click the overflow menu and select
+         <b>
+          Create version
+         </b>
+         .
+        </li>
+        <li>
+         In the
+         <b>
+          Create version
+         </b>
+         window, resolved UI positioning errors of the application and job selection screens on the pipeline.
+        </li>
+       </ul>
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <b>
+        Pipeline
+       </b>
+       page, when you perform the following:
+       <ul>
+        <li>
+         With exception to the
+         <b>
+          Input
+         </b>
+         environment, click the required release link under an environment in the pipeline.
+        </li>
+        <li>
+         The deployment plan detail page opens.
+        </li>
+        <li>
+         Resolved issues where Jenkins tasks were restarting due to parallelization of prior tasks.
+        </li>
+       </ul>
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <b>
+        Pipeline
+       </b>
+       page, improved performance for initial loading of pipeline page.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <b>
+        Pipeline
+       </b>
+       page, on any environment except
+       <b>
+        Input
+       </b>
+       , when you click the overflow menu and select
+       <b>
+        Override Inventory
+       </b>
+       , this function is operating properly without the page crashing.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <b>
+        Releases
+       </b>
+       page, when you perform the following:
+       <ul>
+        <li>
+         In the
+         <b>
+          Release activities
+         </b>
+         table, click on a release.
+        </li>
+        <li>
+         For the required deployment plan, click the overflow menu and select
+         <b>
+          Edit this plan
+         </b>
+         .
+        </li>
+        <li>
+         In the
+         <b>
+          Edit deployment plan
+         </b>
+         window, when you click the
+         <b>
+          Team
+         </b>
+         drop-down, the field is populated correctly with the associated teams.
+        </li>
+       </ul>
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <b>
+        Releases
+       </b>
+       page, when you perform the following:
+       <ul>
+        <li>
+         In the
+         <b>
+          Release activities
+         </b>
+         table, click on a release.
+        </li>
+        <li>
+         Click the
+         <b>
+          Create deployment plan
+         </b>
+         button and create and save a deployment.
+        </li>
+        <li>
+         Click the deployment plan created in the previous step.
+        </li>
+        <li>
+         Click the
+         <b>
+          Create task
+         </b>
+         button and create several Jenkins tasks.
+        </li>
+        <li>
+         Schedule deployment in five minutes.
+        </li>
+        <li>
+         For the created deployment plan containing the Jenkins tasks, click the
+         <b>
+          Complete task
+         </b>
+         ,
+         <b>
+          Fail task
+         </b>
+         , and
+         <b>
+          Skip task
+         </b>
+         icons to confirm the aforementioned states. When the
+         <b>
+          START TIME
+         </b>
+         occurs, it is ignored because the deployment plan is in progress.
+        </li>
+       </ul>
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       When you click
+       <b>
+        Settings &gt;
+       </b>
+       <b>
+        Authorization &gt;
+       </b>
+       <b>
+        Teams
+       </b>
+       and perform the following:
+       <ul>
+        <li>
+         Select a team containing more than 25 members.
+        </li>
+        <li>
+         In the
+         <b>
+          Items per page
+         </b>
+         drop-down, select
+         <b>
+          100
+         </b>
+         .
+        </li>
+        <li>
+         Click the overflow menu and select
+         <b>
+          Assign roles
+         </b>
+         .
+        </li>
+        <li>
+         In the
+         <b>
+          Edit member
+         </b>
+         window select a
+         <b>
+          Role
+         </b>
+         and click
+         <b>
+          Save
+         </b>
+         . After saving, the page size correctly reverts to 100 items per page.
+        </li>
+       </ul>
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       When you click
+       <strong>
+        Settings &gt; Calendar
+       </strong>
+       , the Calendar page works correctly.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       Fixed various console errors including property types, missing
+       <code>
+        typename
+       </code>
+       , and treatment of English as a non-default language.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan and prepare
+   </h2>
+   For supported platforms and requirements you can dynamically generate a system requirements report using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <h2>
+    Install the server
+   </h2>
+   There are two option to obtaining the installation package: online installer and offline installer. Both options require a master license key, which can be acquired from
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    IBM Passport Advantage
+   </a>
+   .
+   <h2>
+    Online installer
+   </h2>
+   The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
+
+Download the online installer package depending on the platform, the product is being installed.
+   <ul>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-linux" rel="noopener" target="_blank">
+      Linux
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-macos" rel="noopener" target="_blank">
+      Mac OS
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+      Windows
+     </a>
+    </li>
+   </ul>
+   After the download completes, start the executable file to begin the install process.
+   <h2>
+    Offline installer
+   </h2>
+   Use the offline installer to install Velocity without internet connection. You will still need internet connection at some point to download the installer itself. Once downloaded, the installer will include all containers needed to successfully install the product. For this reason, the offline installer is larger than the online installer and will require more time/bandwidth and disk space when downloading.
+
+The installation package is available from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Velocity&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    IBM Fix Central
+   </a>
+   . Search and select the installation package appropriate for the installation platform.
+
+After downloading the installation package, decompress the contents into two directories: one for Kubernetes and the other for Docker Compose. See the
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.3.x/com.ibm.uvelocity.doc/topics/c_install_se_roadmap.html" rel="noopener" target="_blank">
+    documentation section on installation
+   </a>
+   for instructions about how to install the server.
+
+A product license key is required to install the product. To obtain a key, you must agree to the terms and conditions provided on Passport Advantage.
+   <h2>
+    Learn
+   </h2>
+   To learn more about UrbanCode Velocity, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using UrbanCode Velocity, post your questions in the
+   <a href="https://community.ibm.com/community/user/middleware/communities/community-home?CommunityKey=9adfe6b6-2e23-4895-8b27-38b93b5e152c" rel="noopener" target="_blank">
+    UrbanCode forums
+   </a>
+   . Tag your question with
+   <strong>
+    velocity
+   </strong>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="https://www.ibm.com/developerworks/rfe/" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   <h2>
+    Get support
+   </h2>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

@@ -1,26 +1,384 @@
 <!DOCTYPE html>
-<html><head><title>6.1.0.1</title></head>
-<body>
-<p><b>This article was originaly published in 2014.06.26</b></p>
-<p><h1>6.1.0.1 - June 26, 2014</h1></p>
-<p><div class="new_release_cont">This release of IBM UrbanCode Deploy is a maintenance release and includes the following features as well as various bug fixes and performance enhancements. This release is recommended for all customers.</div>
-<div class="new_release_cont">
-<h2>UrbanCode Deploy with Patterns Support<br/>
-</h2>
-<p>Version 6.1.0.1 includes a built-in integration with the pattern designer for UrbanCode Deploy with Patterns, so that users in the core UrbanCode Deploy product can request new environments to be provisioned through the pattern designer directly from the application environment list.
-</p>
-</div>
-<div class="new_release_cont">
-<h2>Enhanced snapshot locking control<br/>
-</h2>
-<p>Environments can be configured to specifically lock either snapshot versions or snapshot configuration, or both, when snapshots are deployed to the environment. In addition, users can now manually lock snapshots so that they cannot be changed in the future, and there are new CLI calls available to initiate this.
-</p>
-</div>
-<div class="new_release_cont">
-<h2>Agent backwards compatibility and enhanced status tracking<br/>
-</h2>
-<p>Unlike version 6.1.0.0, version 6.1.0.1 can continue to use pre-6.x agents, all the way back to agents from version 4.8.5. In addition, agents which should be upgraded are indicated as such in the UI, with a new indicator to show the minimum required and recommended agent versions.
-</p>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.0.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2014.06.26
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.0.1 - June 26, 2014
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Deploy is a maintenance release and includes the following features as well as various bug fixes and performance enhancements. This release is recommended for all customers.
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     UrbanCode Deploy with Patterns Support
+     <br/>
+    </h2>
+    <p>
+     Version 6.1.0.1 includes a built-in integration with the pattern designer for UrbanCode Deploy with Patterns, so that users in the core UrbanCode Deploy product can request new environments to be provisioned through the pattern designer directly from the application environment list.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Enhanced snapshot locking control
+     <br/>
+    </h2>
+    <p>
+     Environments can be configured to specifically lock either snapshot versions or snapshot configuration, or both, when snapshots are deployed to the environment. In addition, users can now manually lock snapshots so that they cannot be changed in the future, and there are new CLI calls available to initiate this.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Agent backwards compatibility and enhanced status tracking
+     <br/>
+    </h2>
+    <p>
+     Unlike version 6.1.0.0, version 6.1.0.1 can continue to use pre-6.x agents, all the way back to agents from version 4.8.5. In addition, agents which should be upgraded are indicated as such in the UI, with a new indicator to show the minimum required and recommended agent versions.
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     UrbanCode Deploy with Patterns integration
+    </li>
+    <li>
+     Manual snapshot locking
+    </li>
+    <li>
+     Recommended fixes for UrbanCode Deploy 6.1
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="../getting-started">
+      Getting Started
+     </a>
+     page.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     There are no behavioral changes in this release.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release, and any future fix packs can be found
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038759" target="_blank">
+      in this document
+     </a>
+     .
+    </p>
+    <table border="0" class="ibm-data-table ibm-alternate" role="presentation" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        APAR
+       </td>
+       <td valign="bottom" width="80%">
+        Description
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI13693" target="_blank">
+         PI13693
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        THE INVENTORY FOR COMPONENTS IS	SHOWING DELETED OLD ENVIRONMENTS AS ACTIVE.
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI15157" target="_blank">
+         PI15157
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ADD RESOURCE TO ENVIRONMENT PANEL HAS 2 VERTICAL SCROLL BARS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI15734" target="_blank">
+         PI15734
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        THE “CURRENTLY DEPLOYED VERSIONS” COLUMN IN COMPONENT VERSION PANEL CAN CREATE CONFUSION FOR USERS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI17649" target="_blank">
+         PI17649
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DATES IN REVERSE ORDER.
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI17869" target="_blank">
+         PI17869
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        AGENTS ARE NOT MARKED AS ONLINE UNTIL THE RELAY IS RESTARTED
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI18115" target="_blank">
+         PI18115
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        AGENT STAYS IN CONNECTED STATE DUE TO CLASSPATH ISSUE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI18648" target="_blank">
+         PI18648
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CAN’T DELETE TEAM MAPPINGS OF OBJECTS WHOSE TYPE HAS BEEN SWITCHED
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI19268" target="_blank">
+         PI19268
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        LOG LEVEL ALWAYS AT INFO
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI19546" target="_blank">
+         PI19546
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        IMPORT VERSION WITH TEMPLATE GIVES “ERROR CREATING NEW VERSION: NULL”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI19553" target="_blank">
+         PI19553
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        USER INTERFACE BUG WHILE CREATING AN APPLICATION PROPERTY BY EDITING THE BATCH SCRIPT IN URBANCODE DEPLOY 6.0.1.4 IFIX1
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI19734" target="_blank">
+         PI19734
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CANNOT DELETE TEAMS FROM SETTINGS &gt; TEAMS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI19966" target="_blank">
+         PI19966
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        JAVA.LANG.RUNTIMEEXCEPTION: NO HELPER FOUND FOR ELEMENT NAME #COMMENT WHEN TRYING TO SUBMIT APPLICATION PROCESS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI20154" target="_blank">
+         PI20154
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SELECTING SAVE BEFORE COMPONENT -&gt; EDIT PAGE FINISHES LOADING CAUSES DATA LOSS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI20256" target="_blank">
+         PI20256
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ITERATION PROPERTIES FROM THE “RUN FOR EACH AGENT” STEP ARE NOT RESOLVED WHEN USING RUN GENERIC PROCESS STEP.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+   </div>
+   <p>
+    To search for additional post-release issues that IBM Rational Support documented, visit the
+    <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+     IBM Support portal.
+    </a>
+   </p>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=installing" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     For advanced enterprise deployments that require high availability, review our options in the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.0" target="_blank">
+      information center.
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Deploy supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+     <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release is available for download from Fix Central, requiring authentication. This download is
+     <a href="http://www.ibm.com/support/fixcentral/swg/quickorder?parent=ibm~Rational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=6.1.0.0&amp;platform=All&amp;function=all&amp;source=fc" target="_blank">
+      available here.
+     </a>
+    </p>
+    <p>
+     Information for installing the server, see the
+     <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=installing">
+      Installing servers and agents
+     </a>
+     section in the product documentation.
+    </p>
+    <p>
+     For information on installing and managing licenses, see
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.0/com.ibm.udeploy.install.doc/topics/licenseManage.html">
+      Managing licenses
+     </a>
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="..">
+      What’s New
+     </a>
+    </p>
+    <p>
+     To learn more about IBM UrbanCode Deploy, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.0" target="_blank">
+      documentation
+     </a>
+    </p>
+    <p>
+     For help installing or using IBM UrbanCode Deploy, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+    </p>
+    <p>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

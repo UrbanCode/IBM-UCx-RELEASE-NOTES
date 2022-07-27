@@ -1,26 +1,214 @@
 <!DOCTYPE html>
-<html><head><title>6.1.6.2</title></head>
-<body>
-<p><b>This article was originaly published in 2020.06.16</b></p>
-<p><h1>6.1.6.2</h1></p>
-<p>This release of IBM UrbanCode Build is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
-
-<h3>Build-life dependency graph</h3>​
+<html>
+ <head>
+  <title>
+   6.1.6.2
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2020.06.16
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.6.2
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Build is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <h3>
+    Build-life dependency graph
+   </h3>
+   ​
 A new graph displays a visual representation of build-life dependencies.
-
-<h3>Performance improvements​</h3>
-Optimization improvements has been incorporated for faster loading of templates and other user interface pages.
-
-<h3>Utilities plug-in updates​</h3>
-A step has been added to the UrbanCode Build Utilities plug-in for sending HTTP requests.​
-
-<h3>User interface enhancements</h3>
-<ul>
-	<li>The Users table on the Teams page can now be sorted.</li>
-	<li>Updated the codestation project Versions table to include an in-use column​</li>
-	<li><strong>Close</strong> button added to Visual Request Context​ page</li>
-	<li>The Process dashboard user interface has been redesigned​</li>
-	<li>Added sorting support for Users page under Teams.​</li>
-</ul>
-</p></body>
+   <h3>
+    Performance improvements​
+   </h3>
+   Optimization improvements has been incorporated for faster loading of templates and other user interface pages.
+   <h3>
+    Utilities plug-in updates​
+   </h3>
+   A step has been added to the UrbanCode Build Utilities plug-in for sending HTTP requests.​
+   <h3>
+    User interface enhancements
+   </h3>
+   <ul>
+    <li>
+     The Users table on the Teams page can now be sorted.
+    </li>
+    <li>
+     Updated the codestation project Versions table to include an in-use column​
+    </li>
+    <li>
+     <strong>
+      Close
+     </strong>
+     button added to Visual Request Context​ page
+    </li>
+    <li>
+     The Process dashboard user interface has been redesigned​
+    </li>
+    <li>
+     Added sorting support for Users page under Teams.​
+    </li>
+   </ul>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     New Build-life dependency graph
+    </li>
+    <li>
+     Optimization improvements for faster loading of user interface pages
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   For information on documentation and support resources, software and hardware requirements and installation steps, click the
+   <strong>
+    Getting Started
+   </strong>
+   tab.
+   <h3>
+    New features and enhancements
+   </h3>
+   <ul>
+    <li>
+     Added support for multi-select option to copy multiple properties (RFE 130441)
+    </li>
+    <li>
+     Improved performance on Recent Activity page of build process (RFE 124813)
+    </li>
+    <li>
+     Added support for deleting LDAP user groups that are synced with LDAP.​
+    </li>
+    <li>
+     Added ability to show dependency conflicts to dependency graph view​
+    </li>
+    Fixes​
+    <h3>
+     Fixes
+    </h3>
+    <table border="0" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH25510" target="_blank">
+         PH25510
+        </a>
+       </td>
+       <td valign="bottom">
+        Process copy does not include a new process level artifact configuration​
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH25959" target="_blank">
+         PH25959
+        </a>
+       </td>
+       <td valign="bottom">
+        The user of system team with Admin role is unable to create resources for other teams​
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h3>
+     Additional fixes
+    </h3>
+    <ul>
+     <li>
+      Added support in Process template page to fetch the work directory based on agent selection​
+     </li>
+     <li>
+      Fixed the cleanup step type creation issue​
+     </li>
+     <li>
+      Fixed the issue with the users having create templates permission can also edit the templates.​
+     </li>
+     <li>
+      Removed the ability to disabled super-users using the REST API
+     </li>
+    </ul>
+    ​
+    <h2>
+     Getting Started
+    </h2>
+    <br/>
+    <h2>
+     Plan and Prepare
+    </h2>
+    For supported platforms and requirements, see the reports that can be dynamically generated using the
+    <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener noreferrer" target="_blank">
+     Software Product Compatibility Reports (SPCR)
+    </a>
+    tool.
+    <strong>
+     Note:
+    </strong>
+    Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    <p>
+     To get started quickly, IBM UrbanCode Build is shipped with an Apache Derby database. Apache Derby is not supported for production environments. As you plan your production topology, review the product documentation.
+    </p>
+    <p>
+     IBM UrbanCode Build supports integrations with many different tools in the form of job steps. Each IBM UrbanCode Build plug-in is a separate download and installation available on our
+     <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+    <h3>
+     Learn
+    </h3>
+    <p>
+     To learn more about new enhancements in this release, click the
+     <strong>
+      What’s New
+     </strong>
+     tab.
+    </p>
+    <p>
+     To learn more about IBM UrbanCode Build, see the product
+     <a href="https://www.ibm.com/support/knowledgecenter/SS8NMD" target="_blank">
+      documentation
+     </a>
+     .
+    </p>
+    <p>
+     For help installing or using IBM UrbanCode Build, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode" target="_blank">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     .
+    </p>
+    <p>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+     .
+    </p>
+    <h3>
+     Get support
+    </h3>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </ul>
+  </p>
+ </body>
 </html>

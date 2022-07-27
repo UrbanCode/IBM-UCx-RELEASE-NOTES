@@ -1,30 +1,423 @@
 <!DOCTYPE html>
-<html><head><title>6.1.1.5</title></head>
-<body>
-<p><b>This article was originaly published in 2015.05.11</b></p>
-<p><h1>6.1.1.5 - May 11, 2015</h1></p>
-<p><div class="new_release_cont">This release of IBM UrbanCode Release is a maintenance release containing <a href="./release-notes/">bug fixes</a>.</div>
-<div class="new_release_cont">
-<h2>New IBM UrbanCode Deploy Plugin</h2>
-<ul>
-<li>The built-in UCD integration has been converted into a plugin.</li>
-<li>The plugin has significantly better performance than the integration due to having the capability to perform a delta-sync rather than a full import on each sync.</li>
-<li>We encourage existing customers to set their old integration to “Manual Update” then import the plugin and set it to run once a minute.</li>
-<li>The plugin requires IBM UrbanCode Deploy version 6.1.1.4 and above. A patch is available for IBM UrbanCode Deploy 6.1.1.3 as well.</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<h2>Group Assignment</h2>
-<ul>
-<li>Tasks can now be assigned to either a role or a group.</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<h2>Timezones for Recurring Rules</h2>
-<ul>
-<li>When creating a recurring rule, you can now select the timezone for that rule.</li>
-<li>Existing rules will default to the server’s timezone.</li>
-</ul>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.1.5
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2015.05.11
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.1.5 - May 11, 2015
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Release is a maintenance release containing
+    <a href="./release-notes/">
+     bug fixes
+    </a>
+    .
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     New IBM UrbanCode Deploy Plugin
+    </h2>
+    <ul>
+     <li>
+      The built-in UCD integration has been converted into a plugin.
+     </li>
+     <li>
+      The plugin has significantly better performance than the integration due to having the capability to perform a delta-sync rather than a full import on each sync.
+     </li>
+     <li>
+      We encourage existing customers to set their old integration to “Manual Update” then import the plugin and set it to run once a minute.
+     </li>
+     <li>
+      The plugin requires IBM UrbanCode Deploy version 6.1.1.4 and above. A patch is available for IBM UrbanCode Deploy 6.1.1.3 as well.
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Group Assignment
+    </h2>
+    <ul>
+     <li>
+      Tasks can now be assigned to either a role or a group.
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Timezones for Recurring Rules
+    </h2>
+    <ul>
+     <li>
+      When creating a recurring rule, you can now select the timezone for that rule.
+     </li>
+     <li>
+      Existing rules will default to the server’s timezone.
+     </li>
+    </ul>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     New UCD Plugin
+    </li>
+    <li>
+     Group Assignment for Tasks
+    </li>
+    <li>
+     Timezone Field for Recurring Rules
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started/">
+     Getting Started
+    </a>
+    page.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Installation Notes
+    </div>
+    <p>
+     No new installation notes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     No major behavioral changes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Fixes in this Release
+     </div>
+     <p>
+      A cumulative list of fixes in this release, and any future fix packs will be available.
+     </p>
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr>
+        <td valign="bottom" width="22%">
+         APAR/defect
+        </td>
+        <td valign="bottom" width="78%">
+         Description
+        </td>
+       </tr>
+       <tr>
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI35347" target="_blank">
+          PI35347
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         JAVA OPTIONS SETTINGS IN SETENV.SH / SETENV.BAT ARE NOT APPLICATION TO IBM JRE SHIPPED WITH UCR
+        </td>
+       </tr>
+       <tr>
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI36688" target="_blank">
+          PI36688
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         ERROR WHEN OPENING A COMPLETED DEPLOYMENT
+        </td>
+       </tr>
+       <tr valign="top">
+       </tr>
+       <tr>
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI31123" target="_blank">
+          PI31123
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         DEPLOYMENT CALENDAR DISPLAYS WRONG TIME
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI40837" target="_blank">
+          PI40837
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         REQUIRED INFORMATION MISSING ON HIGH-AVAILABILITY ENVIRONMENTS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI36175" target="_blank">
+          PI36175
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         PERFORMANCE ISSUES WHEN SELECTING NEW APPLICATION ON THE RELEASE DETAIL PAGE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI39819" target="_blank">
+          PI39819
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         ISSUES WITH UCR/UCD INTEGRATION
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI40854" target="_blank">
+          PI40854
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UCR INTEGRATION RTC PLUG-IN NOT RETURNING ATTRIBUTE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI29051" target="_blank">
+          PI29051
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         IT TAKES 3+ MINUTES TO LOAD THE APPLICATIONS TAB UNDER SECURITY (AS AN ADMIN OR NON ADMIN USER).
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI31221" target="_blank">
+          PI31221
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         BUTTON DISPLAY WITH ENVIRONMENT RESERVATIONS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI35554" target="_blank">
+          PI35554
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         CHANGE COUNTS FOR RELEASES MAY BE INACCURATE IF NO CHANGE TYPE IS SPECIFIED FOR SOME CHANGES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI35596" target="_blank">
+          PI35596
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         CREATING A RISK WITH NO DESCRIPTION AND ORACLE DB CAUSES ERROR WHEN LOADING RELEASE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI29497" target="_blank">
+          PI29497
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         SEVERAL KNOWN PERFORMANCE ISSUES CUSTOMER’S USERS ARE CURRENTLY EXPERIENCING
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI35512" target="_blank">
+          PI35512
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         ISSUES WITH DISPLAY OF RECURRING DEPLOYMENTS ON CALENDAR PAGE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI35513" target="_blank">
+          PI35513
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         ISSUES WITH DUPLICATE DAYS DISPLAYING FOR DEPLOYMENTS ON CALENDAR PAGE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI40849" target="_blank">
+          PI40849
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         EXECUTING SYNC SNAPSHOT OR UPDATE APPLICATION STEPS CAUSES ERROR
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI36889" target="_blank">
+          PI36889
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         ERROR WHEN OPENING A COMPLETED DEPLOYMENT
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI34731" target="_blank">
+          PI34731
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         ISSUES WITH VERSIONS LOADING FOR COMPONENTS WITHIN THE APPLICATIONS PAGE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI36892" target="_blank">
+          PI36892
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         USABILITY ISSUES WITH TAGS IN DEPLOYMENT PLANS
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Known Problems and Workarounds
+     </div>
+     <p>
+      To search for additional post-release issues that IBM Rational Support documented, visit the
+      <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+     </p>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes/">
+      release notes
+     </a>
+     . For supported platforms and requirements, see the
+     <a href="http://www-03.ibm.com/software/products/en/ucrel#tab_othertab1" target="_blank">
+      system requirements
+     </a>
+     . To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/topics/install_ov.html">
+      installation guide
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release requires IBM Installation Manager version 1.8.0 or later for installation. See
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg24036814">
+      download document
+     </a>
+     for details on this download. This release is available for download on Fix Central for current customers, requiring authentication. This download is
+     <a href="http://www-933.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=fixId&amp;fixids=6.1.1.5-UrbanCode-Release&amp;includeRequisites=1&amp;includeSupersedes=0&amp;downloadMethod=http">
+      available here.
+     </a>
+     Information for installing the server, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/topics/install_ov.html">
+      Installing server
+     </a>
+     section in the product documentation.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="../">
+      What’s New
+     </a>
+     To learn more about IBM UrbanCode Release, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/ucr61_welcome.html" target="_blank">
+      documentation
+     </a>
+     For help installing or using IBM UrbanCode Release, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

@@ -1,38 +1,241 @@
 <!DOCTYPE html>
-<html><head><title>2.1.2</title></head>
-<body>
-<p><b>This article was originaly published in 2020.11.06</b></p>
-<p><h1>2.1.2</h1></p>
-<p>The following enhancements are included in each release. In addition to various bug fixes.
-
-<h2><Key Features and Enhancements in 2.1.2</strong></h2>
-<dl>
-<dt>Auto-promotion of UrbanCode Deploy Applications</dt>
-<dd>You can now auto-promote UrbanCode Deploy applications that are in the pipeline from the input to stage environments.</dd>
-<dt>Known problems</dt>
-<dd>
-The <code>release-events-api</code> performance issues in Kubernetes or OpenShift installations with explicit overrides of limits and requests for memory allocations in the deployment might be caused by the overrides. The following workaround provides guidelines to address the loss of system stability that is associated with the non-default settings that were set during configuration. This issue is typical only when the preceding explicit overrides are implemented in the configuration. If more than 2 GBs of memory are required, perform the following procedure:
-<ol>
-	<li>Determine the memory requirement.</li>
-	<li>Under <strong>spec</strong> > <strong>template</strong> > <strong>spec</strong> > <strong>containers</strong> in your YAML file, locate the following line. 
-<code>image: urbancode/velocity-se-release-events-api:x.x.x.xx
- </code></li>
-	<li>Add the command override as a sibling entry to the line located in the previous step. The command is shown below.
-    <code>
-     image: urbancode/velocity-se-release-events-api:x.x.x.xx
+<html>
+ <head>
+  <title>
+   2.1.2
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2020.11.06
+   </b>
+  </p>
+  <p>
+   <h1>
+    2.1.2
+   </h1>
+  </p>
+  <p>
+   The following enhancements are included in each release. In addition to various bug fixes.
+   <h2>
+    <key 2.1.2<="" and="" enhancements="" features="" in="" strong="">
+    </key>
+   </h2>
+   <dl>
+    <dt>
+     Auto-promotion of UrbanCode Deploy Applications
+    </dt>
+    <dd>
+     You can now auto-promote UrbanCode Deploy applications that are in the pipeline from the input to stage environments.
+    </dd>
+    <dt>
+     Known problems
+    </dt>
+    <dd>
+     The
+     <code>
+      release-events-api
+     </code>
+     performance issues in Kubernetes or OpenShift installations with explicit overrides of limits and requests for memory allocations in the deployment might be caused by the overrides. The following workaround provides guidelines to address the loss of system stability that is associated with the non-default settings that were set during configuration. This issue is typical only when the preceding explicit overrides are implemented in the configuration. If more than 2 GBs of memory are required, perform the following procedure:
+     <ol>
+      <li>
+       Determine the memory requirement.
+      </li>
+      <li>
+       Under
+       <strong>
+        spec
+       </strong>
+       &gt;
+       <strong>
+        template
+       </strong>
+       &gt;
+       <strong>
+        spec
+       </strong>
+       &gt;
+       <strong>
+        containers
+       </strong>
+       in your YAML file, locate the following line.
+       <code>
+        image: urbancode/velocity-se-release-events-api:x.x.x.xx
+       </code>
+      </li>
+      <li>
+       Add the command override as a sibling entry to the line located in the previous step. The command is shown below.
+       <code>
+        image: urbancode/velocity-se-release-events-api:x.x.x.xx
      command:
        - node
-       - --max-old-space-size=<em>maximum_size</em>
-       - /release-events-api/release-events-api.min.js
-  </code>
-       </li>
-	<li>Enter the maximum memory requirement in the appropriate units on the command line. Replace the <em>maximum_size</em> variable with your value.</li>
-</ol>
-</dd>
-<dt>Bug fixes</dt>
-<dd>
-Corrected the following error VSM load error when ParticleViewMode.sprints is stored as null.
-<code>GraphQL Error: Expected Iterable, but did not find one for field ParticleViewMode.sprints</code></dd>
-</dl>
-</p></body>
+       - --max-old-space-size=
+        <em>
+         maximum_size
+        </em>
+        - /release-events-api/release-events-api.min.js
+       </code>
+      </li>
+      <li>
+       Enter the maximum memory requirement in the appropriate units on the command line. Replace the
+       <em>
+        maximum_size
+       </em>
+       variable with your value.
+      </li>
+     </ol>
+    </dd>
+    <dt>
+     Bug fixes
+    </dt>
+    <dd>
+     Corrected the following error VSM load error when ParticleViewMode.sprints is stored as null.
+     <code>
+      GraphQL Error: Expected Iterable, but did not find one for field ParticleViewMode.sprints
+     </code>
+    </dd>
+   </dl>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Auto-promotion of UrbanCode Deploy Applications
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <!-- A cumulative list of fixes in this release, and any future fix packs can be found in the <a href="https://www.urbancode.com/whats-new/velocity-fixlist/" target="_blank" rel="noopener">Fixlist</a> document. -->
+   The following table is a cumulative list of fixes in the 2.0.x version stream.
+   <table>
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99806
+      </td>
+      <td valign="bottom" width="80%">
+       Velocity 1.5.1 Upgrade could Prevent Access to Deployment Plans and Reports (Fixed with v1.5.2)
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99805
+      </td>
+      <td valign="bottom" width="80%">
+       Fixed Jenkins plugin that could break Jenkins Server
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99803
+      </td>
+      <td valign="bottom" width="80%">
+       Fixes a performance issue that could occur when integrating with an UrbanCode Deploy version older than v7.0.5.1
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan and prepare
+   </h2>
+   For supported platforms and requirements you can dynamically
+generate a system requirements report using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <h2>
+    Install the server
+   </h2>
+   There are two option to obtaining the installation package: online installer and offline installer. Both options require a master license key, which can be acquired from
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    IBM Passport Advantage
+   </a>
+   .
+   <h2>
+    Online installer
+   </h2>
+   The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
+
+Download the online installer package depending on the platform, the product is being installed.
+   <ul>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-linux" rel="noopener" target="_blank">
+      Linux
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-macos" rel="noopener" target="_blank">
+      Mac OS
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+      Windows
+     </a>
+    </li>
+   </ul>
+   After the download completes, start the executable file to begin the install process.
+   <h2>
+    Offline installer
+   </h2>
+   Use the offline installer to install Velocity without internet connection. You will still need internet connection at some point to download the installer itself. Once downloaded, the installer will include all containers needed to successfully install the product. For this reason, the offline installer is larger than the online installer and will require more time/bandwidth and disk space when downloading.
+
+The installation package is available from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Velocity&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    IBM Fix Central
+   </a>
+   . Search and select the installation package appropriate for the installation platform.
+
+After downloading the installation package, decompress the contents into two directories: one for Kubernetes and the other for Docker Compose. See the
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.1.x/com.ibm.uvelocity.doc/topics/c_install_se_roadmap.html">
+    documentation section on installation
+   </a>
+   for instructions about how to install the server.
+
+A product license key is required to install the product. To obtain a key, you must agree to the terms and conditions provided on Passport Advantage.
+   <h2>
+    Learn
+   </h2>
+   To learn more about UrbanCode Velocity, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using UrbanCode Velocity, post your questions in the
+   <a href="https://www.ibm.com/mysupport/s/forumsproduct?language=en_US" rel="noopener" target="_blank">
+    UrbanCode forums
+   </a>
+   . Tag your question with
+   <strong>
+    velocity
+   </strong>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="https://www.ibm.com/developerworks/rfe/" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   <h2>
+    Get support
+   </h2>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

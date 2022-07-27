@@ -1,8 +1,1081 @@
 <!DOCTYPE html>
-<html><head><title>6.1.0.2.ifix01</title></head>
-<body>
-<p><b>This article was originaly published in 2014.09.02</b></p>
-<p><h1>6.1.0.2.ifix01 - September 2, 2014</h1></p>
-<p><div class="new_release_cont">This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.0.2.ifix01
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2014.09.02
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.0.2.ifix01 - September 2, 2014
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Recommended fixes for UrbanCode Deploy 6.1
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started">
+     Getting Started
+    </a>
+    page.
+    <p>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <h2>
+     Upgrading from 6.0
+    </h2>
+    <p>
+     UrbanCode Deploy 6.1 introduced scalability enhancements to agent/server communication. All agent relays must be upgraded before running any deployments. All existing agents will continue to work without an upgrade, but they should be upgraded using the Upgrade action on the agent list in the web UI as soon as possible after upgrading. Any newly installed agents must be version 6.1. The latest agent and agent relay installers will be available on your UrbanCode Deploy server’s Tools page (in the Help menu) after the server is upgraded.
+    </p>
+    <p>
+     UrbanCode Deploy 6.1 also includes a more scalable artifact storage system. After upgrading your server, a background process will migrate artifacts into the new format. You can continue to access and deploy artifacts during this process, but there will need to be at least as much free disk space in the server’s var/repository directory as is currently being used by that directory. (If you currently have 25GB of artifacts, you need 25GB of additional free disk space.) The extra disk space is no longer needed after all artifacts have been migrated.
+    </p>
+    <h2>
+     Workflow changes
+    </h2>
+    <p>
+     This release includes some changes to how workflows are processed. The goal of these changes was to address what had been an outstanding defect for several years. In this scenario:
+    </p>
+    <p>
+     <a href="Screen-Shot-2014-08-27-at-5.55.55-PM.png">
+      <img alt="Screen Shot 2014-08-27 at 5.55.55 PM" class="alignnone size-medium wp-image-6912" sizes="(max-width: 446px) 100vw, 446px" src="Screen-Shot-2014-08-27-at-5.55.55-PM.png" srcset="Screen-Shot-2014-08-27-at-5.55.55-PM.png 446w, Screen-Shot-2014-08-27-at-5.55.55-PM-261x300.png 261w"/>
+     </a>
+    </p>
+    <p>
+     You’d expect that only when both branches (Step A/B and C/D) finish successfully, StepE runs. But in fact, if one branch fails, StepE would still run when the second branch finishes. For example, if StepA and B pass but StepC fails, StepE will still run after StepB. To fix this, in 6.1.0.2, if any part of a branch becomes invalid, the entire branch is considered invalid, and if there’s some place in the workflow where the branch joins with another branch, it won’t go past there unless all of both branches have actually passed.
+    </p>
+    <p>
+     A consequence of that change is that joining behavior becomes more strict. In order to minimize impact on existing configuration, we’ve also added detection of “mutually exclusive” branches – when you go on one branch if a step fails, and another if it succeeds. Since there is no condition where both of these branches will be run, we need to only require one of them to come through.
+    </p>
+    <p>
+     <a href="Screen-Shot-2014-08-27-at-6.01.30-PM.png">
+      <img alt="Screen Shot 2014-08-27 at 6.01.30 PM" class="alignnone size-medium wp-image-6913" sizes="(max-width: 445px) 100vw, 445px" src="Screen-Shot-2014-08-27-at-6.01.30-PM.png" srcset="Screen-Shot-2014-08-27-at-6.01.30-PM.png 445w, Screen-Shot-2014-08-27-at-6.01.30-PM-223x300.png 223w"/>
+     </a>
+    </p>
+    <p>
+     In the above scenario, StepE will run as long as one of the two branches leading into it have successfully executed. We detect conditions like this by examining both branches and finding the step where they separated (StepZ, in this case). If the arrows leading out of that step are mutually exclusive (at least one “On Success” and at least one “On Failure”), we will only require one of the branches to have passed before we execute the step which joins them.
+    </p>
+    <p>
+     There is currently a limitation to this behavior, though. In cases where branches are created in multiple locations but join at the same step, the new logic will only find the first point at which the branches were created. Consider the following:
+    </p>
+    <p>
+     <a href="Screen-Shot-2014-08-27-at-6.06.41-PM.png">
+      <img alt="Screen Shot 2014-08-27 at 6.06.41 PM" class="alignnone size-medium wp-image-6915" sizes="(max-width: 622px) 100vw, 622px" src="Screen-Shot-2014-08-27-at-6.06.41-PM.png" srcset="Screen-Shot-2014-08-27-at-6.06.41-PM.png 622w, Screen-Shot-2014-08-27-at-6.06.41-PM-300x284.png 300w"/>
+     </a>
+    </p>
+    <p>
+     Step D and Step X/Y are mutually exclusive, but they join with a third branch (Step A/B) which was created higher in the workflow. The server will see StepZ as the point where branches were created, and since its outgoing arrows are not mutually exclusive, it will require all three branches to have passed before executing StepE. This will never happen, so the workflow will fail.
+    </p>
+    <p>
+     Additional enhancements to this logic are planned so that the server will be able to detect multiple branching points more accurately, but until that becomes available, the workaround is to add an intermediate step to join each set of mutually exclusive branches. In our scenario here, adding StepW will do the trick:
+    </p>
+    <p>
+     <a href="Screen-Shot-2014-08-27-at-6.13.08-PM.png">
+      <img alt="Screen Shot 2014-08-27 at 6.13.08 PM" class="alignnone size-medium wp-image-6916" sizes="(max-width: 654px) 100vw, 654px" src="Screen-Shot-2014-08-27-at-6.13.08-PM.png" srcset="Screen-Shot-2014-08-27-at-6.13.08-PM.png 654w, Screen-Shot-2014-08-27-at-6.13.08-PM-300x270.png 300w"/>
+     </a>
+    </p>
+    <p>
+     Because StepW connects these two branches without being affected by the outcome of the branch with Step A/B, it will properly detect that they are mutually exclusive. The step used here can be any step other than the explicit “Join” step, as the “Join” step requires all incoming paths to be valid every time. In this case, StepW is a shell plugin which simply runs “ls”.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release, and any future fix packs can be found
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038759" target="_blank">
+      in this document
+     </a>
+     .
+    </p>
+    <table border="0" class="ibm-data-table ibm-alternate" role="presentation" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        APAR
+       </td>
+       <td valign="bottom" width="80%">
+        Description
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI12564" target="_blank">
+         PI12564
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “DEPLOY CREATES ADDITIONAL RCL_API_LOG_SAMPLE_X_X_XXXX_X.XML IN
+        <br>
+         ITS BIN AT STARTUP”
+        </br>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI19791" target="_blank">
+         PI19791
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “NULLPOINTEREXCEPTIONS SHOWN IN LOG WHEN VIEWING REQUESTS WITHOUT
+        <br>
+         PERMISSIONS”
+        </br>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI21105" target="_blank">
+         PI21105
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ERROR AQUIRING LOCK
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI21177" target="_blank">
+         PI21177
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “AFTER UPGRADE TO 6.1 FROM 6.0, YOU SEE A “500 INTERNAL SERVER
+        <br/>
+        ERROR JAVA.IO.IOEXCEPTION: UNACCEPTABLE RESPONSE: POST” ERROR”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI21243" target="_blank">
+         PI21243
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        OUTPUT OF STEP ONLY SHOWN ONCE THE STEP IS COMPLETED
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI21304" target="_blank">
+         PI21304
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “DOCUMENTATION SHOULD MENTION THAT AGENTS SHOULD BE ACTIVE BEFORE
+        <br/>
+        UPGRADING”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI21520" target="_blank">
+         PI21520
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO PERFORM A PROPER SYNC OPERATION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI21591" target="_blank">
+         PI21591
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNZIP PLUGIN IN UCD 6.1.0.1 DOES NOT SUPPORT DBCS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI21979" target="_blank">
+         PI21979
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UPGRADE FROM 4.8.1 TO 5.0.0.2 FAILS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22025" target="_blank">
+         PI22025
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “FULL VERIFICATION OPTION IN IBM URBANCODE DEPLOY VERSIONED FILE
+        <br/>
+        STORAGE PLUGIN DOESN’T WORK AS EXPECTED”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22078" target="_blank">
+         PI22078
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “INCORRECTLY DELETED ENVIRONMENTS CAUSES UI ERROR IN APPLICATION
+        <br/>
+        CHANGES”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22120" target="_blank">
+         PI22120
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “SWITCH STATEMENT FAILS IF OUTGOING EDGES HAVE PROPERTIES AS
+        <br/>
+        VALUES”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22138" target="_blank">
+         PI22138
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        APPLICATION UI UNUSABLE WHILE LOADING ENVIRONMENTAL COMPLIANCY
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22166" target="_blank">
+         PI22166
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        FAILED VERSION IMPORT AFFECTS VERSION CLEANUP
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22184" target="_blank">
+         PI22184
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CAN’T COPY COMPONENTS AFTER UPGRADE TO 6.0.1.5
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22226" target="_blank">
+         PI22226
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “UPGRADE FAILS WITH STRINGINDEXOUTOFBOUNDS WHEN LOADING SECURITY
+        <br/>
+        SCHEMA”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22271" target="_blank">
+         PI22271
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        MDHA SSL CONFIGURATION IS MISSING
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22362" target="_blank">
+         PI22362
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “OUTPUT LOG NOT GETTING POPULATED TILL AFTER THE PROCESS IS
+        <br/>
+        FINISHED”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22470" target="_blank">
+         PI22470
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        THERE NEEDS TO BE AN OPTION TO DISABLE HTTPFAILOVERHANDLING
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22529" target="_blank">
+         PI22529
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DEPLOY FAILS TO ACQUIRE LOCK
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22559" target="_blank">
+         PI22559
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DESCRIPTION OF RESOURCE TEMPLATE AND BLUEPRINT NOT VISIBLE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22600" target="_blank">
+         PI22600
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “./AGENT STOP : JDK COULD NOT BE FOUND. NOT PRODUCING THREAD DUMP
+        <br/>
+        AND HEAP DUMP. ON AGENT STOP”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22612" target="_blank">
+         PI22612
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “APPLICATION PROCESSES CAN TAKE A LONG TIME TO CONTINUE AFTER THE
+        <br/>
+        COMPONENT PROCESS FINISHES”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22618" target="_blank">
+         PI22618
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “THREAD SAFETY ISSUE WHEN PERFORMING RESOLVE ARTIFACT PROCESS
+        <br/>
+        STEP.”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22649" target="_blank">
+         PI22649
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “COMPONENT MAPPINGS TO AGENT POOLS INSIDE RESOURCE GROUPS ARE NOT
+        <br/>
+        MIGRATED”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22776" target="_blank">
+         PI22776
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “ERROR MESSAGE INVALID OPTION WHEN STARTING THE AGENT SERVICE
+        <br/>
+        TWICE”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22809" target="_blank">
+         PI22809
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “WHEN USING THE HEAD METHOD WITH THE WEB UTILS PLUGIN, TEST STEP
+        <br/>
+        FAILS”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22849" target="_blank">
+         PI22849
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “AGENTS NOT STARTING ON SOLARIS 5.10   GETTING ERROR ” ./AGENT:
+        <br/>
+        SYNTAX ERROR AT LINE 131: `WORKER_PROC_ID=$’ UNEXPECTED””
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22900" target="_blank">
+         PI22900
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        IMPORTING USERS FROM LDAP USING WILDCARD FAILS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22937" target="_blank">
+         PI22937
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        [UPGRADE] APPLYING 4.8 CHANGE: 37 – REMOVE OLD TRACE TABLES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22979" target="_blank">
+         PI22979
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “EVEN IF “ARCHIVE PATH” IS EMPTY, VERSIONS ARE ARCHIVED IN THE
+        <br/>
+        BIN FOLDER”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22981" target="_blank">
+         PI22981
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “ERROR MESSAGE “JDK COULD NOT BE FOUND” WHEN STOPPING AGENT
+        <br/>
+        SERVICE”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI22987" target="_blank">
+         PI22987
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “AGENTHOME/BIN/INIT/AGENT INCORRECTLY REFERS FOR SCRIPT TO
+        <br/>
+        IBM-UCDAGENT AND NOT AGENT”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23254" target="_blank">
+         PI23254
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        OPERATIONAL PROCESSES SHOW SUCCESS WHEN NO AGENTS ARE ONLINE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23514" target="_blank">
+         PI23514
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “LOADING THE RESOURCE TREE TAKES 10 SECONDS OR LONGER FOR A
+        <br/>
+        COMPLEX TREE STRUCTURE”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23607" target="_blank">
+         PI23607
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “WHEN USING A CUSTOM KEYSTORE AND ATTEMPTING TO UPGRADE AN AGENT,
+        <br/>
+        YOU GET “UNABLE TO CREATE KEYSTORE” ERROR”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23618" target="_blank">
+         PI23618
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO CREATE A VERSION USING THE CLI
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23619" target="_blank">
+         PI23619
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        APPROVAL CREATED STEP FAILS TO SEND A NOTIFICATION WHEN CREATED.
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23637" target="_blank">
+         PI23637
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CODESTATION GOT CORRUPTED AFTER UPGRADING FROM 60 TO 61
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI24033" target="_blank">
+         PI24033
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO REMOVE TEAM FROM A GENERIC PROCESS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI24095" target="_blank">
+         PI24095
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “USER DEFINED AGENT PROPERTIES DISAPPEAR (NOT STORED) IN THE
+        <br/>
+        LATEST VERSION OF AGENT PROPERTIES AFTER RESTARTING THE AGENT”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI24173" target="_blank">
+         PI24173
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “”NO ROW WITH THE GIVEN IDENTIFIER EXISTS:
+        <br/>
+        [COM.URBANCODE.SECURITY.SECURITYUSER#22….]”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI24474" target="_blank">
+         PI24474
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “LOADING GENERIC PROCESS HISTORY CAN TAKE EXCESSIVELY LONG OR
+        <br/>
+        CAUSE OUT-OF-MEMORY ERRORS”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI17679" target="_blank">
+         PI17679
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        RUN PROCESS DIALOG ONLY SHOWS “LOADING…” FOR PROCESS SELECTION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI18568" target="_blank">
+         PI18568
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “SNAPSHOT ADVANCED SETTINGS REFRESH TAKES LONGER THAN A COUPLE
+        <br/>
+        MINUTES”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI18869" target="_blank">
+         PI18869
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        LOOPS WITHIN COMPONENT PROCESS LEAD TO SERVER HANGS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI19093" target="_blank">
+         PI19093
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “SYNTAXERROR WHEN EXECUTING A JACL SCRIPT VIA EXECUTE WSADMIN
+        <br/>
+        SCRIPT STEP”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI19454" target="_blank">
+         PI19454
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        AGENT GETS NULLPOINTEREXCEPTION WHEN RESTARTED AFTER REBOOT STEP
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI19548" target="_blank">
+         PI19548
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        THE IMPORTVERSIONS TEMPLATE IS NOT CLEAR ON REQUIRED PARAMETERS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI19611" target="_blank">
+         PI19611
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        THE WORK ITEMS SECTION OF UDEPLOY IS NOT VISIBLE.
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI20186" target="_blank">
+         PI20186
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “URBANCODE DEPLOY LEAKS MEMORY WHEN CREATING AND DELETING
+        <br/>
+        ENVIRONMENTS IN SMART CLOUD ORCHESTRATOR”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI20323" target="_blank">
+         PI20323
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO VIEW WORK ITEMS TAB
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI20412" target="_blank">
+         PI20412
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO REMOVE A CUSTOM AUTHORIZATION REALM
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI20664" target="_blank">
+         PI20664
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “ATTEMPTS TO CALL A COMPONENT PROCESS FROM ANOTHER COMPONENT
+        <br/>
+        PROCESS FAIL”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI20891" target="_blank">
+         PI20891
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        AUTOMATIC CLEANUPS ARE FAILING
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI21096" target="_blank">
+         PI21096
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “CANNOT RENAME RESOURCE’S TOP-LEVEL GROUP: ILLEGAL CHARACTER
+        <br/>
+        RANGE NEAR INDEX 8″
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI21172" target="_blank">
+         PI21172
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “ARTIFACT UPGRADE STATUS BAR DOES NOT SHOW 100% EVEN THOUGH
+        <br/>
+        ARTIFACT MIGRATION COMPLETED.”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI21274" target="_blank">
+         PI21274
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “UNABLE TO UPLOAD LOGS TO SERVER AT …… :
+        <br/>
+        JAVA.LANG.ILLEGALARGUMENTEXCEPTION”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI21794" target="_blank">
+         PI21794
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        AGENT ONLINE EVENTS CAN CAUSE A TRANSACTION TO BE LEFT OPEN
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23002" target="_blank">
+         PI23002
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “URBANCODE DEPLOY PENDING APPROVAL NOTICES NOT SENT FOR ANYTHING
+        <br/>
+        OTHER THAN STANDARD APPLICATION”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23036" target="_blank">
+         PI23036
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “FILTER TEXT BOXES DISAPPEAR ON RESOURCE TREE WITH
+        <br/>
+        JAVA.LANG.NEGATIVEARRAYSIZEEXCEPTION”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23061" target="_blank">
+         PI23061
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        RUN COMPONENT PROCESS STEP GETS SET TO “UNDEFINED”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23088" target="_blank">
+         PI23088
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        RESTARTED AGENT SHOWS CONNECTED, NOT ONLINE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23257" target="_blank">
+         PI23257
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CAN’T SAVE APPLICATION PROCESS THAT REFERENCES A DELETED PROCESS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23448" target="_blank">
+         PI23448
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “LARGE GENERIC PROCESSES MAY TAKE LONGER THAN EXPECTED TO RUN
+        <br/>
+        THEIR FIRST STEP”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23485" target="_blank">
+         PI23485
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “COMPONENT PROCESS SECURED PROPERTIES ARE DISPLAYED IN PLAIN TEXT
+        <br/>
+        IN THE OUTPUT.LOG”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23611" target="_blank">
+         PI23611
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “PROPERTY VALUES ARE NOT SAVED FOR PLUGIN STEPS ON URBANCODE
+        <br/>
+        DEPLOY 6.0.1.5″
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23732" target="_blank">
+         PI23732
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “USER IN TEAMA CANNOT CREATE A CHILD RESOURCE USING
+        <br/>
+        TEAM-INHERITANCE FOR TEAMA AND TEAMB”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23782" target="_blank">
+         PI23782
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “CANNOT SAVE AN APPLICATION PROCESS WITH MULTIPLE INSTALL
+        <br/>
+        MULTIPLE COMPONENTS.”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI23822" target="_blank">
+         PI23822
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “URBANCODE DEPLOY AGENT LEAKS FILE DESCRIPTORS OVER TIME ON JAVA
+        <br/>
+        6″
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI24084" target="_blank">
+         PI24084
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        “RUNNING A GENERIC PROCESS FROM A STEP AGAINST AN OFFLINE AGENT
+        <br/>
+        CAUSES THE PROCESS TO RUN FOREVER”
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+   </div>
+   <p>
+    To search for additional post-release issues that IBM Rational Support documented, visit the
+    <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+     IBM Support portal.
+    </a>
+   </p>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=installing" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     For advanced enterprise deployments that require high availability, review our options in the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.0" target="_blank">
+      information center.
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Deploy supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+     <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     If you’re upgrading from 6.0…
+    </div>
+    <p>
+     UrbanCode Deploy 6.1 introduced scalability enhancements to agent/server communication.
+     <strong>
+      All agent relays must be upgraded before running any deployments.
+     </strong>
+     All existing agents will continue to work without an upgrade, but they should be upgraded using the Upgrade action on the agent list in the web UI as soon as possible after upgrading.
+     <strong>
+      Any newly installed agents must be version 6.1.
+     </strong>
+     The latest agent and agent relay installers will be available on your UrbanCode Deploy server’s Tools page (in the Help menu) after the server is upgraded.
+    </p>
+    <p>
+     UrbanCode Deploy 6.1 also includes a more scalable artifact storage system. After upgrading your server, a background process will migrate artifacts into the new format. You can continue to access and deploy artifacts during this process, but
+     <strong>
+      there will need to be at least as much free disk space in the server’s var/repository directory as is currently being used by that directory
+     </strong>
+     . (If you currently have 25GB of artifacts, you need 25GB of additional free disk space.) The extra disk space is no longer needed after all artifacts have been migrated.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Install the server
+     </div>
+     <p>
+      This release is available for download from Fix Central, requiring authentication. This download is
+      <a href="http://www.ibm.com/support/fixcentral/swg/quickorder?parent=ibm~Rational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=6.1.0.0&amp;platform=All&amp;function=all&amp;source=fc" target="_blank">
+       available here.
+      </a>
+     </p>
+     <p>
+      Information for installing the server, see the
+      <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=installing">
+       Installing servers and agents
+      </a>
+      section in the product documentation.
+     </p>
+     <p>
+      For information on installing and managing licenses, see
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.0/com.ibm.udeploy.install.doc/topics/licenseManage.html">
+       Managing licenses
+      </a>
+     </p>
+     <div class="horizontal-rule">
+     </div>
+     <div class="subtitle">
+      Learn
+     </div>
+     <p>
+      To learn more about new enhancements in this release, see
+      <a href="..">
+       What’s New
+      </a>
+     </p>
+     <p>
+      To learn more about IBM UrbanCode Deploy, see the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.0" target="_blank">
+       documentation
+      </a>
+     </p>
+     <p>
+      For help installing or using IBM UrbanCode Deploy, post your questions in the
+      <a href="https://developer.ibm.com/answers?community=urbancode">
+       forums
+      </a>
+      or contact
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       support
+      </a>
+     </p>
+     <p>
+      To suggest an enhancement to the product, visit the
+      <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+       RFE Community
+      </a>
+     </p>
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Get support
+     </div>
+     <p>
+      For information from support, including FAQs, visit the
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+      You can configure the support portal to view information about specific products.
+     </p>
+    </div>
+   </div>
+  </p>
+ </body>
 </html>

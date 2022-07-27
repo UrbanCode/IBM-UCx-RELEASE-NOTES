@@ -1,18 +1,182 @@
 <!DOCTYPE html>
-<html><head><title>6.2.5.3</title></head>
-<body>
-<p><b>This article was originaly published in 2021.06.24</b></p>
-<p><h1>6.2.5.3</h1></p>
-<p>This release of IBM UrbanCode Release is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+<html>
+ <head>
+  <title>
+   6.2.5.3
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2021.06.24
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.5.3
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Release is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <h3>
+    Apache Tomcat server upgraded
+   </h3>
+   The Tomcat Server shipped with the product has been upgraded to version 8.5.64.
+   <h3>
+    New plug-ins
+   </h3>
+   Jenkins plug-in added for UrbanCode Release. The plug-in provides integration with Jenkins to import jobs from Jenkins.
+   <h3>
+    Security enhancements
+   </h3>
+   Upgraded Java to resolve security vulnerability CVE-2015-3253.
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Upgrade Tomcat version
+    </li>
+    <li>
+     Security enhancement
+    </li>
+    <li>
+     New Jenkins plugin
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h3>
+    Fixes in this Release
+   </h3>
+   The following APARs are included in this release.
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="990">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH34000" rel="noopener noreferrer" target="_blank">
+        PH34000
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       When a new deployment is created by selecting a specific Release Version value different from 'None' then the 'Deployment Execution' tab shows all tasks as 'Not Applicable
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH35893" rel="noopener noreferrer" target="_blank">
+        PH35893
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UrbanCode Deploy version 7.1 does not respond to HTTP PUT method for deploy applications
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH37750" rel="noopener noreferrer" target="_blank">
+        PH37750
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       Login fails when login is done from a browser without internet access.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH32842" rel="noopener noreferrer" target="_blank">
+        PH32842
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       Clash occurs when performing synchronization from Ansible or Nolio.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH36113" rel="noopener noreferrer" target="_blank">
+        PH36113
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       Fixed issue in UrbanCode Release 6.2.5 allowing world-writable files to be created in /var/temp directory
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <br/>
+   <h3>
+    Known problems and workarounds
+   </h3>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h3>
+    Install the server
+   </h3>
+   This release is available for download from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=all&amp;source=fc" rel="noopener" target="_blank">
+    Fix Central
+   </a>
+   and
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    Passport Advantage
+   </a>
+   , requiring authentication.
+   <!-- This download is <a href="http://www-933.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&product=ibm/Rational/UrbanCode+Release&release=All&platform=All&function=fixId&fixids=6.2.5-UrbanCode-Release&includeRequisites=1&includeSupersedes=0&downloadMethod=http">available here.</a -->
+   Information for installing the server, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.5/com.ibm.urelease.doc/topics/install_ov.html" rel="noopener" target="_blank">
+    Installing server
+   </a>
+   section in the product documentation.
 
-<h3>Apache Tomcat server upgraded</h3>
+For information on installing licenses, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SS4GCC_6.2.5/com.ibm.urelease.doc/topics/licenseManage.html" rel="noopener" target="_blank">
+    Managing Licenses
+   </a>
+   .
+   <h3>
+    Learn
+   </h3>
+   To learn more about new enhancements in this release, click What’s New.
 
-The Tomcat Server shipped with the product has been upgraded to version 8.5.64.
+To learn more about IBM UrbanCode Release, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.5/com.ibm.urelease.doc/ucr_version_welcome.html" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
 
-<h3>New plug-ins</h3>
-Jenkins plug-in added for UrbanCode Release. The plug-in provides integration with Jenkins to import jobs from Jenkins.
+For help installing or using IBM UrbanCode Release, post your questions in the
+   <a href="https://developer.ibm.com/answers?community=urbancode" rel="noopener" target="_blank">
+    forums
+   </a>
+   or contact
+   <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+    support
+   </a>
+   .
 
-<h3>Security enhancements</h3>
-Upgraded Java to resolve security vulnerability CVE-2015-3253.
-</p></body>
+To suggest an enhancement to the product, visit the
+   <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   .
+   <h3>
+    Get support
+   </h3>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

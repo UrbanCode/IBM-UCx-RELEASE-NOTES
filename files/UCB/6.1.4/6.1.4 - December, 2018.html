@@ -1,42 +1,248 @@
 <!DOCTYPE html>
-<html><head><title>6.1.4</title></head>
-<body>
-<p><b>This article was originaly published in 2018.12.01</b></p>
-<p><h1>6.1.4 - December, 2018</h1></p>
-<p>IBM UrbanCode Build 6.1.4 continues to deliver a template-driven system to configure and run builds.
-<div class="new_release_cont">
-<div class="inline-block"><img src="features_multiple_env.png" alt="" /></div>
-<h3>Software updates</h3>
-<ul>
- 	<li>Add support for Java 9, 10, and 11</li>
- 	<li>Upgrade Apache Tomcat to 8.5 series</li>
- 	<li>Upgrade Hibernate to 5.1 series</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<div class="inline-block"><img src="features_cloud.png" alt="" /></div>
-<h3>UrbanCode Build container images (Beta)</h3>
-UrbanCode Build can now be run in containers. Docker container images for the server and agent are available for download.
+<html>
+ <head>
+  <title>
+   6.1.4
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2018.12.01
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.4 - December, 2018
+   </h1>
+  </p>
+  <p>
+   IBM UrbanCode Build 6.1.4 continues to deliver a template-driven system to configure and run builds.
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="features_multiple_env.png"/>
+    </div>
+    <h3>
+     Software updates
+    </h3>
+    <ul>
+     <li>
+      Add support for Java 9, 10, and 11
+     </li>
+     <li>
+      Upgrade Apache Tomcat to 8.5 series
+     </li>
+     <li>
+      Upgrade Hibernate to 5.1 series
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="features_cloud.png"/>
+    </div>
+    <h3>
+     UrbanCode Build container images (Beta)
+    </h3>
+    UrbanCode Build can now be run in containers. Docker container images for the server and agent are available for download.
 
 This is a Beta feature.
-
-</div>
-<div class="new_release_cont">
-<div class="inline-block"><img src="features_check.png" alt="" /></div>
-<h3>User interface enhancements</h3>
-<ul>
- 	<li>Add “Created By” column to the build life table of Codestation projects for improved traceability.</li>
- 	<li>The build life artifacts tab layout out has changed to improve user experience.</li>
- 	<li>Enhance the CSS styles in template tabs for Project, Process, Source, and Job.</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<div class="inline-block"><img src="integration.png" alt="" /></div>
-<h3>Automatic keystore initialization (Beta)</h3>
-Keystore files can now be automatically generated at server startup, based on the properties specified in the installed.properties file.
+   </div>
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="features_check.png"/>
+    </div>
+    <h3>
+     User interface enhancements
+    </h3>
+    <ul>
+     <li>
+      Add “Created By” column to the build life table of Codestation projects for improved traceability.
+     </li>
+     <li>
+      The build life artifacts tab layout out has changed to improve user experience.
+     </li>
+     <li>
+      Enhance the CSS styles in template tabs for Project, Process, Source, and Job.
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="integration.png"/>
+    </div>
+    <h3>
+     Automatic keystore initialization (Beta)
+    </h3>
+    Keystore files can now be automatically generated at server startup, based on the properties specified in the installed.properties file.
 
 This is a Beta feature and disabled by default.
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     New Features and Enhancements
+    </li>
+    <li>
+     Recommended Fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h3 class="horizontal-rule">
+    <span style="font-size: 1rem;">
+     APARs
+    </span>
+   </h3>
+   <div class="key-features">
+    The following table list the APARs included in this release.
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH01195" rel="noopener" target="_blank">
+         PH01195
+        </a>
+       </td>
+       <td valign="bottom">
+        Fix “Value too large for column” error in TFS plugin due to insufficient column width in database
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <h3 class="subtitle">
+      Fixes
+     </h3>
+     The following are updates to the release based on various sources.
+     <div class="new_release_cont">
+      <ul>
+       <li>
+        Fix UI issue when filtering records in the process and source template tabs
+       </li>
+       <li>
+        Fix ArrayIndexOutOfBoundsException in ProcessResource#getProjectTemplateProperties
+       </li>
+       <li>
+        Properly display the validation failure message in error popup window when saving job config steps
+       </li>
+       <li>
+        Fix persistence issue of
+        <strong>
+         Working Directory Offset
+        </strong>
+        field of plugin steps
+       </li>
+       <li>
+        Add scrollbar to text area widgets if exceeding maximum height allowed, to avoid running over other elements
+       </li>
+       <li>
+        Fix potential
+        <code>
+         Illegal Argument Exception
+        </code>
+        error when adding a new step to a job config template
+       </li>
+      </ul>
+     </div>
+     To search for additional post-release issues that IBM Rational Support documented, visit the
+     <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+      IBM Support portal.
+     </a>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Plan &amp; Prepare
+    </h3>
+    For supported platforms and requirements, see the reports that can be dynamically generated using the
+    <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener noreferrer" target="_blank">
+     Software Product Compatibility Reports (SPCR)
+    </a>
+    tool.
+    <strong>
+     Note:
+    </strong>
+    Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
 
-</div>
-</p></body>
+To get started quickly, IBM UrbanCode Build is shipped with an Apache Derby database. Apache Derby is not supported for production environments. As you plan your production topology, review the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.4/com.ibm.ucbuild.doc/topics/install_ch.html" rel="noopener" target="_blank">
+     installation
+    </a>
+    topics in the product documentation.
+   </div>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Install the server
+    </h3>
+    This release is available for download from
+    <a href="https://www-112.ibm.com/software/howtobuy/softwareandservices/passportadvantage" rel="noopener" target="_blank">
+     Passport Advantage
+    </a>
+    , requiring authentication.
+
+You have two options for incorporating this product into your environment:
+    <ul>
+     <li>
+      Setup the product containers into a container management environment of your choice, see the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.4/com.ibm.ucbuild.doc/topics/container_overview_c.html">
+       Running in container
+      </a>
+      section in the product documentation.
+     </li>
+     <li>
+      Use the traditional installation process where you use an installer program to install the server, see the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.4/com.ibm.ucbuild.doc/topics/install_ch.html">
+       Installing
+      </a>
+      section in the product documentation.
+     </li>
+    </ul>
+    For information on installing and managing licenses, see
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.4/com.ibm.ucbuild.doc/topics/licenseManage.html">
+     License Management
+    </a>
+    <div class="horizontal-rule">
+    </div>
+    <h3 class="subtitle">
+     Learn
+    </h3>
+    To learn more about IBM UrbanCode Build, see the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.4" rel="noopener" target="_blank">
+     documentation
+    </a>
+    For help installing or using IBM UrbanCode Build, contact
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+     support
+    </a>
+    To suggest an enhancement to the product, visit the
+    <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+     RFE Community
+    </a>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Get support
+    </h3>
+    For information from support, including FAQs, visit the
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+     IBM Support portal.
+    </a>
+    You can configure the support portal to view information about specific products.
+   </div>
+  </p>
+ </body>
 </html>

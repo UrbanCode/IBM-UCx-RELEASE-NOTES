@@ -1,52 +1,850 @@
 <!DOCTYPE html>
-<html><head><title>6.2.2</title></head>
-<body>
-<p><b>This article was originaly published in 2016.09.20</b></p>
-<p><h1>6.2.2 - September 20, 2016</h1></p>
-<p><p>
-IBM® UrbanCode&#x2122; Deploy 6.2.2 is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.
-</p>
-<div class="new_release_cont">
-<div class="deploy-bullets">
-<h2>New version of Java required</h2>
-<li>Beginning in version 6.2.2, the IBM UrbanCode Deploy server and agent relays require Java&#x2122; Runtime Environment (JRE) or Java Development Kit (JDK) version 8.</li>
-<h2>Process Editor is easier to use</h2>
-<li>The step palette has been enhanced to make it easier to navigate. Steps can be added without specifying properties. Properties can be added later.</li>
-<li>The new Auto Layout feature automatically lays out the diagram when you drop steps into the diagram.</li>
-<li>Scripts on a step can be open from the property dialog, using the Script Editor. The editor provides syntax coloring and a search and replace feature. Layouts from earlier UrbanCode Deploy versions can be convert into the new process layout. You can revert to the original layout if desired.</li>
-<h2>New integration with VRealize Automation</h2>
-<li>
-The UrbanCode Deploy Blueprint Designer now provides integration with VRealize Automation (vRA). You can create a cloud blueprint in UrbanCode Deploy that incorporates vCenter IaaS constructs managed through vRA, including virtual machine templates and network profiles. Additionally, you can add vRA software components and UrbanCode Deploy software components to create a full stack blueprint that can be executed through UrbanCode Deploy to create and deploy a vRA blueprint. Then, you can manage the created resources from vRA in UrbanCode Deploy to view environment status and delete the environment in vRA when it is no longer needed.
-</li>
-<li>
-The key benefits of using UrbanCode Deploy with vRA is that the combination of using UrbanCode Deploy for the deployment automation and VRA to manage the infrastructure. UrbanCode Deploy also allows VMware users to seamlessly move their vRA/vCenter blueprints to other cloud providers, including OpenStack, SoftLayer, and others.
-</li>
-<h2>Improved support for middleware deployments and configuration management</h2>
-<li>
-The Deploy, Configure, and Install WebSphere Application Server plug-ins have been updated to include the ability to migrate captured configurations to a new version of WebSphere Application Server.</li>
-<li>Support for WebSphere Liberty Collectives has been added to the UrbanCode Deploy IBM WebSphere Liberty plug-in.
-</li>
-<h2>Enhancements to full stack provisioning</h2>
-<li>Application processes can now be run from an UrbanCode Deploy cloud blueprint to provision Windows or Linux VMs on multiple clouds (Softlayer, AWS, Azure).</li>
-<h2>Monitor key deployment metrics</h2>
-<li>The ability to monitor key deployment metrics through integration with applications such as New Relic and IBM Application Performance Management has been added. This includes key metrics that cover agents, individual components and applications, as well as component summary metrics.
-</li>
-<h2>New community for developers</h2>
-<li>The new <a href="http://www.developer.ibm.com/urbancode/plugins/development" target="_blank" rel="noopener noreferrer">Open Development Community for Plugins</a> provides information for contributing plug-ins.</li>
-<h2>New and improved integrations</h2>
-<li>New Jenkins Pipeline plug-in adds support for creating components, invoking UrbanCode Deploy component imports, running steps multiple times in a single job, deploying snapshots or component versions; compatible with Jenkins Pipeline DSL</li>
-<li>New API Management plug-in</li>
-<li>Improved Docker Compose plug-in</li>
-<li>New IBM Operational Decision Manager (ODM) source plug-in and support for deploying RuleApps remotely with the existing plug-in.</li>
-<li>New Configuration management for Microsoft Internet Information Server (IIS) plug-in (BETA) allows you to use UrbanCode Deploy to manage a heterogeneous application server environment.</li>
-<li>Artifactory plug-in updated to improve governance and metadata exchange and handling of Maven snapshot.</li>
-<li>Cloud Foundry plug-in improved support for manifest deployments and managing User Provided Services.</li>
-<h2>Improvements for the mainframe environment</h2>
-<li>UrbanCode Deploy can now manage the deployment of both MVS data sets and HFS files in a single component version.</li>
-<h2>UrbanCode Deploy as a service</h2>
-<li>The new IBM Cloud UrbanCode Deploy offering allows you to using applications in the cloud and automate deployment without investing in the infrastructure or administration. See<br/>
-<a href="https://developer.ibm.com/urbancode/2016/09/20/urbancode-deploy-new-features-092016/" target="_blank" rel="noopener noreferrer">The Best of the UrbanCode Deploy 6.2.2</a> for more details about UrbanCode Deploy 6.2.2 cloud offering and new features.</li>
-</div>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.2.2
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2016.09.20
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.2 - September 20, 2016
+   </h1>
+  </p>
+  <p>
+   <p>
+    IBM® UrbanCode™ Deploy 6.2.2 is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.
+   </p>
+   <div class="new_release_cont">
+    <div class="deploy-bullets">
+     <h2>
+      New version of Java required
+     </h2>
+     <li>
+      Beginning in version 6.2.2, the IBM UrbanCode Deploy server and agent relays require Java™ Runtime Environment (JRE) or Java Development Kit (JDK) version 8.
+     </li>
+     <h2>
+      Process Editor is easier to use
+     </h2>
+     <li>
+      The step palette has been enhanced to make it easier to navigate. Steps can be added without specifying properties. Properties can be added later.
+     </li>
+     <li>
+      The new Auto Layout feature automatically lays out the diagram when you drop steps into the diagram.
+     </li>
+     <li>
+      Scripts on a step can be open from the property dialog, using the Script Editor. The editor provides syntax coloring and a search and replace feature. Layouts from earlier UrbanCode Deploy versions can be convert into the new process layout. You can revert to the original layout if desired.
+     </li>
+     <h2>
+      New integration with VRealize Automation
+     </h2>
+     <li>
+      The UrbanCode Deploy Blueprint Designer now provides integration with VRealize Automation (vRA). You can create a cloud blueprint in UrbanCode Deploy that incorporates vCenter IaaS constructs managed through vRA, including virtual machine templates and network profiles. Additionally, you can add vRA software components and UrbanCode Deploy software components to create a full stack blueprint that can be executed through UrbanCode Deploy to create and deploy a vRA blueprint. Then, you can manage the created resources from vRA in UrbanCode Deploy to view environment status and delete the environment in vRA when it is no longer needed.
+     </li>
+     <li>
+      The key benefits of using UrbanCode Deploy with vRA is that the combination of using UrbanCode Deploy for the deployment automation and VRA to manage the infrastructure. UrbanCode Deploy also allows VMware users to seamlessly move their vRA/vCenter blueprints to other cloud providers, including OpenStack, SoftLayer, and others.
+     </li>
+     <h2>
+      Improved support for middleware deployments and configuration management
+     </h2>
+     <li>
+      The Deploy, Configure, and Install WebSphere Application Server plug-ins have been updated to include the ability to migrate captured configurations to a new version of WebSphere Application Server.
+     </li>
+     <li>
+      Support for WebSphere Liberty Collectives has been added to the UrbanCode Deploy IBM WebSphere Liberty plug-in.
+     </li>
+     <h2>
+      Enhancements to full stack provisioning
+     </h2>
+     <li>
+      Application processes can now be run from an UrbanCode Deploy cloud blueprint to provision Windows or Linux VMs on multiple clouds (Softlayer, AWS, Azure).
+     </li>
+     <h2>
+      Monitor key deployment metrics
+     </h2>
+     <li>
+      The ability to monitor key deployment metrics through integration with applications such as New Relic and IBM Application Performance Management has been added. This includes key metrics that cover agents, individual components and applications, as well as component summary metrics.
+     </li>
+     <h2>
+      New community for developers
+     </h2>
+     <li>
+      The new
+      <a href="http://www.developer.ibm.com/urbancode/plugins/development" rel="noopener noreferrer" target="_blank">
+       Open Development Community for Plugins
+      </a>
+      provides information for contributing plug-ins.
+     </li>
+     <h2>
+      New and improved integrations
+     </h2>
+     <li>
+      New Jenkins Pipeline plug-in adds support for creating components, invoking UrbanCode Deploy component imports, running steps multiple times in a single job, deploying snapshots or component versions; compatible with Jenkins Pipeline DSL
+     </li>
+     <li>
+      New API Management plug-in
+     </li>
+     <li>
+      Improved Docker Compose plug-in
+     </li>
+     <li>
+      New IBM Operational Decision Manager (ODM) source plug-in and support for deploying RuleApps remotely with the existing plug-in.
+     </li>
+     <li>
+      New Configuration management for Microsoft Internet Information Server (IIS) plug-in (BETA) allows you to use UrbanCode Deploy to manage a heterogeneous application server environment.
+     </li>
+     <li>
+      Artifactory plug-in updated to improve governance and metadata exchange and handling of Maven snapshot.
+     </li>
+     <li>
+      Cloud Foundry plug-in improved support for manifest deployments and managing User Provided Services.
+     </li>
+     <h2>
+      Improvements for the mainframe environment
+     </h2>
+     <li>
+      UrbanCode Deploy can now manage the deployment of both MVS data sets and HFS files in a single component version.
+     </li>
+     <h2>
+      UrbanCode Deploy as a service
+     </h2>
+     <li>
+      The new IBM Cloud UrbanCode Deploy offering allows you to using applications in the cloud and automate deployment without investing in the infrastructure or administration. See
+      <br/>
+      <a href="https://github.com/UrbanCode/IBM-UCx-RELEASE-NOTES/blob/main/files/UCD/6.2.2/6.2.2%20-%20September%2020%2C%202016.html" rel="noopener noreferrer" target="_blank">
+       The Best of the UrbanCode Deploy 6.2.2
+      </a>
+      for more details about UrbanCode Deploy 6.2.2 cloud offering and new features.
+     </li>
+    </div>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     New Process Editor
+    </li>
+    <li>
+     Integration with VRealize
+    </li>
+    <li>
+     Deployment to Application Processes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started/">
+     Getting Started
+    </a>
+    page.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Installation Notes
+    </div>
+    <p>
+     Java™ Runtime Environment (JRE) or Java Development Kit (JDK) version 8 is required.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     No major behavioral changes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Fixes in this Release
+     </div>
+     <p>
+      A cumulative list of fixes in this release, and any future fix packs will be available.
+     </p>
+    </div>
+    <div class="key-features">
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         APAR/defect
+        </td>
+        <td valign="bottom" width="78%">
+         Description
+        </td>
+       </tr>
+       <tr valign="top">
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI24455" target="_blank">
+          PI24455
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         FIRST START FAILS WITH FAILED TO START IBM URBANCODE DEPLOY:
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI35295" target="_blank">
+          PI35295
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Unable to delete type configurations
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI37581" target="_blank">
+          PI37581
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         It is possible to import component templates from old versions resulting in errors restoring objects from vc_persistent_record
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI39002" target="_blank">
+          PI39002
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UPGRADING UCD TO 6.1.1.3 PRINTS MISLEADING MESSAGE ABOUT JRE USED
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI48885" target="_blank">
+          PI48885
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Reset Latest to This Version does not prompt for a comment if comment is required
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI55273" target="_blank">
+          PI55273
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         udclient gives unhelpful error when creating component with incorrect name for template
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI56388" target="_blank">
+          PI56388
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Poor error message for cyclic process steps when importing
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI56486" target="_blank">
+          PI56486
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Deploying incremental versions leads to wrong snapshot in environment inventory view
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI58327" target="_blank">
+          PI58327
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Cannot edit a component’s basic settings: User does not have read permission
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI61693" target="_blank">
+          PI61693
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Security reports query large amounts of data
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI62368" target="_blank">
+          PI62368
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Adding thousands of components to a resource tree times out
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI62426" target="_blank">
+          PI62426
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Cannot change component version properties once deployed.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI62602" target="_blank">
+          PI62602
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Environment is not correctly created if based on resource template with special characters
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI62821" target="_blank">
+          PI62821
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Agent installation failed when using the IBMJCECCA hardware cryptograph driver
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI63732" target="_blank">
+          PI63732
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Agent Relays Tab does not have security options
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI63824" target="_blank">
+          PI63824
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Unable to edit or delete property definition
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI64554" target="_blank">
+          PI64554
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Component Template Versions Increasing without Changes
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI64845" target="_blank">
+          PI64845
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         lastResendTime in PluginTaskRequest should be declared as Long instead of long
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI64901" target="_blank">
+          PI64901
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UCD v6.2.1.0ifix01:ComponentTemplate (Component Template Versions Increasing without Changes)
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65002" target="_blank">
+          PI65002
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UnrecoverableKeyException on agent startup when installed via UI
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65004" target="_blank">
+          PI65004
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         ERROR ON BATCH EDIT WHEN HAVE MULTIPLE LINES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65020" target="_blank">
+          PI65020
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Components used in Application Processes can be deleted from the Component Tab, if you remove it from the Application -&gt; Component tab (breaking the Application Process it is used in)
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65095" target="_blank">
+          PI65095
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Incorrect Template Property Propagation
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65111" target="_blank">
+          PI65111
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         CLI COMMAND DOES NOT WORK WHEN NAME PARAMETER LONGER THAN 35 CHARACTERS in DB2
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65546" target="_blank">
+          PI65546
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         TRIM ON COMPONENT PROCESS NAME IS CAUSING COLLISION ON SOME APPLICATION IMPORTS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65547" target="_blank">
+          PI65547
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Component inventory update step fails to remove desired inventory with NullPointerException
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65557" target="_blank">
+          PI65557
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Process Request Started notification template shows unresolved property for version when process includes operational (non-version) step
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65647" target="_blank">
+          PI65647
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         During an Application export, a ‘No ResourceRole exists with ID’ error occurs
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65742" target="_blank">
+          PI65742
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Environment shows as noncompliant if user does not have full permissions
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65804" target="_blank">
+          PI65804
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Copying an environment with environment template does not disable / gray out template assiged fields
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI66002" target="_blank">
+          PI66002
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         NOT POSSIBLE TO DELETE A RESOURCE TEMPLATE THAT HAD A CHILD BLUEPRINT IN A DELETED APPLICATION
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI66436" target="_blank">
+          PI66436
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         Importing component templates is modifying Component Property Definitions
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI66563" target="_blank">
+          PI66563
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         Version import AuthTokens not cleaned up
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI66647" target="_blank">
+          PI66647
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         Need to default missing templateName on Manual Tasks during importing of Applications
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI66754" target="_blank">
+          PI66754
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         Unable to view component template process in components inherited from template
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI66758" target="_blank">
+          PI66758
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         Import Application with snapshot fails to import on different os than the server is running on.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI66760" target="_blank">
+          PI66760
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         File not found exception on the agent during log upload causes an empty log file to be uploaded to the server
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI67005" target="_blank">
+          PI67005
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         Iteration properties in the for each agent step are not immediately resolving
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI67104" target="_blank">
+          PI67104
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         Locked Processes ignored with snapshot deployments
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI67226" target="_blank">
+          PI67226
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         Resource Compare/Apply Changes  hangs
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI67605" target="_blank">
+          PI67605
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         Component cleanup creates achive files erroneously
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI67931" target="_blank">
+          PI67931
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         zOS Utility v17 step Deploy Package fails with IRX0013I Error running BUZBKPZP, line 994: Invalid character in program
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI68747" target="_blank">
+          PI68747
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         Codestation geo tag (version status) escaping does not escape ‘:’, ‘;’, or ‘’
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI69043" target="_blank">
+          PI69043
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         ResourceSyncService should not sync deleted environments
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI69164" target="_blank">
+          PI69164
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         Run generic process steps can fail unexpectedly but still run.
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+     </div>
+     <div class="subtitle">
+      Known Problems and Workarounds
+     </div>
+     <p>
+      To search for additional post-release issues that IBM Rational Support documented, visit the
+      <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+     </p>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     IMPORTANT
+    </div>
+    <p>
+     IBM UrbanCode Deploy 6.2.2 does not support upgrades if you are using DB2 on a z/OS server. If you attempt to upgrade by using this fix pack, an error message is displayed and the upgrade does not occur. Do not upgrade to the 6.2.2 fixpack, if you use DB2 on z/OS. A fix is being planned for a future release.
+    </p>
+    <p>
+     Beginning in version 6.2.2, the IBM UrbanCode Deploy server and agent relays require a Java Runtime Environment (JRE) or Java Development Kit (JDK) version 8. If you are updating or changing the JRE to the latest version, see
+     <br>
+      <a href="http://www.ibm.com/support/knowledgecenter/en/SS4GSP_6.2.2/com.ibm.udeploy.doc/topics/jre_change.html#jre_change" target="_blank">
+       Changing or updating the JRE of servers
+      </a>
+      and
+      <a href="http://www.ibm.com/support/knowledgecenter/en/SS4GSP_6.2.2/com.ibm.udeploy.doc/topics/update_JRE_agent_relays.html#update_JRE_agent_relays" target="_blank">
+       Updating the JRE location for agent relays
+      </a>
+      for instructions. For documentation on the IBM JRE, see
+      <a href="https://www.ibm.com/support/knowledgecenter/SSYKE2/welcome_javasdk_family.html" target="_blank">
+       IBM SDK, Java Technology Edition
+      </a>
+      .
+     </br>
+    </p>
+    <p>
+     If you are upgrading from version 6.2.1.0 or earlier, to ensure that all secure property values are obscured, the values of all properties in the history for existing deployments are obscured. In the deployment history for deployments that you run after you upgrade, only secure properties are obscured in the logs.
+    </p>
+    <p>
+     If you are upgrading from version 6.2.1.0 or earlier, new security features erase old component version import logs to hide secure information. If you want to keep the logs, in the installed.properties file, set the
+     <strong>
+      com.urbancode.ds.cleanup.sourceConfig.fullCleanupSkip
+     </strong>
+     property to
+     <strong>
+      True
+     </strong>
+     .
+    </p>
+    <p>
+     When upgrading an IBM UrbanCode Deploy agent to 6.2.2, end-to-end JMS encryption will automatically be enabled on all agents. In order for agent communication to function properly with end-to-end encryption enabled, the IBM UrbanCode Deploy server and agent clocks need to be synchronized to within a few minutes. To disable this feature, add the line
+     <code>
+      agent.jms.disable_full_encryption=true
+     </code>
+     ” to the agent’s
+     <code>
+      conf/agent/installed.properties
+     </code>
+     file before upgrading the agent.
+    </p>
+    <p>
+     After upgrading to IBM UrbanCode Deploy 6.2.2, users will not be able to view or delete agent relays until they have been granted permission to those relays. Relays that existed before the upgrade are only added to the System Team by default. For users to view agent relays, a user with Manage Security permission should give the correct roles the new For relays that existed before the upgrade, a user with Manage Security permissions will have to add the agent relays to the correct teams and give the correct roles the Agent Relay view and edit permissions.
+    </p>
+    <p>
+     The silent install of the IBM UrbanCode Deploy 6.2.2 server hangs when prompting for the value of the server installation directory (
+     <code>
+      install.server.dir
+     </code>
+     ). To workaround the problem, run the following instead of calling
+     <code>
+      ./install-server.sh
+     </code>
+     directly:
+     <br>
+      <code>
+       <br>
+        echo "" &gt; answerFile.txt
+        <br/>
+        echo "" &gt;&gt; answerFile.txt
+        <br/>
+        ./install-server.sh &lt; answerFile.txt (or install-server.bat &lt; answerFile.txt for Windows installations)
+       </br>
+      </code>
+     </br>
+    </p>
+    <div class="key-features">
+     <div class="subtitle">
+      Plan &amp; Prepare
+     </div>
+     <p>
+      For fixes contained in this release, and any known issues, review the
+      <a href="../release-notes">
+       release notes
+      </a>
+      .
+     </p>
+     <p>
+      For supported platforms and requirements, see the
+      <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+       system requirements
+      </a>
+      . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+     </p>
+     <p>
+      To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.2/com.ibm.udeploy.install.doc/topics/install_ch.html" target="_blank">
+       installation guide
+      </a>
+     </p>
+     <p>
+      For advanced enterprise deployments that require high availability, review our options in the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.2" target="_blank">
+       information center.
+      </a>
+     </p>
+     <p>
+      IBM UrbanCode Deploy supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+      <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" target="_blank">
+       plug-in page
+      </a>
+      .
+     </p>
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Installation
+     </div>
+     <p>
+      Version 6.2.2 is available to download from
+      <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%2FRational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=6.2.2&amp;platform=All&amp;function=all" target="_blank">
+       here.
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      For information on installing and managing licenses, see
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.udeploy.install.doc/topics/licenseManage.html">
+       Managing licenses
+      </a>
+     </p>
+     <div class="horizontal-rule">
+     </div>
+     <div class="subtitle">
+      Learn
+     </div>
+     <p>
+      To learn more about new enhancements in this release, see
+      <a href="..">
+       What’s New
+      </a>
+     </p>
+     <p>
+      To learn more about IBM UrbanCode Deploy, see the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.2" target="_blank">
+       documentation
+      </a>
+     </p>
+     <p>
+      For help installing or using IBM UrbanCode Deploy, post your questions in the
+      <a href="https://developer.ibm.com/answers?community=urbancode">
+       forums
+      </a>
+      or contact
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       support
+      </a>
+     </p>
+     <p>
+      To suggest an enhancement to the product, visit the
+      <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+       RFE Community
+      </a>
+     </p>
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Get support
+     </div>
+     <p>
+      For information from support, including FAQs, visit the
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+      You can configure the support portal to view information about specific products.
+     </p>
+    </div>
+   </div>
+  </p>
+ </body>
 </html>

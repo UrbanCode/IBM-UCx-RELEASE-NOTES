@@ -1,20 +1,189 @@
 <!DOCTYPE html>
-<html><head><title>6.2.5.2</title></head>
-<body>
-<p><b>This article was originaly published in 2021.03.22</b></p>
-<p><h1>6.2.5.2</h1></p>
-<p>This release of IBM UrbanCode Release is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+<html>
+ <head>
+  <title>
+   6.2.5.2
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2021.03.22
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.5.2
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Release is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <h3>
+    Software upgrades
+   </h3>
+   The integrated Apache Log4j software has been upgraded to version 1.2.16
+   <h3>
+    Security enhancements
+   </h3>
+   Upgraded apache-taglibs library to Standard 1.1.2 to fix security vulnerability CVE-2015-0254.
+   <h3>
+    Plug-in updates
+   </h3>
+   <ul>
+    <li>
+     You can now use the Slack plug-in to create a Slack channel when a deployment is running. The channel name is the same as the deployment name and includes release team members.
+    </li>
+    <li>
+     Ansible plug-in properties are now displayed for plug-in tasks.
+    </li>
+   </ul>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Security enhancements
+    </li>
+    <li>
+     Software upgrades
+    </li>
+    <li>
+     Plug-in updates
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h3>
+    Fixes in this Release
+   </h3>
+   The following APARs are included in this release.
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="990">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH34880" rel="noopener noreferrer" target="_blank">
+        PH34880
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       The following error occurs when reordering UrbanCode Deploy properties: ORA-01704: string literal too long
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH34001" rel="noopener noreferrer" target="_blank">
+        PH34001
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       Ansible tasks fail when a deployment is locked
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH32863" rel="noopener noreferrer" target="_blank">
+        PH32863
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       Ansible Tasks are failing/updating when deployment is locked
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH32842" rel="noopener noreferrer" target="_blank">
+        PH32842
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       Clash occurs when performing synchronization from Ansible or Nolio
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH32841" rel="noopener noreferrer" target="_blank">
+        PH32841
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       SAML authentication realm displays JSON Null when  saving the realm
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <br/>
+   <h3>
+    Known problems and workarounds
+   </h3>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h3>
+    Install the server
+   </h3>
+   This release is available for download from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=all&amp;source=fc" rel="noopener" target="_blank">
+    Fix Central
+   </a>
+   and
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    Passport Advantage
+   </a>
+   , requiring authentication.
+   <!-- This download is <a href="http://www-933.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&product=ibm/Rational/UrbanCode+Release&release=All&platform=All&function=fixId&fixids=6.2.5-UrbanCode-Release&includeRequisites=1&includeSupersedes=0&downloadMethod=http">available here.</a -->
+   Information for installing the server, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.5/com.ibm.urelease.doc/topics/install_ov.html" rel="noopener" target="_blank">
+    Installing server
+   </a>
+   section in the product documentation.
 
-<h3>Software upgrades</h3>
-The integrated Apache Log4j software has been upgraded to version 1.2.16
+For information on installing licenses, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SS4GCC_6.2.5/com.ibm.urelease.doc/topics/licenseManage.html" rel="noopener" target="_blank">
+    Managing Licenses
+   </a>
+   .
+   <h3>
+    Learn
+   </h3>
+   To learn more about new enhancements in this release, click What’s New..
 
-<h3>Security enhancements</h3>
-Upgraded apache-taglibs library to Standard 1.1.2 to fix security vulnerability CVE-2015-0254. 
+To learn more about IBM UrbanCode Release, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.5/com.ibm.urelease.doc/ucr_version_welcome.html" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
 
-<h3>Plug-in updates</h3>
-<ul>
-<li>You can now use the Slack plug-in to create a Slack channel when a deployment is running. The channel name is the same as the deployment name and includes release team members.</li>
-<li>Ansible plug-in properties are now displayed for plug-in tasks.</li>
-</ul>
-</p></body>
+For help installing or using IBM UrbanCode Release, post your questions in the
+   <a href="https://developer.ibm.com/answers?community=urbancode" rel="noopener" target="_blank">
+    forums
+   </a>
+   or contact
+   <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+    support
+   </a>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   .
+   <h3>
+    Get support
+   </h3>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

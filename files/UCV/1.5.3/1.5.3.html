@@ -1,94 +1,491 @@
 <!DOCTYPE html>
-<html><head><title>1.5.3</title></head>
-<body>
-<p><b>This article was originaly published in 2020.04.21</b></p>
-<p><h1>1.5.3</h1></p>
-<p>This page provides a summary of enhancements and bug fixes for 1.5.3 and prior 1.5.x releases. To get started with new features checkout out <a href="https://www.urbancode.com/resources/?search=&amp;product_filter%5B%5D=811">Velocity resources</a>.
+<html>
+ <head>
+  <title>
+   1.5.3
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2020.04.21
+   </b>
+  </p>
+  <p>
+   <h1>
+    1.5.3
+   </h1>
+  </p>
+  <p>
+   This page provides a summary of enhancements and bug fixes for 1.5.3 and prior 1.5.x releases. To get started with new features checkout out
+   <a href="https://www.urbancode.com/resources/?search=&amp;product_filter%5B%5D=811">
+    Velocity resources
+   </a>
+   .
+   <h2>
+    <strong>
+     Key Features in 1.5.3
+    </strong>
+   </h2>
+   <h3>
+    Improved LDAP Settings Page
+   </h3>
+   Added ability to import LDAP user groups by entering a username string from the LDAP settings page. The username string can include wildcards.
+   <h3>
+    Improved Add/Edit Integration Forms
+   </h3>
+   Advanced “hidden” fields can now be toggled from create/edit integration forms. This simplifies form usage while improving configuration.
+   <h3>
+    Improved UCD Application Naming
+   </h3>
+   UCD application names have better context by having their associated integration names appended.
+   <h2>
+    Bug Fixes
+   </h2>
+   <ul>
+    <li>
+     Fixed partial value stream display when using FireFox and Safari browsers.
+    </li>
+    <li>
+     Improved integration forms: always synchronize form fields with plugin version and fixed possible checkbox bug when creating more than one integration.
+    </li>
+    <li>
+     Reduced value stream dot (work item) alert noise.
+    </li>
+    <li>
+     Improved consistency of value stream navigation from value stream “card” view.
+    </li>
+    <li>
+     <div>
+      <div>
+       Fixed the UrbanCode Deploy Status task to correctly identify and ignore all snapshot components that do not specify at least one component version. UrbanCode Deploy statuses can only be applied to components with versions.
+      </div>
+     </div>
+    </li>
+   </ul>
+   <hr/>
+   <h2>
+    <strong>
+     Key Features in 1.5.2
+    </strong>
+   </h2>
+   <h2>
+    Bug Fixes
+   </h2>
+   <ul>
+    <li aria-setsize="-1" data-aria-level="1" data-aria-posinset="2" data-font="Symbol" data-leveltext="" data-listid="4">
+     <span data-contrast="auto">
+      Fixes a v1.5.1 specific issue where usernames with uppercase lettering that were upgraded from a prior installation would be prevented from accessing deployment plans and reports.
+     </span>
+    </li>
+   </ul>
+   <hr/>
+   <h2>
+    <strong>
+     Key Features in 1.5.1
+    </strong>
+   </h2>
+   <h3>
+    New Deployment Plan Task can "Run a Shell Script"
+   </h3>
+   <span data-contrast="auto">
+    A new “Shell” plugin brings the powerful flexibility of containerized shell execution as part of deployment plans.
+   </span>
+   <span data-contrast="auto">
+    Simply add
+   </span>
+   <span data-contrast="auto">
+    the plugin and integration to
+   </span>
+   <span data-contrast="auto">
+    Velocity
+   </span>
+   <span data-contrast="auto">
+    and you will be able to configure deployment plan templates with a
+   </span>
+   <span data-contrast="auto">
+    new type of task
+   </span>
+   <span data-contrast="auto">
+    to
+   </span>
+   <span data-contrast="auto">
+    “Run a Shell Script”.
+   </span>
+   <img alt="" class="alignnone wp-image-1004036 size-large" height="322" src="http://www.urbancode.comshellscript-1024x515.png" width="640"/>
+   <h3>
+    Deployment Plan Task Support for UrbanCode Deploy Properties
+   </h3>
+   <span data-contrast="auto">
+    Velocity can now pass properties to
+   </span>
+   <span data-contrast="auto">
+    UrbanCode
+   </span>
+   <span data-contrast="auto">
+    Deploy
+   </span>
+   <span data-contrast="auto">
+    (UCD)
+   </span>
+   <span data-contrast="auto">
+    t
+   </span>
+   <span data-contrast="auto">
+    asks
+   </span>
+   <span data-contrast="auto">
+    as part of a deployment plan.
+   </span>
+   <span data-contrast="auto">
+    Property values
+   </span>
+   <span data-contrast="auto">
+    can be set from
+   </span>
+   <span data-contrast="auto">
+    Velocity
+   </span>
+   <span data-contrast="auto">
+    as
+   </span>
+   <span data-contrast="auto">
+    name-value pairs
+   </span>
+   <span data-contrast="auto">
+    in the
+   </span>
+   <span data-contrast="auto">
+    “UCD Properties” text box
+   </span>
+   <span data-contrast="auto">
+    when creating or editing a task
+   </span>
+   <span data-contrast="auto">
+    .
+   </span>
+   <img alt="" class="alignnone wp-image-1004037 size-large" height="399" src="http://www.urbancode.comucd-task-1-1024x638.png" width="640"/>
+   <h3>
+    <span class="TextRun BCX2 SCXW152110826" data-contrast="auto" lang="EN-US" xml:lang="EN-US">
+     <span class="NormalTextRun BCX2 SCXW152110826">
+      New Value Stream Dot
+     </span>
+    </span>
+    <span class="TextRun BCX2 SCXW152110826" data-contrast="auto" lang="EN-US" xml:lang="EN-US">
+     <span class="NormalTextRun BCX2 SCXW152110826">
+      Hover-Over
+     </span>
+    </span>
+   </h3>
+   <span data-contrast="auto">
+    D
+   </span>
+   <span data-contrast="auto">
+    ots now display hover-over details making value streams more interactive and data rich. Hover-over is available in all “Dot” views: value stream stage view and value stream swim lanes view.
+   </span>
+   <h3>
+    Added Sprint and Release Details and Sprint Coloring
+   </h3>
+   <span data-contrast="auto">
+    Dots now have sprint and release fields displayed in
+   </span>
+   <span data-contrast="auto">
+    the details panel. Both are also
+   </span>
+   <span data-contrast="auto">
+    available as view coloring schemes.
+   </span>
+   <h3>
+    Jenkins Templates are Hidden
+   </h3>
+   <span data-contrast="auto">
+    The UI has been improved for Jenkins Jobs by hiding
+   </span>
+   <span data-contrast="auto">
+    CloudBees
+   </span>
+   <span data-contrast="auto">
+    Jenkins templates which cannot be run on their own.
+   </span>
+   <h3>
+    Other UI improvements
+   </h3>
+   Other UI improvements include the pipeline deployment version selector and improved spacing for stage names.
+   <h2>
+    Bug Fixes
+   </h2>
+   <ul>
+    <li aria-setsize="-1" data-aria-level="1" data-aria-posinset="1" data-font="Symbol" data-leveltext="" data-listid="4">
+     <span data-contrast="auto">
+      Fixed issue
+     </span>
+     <span data-contrast="auto">
+      where t
+     </span>
+     <span data-contrast="auto">
+      emplate deployment plans
+     </span>
+     <span data-contrast="auto">
+      might
+     </span>
+     <span data-contrast="auto">
+      not
+     </span>
+     <span data-contrast="auto">
+      be
+     </span>
+     <span data-contrast="auto">
+      visible
+     </span>
+     <span data-contrast="auto">
+      to
+     </span>
+     <span data-contrast="auto">
+      an
+     </span>
+     <span data-contrast="auto">
+      authorized
+     </span>
+     <span data-contrast="auto">
+      u
+     </span>
+     <span data-contrast="auto">
+      ser
+     </span>
+     <span data-contrast="auto">
+      .
+     </span>
+    </li>
+    <li aria-setsize="-1" data-aria-level="1" data-aria-posinset="2" data-font="Symbol" data-leveltext="" data-listid="4">
+     <span data-contrast="auto">
+      Fixed issue where multi-select process did not work for combined apps.
+     </span>
+    </li>
+    <li aria-setsize="-1" data-aria-level="1" data-aria-posinset="3" data-font="Symbol" data-leveltext="" data-listid="4">
+     Fixed issue for dots with long histories.
+    </li>
+    <li aria-setsize="-1" data-aria-level="1" data-aria-posinset="3" data-font="Symbol" data-leveltext="" data-listid="4">
+     Fixed age in stage value for dot overview.
+    </li>
+    <li aria-setsize="-1" data-aria-level="1" data-aria-posinset="3" data-font="Symbol" data-leveltext="" data-listid="4">
+     Fixed an issue to support "latest" as a plugin image tag.
+    </li>
+   </ul>
+   <hr/>
+   <h2>
+    <strong>
+     Key Features in 1.5.0
+    </strong>
+   </h2>
+   <h3>
+    New Value Stream Swim Lanes view
+   </h3>
+   A Value Stream Swim Lanes view is now available for all value streams. The new view reorganizes your original value steam based on assigned user. You can use this view to identify who owns certain work items and how far along these items are in the value steam. The DQL querying is available if you are looking for something specific.
+   <a href="swim-lanes-pic.png">
+    <img alt="Swim Lanes Sample Picture" class="alignnone size-full wp-image-1003855" height="713" src="swim-lanes-pic.png" width="1879"/>
+   </a>
+   <h3>
+    New Pipeline Executor role
+   </h3>
+   The new Pipeline Executor role allow teams to give developers the ability to push builds through the pipeline, but not modify them. Proper use of this role ensures good division of duties and conformity to each deployment.
+   <h3>
+    Integration logs
+   </h3>
+   Improvements to integration logs have been made to improve troubleshooting. Now, the last ten integration executions are saved in a log and each can be viewed. The
+   <strong>
+    Logs Modal
+   </strong>
+   dialog has been redesigned to better accommodate the additional information.
+   <a href="execution-logs-pic.png">
+    <img alt="Execution Logs Picture" class="alignnone size-full wp-image-1003857" height="993" src="execution-logs-pic.png" width="1919"/>
+   </a>
+   <h3>
+    Insights dashboard improvements to the Deployment Count chart
+   </h3>
+   Several improvements have been made to the Deployment Count chart.
+   <ul>
+    <li>
+     If a links is available for a Deployment Count chart, it links to additional details.
+    </li>
+    <li>
+     The chart can be filtered by
+     <b>
+      User
+     </b>
+     .
+    </li>
+    <li>
+     The
+     <strong>
+      Group By
+     </strong>
+     drop down list now expands to display the selected option.
+    </li>
+   </ul>
+   <h2>
+    Bug Fixes
+   </h2>
+   <h3>
+    Problem: Unable to disable SMTP configuration setting
+   </h3>
+   There is now a
+   <strong>
+    Delete
+   </strong>
+   button to remove a SMTP configuration. Prior to this fix, the SMTP configuration could not be unset or deleted.
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Improved LDAP user group import
+    </li>
+    <li>
+     Improved integration creation/edit forms.
+    </li>
+    <li>
+     Added integration names to UCD applications
+    </li>
+    <li>
+     Fixed partial value stream display when using FireFox and Safari browsers.
+    </li>
+    <li>
+     Fixed the UrbanCode Deploy Status task to correctly identify and ignore all snapshot components that do not specify at least one component version
+    </li>
+    <li>
+     Other small bug fixes and improvements...
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   None
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Known Problems
+   </h2>
+   <ul>
+    <li>
+     <strong>
+      Significant Velocity Related Performance Issues for UrbanCode Deploy prior to v7.0.5.1
+     </strong>
+     APAR PI99803 identified a significant UrbanCode Deploy performance issue due to the Velocity UrbanCode Deploy Integration creating a large number of login requests when gathering deployment information. This issue is resolved with UrbanCode Deploy v7.0.5.1. If you are using UrbanCode Deploy v7.0.0.0 or greater, contact the L2 support team to obtain a performance related patch.
+    </li>
+    <li>
+     <strong>
+      Velocity 1.5.1 Upgrade could Prevent Access to Deployment Plans and Reports (Fixed with v1.5.2)
+     </strong>
+     APAR PI99806 only affects upgrades to Velocity 1.5.1, where usernames containing
+     <span data-contrast="auto">
+      uppercase
+     </span>
+     lettering can loose access to deployment plans and reports (fully lowercase names/emails are unaffected). If you have users affected by this, contact support for an immediate work around. This issue is fixed with version 1.5.2 and later (upgrading will resolve the issue).
+    </li>
+   </ul>
+   <h2>
+    Plan &amp; Prepare
+   </h2>
+   For supported platforms and requirements you can dynamically generate a system requirements report using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <h2>
+    Install the server
+   </h2>
+   There are two option to obtaining the installation package: online installer and offline installer. Both options will require a master license key, which can be acquired from:
+   <ul>
+    <li>
+     <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+      IBM Passport Advantage
+     </a>
+     - Use this option if you have purchased IBM UrbanCode Velocity.
+    </li>
+    <li>
+     <a href="https://www.uc-velocity.com/" rel="noopener" target="_blank">
+      Trial Installation
+     </a>
+     - Use this option if you would like to try IBM UrbanCode Velocity.
+    </li>
+   </ul>
+   <h2>
+    Online installer
+   </h2>
+   The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
 
-&nbsp;
-<h2><strong>Key Features in 1.5.3</strong></h2>
-&nbsp;
-<h3>Improved LDAP Settings Page</h3>
-Added ability to import LDAP user groups by entering a username string from the LDAP settings page. The username string can include wildcards.
-<h3>Improved Add/Edit Integration Forms</h3>
-Advanced “hidden” fields can now be toggled from create/edit integration forms. This simplifies form usage while improving configuration.
-<h3>Improved UCD Application Naming</h3>
-UCD application names have better context by having their associated integration names appended.
-<h2>Bug Fixes</h2>
-<ul>
- 	<li>Fixed partial value stream display when using FireFox and Safari browsers.</li>
- 	<li>Improved integration forms: always synchronize form fields with plugin version and fixed possible checkbox bug when creating more than one integration.</li>
- 	<li>Reduced value stream dot (work item) alert noise.</li>
- 	<li>Improved consistency of value stream navigation from value stream “card” view.</li>
- 	<li>
-<div>
-<div>Fixed the UrbanCode Deploy Status task to correctly identify and ignore all snapshot components that do not specify at least one component version. UrbanCode Deploy statuses can only be applied to components with versions.</div>
-</div></li>
-</ul>
-&nbsp;
+Download the online installer package depending on the platform, the product is being installed.
+   <ul>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-linux" rel="noopener" target="_blank">
+      Linux
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-macos" rel="noopener" target="_blank">
+      Mac OS
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+      Windows
+     </a>
+    </li>
+   </ul>
+   After the download completes, start the executable file to begin the install process.
+   <h2>
+    Offline installer
+   </h2>
+   Use the offline installer to install Velocity without internet connection. You will still need internet connection at some point to download the installer itself. Once downloaded, the installer will include all containers needed to successfully install the product. For this reason, the offline installer is larger than the online installer and will require more time/bandwidth and disk space when downloading.
 
-<hr />
+The installation package is available from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Velocity&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    IBM FixCentral
+   </a>
+   . Search and select the installation package appropriate for the installation platform.
 
-<h2><strong>Key Features in 1.5.2</strong></h2>
-&nbsp;
-<h2>Bug Fixes</h2>
-<ul>
- 	<li data-leveltext="" data-font="Symbol" data-listid="4" aria-setsize="-1" data-aria-posinset="2" data-aria-level="1"><span data-contrast="auto">Fixes a v1.5.1 specific issue where usernames with uppercase lettering that were upgraded from a prior installation would be prevented from accessing deployment plans and reports.
-</span></li>
-</ul>
-&nbsp;
+After downloading the installation package, decompress the contents into two directories: one for Kubernetes and the other for Docker Compose. See the
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_1.5.x/com.ibm.uvelocity.doc/topics/c_install_se_roadmap.html">
+    documentation section on installation
+   </a>
+   for instructions about how to install the server.
 
-<hr />
+A product license key is required to install the product. To obtain a key, you must agree to the terms and conditions provided on Passport Advantage.
+   <h2>
+    Learn
+   </h2>
+   To learn more about UrbanCode Velocity, see
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SSCKX6_1.5.x" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
 
-<h2><strong>Key Features in 1.5.1</strong></h2>
-&nbsp;
-<h3>New Deployment Plan Task can "Run a Shell Script"</h3>
-<span data-contrast="auto">A new “Shell” plugin brings the powerful flexibility of containerized shell execution as part of deployment plans.</span><span data-contrast="auto"> Simply add </span><span data-contrast="auto">the plugin and integration to </span><span data-contrast="auto">Velocity</span><span data-contrast="auto"> and you will be able to configure deployment plan templates with a </span><span data-contrast="auto">new type of task </span><span data-contrast="auto">to</span><span data-contrast="auto"> “Run a Shell Script”.</span>
+For help installing or using UrbanCode Velocity, post your questions in the
+   <a href="https://developer.ibm.com/answers/topics/velocity.html" rel="noopener" target="_blank">
+    UrbanCode forums
+   </a>
+   . Tag your question with
+   <strong>
+    velocity
+   </strong>
+   .
 
-<img class="alignnone wp-image-1004036 size-large" src="http://www.urbancode.comshellscript-1024x515.png" alt="" width="640" height="322" />
-<h3>Deployment Plan Task Support for UrbanCode Deploy Properties</h3>
-<span data-contrast="auto">Velocity can now pass properties to </span><span data-contrast="auto">UrbanCode</span><span data-contrast="auto"> Deploy </span><span data-contrast="auto">(UCD) </span><span data-contrast="auto">t</span><span data-contrast="auto">asks</span> <span data-contrast="auto">as part of a deployment plan. </span><span data-contrast="auto">Property values </span><span data-contrast="auto">can be set from</span><span data-contrast="auto"> Velocity </span><span data-contrast="auto">as </span><span data-contrast="auto">name-value pairs </span><span data-contrast="auto">in the</span><span data-contrast="auto"> “UCD Properties” text box </span><span data-contrast="auto">when creating or editing a task</span><span data-contrast="auto">.</span>
-
-<img class="alignnone wp-image-1004037 size-large" src="http://www.urbancode.comucd-task-1-1024x638.png" alt="" width="640" height="399" />
-<h3><span class="TextRun BCX2 SCXW152110826" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun BCX2 SCXW152110826">New Value Stream Dot</span></span><span class="TextRun BCX2 SCXW152110826" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun BCX2 SCXW152110826"> Hover-Over</span></span></h3>
-<span data-contrast="auto">D</span><span data-contrast="auto">ots now display hover-over details making value streams more interactive and data rich. Hover-over is available in all “Dot” views: value stream stage view and value stream swim lanes view.</span>
-<h3>Added Sprint and Release Details and Sprint Coloring</h3>
-<span data-contrast="auto">Dots now have sprint and release fields displayed in </span><span data-contrast="auto">the details panel. Both are also </span><span data-contrast="auto">available as view coloring schemes.</span>
-<h3>Jenkins Templates are Hidden</h3>
-<span data-contrast="auto">The UI has been improved for Jenkins Jobs by hiding </span><span data-contrast="auto">CloudBees</span><span data-contrast="auto"> Jenkins templates which cannot be run on their own.</span>
-<h3>Other UI improvements</h3>
-Other UI improvements include the pipeline deployment version selector and improved spacing for stage names.
-<h2>Bug Fixes</h2>
-<ul>
- 	<li data-leveltext="" data-font="Symbol" data-listid="4" aria-setsize="-1" data-aria-posinset="1" data-aria-level="1"><span data-contrast="auto">Fixed issue </span><span data-contrast="auto">where t</span><span data-contrast="auto">emplate deployment plans </span><span data-contrast="auto">might </span><span data-contrast="auto">not </span><span data-contrast="auto">be </span><span data-contrast="auto">visible </span><span data-contrast="auto">to</span> <span data-contrast="auto">an </span><span data-contrast="auto">authorized </span><span data-contrast="auto">u</span><span data-contrast="auto">ser</span><span data-contrast="auto">.</span></li>
- 	<li data-leveltext="" data-font="Symbol" data-listid="4" aria-setsize="-1" data-aria-posinset="2" data-aria-level="1"><span data-contrast="auto">Fixed issue where multi-select process did not work for combined apps.</span></li>
- 	<li data-leveltext="" data-font="Symbol" data-listid="4" aria-setsize="-1" data-aria-posinset="3" data-aria-level="1">Fixed issue for dots with long histories.</li>
- 	<li data-leveltext="" data-font="Symbol" data-listid="4" aria-setsize="-1" data-aria-posinset="3" data-aria-level="1">Fixed age in stage value for dot overview.</li>
- 	<li data-leveltext="" data-font="Symbol" data-listid="4" aria-setsize="-1" data-aria-posinset="3" data-aria-level="1">Fixed an issue to support "latest" as a plugin image tag.</li>
-</ul>
-&nbsp;
-
-<hr />
-
-<h2><strong>Key Features in 1.5.0</strong></h2>
-&nbsp;
-<h3>New Value Stream Swim Lanes view</h3>
-A Value Stream Swim Lanes view is now available for all value streams. The new view reorganizes your original value steam based on assigned user. You can use this view to identify who owns certain work items and how far along these items are in the value steam. The DQL querying is available if you are looking for something specific.
-<a href="swim-lanes-pic.png"><img class="alignnone size-full wp-image-1003855" src="swim-lanes-pic.png" alt="Swim Lanes Sample Picture" width="1879" height="713" /></a>
-<h3>New Pipeline Executor role</h3>
-The new Pipeline Executor role allow teams to give developers the ability to push builds through the pipeline, but not modify them. Proper use of this role ensures good division of duties and conformity to each deployment.
-<h3>Integration logs</h3>
-Improvements to integration logs have been made to improve troubleshooting. Now, the last ten integration executions are saved in a log and each can be viewed. The <strong>Logs Modal</strong> dialog has been redesigned to better accommodate the additional information.
-<a href="execution-logs-pic.png"><img class="alignnone size-full wp-image-1003857" src="execution-logs-pic.png" alt="Execution Logs Picture" width="1919" height="993" /></a>
-<h3>Insights dashboard improvements to the Deployment Count chart</h3>
-Several improvements have been made to the Deployment Count chart.
-<ul>
- 	<li>If a links is available for a Deployment Count chart, it links to additional details.</li>
- 	<li>The chart can be filtered by <b>User</b>.</li>
- 	<li>The <strong>Group By</strong> drop down list now expands to display the selected option.</li>
-</ul>
-<h2>Bug Fixes</h2>
-<h3>Problem: Unable to disable SMTP configuration setting</h3>
-There is now a <strong>Delete</strong> button to remove a SMTP configuration. Prior to this fix, the SMTP configuration could not be unset or deleted.
-</p></body>
+To suggest an enhancement to the product, visit the
+   <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   <h2>
+    Get support
+   </h2>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

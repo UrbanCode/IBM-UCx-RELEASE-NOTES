@@ -1,39 +1,502 @@
 <!DOCTYPE html>
-<html><head><title>2.5.4</title></head>
-<body>
-<p><b>This article was originaly published in 2022.02.25</b></p>
-<p><h1>2.5.4</h1></p>
-<p>This release of IBM UrbanCode Velocity is a maintenance release and includes bug fixes. This release is recommended for all customers.
-<h4>LDAP</h4>
-On the <strong>Settings</strong> page, when you click <strong>Authentication</strong> &gt; <strong>LDAP</strong>, the required fields are obvious and indicated with red asterisks for admins for readily editing and configuring LDAP.
-<h4>Plugins</h4>
-Based on the your installed version of IBM UrbanCode Velocity, plugins not compatible with that version are prevented from installing in the product. If the installed version of IBM UrbanCode Velocity is equal or greater than the product version that the plugin supports, the installation of the plugin is possible. Plugins prevented from installation are detailed for the following three scenarios:
-<ul>
- 	<li>On the <strong>Settings</strong> page, click the <strong>Plugins</strong> tab.</li>
- 	<li>Locate the required plugin in the list and click the <strong>Install</strong> button.</li>
- 	<li>The error <strong>Plugin &lt;name&gt; is only supported on IBM UrbanCode Velocity versions equal to or greater than x.x.x</strong> is displayed on the right side of the <strong>Status</strong> field for that plugin.</li>
- 	<li>On the <strong>Settings</strong> page, click the <strong>Plugins</strong> tab.</li>
- 	<li>Click the <strong>Load plugin</strong> button.</li>
- 	<li>In the <strong>Load a custom plu</strong>gin window, click in the <strong>Plugin Image</strong> field and enter the required plugin.</li>
- 	<li>Click the <strong>Submit</strong> button.</li>
- 	<li>The error <strong>Plugin &lt;name&gt; is only supported on IBM UrbanCode Velocity versions equal to or greater than x.x.x</strong> is displayed in the Load a custom plugin window.</li>
- 	<li>On the <strong>Settings</strong> page, click the <strong>Integrations</strong> tab.</li>
- 	<li>Locate the required plugin and then click on the overflow menu and select <strong>Upgrade</strong>.</li>
- 	<li>In the <strong>Status</strong> field for the plugin, <strong>Upgrade failed</strong> is displayed.</li>
-</ul>
-For scheduled events plugins, perform the following steps:
-<ul>
- 	<li>On the <strong>Settings</strong> page, click the <strong>Plugins</strong> tab.</li>
- 	<li>Locate the required plugin and then click the <strong>Add integration</strong> button.</li>
- 	<li>In the <strong>Add Integration</strong> window, click the <strong>Show hidden properties</strong> check box.</li>
- 	<li>Click in the <strong>Initial Sync Date</strong> field to specify only pulling data after the selected date on the initial run.</li>
- 	<li>Fill in the remaining required fields in the <strong>Add Integration</strong> window.</li>
- 	<li>Click the <strong>Add</strong> button.</li>
-</ul>
-If the plugin does not support the sync feature, the <strong>Initial Sync Date</strong> field is not displayed when you click the <strong>Show hidden properties</strong> check box in the <strong>Add Integration</strong> window.
-<h4>Kubernetes</h4>
-Based on the responsiveness of a given Kubernetes environment, you are able to configure liveness and readiness probes and specify dynamic timeouts to prevent persistent removal of pods.
+<html>
+ <head>
+  <title>
+   2.5.4
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2022.02.25
+   </b>
+  </p>
+  <p>
+   <h1>
+    2.5.4
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Velocity is a maintenance release and includes bug fixes. This release is recommended for all customers.
+   <h4>
+    LDAP
+   </h4>
+   On the
+   <strong>
+    Settings
+   </strong>
+   page, when you click
+   <strong>
+    Authentication
+   </strong>
+   &gt;
+   <strong>
+    LDAP
+   </strong>
+   , the required fields are obvious and indicated with red asterisks for admins for readily editing and configuring LDAP.
+   <h4>
+    Plugins
+   </h4>
+   Based on the your installed version of IBM UrbanCode Velocity, plugins not compatible with that version are prevented from installing in the product. If the installed version of IBM UrbanCode Velocity is equal or greater than the product version that the plugin supports, the installation of the plugin is possible. Plugins prevented from installation are detailed for the following three scenarios:
+   <ul>
+    <li>
+     On the
+     <strong>
+      Settings
+     </strong>
+     page, click the
+     <strong>
+      Plugins
+     </strong>
+     tab.
+    </li>
+    <li>
+     Locate the required plugin in the list and click the
+     <strong>
+      Install
+     </strong>
+     button.
+    </li>
+    <li>
+     The error
+     <strong>
+      Plugin &lt;name&gt; is only supported on IBM UrbanCode Velocity versions equal to or greater than x.x.x
+     </strong>
+     is displayed on the right side of the
+     <strong>
+      Status
+     </strong>
+     field for that plugin.
+    </li>
+    <li>
+     On the
+     <strong>
+      Settings
+     </strong>
+     page, click the
+     <strong>
+      Plugins
+     </strong>
+     tab.
+    </li>
+    <li>
+     Click the
+     <strong>
+      Load plugin
+     </strong>
+     button.
+    </li>
+    <li>
+     In the
+     <strong>
+      Load a custom plu
+     </strong>
+     gin window, click in the
+     <strong>
+      Plugin Image
+     </strong>
+     field and enter the required plugin.
+    </li>
+    <li>
+     Click the
+     <strong>
+      Submit
+     </strong>
+     button.
+    </li>
+    <li>
+     The error
+     <strong>
+      Plugin &lt;name&gt; is only supported on IBM UrbanCode Velocity versions equal to or greater than x.x.x
+     </strong>
+     is displayed in the Load a custom plugin window.
+    </li>
+    <li>
+     On the
+     <strong>
+      Settings
+     </strong>
+     page, click the
+     <strong>
+      Integrations
+     </strong>
+     tab.
+    </li>
+    <li>
+     Locate the required plugin and then click on the overflow menu and select
+     <strong>
+      Upgrade
+     </strong>
+     .
+    </li>
+    <li>
+     In the
+     <strong>
+      Status
+     </strong>
+     field for the plugin,
+     <strong>
+      Upgrade failed
+     </strong>
+     is displayed.
+    </li>
+   </ul>
+   For scheduled events plugins, perform the following steps:
+   <ul>
+    <li>
+     On the
+     <strong>
+      Settings
+     </strong>
+     page, click the
+     <strong>
+      Plugins
+     </strong>
+     tab.
+    </li>
+    <li>
+     Locate the required plugin and then click the
+     <strong>
+      Add integration
+     </strong>
+     button.
+    </li>
+    <li>
+     In the
+     <strong>
+      Add Integration
+     </strong>
+     window, click the
+     <strong>
+      Show hidden properties
+     </strong>
+     check box.
+    </li>
+    <li>
+     Click in the
+     <strong>
+      Initial Sync Date
+     </strong>
+     field to specify only pulling data after the selected date on the initial run.
+    </li>
+    <li>
+     Fill in the remaining required fields in the
+     <strong>
+      Add Integration
+     </strong>
+     window.
+    </li>
+    <li>
+     Click the
+     <strong>
+      Add
+     </strong>
+     button.
+    </li>
+   </ul>
+   If the plugin does not support the sync feature, the
+   <strong>
+    Initial Sync Date
+   </strong>
+   field is not displayed when you click the
+   <strong>
+    Show hidden properties
+   </strong>
+   check box in the
+   <strong>
+    Add Integration
+   </strong>
+   window.
+   <h4>
+    Kubernetes
+   </h4>
+   Based on the responsiveness of a given Kubernetes environment, you are able to configure liveness and readiness probes and specify dynamic timeouts to prevent persistent removal of pods.
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Plugins initial sync date
+    </li>
+    <li>
+     Plugins safer installs
+    </li>
+    <li>
+     Kubernetes liveness, readiness probes
+    </li>
+    <li>
+     LDAP bug fix
+    </li>
+    <li>
+     Security fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <!-- A cumulative list of fixes in this release, and any future fix packs can be found in the <a href="https://www.urbancode.com/whats-new/velocity-fixlist/" target="_blank" rel="noopener">Fixlist</a> document. -->
+   The following table is a cumulative list of fixes in the 2.5.4 version.
+   <table>
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99873
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <strong>
+        Value streams
+       </strong>
+       page, when you click
+       <strong>
+        Search with DQL
+       </strong>
+       and enter a query, resolved issue of long query retrieval times for a larger number dots and issues attempted in search. Optimized code to ensure efficient data retrieval times.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <strong>
+        Value streams
+       </strong>
+       page, corrected WorkFlowQuery (WFQ) returning internal server error by updating code with utilization of a suitable data structure for effective processing correcting the following issues:
+       <ul>
+        <li>
+         Insights page not loading.
+        </li>
+        <li>
+         VSM not loading.
+        </li>
+        <li>
+         Plugin containers not being removed after execution.
+        </li>
+       </ul>
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99869
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <strong>
+        Insights
+       </strong>
+       page, when you perform the following:
+       <ul>
+        <li>
+         Click on the
+         <strong>
+          Reports
+         </strong>
+         tab.
+        </li>
+        <li>
+         Click on the required report.
+        </li>
+        <li>
+         Click on the
+         <strong>
+          Results
+         </strong>
+         link of a previously run report
+         <em>
+          or
+         </em>
+         click the
+         <strong>
+          Run report
+         </strong>
+         button to generate a new report with a
+         <strong>
+          Results
+         </strong>
+         link.
+        </li>
+        <li>
+         When you share the report link, the server port is used versus using the assumed port number 443.
+        </li>
+       </ul>
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <strong>
+        Insights
+       </strong>
+       page, when you perform the following:
+       <ul>
+        <li>
+         Click on the
+         <strong>
+          Reports
+         </strong>
+         tab.
+        </li>
+        <li>
+         Click on the
+         <strong>
+          Deployment audit
+         </strong>
+         report.
+        </li>
+        <li>
+         In the
+         <strong>
+          Deployment audit
+         </strong>
+         window, click in the
+         <strong>
+          Timezone
+         </strong>
+         drop-down field and select the Coordinated universal time (UTC) required for the report.
+        </li>
+        <li>
+         In the
+         <strong>
+          Deployment audit
+         </strong>
+         window, fill in the remaining required fields.
+        </li>
+        <li>
+         Click the
+         <strong>
+          Confirm
+         </strong>
+         button to run the report.
+        </li>
+        <li>
+         Click the
+         <strong>
+          Results
+         </strong>
+         link to display the
+         <strong>
+          Deployment audit
+         </strong>
+         report in the selected time zone.
+        </li>
+       </ul>
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99876
+      </td>
+      <td valign="bottom" width="80%">
+       When performing upgrades of IBM UrbanCode Velocity, fixed issue of deleted groups not migrating correctly.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       Resolved LDAP login issue.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan and prepare
+   </h2>
+   For supported platforms and requirements you can dynamically generate a system requirements report using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <h2>
+    Install the server
+   </h2>
+   There are two option to obtaining the installation package: online installer and offline installer. Both options require a master license key, which can be acquired from
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    IBM Passport Advantage
+   </a>
+   .
+   <h2>
+    Online installer
+   </h2>
+   The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
 
-&nbsp;
-</p></body>
+Download the online installer package depending on the platform, the product is being installed.
+   <ul>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-linux" rel="noopener" target="_blank">
+      Linux
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-macos" rel="noopener" target="_blank">
+      Mac OS
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+      Windows
+     </a>
+    </li>
+   </ul>
+   After the download completes, start the executable file to begin the install process.
+   <h2>
+    Offline installer
+   </h2>
+   Use the offline installer to install Velocity without internet connection. You will still need internet connection at some point to download the installer itself. Once downloaded, the installer will include all containers needed to successfully install the product. For this reason, the offline installer is larger than the online installer and will require more time/bandwidth and disk space when downloading.
+
+The installation package is available from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Velocity&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    IBM Fix Central
+   </a>
+   . Search and select the installation package appropriate for the installation platform.
+
+After downloading the installation package, decompress the contents into two directories: one for Kubernetes and the other for Docker Compose. See the
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.3.x/com.ibm.uvelocity.doc/topics/c_install_se_roadmap.html" rel="noopener" target="_blank">
+    documentation section on installation
+   </a>
+   for instructions about how to install the server.
+
+A product license key is required to install the product. To obtain a key, you must agree to the terms and conditions provided on Passport Advantage.
+   <h2>
+    Learn
+   </h2>
+   To learn more about UrbanCode Velocity, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using UrbanCode Velocity, post your questions in the
+   <a href="https://community.ibm.com/community/user/middleware/communities/community-home?CommunityKey=9adfe6b6-2e23-4895-8b27-38b93b5e152c" rel="noopener" target="_blank">
+    UrbanCode forums
+   </a>
+   . Tag your question with
+   <strong>
+    velocity
+   </strong>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="https://www.ibm.com/developerworks/rfe/" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   <h2>
+    Get support
+   </h2>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

@@ -1,10 +1,255 @@
 <!DOCTYPE html>
-<html><head><title>6.2.0.1</title></head>
-<body>
-<p><b>This article was originaly published in 2015.11.25</b></p>
-<p><h1>6.2.0.1 - November 25, 2015</h1></p>
-<p><div class="new_release_cont">
-This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.2.0.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2015.11.25
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.0.1 - November 25, 2015
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Recommended fixes for UrbanCode Deploy 6.2
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="../getting-started">
+      Getting Started
+     </a>
+     page.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Agent Compatibility Note
+    </div>
+    <ul>
+     <li>
+      Agents used to import new component versions will need to be upgraded to agent version 6.1.0.4. If older agents are used, version import tasks will fail with the following error:
+      <pre>Exception in thread "main" java/nio/charset/IllegalCharsetNameException: ${DS_SYSTEM_ENCODING}</pre>
+     </li>
+     <li>
+      Due to changes in communication, if you leverage the integration with the Rational Team Concert build, you must first upgrade your RTC server to 5.0.2.
+     </li>
+    </ul>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Agent Status Tracking Improvements
+    </div>
+    <p>
+     This release improves agent status tracking for agents connection through agent relays and in HA environments. For best results, it is necessary to upgrade agent relays. Without these upgrades, agent status tracking for agents connected through relays is unreliable.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     This release contains an updated version of the File Utils plugin. If you use the Middleware Configuration for WebSphere Application Server plugin, please ensure you upgrade to version 8.141002 of the plugin.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release, and any future fix packs can be found
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038759" target="_blank">
+      in this document
+     </a>
+     .
+    </p>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+   </div>
+   <p>
+    To search for additional post-release issues that IBM Rational Support documented, visit the
+    <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+     IBM Support portal.
+    </a>
+   </p>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.0/com.ibm.udeploy.install.doc/topics/install_ch.html" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     For advanced enterprise deployments that require high availability, review our options in the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.0" target="_blank">
+      information center.
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Deploy supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+     <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     If you’re upgrading from 6.0…
+    </div>
+    <p>
+     UrbanCode Deploy 6.1 introduced scalability enhancements to agent/server communication.
+     <strong>
+      All agent relays must be upgraded before running any deployments.
+     </strong>
+     All existing agents will continue to work without an upgrade, but they should be upgraded using the Upgrade action on the agent list in the web UI as soon as possible after upgrading.
+     <strong>
+      Any newly installed agents must be version 6.1.
+     </strong>
+     The latest agent and agent relay installers will be available on your UrbanCode Deploy server’s Tools page (in the Help menu) after the server is upgraded.
+    </p>
+    <p>
+     UrbanCode Deploy 6.1 also includes a more scalable artifact storage system. After upgrading your server, a background process will migrate artifacts into the new format. You can continue to access and deploy artifacts during this process, but
+     <strong>
+      there will need to be at least as much free disk space in the server’s var/repository directory as is currently being used by that directory
+     </strong>
+     . (If you currently have 25GB of artifacts, you need 25GB of additional free disk space.) The extra disk space is no longer needed after all artifacts have been migrated.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Install the server
+     </div>
+     <p>
+      This release is available for download from FixCentral, requiring authentication. This download is available
+      <a href="http://www.ibm.com/support/fixcentral/swg/quickorder?parent=ibm~Rational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=6.2.0.0&amp;platform=All&amp;function=all&amp;source=fc">
+       here
+      </a>
+      .
+     </p>
+     <p>
+      Information for installing the server, see the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.0/com.ibm.udeploy.install.doc/topics/install_ch.html">
+       Installing servers and agents
+      </a>
+      section in the product documentation.
+     </p>
+     <p>
+      For information on installing and managing licenses, see
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.3/com.ibm.udeploy.install.doc/topics/licenseManage.html">
+       Managing licenses
+      </a>
+     </p>
+     <div class="horizontal-rule">
+     </div>
+     <div class="subtitle">
+      Learn
+     </div>
+     <p>
+      To learn more about new enhancements in this release, see
+      <a href="..">
+       What’s New
+      </a>
+     </p>
+     <p>
+      To learn more about IBM UrbanCode Deploy, see the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.0" target="_blank">
+       documentation
+      </a>
+     </p>
+     <p>
+      For help installing or using IBM UrbanCode Deploy, post your questions in the
+      <a href="https://developer.ibm.com/answers?community=urbancode">
+       forums
+      </a>
+      or contact
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       support
+      </a>
+     </p>
+     <p>
+      To suggest an enhancement to the product, visit the
+      <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+       RFE Community
+      </a>
+     </p>
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Get support
+     </div>
+     <p>
+      For information from support, including FAQs, visit the
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+      You can configure the support portal to view information about specific products.
+     </p>
+    </div>
+   </div>
+  </p>
+ </body>
 </html>

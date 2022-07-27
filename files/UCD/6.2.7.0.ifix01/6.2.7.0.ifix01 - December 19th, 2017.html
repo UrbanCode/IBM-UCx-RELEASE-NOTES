@@ -1,23 +1,506 @@
 <!DOCTYPE html>
-<html><head><title>6.2.7.0.ifix01</title></head>
-<body>
-<p><b>This article was originaly published in 2017.12.19</b></p>
-<p><h1>6.2.7.0.ifix01 - December 19th, 2017</h1></p>
-<p><h3>Secured Authentication Tokens</h3>
-Users can restrict the authentication tokens used by process steps so that only tokens with the minimum permissions needed to accomplish the step are created. Also, authentication tokens are now encrypted in storage, and existing tokens can be updated to the new encryption standard.
-<h3>Increased Detail in Audit Logging</h3>
-The audit log now specifies whether the user used an authentication token to log in and more detail about the security settings that were changed.
-<h3>Additional Permissions Added</h3>
-Specific permissions have been added to upgrade and delete agents, delete agent relays, and edit post processing scripts.
-<h3>Optional Manual Task Notifications</h3>
-Choose notification options for manual tasks including no notification. You can restrict approvals for manual task to the person who started the deployment.
-<h3>Full z/OS Component Versions</h3>
-Components using z/OS now have the option to use full or incremental versions.
-<h3>Terraform</h3>
-Greater support for creating Terraform documents in the blueprint designer. The blueprint designer now combines different provider syntaxes into one, unified graphical representation.
+<html>
+ <head>
+  <title>
+   6.2.7.0.ifix01
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2017.12.19
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.7.0.ifix01 - December 19th, 2017
+   </h1>
+  </p>
+  <p>
+   <h3>
+    Secured Authentication Tokens
+   </h3>
+   Users can restrict the authentication tokens used by process steps so that only tokens with the minimum permissions needed to accomplish the step are created. Also, authentication tokens are now encrypted in storage, and existing tokens can be updated to the new encryption standard.
+   <h3>
+    Increased Detail in Audit Logging
+   </h3>
+   The audit log now specifies whether the user used an authentication token to log in and more detail about the security settings that were changed.
+   <h3>
+    Additional Permissions Added
+   </h3>
+   Specific permissions have been added to upgrade and delete agents, delete agent relays, and edit post processing scripts.
+   <h3>
+    Optional Manual Task Notifications
+   </h3>
+   Choose notification options for manual tasks including no notification. You can restrict approvals for manual task to the person who started the deployment.
+   <h3>
+    Full z/OS Component Versions
+   </h3>
+   Components using z/OS now have the option to use full or incremental versions.
+   <h3>
+    Terraform
+   </h3>
+   Greater support for creating Terraform documents in the blueprint designer. The blueprint designer now combines different provider syntaxes into one, unified graphical representation.
 
 Enhancements to the Terraform extensions (provider, provisioner) for IBM UrbanCode Deploy.
-<h3>Plug-ins Atom Feed</h3>
-Stay up-to-date on all new plug-in releases by following the <a href="https://public.dhe.ibm.com/software/products/UrbanCode/plugins/uc-plugins-atom-feed.xml" target="_blank" rel="noopener noreferrer">UrbanCode Plug-ins Atom feed</a>. Subscribe using your favorite RSS/Atom feed reader.
-</p></body>
+   <h3>
+    Plug-ins Atom Feed
+   </h3>
+   Stay up-to-date on all new plug-in releases by following the
+   <a href="https://public.dhe.ibm.com/software/products/UrbanCode/plugins/uc-plugins-atom-feed.xml" rel="noopener noreferrer" target="_blank">
+    UrbanCode Plug-ins Atom feed
+   </a>
+   . Subscribe using your favorite RSS/Atom feed reader.
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Additional Token and User Permission Options
+    </li>
+    <li>
+     Optional Manual Task Notifications
+    </li>
+    <li>
+     Increased Audit Logging Detail
+    </li>
+    <li>
+     Full z/OS Component Versions
+    </li>
+    <li>
+     Greater Terraform Support
+    </li>
+    <li>
+     Plug-ins Atom Feed
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h3 class="horizontal-rule">
+    <span style="font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 1.75rem;">
+     Enhancements in this Release
+    </span>
+   </h3>
+   <div class="key-features">
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=105917" rel="noopener" target="_blank">
+         105917
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Provide different types of audit entries for different types of authentication requests
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=106531" rel="noopener" target="_blank">
+         106531
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Provides unique auditLog entries to be able to determine specific setting changed in all cases within #security/roles
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=91193" rel="noopener" target="_blank">
+         91193
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Require permissions/access to upgrade and delete agents and agent relays
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=97944" rel="noopener" target="_blank">
+         97944
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        need more granular control of edit &amp; execution perms for Post Processing Scripts
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h2>
+    </h2>
+    <h3>
+     Fixes in this release
+    </h3>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI89546" rel="noopener" target="_blank">
+         PI89546
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ERRORS WHEN EDITING RESOURCE TREE CONTAINING (,), AND / CHARACTERS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI89496" rel="noopener" target="_blank">
+         PI89496
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CAN’T EDIT COMPONENT TEMPLATE WITHOUT MANAGE TEAMS PERMISSION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI88865" rel="noopener" target="_blank">
+         PI88865
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        COMPONENT PROCESS NEVER STARTS AFTER APPROVALS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI88439" rel="noopener" target="_blank">
+         PI88439
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Server does not start after upgrade: ‘String contains ASCII control characters’
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI85953" rel="noopener" target="_blank">
+         PI85953
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        COMPLETED PROCESSES ARE SHOWING AS RUNNING IN UI
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI84661" rel="noopener" target="_blank">
+         PI84661
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        AGENTS CAN BE ASSIGNED TO RESOURCES THAT THE USER DOESN’T HAVE PERMISSION TO VIEW OR EDIT IN THE APPLICATION CREATION WIZARD
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI82670" rel="noopener" target="_blank">
+         PI82670
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        OUTPUT LOG CAN’T BE VIEWED FROM THE UCD UI
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI80996" rel="noopener" target="_blank">
+         PI80996
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        LAST VERSION IN APPLICATION’S COMPONENT TAB SHOWS ARCHIVED
+VERSIONS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI67556" rel="noopener" target="_blank">
+         PI67556
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SOME SOURCE CONFIG PLUGINS DO NOT SUPPORT “PRESERVE EXECUTE
+BITS” OPTION.
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65004" rel="noopener" target="_blank">
+         PI65004
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO USE BATCH EDIT ON ENTRIES WITH MULTIPLE LINES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI57072" rel="noopener" target="_blank">
+         PI57072
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO CHANGE DATE RANGE AFTER A REPORTS INITIAL DATE SELECTION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI92399" rel="noopener" target="_blank">
+         PI92399
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DISABLE HEAT ENGINE CONVERGENCE MODE IN OPENSTACK NEWTON OR HIGHER TO USE BLUEPRINT DESIGNER
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI92351" rel="noopener" target="_blank">
+         PI92351
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        WHEN IMPORTING A COMPONENT THAT INHERITS COMPONENT TEMPLATE PROPERTIES, COMPONENT PROPERTIES DO NOT GET IMPORTED.
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI84409" rel="noopener" target="_blank">
+         PI84409
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        IMPORTING COMPONENTS WITHOUT COMPONENT/COMPONENT TEMPLATE PROPERTIES CAUSES ERROR IN LOGS.
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI85894" rel="noopener" target="_blank">
+         PI85894
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        YOU CAN MAP AGENTS DURING THE APPLICATION WIZARD DESPITE NOT HAVING AGENT: CREATE RESOURCE PERMISSION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI87384" rel="noopener" target="_blank">
+         PI87384
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Component template can’t be imported if it contains new processes
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI88211" rel="noopener" target="_blank">
+         PI88211
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO LOAD “WORK ITEMS” TAB
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI88507" rel="noopener" target="_blank">
+         PI88507
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SNAPSHOT CANNOT BE LOCKED IF RESOURCE CONTAINS “/ ” IN THE NAME
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI93742" rel="noopener" target="_blank">
+         PI93742
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        POST PROCESSING SCRIPT MAY EXECUTE BEFORE THE OUTPUT LOG HAS BEEN FULLY WRITTEN
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg2C1000302" rel="noopener" target="_blank">
+         Security Bulletin
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Multiple Vulnerabilities in Apache Tomcat affects IBM UrbanCode Deploy (CVE-2017-7674, CVE-2017-7675)
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg2C1000367" rel="noopener" target="_blank">
+         Security Bulletin
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Authenticated Users Can Gain Privilege in IBM UrbanCode Deploy (CVE-2017-1493)
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h3>
+     Known Problems and Workarounds
+    </h3>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/entdocview.wss?uid=swg1PI90236" rel="noopener" target="_blank">
+         PI90236
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO PERFORM DEPLOYMENTS AFTER UPGRADING TO 6.2.6.1 OR 6.2.7.0
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    To search for additional post-release issues that IBM Rational Support documented, visit the
+    <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+     IBM Support portal.
+    </a>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h3 class="subtitle">
+    Severe Defect in Unfixed 6.2.7.0
+   </h3>
+   6.2.7.0 contains APAR
+   <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI93742" rel="noopener" target="_blank">
+    PI93742
+   </a>
+   , which can cause plugin steps to fail even if they have actually succeed. To avoid APAR PI93742, upgrade 6.2.7.0 to 6.2.7.0.ifix01, and then upgrade all agents.
+   <hr/>
+   <h3 class="subtitle">
+    Upgrade Notes
+   </h3>
+   <div>
+   </div>
+   <h3>
+    Starting in 6.2.5.2
+   </h3>
+   Starting the server for the first time may take longer than usual. For very large installations, allow an extra hour for the first server startup. Subsequent startups will take the regular amount of time.
+
+Users now do not receive notifications based on their membership in a role on the System Team. Users will have to be added to the correct role on a different team as well to receive notifications.
+
+The server now deletes all contents of the var/temp directory on server startup.
+   <h3>
+    Starting in 6.2.5.1
+   </h3>
+   Process requests from deleted environments will now be deleted. To keep process requests from deleted environments, add this property to the installed.properties file: com.urbancode.ds.cleanup.HistoryCleanup.disableDeletedEnvironmentCleanup=true
+   <h3>
+    Starting in 6.2.5.0
+   </h3>
+   The UCD_SESSION_KEY header has been renamed to UCD_CSRF_TOKEN. The previous name is also accepted until 6.3 when it will be removed from the product.
+
+Users now require the “Execute” permission on agents in order to run processes against them. All existing user roles will receive this permission when upgrading from a version before 6.2.5.0. When upgrading, ensure that any user that needs to execute processes is on the same team as the agents required to run those processes.
+   <h3>
+    Starting in 6.2.4.0
+   </h3>
+   You must upgrade Agent Relays when upgrading from a version below 6.2.4.0. Also, the TLS protocol 3DES is no longer supported.
+
+After upgrading from before 6.2.4.0, users will not be able to view or delete agent relays until they have been granted permission to those relays. Relays that existed before the upgrade are only added to the System Team by default. For users to view agent relays, a user with Manage Security permission should give the correct roles the new For relays that existed before the upgrade, a user with Manage Security permissions will have to add the agent relays to the correct teams and give the correct roles the Agent Relay view and edit permissions.
+
+When upgrading an IBM UrbanCode Deploy agent, end-to-end JMS encryption will automatically be enabled on all agents. In order for agent communication to function properly with end-to-end encryption enabled, the IBM UrbanCode Deploy server and agent clocks need to be synchronized to within a few minutes. To disable this feature, add the line
+   <code>
+    agent.jms.disable_full_encryption=true
+   </code>
+   ” to the agent’s
+   <code>
+    conf/agent/installed.properties
+   </code>
+   file before upgrading the agent.
+   <h3>
+    Starting in 6.2.3.0
+   </h3>
+   If you are upgrading from version 6.2.3.0 and earlier, servers and relays must be upgraded at the same time. Agents connected through relays may not connect successfully until both server and relay are upgraded. This is due to an incompatibility between versions of an library used by UCD.
+
+Starting in 6.2.3.0, authentication tokens will be obfuscated in the UI and REST API after their initial creation. Scripts and users will only be able to retrieve the full authentication token immediately after creating it.
+
+The silent install of the IBM UrbanCode Deploy server hangs when prompting for the value of the server installation directory (
+   <code>
+    install.server.dir
+   </code>
+   ). To workaround the problem, run the following instead of calling
+   <code>
+    ./install-server.sh
+   </code>
+   directly:
+   <code>
+    echo "" &gt; answerFile.txt echo "" &gt;&gt; answerFile.txt ./install-server.sh &lt; answerFile.txt (or install-server.bat &lt; answerFile.txt for Windows installations)
+   </code>
+   <h3>
+    Starting in 6.2.2.0
+   </h3>
+   The IBM UrbanCode Deploy server and agent relays now require a Java Runtime Environment (JRE) or Java Development Kit (JDK) version 8. If you are updating or changing the JRE to the latest version, see
+   <a href="http://www.ibm.com/support/knowledgecenter/en/SS4GSP_6.2.4/com.ibm.udeploy.doc/topics/jre_change.html#jre_change" rel="noopener" target="_blank">
+    Changing or updating the JRE of servers
+   </a>
+   and
+   <a href="http://www.ibm.com/support/knowledgecenter/en/SS4GSP_6.2.4/com.ibm.udeploy.doc/topics/update_JRE_agent_relays.html#update_JRE_agent_relays" rel="noopener" target="_blank">
+    Updating the JRE location for agent relays
+   </a>
+   for instructions. For documentation on the IBM JRE, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SSYKE2/welcome_javasdk_family.html" rel="noopener" target="_blank">
+    IBM SDK, Java Technology Edition
+   </a>
+   .
+   <h3>
+    Starting in 6.2.1.1
+   </h3>
+   To ensure that all secure property values are obscured, the values of all properties in the history for existing deployments are obscured. In the deployment history for deployments that you run after you upgrade, only secure properties are obscured in the logs.
+
+New security features erase old component version import logs to hide secure information. If you want to keep the logs, in the installed.properties file, set the
+   <strong>
+    com.urbancode.ds.cleanup.sourceConfig.fullCleanupSkip
+   </strong>
+   property to
+   <strong>
+    true
+   </strong>
+   .
+   <h3 class="subtitle">
+    Plan &amp; Prepare
+   </h3>
+   For fixes contained in this release, and any known issues, review the
+   <a href="https://github.com/UrbanCode/IBM-UCx-RELEASE-NOTES">
+    release notes
+   </a>
+   .
+
+For supported platforms and requirements, see the reports that can be dynamically generated using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <strong>
+    Note:
+   </strong>
+   Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+
+To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.7/com.ibm.udeploy.install.doc/topics/install_ch.html">
+    installation guide
+   </a>
+   .
+  </p>
+ </body>
 </html>

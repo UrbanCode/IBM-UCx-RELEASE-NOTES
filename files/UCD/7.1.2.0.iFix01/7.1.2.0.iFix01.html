@@ -1,41 +1,486 @@
 <!DOCTYPE html>
-<html><head><title>7.1.2.0.iFix01</title></head>
-<body>
-<p><b>This article was originaly published in 2021.04.21</b></p>
-<p><h1>7.1.2.0.iFix01</h1></p>
-<p>This release replaces the Urbancode Deploy version 7.1.2.0 release. It includes all updates made in the 7.1.2.0 release. Version 7.1.2.0 has been removed and not available to download. If you have installed version 7.1.2.0, install this iFix to prevent potential problems.
+<html>
+ <head>
+  <title>
+   7.1.2.0.iFix01
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2021.04.21
+   </b>
+  </p>
+  <p>
+   <h1>
+    7.1.2.0.iFix01
+   </h1>
+  </p>
+  <p>
+   This release replaces the Urbancode Deploy version 7.1.2.0 release. It includes all updates made in the 7.1.2.0 release. Version 7.1.2.0 has been removed and not available to download. If you have installed version 7.1.2.0, install this iFix to prevent potential problems.
 
 The following updates and enhancements are included.
+   <h2>
+    7.1.2.0.iFix01
+   </h2>
+   No new features are included in this release. This ifix addresses multiple issues with tables based on resource tree information.
+   <h2>
+    7.1.2.0
+   </h2>
+   This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <h2>
+    Key Features and Enhancements
+   </h2>
+   <dl>
+    <!-- RFE: RTC 106801 -->
+    <dt>
+     Improvement to environment gate
+    </dt>
+    <dd>
+     Environment gates can now be configured to obtain snapshot of statuses. Previously, only snapshot for version statuses was available.
+    </dd>
+    <!-- RFE: 136409 -->
+    <dt>
+     Improved post-processing scripts security
+    </dt>
+    <dd>
+     Starting with this release, Post Processing Scripts are fully secured objects, which means that the scripts can be assigned to teams and types. Fully secured objects are also provides subject to more specific permissions than the previous
+     <strong>
+      Manage Post-Processing Scripts
+     </strong>
+     permission. Role-based permissions such as
+     <strong>
+      Create
+     </strong>
+     ,
+     <strong>
+      Edit
+     </strong>
+     ,
+     <strong>
+      Delete
+     </strong>
+     ,
+     <strong>
+      View
+     </strong>
+     , and
+     <strong>
+      Manage Teams
+     </strong>
+     can be assigned to post-processing scripts. During the upgrade, all roles are granted View permissions for post-processing scripts and roles that were assigned the Manage Post Processing Script permission are granted all the new permissions.
 
-<h2>7.1.2.0.iFix01</h2>
-No new features are included in this release. This ifix addresses multiple issues with tables based on resource tree information.
+With the added permissions, you can control which users can create, view, or modify post-processing scripts. In prior releases, users did not require permission to view post-processing scripts. Users with Manage Post Processing Scripts permission could change them. In this release, users must be assigned the appropriate permissions to perform these tasks. When you upgrade to this release, teams are not automatically assigned to post-processing scripts. Users who require permission must be assigned to teams with access. After you upgrade to version 7.1.2.0, a System Team user must make the required assignments.
+    </dd>
+    <!-- RFE: 144551 -->
+    <dt>
+     Improved searching for users in LDAP Group support
+    </dt>
+    <dd>
+     You can now search for users in LDAP recursively through user subtrees by setting the
+     <strong>
+      Search User Subtree
+     </strong>
+     option when configuring the LDAP connection. The default for this featuare is off.
+    </dd>
+    <!-- RFE:  143496 -->
+    <dt>
+     Rename properties
+    </dt>
+    <dd>
+     When editing properties, you can change the name of the property.
+    </dd>
+   </dl>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Environment gate improvement
+    </li>
+    <li>
+     LDAP Group subtree search
+    </li>
+    <li>
+     Rename properties
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h2>
+    Fixes
+   </h2>
+   A cumulative list of fixes in this release, and any future fix packs can be found in the
+   <a href="https://www.urbancode.com/whats-new/deployfixlist/" rel="noopener" target="_blank">
+    Fixlist
+   </a>
+   document.
+   <h3>
+    7.1.2.0
+   </h3>
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH34622" target="_blank">
+        PH34622
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       IN REQUEST JSON OF SAVE CONDITIONS ON ENVIRONMENT GATE HAS CHANGED FROM CONDITIONS TO GATE IN 7.1.1.0 AND LATER RELEASES
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH34016" target="_blank">
+        PH34016
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       REQUESTING APPLICATION PROCESS VIA REST ENDPOINT RESPONDS WITH HTTP 405
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH33903" target="_blank">
+        PH33903
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       WHEN TO RUN ON IBM JAVA, AGENTS ONLY ENABLE TLSV1
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH33497" target="_blank">
+        PH33497
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       JMS AGENTS CONFIGURED USING MUTUAL AUTHENTICATION CAN NOT BE CONVERTED TO WEB AGENTS
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH33328" target="_blank">
+        PH33328
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       SELECT ALL DOESN'T WORK ANYWHERE (RESOURCE TREE &amp; NON RESOURCE TREE)
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH33071" target="_blank">
+        PH33071
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       WHEN CLICKING "DOWNLOAD ALL LOGS" ON CANCELLED PROCESS REQUEST, 500 ERROR OCCUR
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH33018" target="_blank">
+        PH33018
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       Secure Properties throws error when updating component configuration from UI.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH32476" target="_blank">
+        PH32476
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       "SET X PROPERTY" STEPS FAIL DUE TO EXCEEDING MAX NUMBER OF RETRIES
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH32454" target="_blank">
+        PH32454
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       AGENTS IN CONNECTING STATE AND LICENSED CAN FILL SERVER LOGS WITH NULLPOINTEREXCEPTION
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH32242" target="_blank">
+        PH32242
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       ADD TEAM DROPDOWN FILTER NOT FILTERING RESOURCES BY NAME.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH31588" target="_blank">
+        PH31588
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       AFTER UPGRADE FROM BEFORE 7.0.1.0, SERVER.XML DOES NOT LOAD A LOG NOISE SUPPRESSING CUSTOM WEBAPP CLASS LOADER
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH31534" target="_blank">
+        PH31534
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UCDEXCEPTIONMAPPER IS CAUSING EXCESSIVE ERROR LOGGING AFTER UPGRADE TO 7.0.5.0.IFIX01
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH30474" target="_blank">
+        PH30474
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       SUCCESS MESSAGE MISSING WHILE INSTALLING UCD AGENT
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH30235" target="_blank">
+        PH30235
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       CODESTATION PAGE SHOWS DELETED COMPONENTS ENTRIES
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH29936" target="_blank">
+        PH29936
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UNABLE TO IMPORT COMPONENT VERSIONS THROUGH API
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH29795" target="_blank">
+        PH29795
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       USER IS NOT ABLE TO  SAVE SYSTEM SETTINGS WITHOUT PRIVILEGE "MANAGE MAINTENANCE MODE"
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH29672" target="_blank">
+        PH29672
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UNABLE TO CHANGE FROM THE DEFAULT VALUE FOR "AGENT EXECUTE PERMISSION REQUIRED" UPGRADE PROMPT.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH29584" target="_blank">
+        PH29584
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       S3 ERRORS AFTER UPGRADING AN INSTANCE TO 7.0.5.3
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH28928" target="_blank">
+        PH28928
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       BATCH EDIT FOR SPECIFIC COMPONENT UNDER COMPONENT ENVIRONMENT PROPERTIES IS MISSING
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH28579" target="_blank">
+        PH28579
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       TEAMS AND TYPES ARE NOT SHOWING CORRECTLY ON A BASE RESOURCE WHEN APPLICATION IS CREATED FROM THE RESOURCE TEMPLATE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH28456" target="_blank">
+        PH28456
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UPGRADING TO 7.1.0.1.IFIX01 THROWS "UNTERMINATED ' CHARACTER?"ERROR DUE TO INCORRECT AMOUNT OF SINGLE QUOTES
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH28268" target="_blank">
+        PH28268
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       PROCESS STEP FAILING AFTER UPGRADE WITH CLASSCASTEXCEPTION
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH28218" target="_blank">
+        PH28218
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       'AGENT CONFIGURATION TEMPLATE' HELP / INFO FOR THE 'SERVER URLS'AND 'RELAY URLS' SHOWS INFORMATION NOT RELATED TO THOSE FIELDS.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH28215" target="_blank">
+        PH28215
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UNABLE REMOVE SELECTED COMPONENT FROM COMPONENT ENVIRONMENT PROPERTIES SELECTOR
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1IT33537" target="_blank">
+        IT33537
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UNEXPECTED INTERNAL ERROR 172 RUNNING MERGE STATEMENT USING SUBQUERIES
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH27018" target="_blank">
+        PH27018
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UPGRADING WINDOWS AGENTS FROM A LINUX SERVER CHANGES THE AGENT JAVA_HOME FORMAT FROM WINDOWS TO LINUX
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH25932" target="_blank">
+        PH25932
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       RUN OPERATIONAL PROCESS FOR MULTIPLE COMPONENTS PROCESS FAILS TO RUN
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH01206" target="_blank">
+        PH01206
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       SAVING UNCHANGED PROPERTIES IN BATCH EDIT MODE OVERWRITES TEMPLATE PROPERTIES
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65492" target="_blank">
+        PI65492
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       CREATE ENVIRONMENT DIALOG DOES NOT SHOW ANY BLUEPRINTS WHEN BLUE PRINT DESIGNER'S BLUEPRINT NAMES CONTAIN NON-LATIN CHARACTERS
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   For supported platforms and requirements, see the reports that can be dynamically generated using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <strong>
+    Note:
+   </strong>
+   Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
 
-<h2>7.1.2.0</h2>
+To get started quickly, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+   <a href="https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Rational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    Fix Central
+   </a>
+   , requiring authentication.
 
-This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+Information for installing the server, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_7.1.2/com.ibm.udeploy.install.doc/topics/install_ch.html" rel="noopener" target="_blank">
+    Installing server
+   </a>
+   section in the product documentation.
 
-<h2>Key Features and Enhancements</h2>
-<dl>
-<!-- RFE: RTC 106801 -->
+For information on installing licenses, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SS4GSP_7.1.2/com.ibm.udeploy.doc/topics/licenseManage.html" rel="noopener" target="_blank">
+    Managing Licenses
+   </a>
+   .
+   <h3>
+    Learn
+   </h3>
+   To learn more about IBM UrbanCode Deploy, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_7.1.2/com.ibm.udeploy.doc/ucd_version_welcome.html" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
 
-<dt>Improvement to environment gate</dt>
-<dd>
-Environment gates can now be configured to obtain snapshot of statuses. Previously, only snapshot for version statuses was available.
-</dd>
-<!-- RFE: 136409 -->
-<dt>Improved post-processing scripts security</dt>
-<dd>
-Starting with this release, Post Processing Scripts are fully secured objects, which means that the scripts can be assigned to teams and types. Fully secured objects are also provides subject to more specific permissions than the previous <strong>Manage Post-Processing Scripts</strong> permission. Role-based permissions such as <strong>Create</strong>, <strong>Edit</strong>, <strong>Delete</strong>, <strong>View</strong>, and <strong>Manage Teams</strong> can be assigned to post-processing scripts. During the upgrade, all roles are granted View permissions for post-processing scripts and roles that were assigned the Manage Post Processing Script permission are granted all the new permissions.
+For help installing or using IBM UrbanCode Deploy, post your questions in the
+   <a href="https://developer.ibm.com/answers?community=urbancode" rel="noopener" target="_blank">
+    forums
+   </a>
+   or contact
+   <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+    support
+   </a>
+   .
 
-With the added permissions, you can control which users can create, view, or modify post-processing scripts. In prior releases, users did not require permission to view post-processing scripts. Users with Manage Post Processing Scripts permission could change them. In this release, users must be assigned the appropriate permissions to perform these tasks. When you upgrade to this release, teams are not automatically assigned to post-processing scripts. Users who require permission must be assigned to teams with access. After you upgrade to version 7.1.2.0, a System Team user must make the required assignments. 
-</dd>
-<!-- RFE: 144551 -->
-<dt>Improved searching for users in LDAP Group support</dt>
-<dd>You can now search for users in LDAP recursively through user subtrees by setting the <strong>Search User Subtree</strong> option when configuring the LDAP connection. The default for this featuare is off.
-</dd>
-<!-- RFE:  143496 -->
-<dt>Rename properties</dt>
-<dd>When editing properties, you can change the name of the property.</dd>
-</dl>
-</p></body>
+To suggest an enhancement to the product, visit the
+   <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   .
+   <h3>
+    Get support
+   </h3>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

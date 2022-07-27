@@ -1,21 +1,65 @@
 <!DOCTYPE html>
-<html><head><title>6.2.2.6_ifix01</title></head>
-<body>
-<p><b>This article was originaly published in 2019.07.26</b></p>
-<p><h1>6.2.2.6_ifix01</h1></p>
-<p>This release of IBM UrbanCode Release is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
-<div class="new_release_cont">
-<h2>New features</h2>
-<h3>Improvements to audit logs</h3>
-New settings for managing audit logs.
-<ul>
- 	<li>Export audit log within a specified data range as a CVS file. Click <strong>Settings</strong> &gt; <strong>Audit Logs</strong>.</li>
- 	<li>Delete audit log history by setting a cleanup schedule. Click <strong>Settings</strong> &gt; <strong>System Maintenance</strong> &gt; <strong>Audit Log History Cleanup</strong>.</li>
-</ul>
-&nbsp;
-
-The <code>log4j.properties</code> file can be modified. The following properties can be set to value that are appropriate for your environment.
-<pre><code>
+<html>
+ <head>
+  <title>
+   6.2.2.6_ifix01
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2019.07.26
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.2.6_ifix01
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Release is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <div class="new_release_cont">
+    <h2>
+     New features
+    </h2>
+    <h3>
+     Improvements to audit logs
+    </h3>
+    New settings for managing audit logs.
+    <ul>
+     <li>
+      Export audit log within a specified data range as a CVS file. Click
+      <strong>
+       Settings
+      </strong>
+      &gt;
+      <strong>
+       Audit Logs
+      </strong>
+      .
+     </li>
+     <li>
+      Delete audit log history by setting a cleanup schedule. Click
+      <strong>
+       Settings
+      </strong>
+      &gt;
+      <strong>
+       System Maintenance
+      </strong>
+      &gt;
+      <strong>
+       Audit Log History Cleanup
+      </strong>
+      .
+     </li>
+    </ul>
+    The
+    <code>
+     log4j.properties
+    </code>
+    file can be modified. The following properties can be set to value that are appropriate for your environment.
+    <pre><code>
 log4j.appender.audit=org.apache.log4j.RollingFileAppender 
 log4j.appender.audit.File=../var/log/user_audit.log 
 log4j.appender.audit.MaxFileSize=10MB 
@@ -25,29 +69,238 @@ log4j.appender.audit.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss,SSS zzz} - 
 log4j.additivity.com.urbancode.urelease.domain.AuditAction=false
 log4j.logger.com.urbancode.urelease.domain.AuditAction=DEBUG, audit
 </code></pre>
-<h3>Deployment Overview dashboard improvement</h3>
-There is now a hierarchy view on the Deployment Overview dashboard. Deployments are grouped into a hierarchy view so that you can see how specific teams and line of businesses are performing with their deployments. This view is available when the <strong>Overview Hierarchy View</strong> feature flag is enabled.
-
-<a href="ucr6226_dashboard.png"><img class="alignnone size-medium wp-image-39283" src="ucr6226_dashboard.png" alt="" width="300" height="194" /></a>
-<h3>Add owner to a scheduled deployment</h3>
-You can now set the owner for a scheduled deployment. The owner can be specified manually or the owner can be set automatically to the user who starts the deployment.
-
-<!-- h3>Upload deployment plan</h3>
+    <h3>
+     Deployment Overview dashboard improvement
+    </h3>
+    There is now a hierarchy view on the Deployment Overview dashboard. Deployments are grouped into a hierarchy view so that you can see how specific teams and line of businesses are performing with their deployments. This view is available when the
+    <strong>
+     Overview Hierarchy View
+    </strong>
+    feature flag is enabled.
+    <a href="ucr6226_dashboard.png">
+     <img alt="" class="alignnone size-medium wp-image-39283" height="194" src="ucr6226_dashboard-300x194.png" width="300"/>
+    </a>
+    <h3>
+     Add owner to a scheduled deployment
+    </h3>
+    You can now set the owner for a scheduled deployment. The owner can be specified manually or the owner can be set automatically to the user who starts the deployment.
+    <!-- h3>Upload deployment plan</h3>
 Description: upload deployment plan csv permission
 Where to find/enable: role configuration
 <h3>Phase approval</h3>
 Description: Edit phase approval permission
 Where to find/enable: role configuration
 -->
-<h3>Stop dashboard refresh</h3>
-Specify the amount of time to stop refreshing the dashboard. To use this feature, enable the <strong>Stop Refreshing The User Dashboard</strong> feature flag.
-<h3>Late to start task warning</h3>
-You can now set a threshold on how long a manual task can be in the <strong>Waiting to start</strong> state before it is set to the <strong>Late to start</strong> state. This feature provides insight as to why deployments exceed their planned time. To use this feature, enable the <strong>Late to start warning</strong> feature flag. When enable a new warning icon is visible on the Scheduled Deployment page.
-<h3>New plug-ins</h3>
-<ul>
- 	<li>XL Deploy Plugin</li>
- 	<li>Slack</li>
-</ul>
-</div>
-</p></body>
+    <h3>
+     Stop dashboard refresh
+    </h3>
+    Specify the amount of time to stop refreshing the dashboard. To use this feature, enable the
+    <strong>
+     Stop Refreshing The User Dashboard
+    </strong>
+    feature flag.
+    <h3>
+     Late to start task warning
+    </h3>
+    You can now set a threshold on how long a manual task can be in the
+    <strong>
+     Waiting to start
+    </strong>
+    state before it is set to the
+    <strong>
+     Late to start
+    </strong>
+    state. This feature provides insight as to why deployments exceed their planned time. To use this feature, enable the
+    <strong>
+     Late to start warning
+    </strong>
+    feature flag. When enable a new warning icon is visible on the Scheduled Deployment page.
+    <h3>
+     New plug-ins
+    </h3>
+    <ul>
+     <li>
+      XL Deploy Plugin
+     </li>
+     <li>
+      Slack
+     </li>
+    </ul>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     New Deployment Overview Dashboard
+    </li>
+    <li>
+     Audit log improvements
+    </li>
+    <li>
+     Bug Fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   For information on documentation and support resources, software and hardware requirements and installation steps, see the Getting Started tab.
+   <div class="new_release_cont">
+    <h2>
+     Fixes in this Release
+    </h2>
+    <div class="key-features">
+     <div class="subtitle">
+      Fixes in this Release
+     </div>
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="990">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom">
+         PH13413
+        </td>
+        <td valign="bottom" width="80%">
+         Ensure ASCII control characters are not sent to UrbanCode Deploy in process requests.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="20%">
+         PH13414
+        </td>
+        <td valign="bottom" width="80%">
+         UrbanCode Deploy task was still active following deletion in UrbanCode Deploy.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="20%">
+         PH13415
+        </td>
+        <td valign="bottom" width="80%">
+         Fixed task row dependency count disappearing after opening and closing.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="20%">
+         PH13416
+        </td>
+        <td valign="bottom" width="80%">
+         Ensure reference to deleted deployment plan task does not prevent emails from being sent.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="20%">
+         PH13417
+        </td>
+        <td valign="bottom" width="80%">
+         Ensure tasks do not start after deployment is aborted.
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    For supported platforms and requirements, see the reports that can be dynamically generated using the
+    <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener noreferrer" target="_blank">
+     Software Product Compatibility Reports (SPCR)
+    </a>
+    tool.
+    <strong>
+     Note:
+    </strong>
+    Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+
+To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.2/com.ibm.urelease.doc/topics/install_ov.html">
+     installation guide
+    </a>
+    .
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    This release is available for download from
+    <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=all&amp;source=fc" rel="noopener noreferrer" target="_blank">
+     Fix Central
+    </a>
+    and
+    <a href="https://www.ibm.com/software/howtobuy/passportadvantage/paocustomer" rel="noopener noreferrer" target="_blank">
+     Passport Advantage
+    </a>
+    , requiring authentication.
+    <!-- This download is <a href="http://www-933.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&product=ibm/Rational/UrbanCode+Release&release=All&platform=All&function=fixId&fixids=6.2.2-UrbanCode-Release&includeRequisites=1&includeSupersedes=0&downloadMethod=http">available here.</a -->
+    Information for installing the server, see the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.2/com.ibm.urelease.doc/topics/install_ov.html" rel="noopener noreferrer" target="_blank">
+     Installing server
+    </a>
+    section in the product documentation.
+
+For information on installing licenses, see
+    <a href="https://www.ibm.com/support/knowledgecenter/SS4GCC_6.2.2/com.ibm.urelease.doc/topics/licenseManage.html" rel="noopener noreferrer" target="_blank">
+     Managing Licenses
+    </a>
+    .
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Learn
+    </div>
+    To learn more about new enhancements in this release, see
+    <a href="../">
+     What’s New
+    </a>
+    .
+
+To learn more about IBM UrbanCode Release, see the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.2/com.ibm.urelease.doc/ucr_version_welcome.html" rel="noopener noreferrer" target="_blank">
+     documentation
+    </a>
+    .
+
+For help installing or using IBM UrbanCode Release, post your questions in the
+    <a href="https://developer.ibm.com/answers?community=urbancode">
+     forums
+    </a>
+    or contact
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener noreferrer" target="_blank">
+     support
+    </a>
+    .
+
+To suggest an enhancement to the product, visit the
+    <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener noreferrer" target="_blank">
+     RFE Community
+    </a>
+    .
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    For information from support, including FAQs, visit the
+    <a href="https://www.ibm.com/support/home" rel="noopener noreferrer" target="_blank">
+     IBM Support portal.
+    </a>
+    You can configure the support portal to view information about specific products.
+   </div>
+  </p>
+ </body>
 </html>

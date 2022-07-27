@@ -1,72 +1,672 @@
 <!DOCTYPE html>
-<html><head><title>6.2.1.0</title></head>
-<body>
-<p><b>This article was originaly published in 2016.04.04</b></p>
-<p><h1>6.2.1.0 - April 4, 2016</h1></p>
-<p><div class="new_release_cont">IBM UrbanCode Release 6.2.1.0 is a Major release containing several fixes and many new features</div>
-<div class="new_release_cont">
-<h2>Notification Schemes and Rules</h2>
-<p>Notification schemes and rules can now be created and maintained in Settings.  A notification scheme can be created, reused and assigned to a release or assigned to a scheduled deployment. Each scheme contains a list of notification rules. Each notification rule consists of several attributes.<br/>
-–    Notifications can be associated with different entities: Task, Segment, Deployment, Approval and Release<br/>
-–    Notifications can be assigned to occur at varying times and on certain events: Task is about to start, Task started, Task is skipped, etc.<br/>
-–    The user setting up the notification scheme can choose who is notified (specific user, group, users with a certain role, or just an email address) and which template is used for email notification.</p>
-<p><b>Assigning a Notification Scheme to a Scheduled Deployment</b><br/>
-<a href="choosescheme.png"><img alt="chooseScheme" class="alignnone size-full wp-image-22431" height="404" sizes="(max-width: 445px) 100vw, 445px" src="choosescheme.png" srcset="choosescheme.png 445w, chooseScheme-300x272.png 300w" width="445"/></a></p>
-<p><b>Configuring the settings of a Notification Scheme</b><br/>
-<a href="notificationscheme.png"><img alt="notificationScheme" class="alignnone size-full wp-image-22425" sizes="(max-width: 2382px) 100vw, 2382px" src="notificationscheme.png" srcset="notificationscheme.png 2382w, notificationScheme-300x53.png 300w, notificationScheme-1024x182.png 1024w" width="900"/></a></p>
-<h2>Notification Templates</h2>
-<p>Notification templates are definitions for the content and format of notification emails that users can now create. Templates can include <a href="http://velocity.apache.org/engine/">Apache Velocity</a> variables to dynamically populate the email with specifics of the rule (e.g. the name of the task or assigned user). Upgrading will include a default set of notification templates containing one basic template for each rule condition. Additionally, users can preview notification templates in the UI before enabling them.</p>
-<p><a href="notificationtemplate.png"><img alt="notificationTemplate" class="alignnone size-full wp-image-22445" sizes="(max-width: 1838px) 100vw, 1838px" src="notificationtemplate.png" srcset="notificationtemplate.png 1838w, notificationTemplate-300x111.png 300w, notificationTemplate-1024x377.png 1024w" width="919"/></a></p>
-<h2>New Settings Page</h2>
-<p>The Settings page is home to the new Notification Schemes and Templates tabs as well as various logging and system settings that will make troubleshooting faster and easier.<br/>
-–    The <b>Log4j</b> file, which contains the logging settings, can now be edited from the Logging tab and the changes take effect without a server restart.<br/>
-–    An up-to-date history of the Tomcat <b>Output Logs</b> is now viewable and downloadable from the Output Logs tab.<br/>
-–    <b>Audit logs</b> contain the history of every user action taken on Scheduled Deployments, Releases, and Deployment Plans and can be viewed from the Audit Logs tab.<br/>
-–    <b>The Public URL, SMTP Configuration, License server URL</b> are now editable from the System Settings Tab. Any feature in the server.properties file that is not displayed in the System Settings tab is still editable from the file itself, but will not take effect without a server restart.<br/>
-–    Certain <b>Feature Flags</b> can also be changed from the System Settings tab. These changes take effect immediately after saving.<br/>
-–    <b>Authentication Tokens</b>, which can be used to authenticate log-ins in place of the usual username/password combo, can now be added, edited and removed from the Authentication Tokens tab.<br/>
-–    The support package, a collection of log files and system property files that can be used for troubleshooting or support issues, is downloadable from the System Settings tab. This will allow users to quickly share relevant information with support in the case that any problems arise with the product.</p>
-<p><b>System Settings Tab</b><br/>
-<a href="systemsettings.png"><img alt="systemSettings" class="alignnone size-full wp-image-22455" sizes="(max-width: 1857px) 100vw, 1857px" src="systemsettings.png" srcset="systemsettings.png 1857w, systemSettings-300x96.png 300w, systemSettings-1024x328.png 1024w" width="928"/></a></p>
-<p><b>Output Logs Tab</b><br/>
-<a href="outputlogs.png"><img alt="outputLogs" class="alignnone size-full wp-image-22454" sizes="(max-width: 1886px) 100vw, 1886px" src="outputlogs.png" srcset="outputlogs.png 1886w, outputLogs-300x130.png 300w, outputLogs-1024x443.png 1024w" width="943"/></a></p>
-<h2>Scheduled Deployment Page</h2>
-<p>–    The notifications tab displays information on any notifications that will be sent out when certain actions on the scheduled deployment occur.<br/>
-–    Individual tasks are now assigned numbers on the scheduled deployment page. The task dependency icon was updated to give users more information on a task’s dependencies and prerequisites.<br/>
-–    Individual tasks now display a link that can be used to directly reach a task on a scheduled deployment to facilitate collaboration between users.<br/>
-–    Task tags on the overview tab can now be reordered to create a more customized layout.<br/>
-–    Information on the dashboard displayed at the top of the scheduled deployment page will now automatically refresh as the scheduled deployment is executed.</p>
-<p><b>New Notification Tab</b><br/>
-<a href="notificationtab.png"><img alt="notificationTab" class="alignnone size-full wp-image-22447" sizes="(max-width: 1236px) 100vw, 1236px" src="notificationtab.png" srcset="notificationtab.png 1236w, notificationTab-300x161.png 300w, notificationTab-1024x551.png 1024w" width="936"/></a></p>
-<p><b>Design Updates: Updated dependencies and task numbers</b><br/>
-<a href="sddesignupdates.png"><img alt="sdDesignUpdates" class="alignnone size-full wp-image-22448" height="396" sizes="(max-width: 751px) 100vw, 751px" src="sddesignupdates.png" srcset="sddesignupdates.png 751w, sdDesignUpdates-300x158.png 300w" width="751"/></a></p>
-<p><b>Task Link</b><br/>
-<a href="tasklink.png"><img alt="taskLink" class="alignnone size-full wp-image-22449" sizes="(max-width: 1206px) 100vw, 1206px" src="tasklink.png" srcset="tasklink.png 1206w, taskLink-300x25.png 300w, taskLink-1024x86.png 1024w" width="906"/></a></p>
-<p><b>Reordering Tags</b><br/>
-<a href="reorderingtags.png"><img alt="reorderingTags" class="alignnone size-full wp-image-22451" sizes="(max-width: 1134px) 100vw, 1134px" src="reorderingtags.png" srcset="reorderingtags.png 1134w, reorderingTags-300x151.png 300w, reorderingTags-1024x515.png 1024w" width="934"/></a></p>
-<h2>Event Dashboards</h2>
-<p>On the Calendar page, users can now either view the dashboard or create a new dashboard for any existing event.</p>
-<p><a href="eventdashboard.png"><img alt="eventDashboard" class="alignnone size-full wp-image-22458" height="101" sizes="(max-width: 779px) 100vw, 779px" src="eventdashboard.png" srcset="eventdashboard.png 779w, eventDashboard-300x39.png 300w" width="779"/></a></p>
-<h2>Security Upgrade</h2>
-<p>Authentication Realms can now be mapped to multiple Authorization Realms.  Users imported from the Authentication Realm with be members of all of their associated groups from any of the mapped Authorization Realms.</p>
-<p><a href="authrealms.png"><img alt="authRealms" class="alignnone size-full wp-image-22436" sizes="(max-width: 1860px) 100vw, 1860px" src="authrealms.png" srcset="authrealms.png 1860w, authRealms-300x41.png 300w, authRealms-1024x141.png 1024w" width="930"/></a></p>
-<h2>Recurring Rules</h2>
-<p>Recurring rules can now be temporarily disabled, preventing any additional deployments from being automatically scheduled and removing any pending deployments using the rule.</p>
-<p><a href="recurringrules.png"><img alt="recurringRules" class="alignnone size-full wp-image-22432" sizes="(max-width: 1902px) 100vw, 1902px" src="recurringrules.png" srcset="recurringrules.png 1902w, recurringRules-300x38.png 300w, recurringRules-1024x131.png 1024w" width="951"/></a></p>
-<h2>UrbanCode Deploy Plugin</h2>
-<p>Application processes from application templates in UCD can now be imported into Release.<br/>
-Tasks that were previously stuck in an executing state due to an agent being offline, a UCD gate being failed, or components not being mapped to an application will now have their result updated to match their status in UCD.</p>
-<h2>New Permissions</h2>
-<p><b>Manage System Settings</b>: View and edit the values in the System Settings tab of the new Settings page<br/>
-<b>View Audit Logs</b>: View the Audit Logs tab of the new Settings page<br/>
-<b>Manage Authentication Tokens</b>: View the authentication tokens tab on the new Settings page and create, delete, or edit authentication tokens<br/>
-<b>Manage Notifications</b>: Edit the notification schemes and notification templates on the Settings page<br/>
-<b>View Application Environment</b>: View the new Application Environments tab, where the environment reservations for an application are displayed, on the Environments page<br/>
-<b>Edit Application Environment</b>: Add or remove tags from Application Environments, either on the Application Environments tab or the Release Environments tab.</p>
-<h2>Performance Improvements</h2>
-<p>–    Added new SQL indexes on scheduled deployments<br/>
-–    Used threading to significantly reduce the amount of time to add or remove tasks from deployments and plans<br/>
-–    Updated widgets on menus used to schedule deployments to be filterable and make smaller requests</p>
-      </div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.2.1.0
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2016.04.04
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.1.0 - April 4, 2016
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    IBM UrbanCode Release 6.2.1.0 is a Major release containing several fixes and many new features
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Notification Schemes and Rules
+    </h2>
+    <p>
+     Notification schemes and rules can now be created and maintained in Settings.  A notification scheme can be created, reused and assigned to a release or assigned to a scheduled deployment. Each scheme contains a list of notification rules. Each notification rule consists of several attributes.
+     <br/>
+     –    Notifications can be associated with different entities: Task, Segment, Deployment, Approval and Release
+     <br/>
+     –    Notifications can be assigned to occur at varying times and on certain events: Task is about to start, Task started, Task is skipped, etc.
+     <br/>
+     –    The user setting up the notification scheme can choose who is notified (specific user, group, users with a certain role, or just an email address) and which template is used for email notification.
+    </p>
+    <p>
+     <b>
+      Assigning a Notification Scheme to a Scheduled Deployment
+     </b>
+     <br/>
+     <a href="choosescheme.png">
+      <img alt="chooseScheme" class="alignnone size-full wp-image-22431" height="404" sizes="(max-width: 445px) 100vw, 445px" src="choosescheme.png" srcset="choosescheme.png 445w, chooseScheme-300x272.png 300w" width="445"/>
+     </a>
+    </p>
+    <p>
+     <b>
+      Configuring the settings of a Notification Scheme
+     </b>
+     <br/>
+     <a href="notificationscheme.png">
+      <img alt="notificationScheme" class="alignnone size-full wp-image-22425" sizes="(max-width: 2382px) 100vw, 2382px" src="notificationscheme.png" srcset="notificationscheme.png 2382w, notificationScheme-300x53.png 300w, notificationScheme-1024x182.png 1024w" width="900"/>
+     </a>
+    </p>
+    <h2>
+     Notification Templates
+    </h2>
+    <p>
+     Notification templates are definitions for the content and format of notification emails that users can now create. Templates can include
+     <a href="http://velocity.apache.org/engine/">
+      Apache Velocity
+     </a>
+     variables to dynamically populate the email with specifics of the rule (e.g. the name of the task or assigned user). Upgrading will include a default set of notification templates containing one basic template for each rule condition. Additionally, users can preview notification templates in the UI before enabling them.
+    </p>
+    <p>
+     <a href="notificationtemplate.png">
+      <img alt="notificationTemplate" class="alignnone size-full wp-image-22445" sizes="(max-width: 1838px) 100vw, 1838px" src="notificationtemplate.png" srcset="notificationtemplate.png 1838w, notificationTemplate-300x111.png 300w, notificationTemplate-1024x377.png 1024w" width="919"/>
+     </a>
+    </p>
+    <h2>
+     New Settings Page
+    </h2>
+    <p>
+     The Settings page is home to the new Notification Schemes and Templates tabs as well as various logging and system settings that will make troubleshooting faster and easier.
+     <br/>
+     –    The
+     <b>
+      Log4j
+     </b>
+     file, which contains the logging settings, can now be edited from the Logging tab and the changes take effect without a server restart.
+     <br/>
+     –    An up-to-date history of the Tomcat
+     <b>
+      Output Logs
+     </b>
+     is now viewable and downloadable from the Output Logs tab.
+     <br/>
+     –
+     <b>
+      Audit logs
+     </b>
+     contain the history of every user action taken on Scheduled Deployments, Releases, and Deployment Plans and can be viewed from the Audit Logs tab.
+     <br/>
+     –
+     <b>
+      The Public URL, SMTP Configuration, License server URL
+     </b>
+     are now editable from the System Settings Tab. Any feature in the server.properties file that is not displayed in the System Settings tab is still editable from the file itself, but will not take effect without a server restart.
+     <br/>
+     –    Certain
+     <b>
+      Feature Flags
+     </b>
+     can also be changed from the System Settings tab. These changes take effect immediately after saving.
+     <br/>
+     –
+     <b>
+      Authentication Tokens
+     </b>
+     , which can be used to authenticate log-ins in place of the usual username/password combo, can now be added, edited and removed from the Authentication Tokens tab.
+     <br/>
+     –    The support package, a collection of log files and system property files that can be used for troubleshooting or support issues, is downloadable from the System Settings tab. This will allow users to quickly share relevant information with support in the case that any problems arise with the product.
+    </p>
+    <p>
+     <b>
+      System Settings Tab
+     </b>
+     <br/>
+     <a href="systemsettings.png">
+      <img alt="systemSettings" class="alignnone size-full wp-image-22455" sizes="(max-width: 1857px) 100vw, 1857px" src="systemsettings.png" srcset="systemsettings.png 1857w, systemSettings-300x96.png 300w, systemSettings-1024x328.png 1024w" width="928"/>
+     </a>
+    </p>
+    <p>
+     <b>
+      Output Logs Tab
+     </b>
+     <br/>
+     <a href="outputlogs.png">
+      <img alt="outputLogs" class="alignnone size-full wp-image-22454" sizes="(max-width: 1886px) 100vw, 1886px" src="outputlogs.png" srcset="outputlogs.png 1886w, outputLogs-300x130.png 300w, outputLogs-1024x443.png 1024w" width="943"/>
+     </a>
+    </p>
+    <h2>
+     Scheduled Deployment Page
+    </h2>
+    <p>
+     –    The notifications tab displays information on any notifications that will be sent out when certain actions on the scheduled deployment occur.
+     <br/>
+     –    Individual tasks are now assigned numbers on the scheduled deployment page. The task dependency icon was updated to give users more information on a task’s dependencies and prerequisites.
+     <br/>
+     –    Individual tasks now display a link that can be used to directly reach a task on a scheduled deployment to facilitate collaboration between users.
+     <br/>
+     –    Task tags on the overview tab can now be reordered to create a more customized layout.
+     <br/>
+     –    Information on the dashboard displayed at the top of the scheduled deployment page will now automatically refresh as the scheduled deployment is executed.
+    </p>
+    <p>
+     <b>
+      New Notification Tab
+     </b>
+     <br/>
+     <a href="notificationtab.png">
+      <img alt="notificationTab" class="alignnone size-full wp-image-22447" sizes="(max-width: 1236px) 100vw, 1236px" src="notificationtab.png" srcset="notificationtab.png 1236w, notificationTab-300x161.png 300w, notificationTab-1024x551.png 1024w" width="936"/>
+     </a>
+    </p>
+    <p>
+     <b>
+      Design Updates: Updated dependencies and task numbers
+     </b>
+     <br/>
+     <a href="sddesignupdates.png">
+      <img alt="sdDesignUpdates" class="alignnone size-full wp-image-22448" height="396" sizes="(max-width: 751px) 100vw, 751px" src="sddesignupdates.png" srcset="sddesignupdates.png 751w, sdDesignUpdates-300x158.png 300w" width="751"/>
+     </a>
+    </p>
+    <p>
+     <b>
+      Task Link
+     </b>
+     <br/>
+     <a href="tasklink.png">
+      <img alt="taskLink" class="alignnone size-full wp-image-22449" sizes="(max-width: 1206px) 100vw, 1206px" src="tasklink.png" srcset="tasklink.png 1206w, taskLink-300x25.png 300w, taskLink-1024x86.png 1024w" width="906"/>
+     </a>
+    </p>
+    <p>
+     <b>
+      Reordering Tags
+     </b>
+     <br/>
+     <a href="reorderingtags.png">
+      <img alt="reorderingTags" class="alignnone size-full wp-image-22451" sizes="(max-width: 1134px) 100vw, 1134px" src="reorderingtags.png" srcset="reorderingtags.png 1134w, reorderingTags-300x151.png 300w, reorderingTags-1024x515.png 1024w" width="934"/>
+     </a>
+    </p>
+    <h2>
+     Event Dashboards
+    </h2>
+    <p>
+     On the Calendar page, users can now either view the dashboard or create a new dashboard for any existing event.
+    </p>
+    <p>
+     <a href="eventdashboard.png">
+      <img alt="eventDashboard" class="alignnone size-full wp-image-22458" height="101" sizes="(max-width: 779px) 100vw, 779px" src="eventdashboard.png" srcset="eventdashboard.png 779w, eventDashboard-300x39.png 300w" width="779"/>
+     </a>
+    </p>
+    <h2>
+     Security Upgrade
+    </h2>
+    <p>
+     Authentication Realms can now be mapped to multiple Authorization Realms.  Users imported from the Authentication Realm with be members of all of their associated groups from any of the mapped Authorization Realms.
+    </p>
+    <p>
+     <a href="authrealms.png">
+      <img alt="authRealms" class="alignnone size-full wp-image-22436" sizes="(max-width: 1860px) 100vw, 1860px" src="authrealms.png" srcset="authrealms.png 1860w, authRealms-300x41.png 300w, authRealms-1024x141.png 1024w" width="930"/>
+     </a>
+    </p>
+    <h2>
+     Recurring Rules
+    </h2>
+    <p>
+     Recurring rules can now be temporarily disabled, preventing any additional deployments from being automatically scheduled and removing any pending deployments using the rule.
+    </p>
+    <p>
+     <a href="recurringrules.png">
+      <img alt="recurringRules" class="alignnone size-full wp-image-22432" sizes="(max-width: 1902px) 100vw, 1902px" src="recurringrules.png" srcset="recurringrules.png 1902w, recurringRules-300x38.png 300w, recurringRules-1024x131.png 1024w" width="951"/>
+     </a>
+    </p>
+    <h2>
+     UrbanCode Deploy Plugin
+    </h2>
+    <p>
+     Application processes from application templates in UCD can now be imported into Release.
+     <br/>
+     Tasks that were previously stuck in an executing state due to an agent being offline, a UCD gate being failed, or components not being mapped to an application will now have their result updated to match their status in UCD.
+    </p>
+    <h2>
+     New Permissions
+    </h2>
+    <p>
+     <b>
+      Manage System Settings
+     </b>
+     : View and edit the values in the System Settings tab of the new Settings page
+     <br/>
+     <b>
+      View Audit Logs
+     </b>
+     : View the Audit Logs tab of the new Settings page
+     <br/>
+     <b>
+      Manage Authentication Tokens
+     </b>
+     : View the authentication tokens tab on the new Settings page and create, delete, or edit authentication tokens
+     <br/>
+     <b>
+      Manage Notifications
+     </b>
+     : Edit the notification schemes and notification templates on the Settings page
+     <br/>
+     <b>
+      View Application Environment
+     </b>
+     : View the new Application Environments tab, where the environment reservations for an application are displayed, on the Environments page
+     <br/>
+     <b>
+      Edit Application Environment
+     </b>
+     : Add or remove tags from Application Environments, either on the Application Environments tab or the Release Environments tab.
+    </p>
+    <h2>
+     Performance Improvements
+    </h2>
+    <p>
+     –    Added new SQL indexes on scheduled deployments
+     <br/>
+     –    Used threading to significantly reduce the amount of time to add or remove tasks from deployments and plans
+     <br/>
+     –    Updated widgets on menus used to schedule deployments to be filterable and make smaller requests
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Redesigned Notifications
+    </li>
+    <li>
+     New Settings Page
+    </li>
+    <li>
+     Scheduled Deployment Design Improvements
+    </li>
+    <li>
+     UCD Integration Improvements
+    </li>
+    <li>
+     Multiple Authorization Realm Support
+    </li>
+    <li>
+     Performance Improvements
+    </li>
+    <li>
+     Bug Fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started/">
+     Getting Started
+    </a>
+    page.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Installation Notes
+    </div>
+    <p>
+     No new installation notes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     No major behavioral changes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Fixes in this Release
+     </div>
+     <p>
+      A cumulative list of fixes in this release, and any future fix packs will be available.
+     </p>
+    </div>
+    <div class="key-features">
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         APAR/defect
+        </td>
+        <td valign="bottom" width="78%">
+         Description
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI60171" target="_blank">
+          PI60171
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         The Enabled checkbox on Authentication Realms now defaults to true.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI60168" target="_blank">
+          PI60168
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Added capability to see Releases that have reservations for an environment on the Application Environment page.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI56793" target="_blank">
+          PI56793
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed issue preventing new dependencies to a task.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI60408" target="_blank">
+          PI60408
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed issue preventing the importing of application processes for applications using a template in UCD.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI59551" target="_blank">
+          PI59551
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed issue causing User ID to be displayed instead of the User name when a User is removed from a Team.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI59548" target="_blank">
+          PI59548
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Pie chart would occasionally get displayed out of place.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI59350" target="_blank">
+          PI59350
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Start Deployment button would incorrectly display when phase is not passing all gates.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI60409" target="_blank">
+          PI60409
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed issue where the Release dropdown on the create Scheduled Deployment dialog would load slowly.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI58824" target="_blank">
+          PI58824
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed issue where server would fail to startup if SMTP host was specified but other SMTP settings were invalid.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI58814" target="_blank">
+          PI58814
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed bug causing username displayed in the top-right of the screen to change to that of the most recently edited user.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI57743" target="_blank">
+          PI57743
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed bug causing automatic tasks in recurring deployments would not send requests to deploy.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI57727" target="_blank">
+          PI57727
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed issue with updating future deployments when rescheduling recurring deployments.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI56707" target="_blank">
+          PI56707
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed issue causing the upgrade to 6.2 to overwrite the tomcat.keystore password.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI58332" target="_blank">
+          PI58332
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed issue causing events to load slowly when event integration with releases is enabled.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI57669" target="_blank">
+          PI57669
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed bug, when event integration is enabled, causing deleted events to continue to show on the release detail page.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI57405" target="_blank">
+          PI57405
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixedbug causing releases to not correctly sort by name by default.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI57400" target="_blank">
+          PI57400
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed bug causing application versions to not be colored in the drop-down on the Contents &amp; Notifications page.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI56279" target="_blank">
+          PI56279
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed issues causing the scheduled deployment duration calculator to be incorrect.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI56139" target="_blank">
+          PI56139
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed issue where changing a work item’s name that is imported from RTC would not update in UCR.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI60415" target="_blank">
+          PI60415
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed issue causing scheduled deployments to take progressively longer to create as more used the same deployment plan.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI60416" target="_blank">
+          PI60416
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed issue preventing scheduled deployments to not open due to a cached entry being corrupted.
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI57297" target="_blank">
+          PI57297
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fixed issue where the install is setting the public URL incorrectly.
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+     </div>
+     <div class="subtitle">
+      Known Problems and Workarounds
+     </div>
+     <p>
+      To search for additional post-release issues that IBM Rational Support documented, visit the
+      <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+     </p>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes/">
+      release notes
+     </a>
+     . For supported platforms and requirements, see the
+     <a href="http://www-03.ibm.com/software/products/en/ucrel#tab_othertab1" target="_blank">
+      system requirements
+     </a>
+     . To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.1/com.ibm.urelease.doc/topics/install_ov.html">
+      installation guide
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release requires IBM Installation Manager version 1.8.0 or later for installation. See
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg24036814">
+      download document
+     </a>
+     for details on this download. This release is available for download on Fix Central for current customers, requiring authentication. This download is
+     <a href="http://www-933.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=fixId&amp;fixids=6.2.1.0-UrbanCode-Release&amp;includeRequisites=1&amp;includeSupersedes=0&amp;downloadMethod=http">
+      available here.
+     </a>
+     Information for installing the server, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.1/com.ibm.urelease.doc/topics/install_ov.html">
+      Installing server
+     </a>
+     section in the product documentation.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="../">
+      What’s New
+     </a>
+     To learn more about IBM UrbanCode Release, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.1/com.ibm.urelease.doc/ucr_version_welcome.html" target="_blank">
+      documentation
+     </a>
+     For help installing or using IBM UrbanCode Release, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

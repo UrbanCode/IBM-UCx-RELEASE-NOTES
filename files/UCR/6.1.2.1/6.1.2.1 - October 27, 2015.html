@@ -1,18 +1,288 @@
 <!DOCTYPE html>
-<html><head><title>6.1.2.1</title></head>
-<body>
-<p><b>This article was originaly published in 2015.10.27</b></p>
-<p><h1>6.1.2.1 - October 27, 2015</h1></p>
-<p><div class="new_release_cont">
-IBM UrbanCode Release 6.1.2.1 is a Fix Pack release containing performance improvements and bug fixes.
-</div>
-<div class="new_release_cont">
-<h2>Main improvements:</h2>
-<ul>
-<li><em>Security:</em> Non-secure HTTP connections will be redirected to the secure HTTPS port if SSL is enabled</li>
-<li><em>Performance:</em> Improved performance on the Release Environments page</li>
-<li><em>Feature Update:</em> Users can have permission to apply statuses to application versions without having the “Edit Release” permission</li>
-</ul>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.2.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2015.10.27
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.2.1 - October 27, 2015
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    IBM UrbanCode Release 6.1.2.1 is a Fix Pack release containing performance improvements and bug fixes.
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Main improvements:
+    </h2>
+    <ul>
+     <li>
+      <em>
+       Security:
+      </em>
+      Non-secure HTTP connections will be redirected to the secure HTTPS port if SSL is enabled
+     </li>
+     <li>
+      <em>
+       Performance:
+      </em>
+      Improved performance on the Release Environments page
+     </li>
+     <li>
+      <em>
+       Feature Update:
+      </em>
+      Users can have permission to apply statuses to application versions without having the “Edit Release” permission
+     </li>
+    </ul>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Performance Improvements
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started/">
+     Getting Started
+    </a>
+    page.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Installation Notes
+    </div>
+    <p>
+     No new installation notes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     No major behavioral changes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Fixes in this Release
+     </div>
+     <p>
+      A cumulative list of fixes in this release, and any future fix packs will be available.
+     </p>
+    </div>
+    <div class="key-features">
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         APAR/defect
+        </td>
+        <td valign="bottom" width="78%">
+         Description
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI45406" target="_blank">
+          PI45406
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Redirect HTTP traffic to HTTPS when SSL is enabled
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI51326" target="_blank">
+          PI51326
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Allow users without edit release permission to apply version status to applications
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI51330" target="_blank">
+          PI51330
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Performance issues with removing environments from the Release Environments page
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI45408" target="_blank">
+          PI45408
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Performance issues with Pipeline View displaying “Refreshing…”
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI48539" target="_blank">
+          PI47639
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Pagination on the Pipeline View does not load all application environments
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI50874" target="_blank">
+          PI50874
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Null Pointer Exception when integrating with an UrbanCode Deploy instance with no snapshot statuses
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI51334" target="_blank">
+          PI51334
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Database error when upgrading to version 6.1.2.0
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+     </div>
+     <div class="subtitle">
+      Known Problems and Workarounds
+     </div>
+     <p>
+      To search for additional post-release issues that IBM Rational Support documented, visit the
+      <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+     </p>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes/">
+      release notes
+     </a>
+     . For supported platforms and requirements, see the
+     <a href="http://www-03.ibm.com/software/products/en/ucrel#tab_othertab1" target="_blank">
+      system requirements
+     </a>
+     . To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/topics/install_ov.html">
+      installation guide
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release requires IBM Installation Manager version 1.8.0 or later for installation. See
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg24036814">
+      download document
+     </a>
+     for details on this download. This release is available for download on Fix Central for current customers, requiring authentication. This download is
+     <a href="http://www-933.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=fixId&amp;fixids=6.1.2.1-UrbanCode-Release&amp;includeRequisites=1&amp;includeSupersedes=0&amp;downloadMethod=http">
+      available here.
+     </a>
+     Information for installing the server, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.2/com.ibm.urelease.doc/topics/install_ov.html">
+      Installing server
+     </a>
+     section in the product documentation.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="../">
+      What’s New
+     </a>
+     To learn more about IBM UrbanCode Release, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.2/com.ibm.urelease.doc/ucr61_welcome.html" target="_blank">
+      documentation
+     </a>
+     For help installing or using IBM UrbanCode Release, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

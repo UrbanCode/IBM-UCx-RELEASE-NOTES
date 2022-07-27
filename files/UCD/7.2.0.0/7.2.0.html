@@ -1,18 +1,298 @@
 <!DOCTYPE html>
-<html><head><title>7.2.0.0</title></head>
-<body>
-<p><b>This article was originaly published in 2021.06.29</b></p>
-<p><h1>7.2.0</h1></p>
-<p>This release of IBM UrbanCode Deploy is a major release and includes various bug fixes. This release is recommended for all customers.
-<dl>
- 	<dt>End-of-support for Java 8</dt>
-        <dd>All customers should note that we are officially announcing end-of-support for Java 8 starting June, 2022. Additional information on alternative Java platforms will be communicated later. <strong>Note:</strong> Customers using UrbanCode Deploy on the z/OS platform, please follow the <a href="https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/8/897/ENUS220-008/index.html&request_locale=en">IBM statement</a> of direction.</dd>
+<html>
+ <head>
+  <title>
+   7.2.0.0
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2021.06.29
+   </b>
+  </p>
+  <p>
+   <h1>
+    7.2.0
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Deploy is a major release and includes various bug fixes. This release is recommended for all customers.
+   <dl>
+    <dt>
+     End-of-support for Java 8
+    </dt>
+    <dd>
+     All customers should note that we are officially announcing end-of-support for Java 8 starting June, 2022. Additional information on alternative Java platforms will be communicated later.
+     <strong>
+      Note:
+     </strong>
+     Customers using UrbanCode Deploy on the z/OS platform, please follow the
+     <a href="https://www-01.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/8/897/ENUS220-008/index.html&amp;request_locale=en">
+      IBM statement
+     </a>
+     of direction.
+    </dd>
+    <dt>
+     End-of-life for JMS Communication
+    </dt>
+    <dd>
+     Starting with 7.2.0.0, agents and relays that use the JMS communication protocol will no longer be able to connect to the UrbanCode server. Agents and Relays will need to be migrated to the Web communication type in order to connect.
+    </dd>
+    <dt>
+     JAVA_OPTS option for source-control / non-Groovy plug-ins
+    </dt>
+    <dd>
+     Previously, it was possible to set the JVM options for agents, agent relays, Deploy servers, and automation plug-ins, but not for the source-control plug-ins. Users can now configure JAVA_OPTS for source-control and non-Groovy plug-ins. Setting the custom JVM parameters for source-control plug-ins can help you in debugging and performance improvements.
+    </dd>
+   </dl>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Announcing end-of-support for Java 8
+    </li>
+    <li>
+     End-of-life for JMS Communication
+    </li>
+    <li>
+     JAVA_OPTS configuration for source-control / non-Groovy plug-ins
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h2>
+    Fixes
+   </h2>
+   A cumulative list of fixes in this release, and any future fix packs can be found in the
+   <a href="https://www.urbancode.com/whats-new/deployfixlist/" rel="noopener" target="_blank">
+    Fixlist
+   </a>
+   document.
+   <h3>
+    7.2.0.0
+   </h3>
+   <table class="table table-striped table-hover table-bordered table-condensed">
+    <tbody>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PH37507">
+        PH37507
+       </a>
+      </td>
+      <td>
+       COPY TO CODESTATION IS UNCHECKED REGARDLESS OF SYSTEM SETTINGS
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PH37276">
+        PH37276
+       </a>
+      </td>
+      <td>
+       WEB AGENT RUNNING WITH OPENJDK JAVA-1.8.0_252-B09 FAILS TO CONNECT TO UCD SERVER RUNNING WITH IBM JAVA 1.8.0_281
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PH36751">
+        PH36751
+       </a>
+      </td>
+      <td>
+       USERS REQUIRE READ PERMISSION TO ALL COMPONENTS OF AN APPLICATION WHETHER THE DEPLOY PROCESS USES THAT COMPONENT OR NOT
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PH36572">
+        PH36572
+       </a>
+      </td>
+      <td>
+       RESOURCES AGENTS PAGE DOES NOT SHOW THE LAST COLUMN 'THREE VERTICAL DOTS' - ACTION OPTIONS UNTIL SCROLLED DOWN
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PH35795">
+        PH35795
+       </a>
+      </td>
+      <td>
+       HISTORY OF AN APPLICATION IN V7.1.1.2 SHOWS THE ERROR "NO ROW WITH THE GIVEN IDENTIFIER EXISTS" AFTER UPGRADING FROM 6.2.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PH34716">
+        PH34716
+       </a>
+      </td>
+      <td>
+       NEW ENVIRONMENT PROPERTY CREATED ON A COMPONENT TEMPLATE IS NOT RESOLVED DURING COMPONENT DEPLOYMENT
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PH34641">
+        PH34641
+       </a>
+      </td>
+      <td>
+       DEPLOYMENT WIZARD REVIEW PAGE LISTS APPLICATION PROCESS AND APPROVAL PROPS BY NAME NOT LABEL.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PH30992">
+        PH30992
+       </a>
+      </td>
+      <td>
+       DELETED TYPE CAUSES INCORRECT BEHAVIOUR WITH TEAMS AND TYPES IN URBANCODE DEPLOY
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PH29514">
+        PH29514
+       </a>
+      </td>
+      <td>
+       PERFORMANCE ISSUE WITH CONFIGURATION TAB ON WEB UI
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PH27826">
+        PH27826
+       </a>
+      </td>
+      <td>
+       SNAPSHOT FROM ENVIRONMENT CAN BE EDITED EVEN AFTER ITS DELETION
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PH16827">
+        PH16827
+       </a>
+      </td>
+      <td>
+       COMPONENT VERSION STATUSES ARE MISSING WHEN YOU IMPORT AN APPLICATION WITH A SNAPSHOT
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PI96213">
+        PI96213
+       </a>
+      </td>
+      <td>
+       URBANCODE DEPLOY PROCESS HANGS AFTER REBOOT STEP IS INVOKED IN A COMPONENT PROCESS
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PI86341">
+        PI86341
+       </a>
+      </td>
+      <td>
+       CANNOT LOAD LATEST VERSION OF APPLICATION PROCESS
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <a data-wm-adjusted="done" href="http://www.ibm.com/support/docview.wss?uid=swg1PI43590">
+        PI43590
+       </a>
+      </td>
+      <td>
+       MISSING INFORMATION FOR OPERATIONAL COMPONENT PROCESSES IN AN APPLICATION PROCESS
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Known problems and workarounds
+   </h2>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   For supported platforms and requirements, see the reports that can be dynamically generated using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <strong>
+    Note:
+   </strong>
+   Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
 
-        <dt>End-of-life for JMS Communication</dt>
- 	<dd>Starting with 7.2.0.0, agents and relays that use the JMS communication protocol will no longer be able to connect to the UrbanCode server. Agents and Relays will need to be migrated to the Web communication type in order to connect.</dd>
+To get started quickly, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+   <a href="https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Rational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    Fix Central
+   </a>
+   , requiring authentication.
 
- 	<dt>JAVA_OPTS option for source-control / non-Groovy plug-ins</dt>
- 	<dd>Previously, it was possible to set the JVM options for agents, agent relays, Deploy servers, and automation plug-ins, but not for the source-control plug-ins. Users can now configure JAVA_OPTS for source-control and non-Groovy plug-ins. Setting the custom JVM parameters for source-control plug-ins can help you in debugging and performance improvements.</dd>
-</dl>
-</p></body>
+Information for installing the server, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_7.2.0/com.ibm.udeploy.install.doc/topics/install_ch.html" rel="noopener" target="_blank">
+    Installing server
+   </a>
+   section in the product documentation.
+
+For information on installing licenses, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SS4GSP_7.2.0/com.ibm.udeploy.doc/topics/licenseManage.html" rel="noopener" target="_blank">
+    Managing Licenses
+   </a>
+   .
+   <h3>
+    Learn
+   </h3>
+   To learn more about IBM UrbanCode Deploy, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_7.2.0/com.ibm.udeploy.doc/ucd_version_welcome.html" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using IBM UrbanCode Deploy, post your questions in the
+   <a href="https://developer.ibm.com/answers?community=urbancode" rel="noopener" target="_blank">
+    forums
+   </a>
+   or contact
+   <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+    support
+   </a>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   .
+   <h3>
+    Get support
+   </h3>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

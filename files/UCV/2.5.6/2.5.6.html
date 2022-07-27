@@ -1,17 +1,159 @@
 <!DOCTYPE html>
-<html><head><title>2.5.6</title></head>
-<body>
-<p><b>This article was originaly published in 2022.03.29</b></p>
-<p><h1>2.5.6</h1></p>
-<p>This release of IBM UrbanCode Velocity is a maintenance release and includes bug fixes. This release is recommended for all customers.
-<h4>MongoDB</h4>
-MongoDB is no longer shipped with the offline installation files. It is recommended to pull the MongoDB images from the MongoDB source. For sample directions, see this <a href="https://www.ibm.com/docs/en/urbancode-velocity/2.5.x?topic=installation-installing-onto-docker-compose" target="_blank" rel="noopener">page</a>.	
-        
+<html>
+ <head>
+  <title>
+   2.5.6
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2022.03.29
+   </b>
+  </p>
+  <p>
+   <h1>
+    2.5.6
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Velocity is a maintenance release and includes bug fixes. This release is recommended for all customers.
+   <h4>
+    MongoDB
+   </h4>
+   MongoDB is no longer shipped with the offline installation files. It is recommended to pull the MongoDB images from the MongoDB source. For sample directions, see this
+   <a href="https://www.ibm.com/docs/en/urbancode-velocity/2.5.x?topic=installation-installing-onto-docker-compose" rel="noopener" target="_blank">
+    page
+   </a>
+   .
+   <h4>
+    Security
+   </h4>
+   <li>
+    RabbitMQ - Fixed security vulnerabilities.
+   </li>
+   <li>
+    Added authentication to multiple queries.
+   </li>
+   <li>
+    Fixed multiple unprotected queries.
+   </li>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     MongoDB
+    </li>
+    <li>
+     Security enhancements
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h3>
+    Known problems and workarounds
+   </h3>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan and prepare
+   </h2>
+   For supported platforms and requirements you can dynamically generate a system requirements report using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <h2>
+    Install the server
+   </h2>
+   There are two option to obtaining the installation package: online installer and offline installer. Both options require a master license key, which can be acquired from
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    IBM Passport Advantage
+   </a>
+   .
+   <h2>
+    Online installer
+   </h2>
+   The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
 
+Download the online installer package depending on the platform, the product is being installed.
+   <ul>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-linux" rel="noopener" target="_blank">
+      Linux
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-macos" rel="noopener" target="_blank">
+      Mac OS
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+      Windows
+     </a>
+    </li>
+   </ul>
+   After the download completes, start the executable file to begin the install process.
+   <h2>
+    Offline installer
+   </h2>
+   Use the offline installer to install Velocity without internet connection. You will still need internet connection at some point to download the installer itself. Once downloaded, the installer will include all containers needed to successfully install the product. For this reason, the offline installer is larger than the online installer and will require more time/bandwidth and disk space when downloading.
 
-<h4>Security</h4>
-	<li>RabbitMQ - Fixed security vulnerabilities.</li>	
-        <li>Added authentication to multiple queries.</li>
-	<li>Fixed multiple unprotected queries.</li>
-</p></body>
+The installation package is available from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Velocity&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    IBM Fix Central
+   </a>
+   . Search and select the installation package appropriate for the installation platform.
+
+After downloading the installation package, decompress the contents into two directories: one for Kubernetes and the other for Docker Compose. See the
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.3.x/com.ibm.uvelocity.doc/topics/c_install_se_roadmap.html" rel="noopener" target="_blank">
+    documentation section on installation
+   </a>
+   for instructions about how to install the server.
+
+A product license key is required to install the product. To obtain a key, you must agree to the terms and conditions provided on Passport Advantage.
+   <h2>
+    Learn
+   </h2>
+   To learn more about UrbanCode Velocity, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using UrbanCode Velocity, post your questions in the
+   <a href="https://community.ibm.com/community/user/middleware/communities/community-home?CommunityKey=9adfe6b6-2e23-4895-8b27-38b93b5e152c" rel="noopener" target="_blank">
+    UrbanCode forums
+   </a>
+   . Tag your question with
+   <strong>
+    velocity
+   </strong>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="https://www.ibm.com/developerworks/rfe/" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   <h2>
+    Get support
+   </h2>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

@@ -1,17 +1,780 @@
 <!DOCTYPE html>
-<html><head><title>6.2.1.2</title></head>
-<body>
-<p><b>This article was originaly published in 2016.07.01</b></p>
-<p><h1>6.2.1.2 - July 1, 2016</h1></p>
-<p><p>IBM® UrbanCode&#x2122; Deploy 6.2.1.2 is a Fix Pack release containing bug fixes.</p>
-<div class="new_release_cont">
-<div class="deploy-bullets">
-<ul>
-<h2>Additional Features for the Blueprint Designer</h2>
-<li>You can extend Liberty and Mitaka level Heat engines for use with the UrbanCode Deploy blueprint designer.
-</li><li>You can import multiple formats in nested blueprints and access text and binary files from the blueprint designer.</li>
-</ul>
-</div>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.2.1.2
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2016.07.01
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.1.2 - July 1, 2016
+   </h1>
+  </p>
+  <p>
+   <p>
+    IBM® UrbanCode™ Deploy 6.2.1.2 is a Fix Pack release containing bug fixes.
+   </p>
+   <div class="new_release_cont">
+    <div class="deploy-bullets">
+     <ul>
+      <h2>
+       Additional Features for the Blueprint Designer
+      </h2>
+      <li>
+       You can extend Liberty and Mitaka level Heat engines for use with the UrbanCode Deploy blueprint designer.
+      </li>
+      <li>
+       You can import multiple formats in nested blueprints and access text and binary files from the blueprint designer.
+      </li>
+     </ul>
+    </div>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Recommended fixes for UrbanCode Deploy 6.2
+    </li>
+    <li>
+     Extend Liberty and Mitaka Heat Engines
+    </li>
+    <li>
+     Blueprint Designer Improvements
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started/">
+     Getting Started
+    </a>
+    page.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Installation Notes
+    </div>
+    <p>
+     No new installation notes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     No major behavioral changes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Fixes in this Release
+     </div>
+     <p>
+      A cumulative list of fixes in this release, and any future fix packs will be available.
+     </p>
+    </div>
+    <div class="key-features">
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         APAR/defect
+        </td>
+        <td valign="bottom" width="78%">
+         Description
+        </td>
+       </tr>
+       <tr valign="top">
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI64454" target="_blank">
+          PI64454
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         CREATE A NEW RESOURCE FROM TEMPLATE UNDER RESOURCE TREE SHOWS BLUEPRINTS IN DROPDOWN
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI64146" target="_blank">
+          PI64146
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         INCORRECT DIR BLOCKS FOR TEMP DATA SET DURING BACKUP
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI63474" target="_blank">
+          PI63474
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         PERFORMANCE DELAYS LOADING RESOURCE TREE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI62232" target="_blank">
+          PI62232
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         ADDING THOUSANDS OF RESOURCES VIA THE CLI TIMES OUT
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI62000" target="_blank">
+          PI62000
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         CANNOT SET IMPERSONATION ON AGENT
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI61627" target="_blank">
+          PI61627
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         MAX CONCURRENT JOBS NOT WORKING CORRECTLY FOR APPLICATIONS BASED ON TEMPLATES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI61564" target="_blank">
+          PI61564
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         SERVICE TO GET ENTIRE TREE FOR A GIVEN RESOURCE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI61508" target="_blank">
+          PI61508
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UI SHOWS STOP AND PAUSE BUTTONS WHEN USER DOES NOT HAVE PERMISSIONS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI61220" target="_blank">
+          PI61220
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         WINDOWS SERVICE DOES NOT START AGENT RELAY
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI60873" target="_blank">
+          PI60873
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UPGRADE UCD TO 6.2.1 FAILS DUE TO INDEX CREATION FAILURE USING SQL SERVER
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI60522" target="_blank">
+          PI60522
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         SERVICE PASSWORD NOT VALID FOR WINRS AGENT INSTALLS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI62043" target="_blank">
+          PI62043
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         SERVICE NAME AND SERVICE USER SWITCHED WHEN CONFIGURING WINRS AGENT INSTALLS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI59900" target="_blank">
+          PI59900
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         COPYING AN ENVIRONMENT DOES NOT COPY ITS DEPENDENCE ON A TEMPLATE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI59555" target="_blank">
+          PI59555
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         CANNOT EXPORT APPLICATION AFTER COMPONENT HAS BEEN DELETED
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI59403" target="_blank">
+          PI59403
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         CANNOT CHANGE DESCRIPTION OF ENVIRONMENT WHEN USING APPLICATION WITH ENVIRONMENT TEMPLATES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI59190" target="_blank">
+          PI59190
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UNABLE TO RUN AGENTS AS WINDOWS SERVICES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI58695" target="_blank">
+          PI58695
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         RELOADING OF STEP OUTPUT LOG DOES NOT STOP AFTER STEP FINISHES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI55698" target="_blank">
+          PI55698
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         ISSUES WITH SERVER SHUTDOWN WHEN TRYING TO STOP THE RESOURCE SYNC SERVICE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI55374" target="_blank">
+          PI55374
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         INSTALLING SOME PLUGINS REQUIRE SPECIAL USER PERMISSIONS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI55273" target="_blank">
+          PI55273
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UNCLEAR ERROR MESSAGE FROM UDCLIENT WHEN CREATING COMPONENT WITH NON-EXISTING TEMPLATE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI53541" target="_blank">
+          PI53541
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         NO WARNING WHEN CHANGING COMPONENT VERSION PROPERTY AFTER DEPLOYMENT IF VERSION INTEGRITY IS ENABLED
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI52491" target="_blank">
+          PI52491
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         DELAYS SELECTING AN APPLICATION PROCESS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI51623" target="_blank">
+          PI51623
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UNABLE TO USE UPDATE USER BUTTON TO SYNC WITH LDAP
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI51230" target="_blank">
+          PI51230
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         DEFAULT HEAP SPACE SHOULD BE INCREASED FOR JAVA_OPTS IN SET_ENV
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI50946" target="_blank">
+          PI50946
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         DEFAULT PARAMETERS NOT OVERRIDDEN WHEN PROVISIONING A VSYS.NEXT PATTERN
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI49786" target="_blank">
+          PI49786
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         SPECIFYING TEXT FILE EXTENSIONS PROPERTY DOES NOT HANDLE . CHARACTER
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI61063" target="_blank">
+          PI61063
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         LARGE DEPLOYMENTS CONSUME MEMORY
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI48217" target="_blank">
+          PI48217
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         APPROVAL FAILED NOTIFICATION NOT SENT WHEN APPROVAL IS REJECTED DURING PARALLEL APPROVALS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI47839" target="_blank">
+          PI47839
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UNABLE TO ADD VERSIONS TO SNAPSHOT AFTER REMOVING A COMPONENT FROM AN APPLICATION
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI47748" target="_blank">
+          PI47748
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         COPIED COMPONENT OVERRIDES TEMPLATE PROPERTY VALUES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI47563" target="_blank">
+          PI47563
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UCD EXECUTION TREE REFRESHES THE ENTIRE TREE INSTEAD OF JUST UPDATED STEPS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI47085" target="_blank">
+          PI47085
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         MISLEADING ERROR MESSAGE SHOWN WHEN COMPONENT TEMPLATE PROCESS CANNOT BE CREATED
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI45102" target="_blank">
+          PI45102
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         CANCEL DURING CREATION OF FILTERED RESOURCES SHOWS UNFILTERED RESOURCES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI45093" target="_blank">
+          PI45093
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         CALENDAR ENTRIES FROM DELETED REQUESTS STILL DISPLAY ON THE MAIN CALENDAR
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI42940" target="_blank">
+          PI42940
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         PERFORMANCE DELAYS DURING BATCH COPY, MOVE, CREATE AND DELETE OPERATIONS FOR LARGE DATA SETS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI41746" target="_blank">
+          PI41746
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         DISPLAY ISSUES WITH USERS AND GROUPS WITH LARGE AMOUNTS OF ENTRIES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI40728" target="_blank">
+          PI40728
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         XARGS PROCESS STEP SHOWS INCONSISTENT ARGUMENT MESSAGE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI40105" target="_blank">
+          PI40105
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         RESOURCE FILTER IS RESET AFTER USING CREATE RESOURCE DIALOG
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI39071" target="_blank">
+          PI39071
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         WARNING ERROR MESSAGES INCORRECTLY DISPLAYED IN LOGS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI36429" target="_blank">
+          PI36429
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         WHEN DELETING A COMPONENT VERSION, THE RESOURCES HOLDING THAT COMPONENT VERSION DO NOT HAVE THE FULL PATH
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI35037" target="_blank">
+          PI35037
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         ORA-00001: UNIQUE CONSTRAINT (ECD.DS_VER_STATUS_UCI) VIOLATED:WHEN ATTEMPTING TO ASSIGN A STATUS TO A VERSION
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI32110" target="_blank">
+          PI32110
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         LDAP USER IMPORT FAILS TO IMPORT THE USERS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI30812" target="_blank">
+          PI30812
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         ENTRY AND PROCESS FILTERS SHOW NO OPTIONS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI30002" target="_blank">
+          PI30002
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         ISSUES WITH COMPONENTS INHERITING COMPONENT TEMPLATE SECURE PROPERTIES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI29716" target="_blank">
+          PI29716
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         SPECIFYING AN LDAP “USER DS PATTERN” PREVENTS IMPORTING USERS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI27905" target="_blank">
+          PI27905
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         RESOURCE TEMPLATE EDIT PAGE LOOKS TOO SIMILAR TO RESOURCE EDIT PAGE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI26949" target="_blank">
+          PI26949
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         EXPORTING COMPONENT PROCESS WITH A MANUAL TASK ACTIVITY CAUSES ERROR
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI25305" target="_blank">
+          PI25305
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         LOGS BEING FILLED WITH “DIALOGUE NOT FOUND” MESSAGE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI59190" target="_blank">
+          PI59190
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         UNABLE TO RUN AGENTS AS WINDOWS SERVICES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI60734" target="_blank">
+          PI60734
+         </a>
+        </td>
+        <td valign="bottom" width5="78%">
+         HIGH CPU SPIKE AFTER STACK HAS FAILED
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+     </div>
+     <div class="subtitle">
+      Known Problems and Workarounds
+     </div>
+     <p>
+      To search for additional post-release issues that IBM Rational Support documented, visit the
+      <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+     </p>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     IMPORTANT
+    </div>
+    <p>
+     IBM UrbanCode Deploy 6.2.1.2 does not support upgrades if you are using DB2 on a z/OS server. If you attempt to upgrade by using this fix pack, an error message is displayed and the upgrade does not occur. Do not upgrade to the 6.2.1.2 fixpack if you use DB2 on z/OS. A fix is being planned for a future release.
+    </p>
+    <p>
+     If you are upgrading to version 6.2.1.1 or later, to ensure that all secure property values are obscured, the values of all properties in the history for existing deployments are obscured. In the deployment history for deployments that you run after you upgrade, only secure properties are obscured in the logs.
+    </p>
+    <p>
+     When you upgrade to version 6.2.1.2 of IBM UrbanCode Deploy, new security features erase old component version import logs to hide secure information. If you want to keep the logs, in the
+     <code>
+      installed.properties
+     </code>
+     file, set the
+     <br>
+      <strong>
+       com.urbancode.ds.cleanup.sourceConfig.fullCleanupSkip
+      </strong>
+      property to
+      <code>
+       True
+      </code>
+      .
+     </br>
+    </p>
+    <p>
+     If you are upgrading from a previous version of IBM UrbanCode Deploy, you might be affected by changes to the security features in the product. After upgrading, any security type that previously had edit permission will automatically have all of the associated edit sub-permissions that were introduced with the new version of IBM UrbanCode Deploy. For example, if the cloud connection type had the edit permission granted, then after upgrading, the cloud connection type will have the
+     <strong>
+      Delete
+     </strong>
+     ,
+     <strong>
+      Edit Basic Settings
+     </strong>
+     , and
+     <strong>
+      Manage Teams
+     </strong>
+     sub-permissions.
+    </p>
+    <div class="key-features">
+     <div class="subtitle">
+      Plan &amp; Prepare
+     </div>
+     <p>
+      For fixes contained in this release, and any known issues, review the
+      <a href="../release-notes">
+       release notes
+      </a>
+      .
+     </p>
+     <p>
+      For supported platforms and requirements, see the
+      <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+       system requirements
+      </a>
+      . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+     </p>
+     <p>
+      To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.udeploy.install.doc/topics/install_ch.html" target="_blank">
+       installation guide
+      </a>
+     </p>
+     <p>
+      For advanced enterprise deployments that require high availability, review our options in the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1" target="_blank">
+       information center.
+      </a>
+     </p>
+     <p>
+      IBM UrbanCode Deploy supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+      <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" target="_blank">
+       plug-in page
+      </a>
+      .
+     </p>
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Installation
+     </div>
+     <p>
+      Version 6.2.1.2 is available to download from
+      <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%2FRational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=6.2.1.2&amp;platform=All&amp;function=all" target="_blank">
+       here.
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      For information on installing and managing licenses, see
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.udeploy.install.doc/topics/licenseManage.html">
+       Managing licenses
+      </a>
+     </p>
+     <div class="horizontal-rule">
+     </div>
+     <div class="subtitle">
+      Learn
+     </div>
+     <p>
+      To learn more about new enhancements in this release, see
+      <a href="..">
+       What’s New
+      </a>
+     </p>
+     <p>
+      To learn more about IBM UrbanCode Deploy, see the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1" target="_blank">
+       documentation
+      </a>
+     </p>
+     <p>
+      For help installing or using IBM UrbanCode Deploy, post your questions in the
+      <a href="https://developer.ibm.com/answers?community=urbancode">
+       forums
+      </a>
+      or contact
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       support
+      </a>
+     </p>
+     <p>
+      To suggest an enhancement to the product, visit the
+      <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+       RFE Community
+      </a>
+     </p>
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Get support
+     </div>
+     <p>
+      For information from support, including FAQs, visit the
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+      You can configure the support portal to view information about specific products.
+     </p>
+    </div>
+   </div>
+  </p>
+ </body>
 </html>

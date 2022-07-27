@@ -1,37 +1,677 @@
 <!DOCTYPE html>
-<html><head><title>6.2.1.1</title></head>
-<body>
-<p><b>This article was originaly published in 2016.05.26</b></p>
-<p><h1>6.2.1.1 - May 26, 2016</h1></p>
-<p><p><b>IMPORTANT</b> UCD 6.2.1.1 does not support upgrades when using DB2 on a z/OS server. Attempting to upgrade using this fixpack will display an error message and the upgrade will not occur.  Do not upgrade to the 6.2.1.1 fixpack if you use DB2 on z/OS. A fix will be provided in UCD 6.2.1.2.</p>
-<div class="new_release_cont">
-<div class="deploy-bullets">
-<ul>
-<h2>New Azure Image Provisioning</h2>
-<li>You can now provision Linux images to Microsoft Azure whether or not those images have<br/>
-          the <samp class="ph codeph">cloud-init</samp> package installed.</li>
-<li>You can now use Windows images on Azure. See <a class="xref" href="https://www.ibm.com/support/knowledgecenter/en/SS4GSP_6.2.1/com.ibm.edt.doc/topics/blueprint_edit_azure.html" target="_blank" title="To model a Microsoft Azure environment, log in with an Azure cloud project and specify the Azure-specific information in a blueprint." rel="noopener noreferrer">Modeling environments for Microsoft Azure</a>.</li>
-</ul>
-</div>
-</div>
-<div class="new_release_cont">
-<h2>Deployment history cleanup</h2>
-<p>You can now configure environments so that process history from that environment is deleted after a certain number of days. Deployment history deletion can decrease the size requirements of both the database and the server’s filesystem. See <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=deploying-cleaning-up-deployment-history-files" target="_blank" rel="noopener noreferrer">Cleaning up deployment history files.</a> </p>
-</div>
-<div class="new_release_cont">
-<h2>Stronger Approvals</h2>
-<p>
-Can now require that the requester and approver cannot be the same user. A checkbox labeled “No Self-Approvals” is present on each environment or environment template requiring approvals. If an environment is using an environment template then the environment will inherit the setting.</p>
-<p>For example, user A requests an application process on an environment where this is enabled: User A does not get a notification that approvals are waiting on him/her, cannot see the approval present in his/her work items tab, and cannot respond to the approval request.
-</p>
-</div>
-<div class="new_release_cont">
-<h2>Silent Install Relay</h2>
-<p>
-Run the agent relay installation silently and store configuration in an properties file! See <a href="https://www.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.udeploy.install.doc/topics/install_agentrelay_silent.html" target="_blank" rel="noopener noreferrer">Installing agent relays in silent mode.</a>
-</p>
-</div>
-<h2><a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=overview-whats-new-in-urbancode-deploy" target="_blank" rel="noopener noreferrer">See What’s New documentation for more details!</a> </h2>
-<p></p>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.2.1.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2016.05.26
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.1.1 - May 26, 2016
+   </h1>
+  </p>
+  <p>
+   <p>
+    <b>
+     IMPORTANT
+    </b>
+    UCD 6.2.1.1 does not support upgrades when using DB2 on a z/OS server. Attempting to upgrade using this fixpack will display an error message and the upgrade will not occur.  Do not upgrade to the 6.2.1.1 fixpack if you use DB2 on z/OS. A fix will be provided in UCD 6.2.1.2.
+   </p>
+   <div class="new_release_cont">
+    <div class="deploy-bullets">
+     <ul>
+      <h2>
+       New Azure Image Provisioning
+      </h2>
+      <li>
+       You can now provision Linux images to Microsoft Azure whether or not those images have
+       <br/>
+       the
+       <samp class="ph codeph">
+        cloud-init
+       </samp>
+       package installed.
+      </li>
+      <li>
+       You can now use Windows images on Azure. See
+       <a class="xref" href="https://www.ibm.com/support/knowledgecenter/en/SS4GSP_6.2.1/com.ibm.edt.doc/topics/blueprint_edit_azure.html" rel="noopener noreferrer" target="_blank" title="To model a Microsoft Azure environment, log in with an Azure cloud project and specify the Azure-specific information in a blueprint.">
+        Modeling environments for Microsoft Azure
+       </a>
+       .
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Deployment history cleanup
+    </h2>
+    <p>
+     You can now configure environments so that process history from that environment is deleted after a certain number of days. Deployment history deletion can decrease the size requirements of both the database and the server’s filesystem. See
+     <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=deploying-cleaning-up-deployment-history-files" rel="noopener noreferrer" target="_blank">
+      Cleaning up deployment history files.
+     </a>
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Stronger Approvals
+    </h2>
+    <p>
+     Can now require that the requester and approver cannot be the same user. A checkbox labeled “No Self-Approvals” is present on each environment or environment template requiring approvals. If an environment is using an environment template then the environment will inherit the setting.
+    </p>
+    <p>
+     For example, user A requests an application process on an environment where this is enabled: User A does not get a notification that approvals are waiting on him/her, cannot see the approval present in his/her work items tab, and cannot respond to the approval request.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Silent Install Relay
+    </h2>
+    <p>
+     Run the agent relay installation silently and store configuration in an properties file! See
+     <a href="https://www.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.udeploy.install.doc/topics/install_agentrelay_silent.html" rel="noopener noreferrer" target="_blank">
+      Installing agent relays in silent mode.
+     </a>
+    </p>
+   </div>
+   <h2>
+    <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=overview-whats-new-in-urbancode-deploy" rel="noopener noreferrer" target="_blank">
+     See What’s New documentation for more details!
+    </a>
+   </h2>
+   <p>
+   </p>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     New Azure Image Provisioning
+    </li>
+    <li>
+     Silent Install for the Agent Relay
+    </li>
+    <li>
+     Stronger Approvals
+    </li>
+    <li>
+     Deployment history cleanup
+    </li>
+    <li>
+     and many more...
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="../getting-started">
+      Getting Started
+     </a>
+     page.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Features in this Release
+    </div>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=83218" target="_blank">
+         83218
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Can now require that the requester and approver cannot be the same user.
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=66383" target="_blank">
+         66383
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Agent Relay now has a silent install option.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release, and any future fix packs can be found
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038759" target="_blank">
+      in this document
+     </a>
+     .
+    </p>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI31929" target="_blank">
+         PI31929
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SECURITY CERTIFICATES FOR UCD ARE GENERATED FOR LOCALHOST
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI47557" target="_blank">
+         PI47557
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SNAPSHOT CANNOT LOCK COMPONENT TEMPLATE PROCESS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI48639" target="_blank">
+         PI48639
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        APPLICATION PROCESS LIST IN THE RUN APPLICATION PROCESS DIALOG DISPLAYS INCORRECT RESULTS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI52589" target="_blank">
+         PI52589
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        NO FEEDBACK GIVEN WHEN UCD WEB APPLICATION IS LOADING PAGES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI53967" target="_blank">
+         PI53967
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        VERSION IMPORTS GET STUCK IN WAITING STATUS CONTINUALLY
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54335" target="_blank">
+         PI54335
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PERFORMANCE DELAYS LOADING ENVIRONMENT RESOURCE TREE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54420" target="_blank">
+         PI54420
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CREATING A RESOURCE THEN USING THE BATCH UPDATE WITH THE RESOURCE ID CAN CAUSE BATCH CREATION ON A DIFFERENT RESOURCE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55333" target="_blank">
+         PI55333
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DEPLOYMENTS DO NOT START WHEN 2K+ AGENTS ARE CONNECTED DIRECTLY TO SERVER
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55334" target="_blank">
+         PI55334
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        THE DS_AUDIT_REQUEST_ENTRY TABLE IS NEVER CLEANED UP IN THE DATABASE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55829" target="_blank">
+         PI55829
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        INCORRECT DEFAULT VALUE OF DATETIME APPLICATION PROCESS PROPERTY
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI56832" target="_blank">
+         PI56832
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DEPLOYMENT REPORTS SHOW “AN ERROR HAS OCCURRED”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI57167" target="_blank">
+         PI57167
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        LDAP ERRORS FROM AUTH TOKEN USER AUTHENTICATION ATTEMPTS POLLUTE OUTPUT LOG
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI57764" target="_blank">
+         PI57764
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ISSUES WITH NESTED COMPONENT PROCESSES REPORTING BLANK PROPERTIES IN A SNAPSHOT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI57866" target="_blank">
+         PI57866
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CHANGING DEFAULT PROPERTY IN APPLICATION OR ENVIRONMENT TEMPLATE DOES NOT CHANGE PROPERTY IN APPLICATION OR ENVIRONMENT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI58064" target="_blank">
+         PI58064
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        JOBS SHOW ON DASHBOARD WITH ERRORS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI58167" target="_blank">
+         PI58167
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        AGENTS APPEAR OFFLINE BUT CONNECTION TESTS PASS WHEN CONTACTING AGENT RELAY FROM SERVER BY USING NETWORK RELAY
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI58344" target="_blank">
+         PI58344
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ENVIRONMENT CLEANUP SETTINGS NOT APPLIED DURING CLEANUP
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI58583" target="_blank">
+         PI58583
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO DELETE RESOURCE TEMPLATE MAPPED WITH DELETED ENVIRONMENT TEMPLATE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI58860" target="_blank">
+         PI58860
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ERRORS DURING RESTORE OF ALL COMPONENT PROCESSES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI59405" target="_blank">
+         PI59405
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SECURE PROPERTIES VISIBLE IN STEP INPUT PROPERTIES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI60596" target="_blank">
+         PI60596
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO RUN UCD SERVER AS A WINDOWS SERVICE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI60964" target="_blank">
+         PI60964
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        FLOATING LICENSES REMAIN CHECKED OUT IN HA ENVIRONMENT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54420" target="_blank">
+         PI54420
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        BATCH RESOURCE CREATION ALLOWS FOR DELETED RESOURCES TO BE
+        <br>
+         CREATED WHEN USING A RESOURCE NAME
+        </br>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI61624" target="_blank">
+         PI61624
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        INCORRECT INFORMATION FOR COMPONENT USAGE TAB
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI36311" target="_blank">
+         PI36311
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        NO COMMON SSL PROTOCOLS BETWEEN AGENT, RELAY AND SERVER WHEN
+        <br>
+         USING JAVA PACKAGED WITH INSTALLER
+        </br>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55032" target="_blank">
+         PI55032
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PATTERNS AREN’T USED IN APPLICATION PROCESS HTTP
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI56408" target="_blank">
+         PI56408
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CANCELLATION OF INSTALL MULTIPLE ONLY CANCELS CURRENT
+        <br/>
+        INSTALLATION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI56418" target="_blank">
+         PI56418
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        NO TIMEOUT FOR EMAIL NOTIFICATIONS CAN CAUSE UCD TO HANG AT
+        <br/>
+        SHUTDOWN OR WHILE SENDING EMAILS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI56739" target="_blank">
+         PI56739
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SERVER SHOULD RETURN 404 WHEN A USER IS NOT FOUND VIA THE REST
+        <br/>
+        API
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI57738" target="_blank">
+         PI57738
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        INCORRECT INFORMATION IN UI REMOTE AGENT INSTALLATION PROPERTIES
+        <br/>
+        HOST HELP
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI45948" target="_blank">
+         PI45948
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SET ENVIRONMENT PROPERTY STEP MAY FAIL IF RUN SIMULTANEOUSLY
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+   </div>
+   <p>
+    To search for additional post-release issues that IBM Rational Support documented, visit the
+    <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+     IBM Support portal.
+    </a>
+   </p>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     <b>
+      IMPORTANT
+     </b>
+     UCD 6.2.1.1 does not support upgrades when using DB2 on a z/OS server. Attempting to upgrade using this fixpack will display an error message and the upgrade will not occur.  Do not upgrade to the 6.2.1.1 fixpack if you use DB2 on z/OS. A fix will be provided in UCD 6.2.1.2.
+    </p>
+    <p>
+     <b>
+      IMPORTANT
+     </b>
+     Please set the com.urbancode.ds.cleanup.sourceConfig.fullCleanupSkip to true to retain source config execution records at upgrade time.
+    </p>
+    <p>
+     <b>
+      IMPORTANT
+     </b>
+     If you are upgrading to version 6.2.1.1 or later, to ensure that all secure property values are obscured, the values of all properties in the history for existing deployments are obscured. In the deployment history for deployments that you run after you upgrade, only secure properties are obscured in the logs.
+    </p>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.udeploy.install.doc/topics/install_ch.html" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     For advanced enterprise deployments that require high availability, review our options in the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1" target="_blank">
+      information center.
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Deploy supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+     <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     If you’re upgrading from 6.0…
+    </div>
+    <p>
+     UrbanCode Deploy 6.1 introduced scalability enhancements to agent/server communication.
+     <strong>
+      All agent relays must be upgraded before running any deployments.
+     </strong>
+     All existing agents will continue to work without an upgrade, but they should be upgraded using the Upgrade action on the agent list in the web UI as soon as possible after upgrading.
+     <strong>
+      Any newly installed agents must be version 6.1.
+     </strong>
+     The latest agent and agent relay installers will be available on your UrbanCode Deploy server’s Tools page (in the Help menu) after the server is upgraded.
+    </p>
+    <p>
+     UrbanCode Deploy 6.1 also includes a more scalable artifact storage system. After upgrading your server, a background process will migrate artifacts into the new format. You can continue to access and deploy artifacts during this process, but
+     <strong>
+      there will need to be at least as much free disk space in the server’s var/repository directory as is currently being used by that directory
+     </strong>
+     . (If you currently have 25GB of artifacts, you need 25GB of additional free disk space.) The extra disk space is no longer needed after all artifacts have been migrated.
+    </p>
+    <p>
+     http://www-01.ibm.com/support/docview.wss?uid=swg2C1000116
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Installation
+     </div>
+     <p>
+      Version 6.2.1.1 is available to download from
+      <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%2FRational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=6.2.1.1&amp;platform=All&amp;function=all" target="_blank">
+       here.
+      </a>
+     </p>
+     <p>
+      The download location has been updated to include the required updates to the issues described in this
+      <a href="http://www-01.ibm.com/support/docview.wss?uid=swg2C1000116" target="_blank">
+       technote.
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      For information on installing and managing licenses, see
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.udeploy.install.doc/topics/licenseManage.html">
+       Managing licenses
+      </a>
+     </p>
+     <div class="horizontal-rule">
+     </div>
+     <div class="subtitle">
+      Learn
+     </div>
+     <p>
+      To learn more about new enhancements in this release, see
+      <a href="..">
+       What’s New
+      </a>
+     </p>
+     <p>
+      To learn more about IBM UrbanCode Deploy, see the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1" target="_blank">
+       documentation
+      </a>
+     </p>
+     <p>
+      For help installing or using IBM UrbanCode Deploy, post your questions in the
+      <a href="https://developer.ibm.com/answers?community=urbancode">
+       forums
+      </a>
+      or contact
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       support
+      </a>
+     </p>
+     <p>
+      To suggest an enhancement to the product, visit the
+      <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+       RFE Community
+      </a>
+     </p>
+     <p>
+     </p>
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Get support
+     </div>
+     <p>
+      For information from support, including FAQs, visit the
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+      You can configure the support portal to view information about specific products.
+     </p>
+    </div>
+   </div>
+  </p>
+ </body>
 </html>

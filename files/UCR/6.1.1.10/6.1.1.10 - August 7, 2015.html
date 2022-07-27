@@ -1,29 +1,344 @@
 <!DOCTYPE html>
-<html><head><title>6.1.1.10</title></head>
-<body>
-<p><b>This article was originaly published in 2015.08.07</b></p>
-<p><h1>6.1.1.10 - August 7, 2015</h1></p>
-<p><div class="new_release_cont">This release of IBM UrbanCode Release is a maintenance release containing bug fixes and new features.</div>
-<div class="new_release_cont">
-<h2>Task Filtering</h2>
-<p><a href="filter-screenshot.png"><img alt="filter screenshot" class="alignright size-full wp-image-18264" height="751" sizes="(max-width: 273px) 100vw, 273px" src="filter-screenshot.png" srcset="filter-screenshot.png 273w, filter-screenshot-109x300.png 109w" width="273"/></a></p>
-<p>Tasks can be filtered on the scheduled deployment page.<br/>
-Tasks can be filtered by role/group, user, type, status, application, or tag.</p>
-<p>You can enable this feature by adding the following line to your server.properties file: feature.filter.tasks.enabled=yes</p>
-</div>
-<div class="new_release_cont">
-<h2>Scheduled Deployment Caching</h2>
-<p>Data from scheduled deployments is now cached on the server.  This greatly improves performance when a large number of users are viewing the same deployment simultaneously.<br/>
-You can adjust the lifespan of the cache with the following property in your server.properties: caching.deployment.execution.lifespan=<time in="" seconds=""><br/>
-The default lifespan is 60 seconds.
-</time></p></div>
-<div class="new_release_cont">
-<h2>Task Tags can now be imported from a .CSV</h2>
-<p>When importing a deployment plan, you can now include existing task tags with each task.
-</p></div>
-<div class="new_release_cont">
-<h2>Notification Emails Include Links to Specific Tasks</h2>
-<p>The link in each notification email will now expand the related task and collapse other tasks.  This makes it far easier to find the task mentioned in an email.
-</p></div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.1.10
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2015.08.07
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.1.10 - August 7, 2015
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Release is a maintenance release containing bug fixes and new features.
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Task Filtering
+    </h2>
+    <p>
+     <a href="filter-screenshot.png">
+      <img alt="filter screenshot" class="alignright size-full wp-image-18264" height="751" sizes="(max-width: 273px) 100vw, 273px" src="filter-screenshot.png" srcset="filter-screenshot.png 273w, filter-screenshot-109x300.png 109w" width="273"/>
+     </a>
+    </p>
+    <p>
+     Tasks can be filtered on the scheduled deployment page.
+     <br/>
+     Tasks can be filtered by role/group, user, type, status, application, or tag.
+    </p>
+    <p>
+     You can enable this feature by adding the following line to your server.properties file: feature.filter.tasks.enabled=yes
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Scheduled Deployment Caching
+    </h2>
+    <p>
+     Data from scheduled deployments is now cached on the server.  This greatly improves performance when a large number of users are viewing the same deployment simultaneously.
+     <br/>
+     You can adjust the lifespan of the cache with the following property in your server.properties: caching.deployment.execution.lifespan=
+     <time in="" seconds="">
+      <br/>
+      The default lifespan is 60 seconds.
+     </time>
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Task Tags can now be imported from a .CSV
+    </h2>
+    <p>
+     When importing a deployment plan, you can now include existing task tags with each task.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Notification Emails Include Links to Specific Tasks
+    </h2>
+    <p>
+     The link in each notification email will now expand the related task and collapse other tasks.  This makes it far easier to find the task mentioned in an email.
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Task Filtering
+    </li>
+    <li>
+     Deployment Caching
+    </li>
+    <li>
+     Task Tag Import
+    </li>
+    <li>
+     Direct Task Links in Notifications
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started/">
+     Getting Started
+    </a>
+    page.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Installation Notes
+    </div>
+    <p>
+     No new installation notes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     No major behavioral changes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Fixes in this Release
+     </div>
+     <p>
+      A cumulative list of fixes in this release, and any future fix packs will be available.
+     </p>
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         APAR/defect
+        </td>
+        <td valign="bottom" width="78%">
+         Description
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI46597" target="_blank">
+          PI46597
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UCR PLUGIN SYNC SNAPSHOT STEP FOR UCD DOES NOT SYNC COMPONENT VERSION STATUSES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI45480" target="_blank">
+          PI45480
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         EDITING INTERNAL AUTHORIZATION REALM COULD LOCK OUT ALL INTERNAL USERS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI45766" target="_blank">
+          PI45766
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         USERS CAN ADD THE SAME GATE MULTIPLE TIMES ON A PHASE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI46602" target="_blank">
+          PI46602
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         APPLICATION VERSIONS ARE NOT SORTED BY CREATED DATE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI46599" target="_blank">
+          PI46599
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         CANNOT REMOVE TARGET TAGS FROM APPLICATION TARGETS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI46671" target="_blank">
+          PI46671
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         CHANGES CREATED FROM AN INITIATIVE ARE NOT MAPPED TO IT
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI46676" target="_blank">
+          PI46676
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         JAVA_HOME ENVIRONMENT VARIABLE NOT SET WHILE RUNNING PLUGIN ON LINUX
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+        </td>
+        <td valign="bottom" width="78%">
+         IMPORTING A PLAN FROM A .CSV DOES NOT IMPORT SEGMENT PREREQUISITES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+        </td>
+        <td valign="bottom" width="78%">
+         MULTIPLE EVENT TYPES, TASK TAGS, OR TARGET TAGS CAN BE CREATED WITH THE SAME NAME
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+        </td>
+        <td valign="bottom" width="78%">
+         DELETING A ROLE THAT IS IN USE MAY PREVENT OTHER PAGES FROM LOADING PROPERLY
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+        </td>
+        <td valign="bottom" width="78%">
+         ADDING A STATUS TO A VERSION ON THE APPLICATION VERSION PAGE APPEARS TO ADD MULTIPLE STATUSES
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Known Problems and Workarounds
+     </div>
+     <p>
+      To search for additional post-release issues that IBM Rational Support documented, visit the
+      <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+     </p>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes/">
+      release notes
+     </a>
+     . For supported platforms and requirements, see the
+     <a href="http://www-03.ibm.com/software/products/en/ucrel#tab_othertab1" target="_blank">
+      system requirements
+     </a>
+     . To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/topics/install_ov.html">
+      installation guide
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release requires IBM Installation Manager version 1.8.0 or later for installation. See
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg24036814">
+      download document
+     </a>
+     for details on this download. This release is available for download on Fix Central for current customers, requiring authentication. This download is
+     <a href="http://www-933.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=fixId&amp;fixids=6.1.1.10-UrbanCode-Release&amp;includeRequisites=1&amp;includeSupersedes=0&amp;downloadMethod=http">
+      available here.
+     </a>
+     Information for installing the server, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/topics/install_ov.html">
+      Installing server
+     </a>
+     section in the product documentation.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="../">
+      What’s New
+     </a>
+     To learn more about IBM UrbanCode Release, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/ucr61_welcome.html" target="_blank">
+      documentation
+     </a>
+     For help installing or using IBM UrbanCode Release, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

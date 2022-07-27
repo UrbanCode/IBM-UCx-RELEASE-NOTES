@@ -1,33 +1,477 @@
 <!DOCTYPE html>
-<html><head><title>6.2.1.2</title></head>
-<body>
-<p><b>This article was originaly published in 2016.07.27</b></p>
-<p><h1>6.2.1.2 - July 27, 2016</h1></p>
-<p><div class="new_release_cont">IBM UrbanCode Release 6.2.1.2 is a <span><span>Fix Pack release containing performance improvements and bug fixes.<br/></span></span><p></p>
-<h2>Timeline View (Beta Feature)</h2>
-<p><span><span><span>Previously located under the Federated Deployment Dashboard, the Timeline View of scheduled deployments has been updated and associated with deployments in enterprise events. The Timeline will be displayed as a tab on the Event Page of an Enterprise Event and the individual deployments within an event. <br/>The Timeline displays timing information for set of scheduled deployments in the event, allowing users to visually compare the planned times start and end times of each segment to the actual times. <br/><a href="timeline1.png"></a></span></span></span></p><a href="timeline1.png">
-<p><img alt="timeline1" class="alignnone size-large wp-image-25388" height="518" sizes="(max-width: 980px) 100vw, 980px" src="timeline1.png" srcset="timeline1-1024x541.png 1024w, timeline1-300x158.png 300w, timeline1.png 1544w" width="980"/></p>
-</a><p><a href="timeline1.png"></a><br/>Segments can be colored based on their current execution status or on the tags used on the segment’s tasks.<br/><a href="timeline-view.png"></a></p><a href="timeline-view.png">
-<p><img alt="Timeline View" class="alignnone size-large wp-image-25444" height="572" sizes="(max-width: 980px) 100vw, 980px" src="timeline-view.png" srcset="Timeline-View-1024x598.png 1024w, Timeline-View-300x175.png 300w, timeline-view.png 1365w" width="980"/></p>
-</a><p><a href="timeline-view.png"></a><span><span><span></span></span></span></p>
-<p></p>
-<h2>User Profile and Backups (Beta Feature)</h2>
-<p><span><span><span>Users can now update their contact information, password, and actual name without admin privileges. Users can also add other users as a backup user so that if they were unavailable for any reason it would be easy to find someone else to execute a manual task in their place.<br/><a href="user-profile.png"><img alt="User Profile" class="alignnone size-full wp-image-25420" height="507" sizes="(max-width: 682px) 100vw, 682px" src="user-profile.png" srcset="user-profile.png 682w, User-Profile-300x223.png 300w" width="682"/></a><br/>You will be able to easily see contact information about that user and that users backups if you hover over that user for a task they are assigned too.<br/><a href="user-information.png"><img alt="User Information" class="alignnone size-full wp-image-25421" height="301" sizes="(max-width: 1343px) 100vw, 1343px" src="user-information.png" srcset="user-information.png 1343w, User-Information-300x67.png 300w, User-Information-1024x230.png 1024w" width="1343"/></a></span></span></span></p>
-<h2>Create Additional Help Links (Beta Feature)</h2>
-<p><span><span><span>Additional links can now be added to the Help drop-down at the top of the page. This feature can be found on the Settings -&gt; System Settings tab, after the “Help Links” Feature Flag has been toggled on.<br/><a href="help-link-example.png"><img alt="Help Link Example" class="alignnone size-full wp-image-25415" height="256" sizes="(max-width: 1056px) 100vw, 1056px" src="help-link-example.png" srcset="help-link-example.png 1056w, Help-Link-Example-300x73.png 300w, Help-Link-Example-1024x248.png 1024w" width="1056"/></a></span></span></span></p>
-<h2>Not Applicable Task Reasons</h2>
-<p><span><span>The reasons a task is not applicable are now able to be displayed in the UI. On a not applicable task, simply click on the new help icon for the list of reasons to be displayed. Applicability for this task is recalculated at this moment. So, in the instance that the task’s applicability isn’t updating and the task should really be applicable, clicking the icon will cause it’s applicability to get updated.<br/><a href="not-applicable-reasons.png"><img alt="Not Applicable Reasons" class="alignnone size-full wp-image-25416" height="140" sizes="(max-width: 1231px) 100vw, 1231px" src="not-applicable-reasons.png" srcset="not-applicable-reasons.png 1231w, Not-Applicable-Reasons-300x34.png 300w, Not-Applicable-Reasons-1024x116.png 1024w" width="1231"/></a><br/></span></span><span></span></p></div>
-<div class="new_release_cont">
-<h2>Plug-in task types (Beta Feature)</h2>
-<p>The plugin framework has been improved to allow use of plugin tasks in deployment plan.</p>
-<p><a href="addplugintask.png"><img alt="AddPluginTask" class="alignnone size-large wp-image-25439" height="473" sizes="(max-width: 980px) 100vw, 980px" src="addplugintask.png" srcset="AddPluginTask-1024x494.png 1024w, AddPluginTask-300x145.png 300w, addplugintask.png 1339w" width="980"/></a></p>
-<p>Plugin Steps can now be turned to Plugin Tasks by adding: <strong><em>extends=”PLUGIN_TASK”</em></strong> and will be made available as tasks when building a deployment plan.</p>
-<p><a href="plugintaskstep.png"><img alt="PluginTaskStep" class="alignnone size-full wp-image-25443" height="503" sizes="(max-width: 852px) 100vw, 852px" src="plugintaskstep.png" srcset="plugintaskstep.png 852w, PluginTaskStep-300x177.png 300w" width="852"/></a></p>
-<p>When those tasks are executed the full context will be passed to the plugin step containing information about: Task, Segment, Deployment, Applications, Versions, Release…<br/>Then the plugin step will be responsible to update the status of the task using our REST API our the UCR java client.<br/>Plugin tasks will help to integrate with various external tools like: Ticketing Systems, Notifications, Custom Deployment Automation tools, Approval Systems… They will also help to solve complex scenarios such as Roll Backs.<br/>Plugin task execution logs will be printed as comments in the task dialog.</p>
-<p><a href="plugintasklogs.png"><img alt="PluginTaskLogs" class="alignnone size-large wp-image-25442" height="563" sizes="(max-width: 980px) 100vw, 980px" src="plugintasklogs.png" srcset="PluginTaskLogs-1024x588.png 1024w, PluginTaskLogs-300x172.png 300w, plugintasklogs.png 1294w" width="980"/></a></p>
-<h2>Plug-in Event Listeners (Beta Feature)</h2>
-<p>As part of new features introduced with the plugin framework, Plugins can now have steps that listen to specific events generated in IBM UrbanCode Release such as: Application was added to / removed from a release, Deployment Failed, Task Failed, Integration Failed, Deployment Started, Task is late… and be triggered when those events occur.<br/>When the step is triggered by the event, it will receive the context: Object triggering the event and related information that is relevant for that step execution.<br/>The plugin steps will have to subscribe to 1 or more events ex:<a href="plugintasklogs.png"></a></p><a href="plugintasklogs.png">
-</a><p><a href="plugintasklogs.png"></a> <a href="pluginlistenerstep.png"><img alt="PluginListenerStep" class="alignnone size-full wp-image-25441" height="370" sizes="(max-width: 923px) 100vw, 923px" src="pluginlistenerstep.png" srcset="pluginlistenerstep.png 923w, PluginListenerStep-300x120.png 300w" width="923"/></a></p>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.2.1.2
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2016.07.27
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.1.2 - July 27, 2016
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    IBM UrbanCode Release 6.2.1.2 is a
+    <span>
+     <span>
+      Fix Pack release containing performance improvements and bug fixes.
+      <br/>
+     </span>
+    </span>
+    <p>
+    </p>
+    <h2>
+     Timeline View (Beta Feature)
+    </h2>
+    <p>
+     <span>
+      <span>
+       <span>
+        Previously located under the Federated Deployment Dashboard, the Timeline View of scheduled deployments has been updated and associated with deployments in enterprise events. The Timeline will be displayed as a tab on the Event Page of an Enterprise Event and the individual deployments within an event.
+        <br/>
+        The Timeline displays timing information for set of scheduled deployments in the event, allowing users to visually compare the planned times start and end times of each segment to the actual times.
+        <br/>
+        <a href="timeline1.png">
+        </a>
+       </span>
+      </span>
+     </span>
+    </p>
+    <a href="timeline1.png">
+     <p>
+      <img alt="timeline1" class="alignnone size-large wp-image-25388" height="518" sizes="(max-width: 980px) 100vw, 980px" src="timeline1.png" srcset="timeline1-1024x541.png 1024w, timeline1-300x158.png 300w, timeline1.png 1544w" width="980"/>
+     </p>
+    </a>
+    <p>
+     <a href="timeline1.png">
+     </a>
+     <br/>
+     Segments can be colored based on their current execution status or on the tags used on the segment’s tasks.
+     <br/>
+     <a href="timeline-view.png">
+     </a>
+    </p>
+    <a href="timeline-view.png">
+     <p>
+      <img alt="Timeline View" class="alignnone size-large wp-image-25444" height="572" sizes="(max-width: 980px) 100vw, 980px" src="timeline-view.png" srcset="Timeline-View-1024x598.png 1024w, Timeline-View-300x175.png 300w, timeline-view.png 1365w" width="980"/>
+     </p>
+    </a>
+    <p>
+     <a href="timeline-view.png">
+     </a>
+     <span>
+      <span>
+       <span>
+       </span>
+      </span>
+     </span>
+    </p>
+    <p>
+    </p>
+    <h2>
+     User Profile and Backups (Beta Feature)
+    </h2>
+    <p>
+     <span>
+      <span>
+       <span>
+        Users can now update their contact information, password, and actual name without admin privileges. Users can also add other users as a backup user so that if they were unavailable for any reason it would be easy to find someone else to execute a manual task in their place.
+        <br/>
+        <a href="user-profile.png">
+         <img alt="User Profile" class="alignnone size-full wp-image-25420" height="507" sizes="(max-width: 682px) 100vw, 682px" src="user-profile.png" srcset="user-profile.png 682w, User-Profile-300x223.png 300w" width="682"/>
+        </a>
+        <br/>
+        You will be able to easily see contact information about that user and that users backups if you hover over that user for a task they are assigned too.
+        <br/>
+        <a href="user-information.png">
+         <img alt="User Information" class="alignnone size-full wp-image-25421" height="301" sizes="(max-width: 1343px) 100vw, 1343px" src="user-information.png" srcset="user-information.png 1343w, User-Information-300x67.png 300w, User-Information-1024x230.png 1024w" width="1343"/>
+        </a>
+       </span>
+      </span>
+     </span>
+    </p>
+    <h2>
+     Create Additional Help Links (Beta Feature)
+    </h2>
+    <p>
+     <span>
+      <span>
+       <span>
+        Additional links can now be added to the Help drop-down at the top of the page. This feature can be found on the Settings -&gt; System Settings tab, after the “Help Links” Feature Flag has been toggled on.
+        <br/>
+        <a href="help-link-example.png">
+         <img alt="Help Link Example" class="alignnone size-full wp-image-25415" height="256" sizes="(max-width: 1056px) 100vw, 1056px" src="help-link-example.png" srcset="help-link-example.png 1056w, Help-Link-Example-300x73.png 300w, Help-Link-Example-1024x248.png 1024w" width="1056"/>
+        </a>
+       </span>
+      </span>
+     </span>
+    </p>
+    <h2>
+     Not Applicable Task Reasons
+    </h2>
+    <p>
+     <span>
+      <span>
+       The reasons a task is not applicable are now able to be displayed in the UI. On a not applicable task, simply click on the new help icon for the list of reasons to be displayed. Applicability for this task is recalculated at this moment. So, in the instance that the task’s applicability isn’t updating and the task should really be applicable, clicking the icon will cause it’s applicability to get updated.
+       <br/>
+       <a href="not-applicable-reasons.png">
+        <img alt="Not Applicable Reasons" class="alignnone size-full wp-image-25416" height="140" sizes="(max-width: 1231px) 100vw, 1231px" src="not-applicable-reasons.png" srcset="not-applicable-reasons.png 1231w, Not-Applicable-Reasons-300x34.png 300w, Not-Applicable-Reasons-1024x116.png 1024w" width="1231"/>
+       </a>
+       <br/>
+      </span>
+     </span>
+     <span>
+     </span>
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Plug-in task types (Beta Feature)
+    </h2>
+    <p>
+     The plugin framework has been improved to allow use of plugin tasks in deployment plan.
+    </p>
+    <p>
+     <a href="addplugintask.png">
+      <img alt="AddPluginTask" class="alignnone size-large wp-image-25439" height="473" sizes="(max-width: 980px) 100vw, 980px" src="addplugintask.png" srcset="AddPluginTask-1024x494.png 1024w, AddPluginTask-300x145.png 300w, addplugintask.png 1339w" width="980"/>
+     </a>
+    </p>
+    <p>
+     Plugin Steps can now be turned to Plugin Tasks by adding:
+     <strong>
+      <em>
+       extends=”PLUGIN_TASK”
+      </em>
+     </strong>
+     and will be made available as tasks when building a deployment plan.
+    </p>
+    <p>
+     <a href="plugintaskstep.png">
+      <img alt="PluginTaskStep" class="alignnone size-full wp-image-25443" height="503" sizes="(max-width: 852px) 100vw, 852px" src="plugintaskstep.png" srcset="plugintaskstep.png 852w, PluginTaskStep-300x177.png 300w" width="852"/>
+     </a>
+    </p>
+    <p>
+     When those tasks are executed the full context will be passed to the plugin step containing information about: Task, Segment, Deployment, Applications, Versions, Release…
+     <br/>
+     Then the plugin step will be responsible to update the status of the task using our REST API our the UCR java client.
+     <br/>
+     Plugin tasks will help to integrate with various external tools like: Ticketing Systems, Notifications, Custom Deployment Automation tools, Approval Systems… They will also help to solve complex scenarios such as Roll Backs.
+     <br/>
+     Plugin task execution logs will be printed as comments in the task dialog.
+    </p>
+    <p>
+     <a href="plugintasklogs.png">
+      <img alt="PluginTaskLogs" class="alignnone size-large wp-image-25442" height="563" sizes="(max-width: 980px) 100vw, 980px" src="plugintasklogs.png" srcset="PluginTaskLogs-1024x588.png 1024w, PluginTaskLogs-300x172.png 300w, plugintasklogs.png 1294w" width="980"/>
+     </a>
+    </p>
+    <h2>
+     Plug-in Event Listeners (Beta Feature)
+    </h2>
+    <p>
+     As part of new features introduced with the plugin framework, Plugins can now have steps that listen to specific events generated in IBM UrbanCode Release such as: Application was added to / removed from a release, Deployment Failed, Task Failed, Integration Failed, Deployment Started, Task is late… and be triggered when those events occur.
+     <br/>
+     When the step is triggered by the event, it will receive the context: Object triggering the event and related information that is relevant for that step execution.
+     <br/>
+     The plugin steps will have to subscribe to 1 or more events ex:
+     <a href="plugintasklogs.png">
+     </a>
+    </p>
+    <a href="plugintasklogs.png">
+    </a>
+    <p>
+     <a href="plugintasklogs.png">
+     </a>
+     <a href="pluginlistenerstep.png">
+      <img alt="PluginListenerStep" class="alignnone size-full wp-image-25441" height="370" sizes="(max-width: 923px) 100vw, 923px" src="pluginlistenerstep.png" srcset="pluginlistenerstep.png 923w, PluginListenerStep-300x120.png 300w" width="923"/>
+     </a>
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Plug-in tasks &amp; Listeners
+    </li>
+    <li>
+     Timeline view
+    </li>
+    <li>
+     Customizable help links
+    </li>
+    <li>
+     User Profile
+    </li>
+    <li>
+     Bug Fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started/">
+     Getting Started
+    </a>
+    page.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Installation Notes
+    </div>
+    <p>
+     No new installation notes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     No major behavioral changes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Fixes in this Release
+     </div>
+     <p>
+      A cumulative list of fixes in this release, and any future fix packs will be available.
+     </p>
+    </div>
+    <div class="key-features">
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         APAR/defect
+        </td>
+        <td valign="bottom" width="78%">
+         Description
+        </td>
+       </tr>
+       <tr valign="top">
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI64006" target="_blank">
+          PI64006
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         URL VARIABLES NOT BEING SET IN CUSTOM NOTIFICATION
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI64409" target="_blank">
+          PI64409
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         MISSING LIBRARY FOR RTC PLUGIN V3 (RTC SERVER 6.0 AND LATER) CAUSING EXCEPTION DURING AUTHENTICATION
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI64800" target="_blank">
+          PI64800
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         RTC PLUGIN ‘RUN INTEGRATION’ FAILS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI64802" target="_blank">
+          PI64802
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         WHEN ADDING A NEW APPLICATION THE FIELDS FOR ENVIRONMENTS AND  TEAMS ARE SLOW TO LOAD
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI64839" target="_blank">
+          PI64839
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         RELEASES DROPDOWN SCROLLS INCONSISTENTLY
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65928" target="_blank">
+          PI65928
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         CHANGES TO AUTOMATIC TASKS IN DEPLOYMENT PLANS AREN’T SUCCESSFULLY SAVED
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI66041" target="_blank">
+          PI66041
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         DB2-BASED UCR SERVERS FAIL TO STARTUP WHEN NON-DEFAULT USER IS USED TO ACCESS DATABASE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI66142" target="_blank">
+          PI66142
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         INTEGRATION WITH DEPLOY FAILS WHEN A SNAPSHOT IS CREATED WITH THE SAME NAME AS ANOTHER RENAMED SNAPSHOT
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI66587" target="_blank">
+          PI66587
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         SCHEDULED DEPLOYMENTS CACHE IS NOT SYNCHRONIZED BETWEEN NODES IN HA
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI66488" target="_blank">
+          PI66488
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UCD AND RTC INTEGRATION USING PLUGIN FAILS WITH JAVA.LANG.ASSERTIONERROR
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+     </div>
+     <div class="subtitle">
+      Known Problems and Workarounds
+     </div>
+     <p>
+      To search for additional post-release issues that IBM Rational Support documented, visit the
+      <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+     </p>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes/">
+      release notes
+     </a>
+     . For supported platforms and requirements, see the
+     <a href="http://www-03.ibm.com/software/products/en/ucrel#tab_othertab1" target="_blank">
+      system requirements
+     </a>
+     . To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.1/com.ibm.urelease.doc/topics/install_ov.html">
+      installation guide
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release requires IBM Installation Manager version 1.8.0 or later for installation. See
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg24036814">
+      download document
+     </a>
+     for details on this download. This release is available for download on Fix Central for current customers, requiring authentication. This download is
+     <a href="http://www-933.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=fixId&amp;fixids=6.2.1.2-UrbanCode-Release&amp;includeRequisites=1&amp;includeSupersedes=0&amp;downloadMethod=http">
+      available here.
+     </a>
+     Information for installing the server, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.1/com.ibm.urelease.doc/topics/install_ov.html">
+      Installing server
+     </a>
+     section in the product documentation.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="../">
+      What’s New
+     </a>
+     To learn more about IBM UrbanCode Release, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.1/com.ibm.urelease.doc/ucr_version_welcome.html" target="_blank">
+      documentation
+     </a>
+     For help installing or using IBM UrbanCode Release, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

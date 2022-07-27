@@ -1,8 +1,276 @@
 <!DOCTYPE html>
-<html><head><title>6.1.3.3</title></head>
-<body>
-<p><b>This article was originaly published in 2018.09.28</b></p>
-<p><h1>6.1.3.3 - September 28, 2018</h1></p>
-<p><div class="new_release_cont">This release of UrbanCode Build is a maintenance release and contains a number of new features, feature enhancements and bug fixes. This release is recommended for all customers.</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.3.3
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2018.09.28
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.3.3 - September 28, 2018
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of UrbanCode Build is a maintenance release and contains a number of new features, feature enhancements and bug fixes. This release is recommended for all customers.
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     New Features and Enhancements
+    </li>
+    <li>
+     Recommended Fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="horizontal-rule">
+    <span style="font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 1.5rem;">
+     New Features and Enhancements
+    </span>
+   </div>
+   <div class="key-features">
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom">
+        Visual Process Dependency Graph
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Add support for SQL Server 2017
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Add support for Oracle 18c
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Enhanced UI for Misc Jobs search tab
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Update Apache Tomcat to 7.0.90
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="key-features">
+    <div>
+    </div>
+    <h3 class="subtitle">
+     Fixes
+    </h3>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix performance degradation of various SQL queries due to use of NLS in Oracle database
+       </td>
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH01702" rel="noopener" target="_blank">
+         PH01702
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix issue persisting checkbox values for plugin command steps
+       </td>
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH01277" rel="noopener" target="_blank">
+         PH01277
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Value of fields in “Additional Options” section of step configurations do not persist
+       </td>
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH01848" rel="noopener" target="_blank">
+         PH01848
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Step timeout values are considered as milliseconds, instead of minutes
+       </td>
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH02709" rel="noopener" target="_blank">
+         PH02709
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Unable to change “Post-Processing Script” field to “Use Plug-in Default”
+       </td>
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH03303" rel="noopener" target="_blank">
+         PH03303
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix filtering issue in Team Object Mapping area of the Teams tab
+       </td>
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH01846" rel="noopener" target="_blank">
+         PH01846
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix login issue for LDAP-based authentications when multiple SecurityUser objects exist for the same user
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Set default Hibernate dialect to Oracle10gDialect during upgrade (only for Oracle databases)
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Cleanup leaves preflight misc job traces with running status (one job is stuck as running status per cleanup run)
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Add description in LDAP Authorization realm config page for connection settings area to indicate that these settings are optional
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix incompatibility of multi-select plugin step fields
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Log warning message if a step output property does not have scope
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Reduce log level to DEBUG when coercing collection elements to String
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Plan &amp; Prepare
+    </h3>
+    For fixes contained in this release, and any known issues, review the
+    <a href="../release-notes">
+     release notes
+    </a>
+    .
+
+For supported platforms and requirements, see the
+    <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27044198" rel="noopener" target="_blank">
+     system requirements
+    </a>
+    . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+
+To get started quickly to try the software, IBM UrbanCode Build is shipped with an Apache Derby database. Apache Derby is not supported for production environments. As you plan your production topology, review the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.2/com.ibm.ucbuild.doc/topics/install_ch.html" rel="noopener" target="_blank">
+     installation guide
+    </a>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Install the server
+    </h3>
+    This release is available for download from Fix Central, requiring authentication. This download is
+    <a href="http://www-933.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Rational&amp;product=ibm/Rational/UrbanCode+Build&amp;release=6.1.2.0&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+     available here.
+    </a>
+    Information for installing the server, see the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.2/com.ibm.ucbuild.doc/topics/install_ch.html">
+     Installing
+    </a>
+    section in the product documentation.
+
+For information on installing and managing licenses, see
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.2/com.ibm.ucbuild.doc/topics/licenseManage.html">
+     License Management
+    </a>
+    <div class="horizontal-rule">
+    </div>
+    <h3 class="subtitle">
+     Learn
+    </h3>
+    To learn more about IBM UrbanCode Build, see the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.2" rel="noopener" target="_blank">
+     documentation
+    </a>
+    For help installing or using IBM UrbanCode Build, contact
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+     support
+    </a>
+    To suggest an enhancement to the product, visit the
+    <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+     RFE Community
+    </a>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Get support
+    </h3>
+    For information from support, including FAQs, visit the
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+     IBM Support portal.
+    </a>
+    You can configure the support portal to view information about specific products.
+   </div>
+  </p>
+ </body>
 </html>

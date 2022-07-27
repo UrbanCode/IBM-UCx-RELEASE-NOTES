@@ -1,63 +1,269 @@
 <!DOCTYPE html>
-<html><head><title>6.2.2.5</title></head>
-<body>
-<p><b>This article was originaly published in 2018.12.11</b></p>
-<p><h1>6.2.2.5 - December, 2018</h1></p>
-<p>This release of IBM UrbanCode Release is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
-<div class="new_release_cont">
-<h2>New features</h2>
+<html>
+ <head>
+  <title>
+   6.2.2.5
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2018.12.11
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.2.5 - December, 2018
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Release is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <div class="new_release_cont">
+    <h2>
+     New features
+    </h2>
+    <hr/>
+    <h3>
+     Hover help available for initiatives imported from RTC
+    </h3>
+    Hovering over a work item imported from RTC displays in a preview window some details of the work item.
+    <h3>
+     Task Dependency graph for deployment plans
+    </h3>
+    You can now view a Dependency Graph of a deployment plan. This complements the Scheduled Deployment Dependency graphs that were already available in an earlier release.
+    <a href="task_dependency_graph.jpg">
+     <img alt="Graph showing task dependencies" class="size-full wp-image-36859" height="273" sizes="(max-width: 602px) 100vw, 602px" src="task_dependency_graph.jpg" srcset="task_dependency_graph.jpg 602w, task_dependency_graph-300x136.jpg 300w" width="602"/>
+    </a>
+    <h3>
+     Improved auditing for scheduled deployments
+    </h3>
+    The Change History tab of a scheduled deployment now list more events during the execution of a deployment.
+    <h3>
+     Allow editing of failed task
+    </h3>
+    Failed task description can be edited allowing you to update instructions that would need to be synced with the deployment plan for future deployments.
+    <h3>
+     Allow manual versions to be created from the Application and Versions tabs of a scheduled deployment
+    </h3>
+    Manual versions that can be used for manually created applications can be created directly create from the Scheduled Deployment page.
+    <a href="manual_version.jpg">
+     <img alt="" class="size-full wp-image-36864" height="556" src="manual_version.jpg" width="627"/>
+    </a>
+    <h3>
+     Task owners can be changed while the task is executing
+    </h3>
+    If multiple users work (for example, a shift change occurs while the task is executing) are working on the same task that is in progress, they can assign the task to each other while the task is in progress. Switching users is audited.
+    <h3>
+     Permission to lock and unlock deployments
+    </h3>
+    Permissions have been added locking and unlocking deployments. There is one permission to lock and another one to unlock a deployment.
+    <a href="lock_permissions-1.jpg">
+     <img alt="" class="size-full wp-image-36882" height="129" sizes="(max-width: 606px) 100vw, 606px" src="lock_permissions-1.jpg" srcset="lock_permissions-1.jpg 606w, lock_permissions-1-300x64.jpg 300w" width="606"/>
+    </a>
+    <h3>
+     Permission to edit release dates
+    </h3>
+    New permission available to allow you to edit release dates.
+    <a href="release_date_permission.jpg">
+     <img alt="" class="alignnone size-full wp-image-36892" height="79" src="release_date_permission.jpg" width="243"/>
+    </a>
+    <h3>
+     New notification rules
+    </h3>
+    Additional notification rules are now available. For example: Task Re-Opened or when Comments are added to Tasks.
+    <h3>
+     Performance and usability improvements
+    </h3>
+    <ul>
+     <li>
+      Search functionality in “Copy From” field in “Create New Deployment Plan” dialog
+     </li>
+     <li>
+      Performance improved on the Environment Reservation dialog
+     </li>
+    </ul>
+    <hr/>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Beta features
+    </h2>
+    The following features have been added as a Beta feature. These features require the enabling of a feature flag to use.
+    <h3>
+     Ability to archive started scheduled deployments using the Rest API
+    </h3>
+    In previous versions, only scheduled deployment not started can be removed from the user interface. This beta feature provides a rest endpoint so that in progress or completed deployments can be be cleaned up.
+    <h3>
+     Reset Approval On Version Change
+    </h3>
+    If a scheduled deployment has been approved and later versions selected changed then the approval will be reset and a new approval will be required for the deployment to start
+    <h3>
+     Ability to act on a task from an email
+    </h3>
+    It is now possible to start and complete tasks from emails. Buttons for each action can be added to the email notification templates. It simplifies the user experience and facilitate on-boarding
+    <a href="email_task.jpg">
+     <img alt="" class="size-full wp-image-36867" height="556" src="email_task.jpg" width="627"/>
+    </a>
+    &lt;/h3"&gt;
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Task Dependency graph for deployment plans
+    </li>
+    <li>
+     Performance Improvements
+    </li>
+    <li>
+     Bug Fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h3>
+    <span style="font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 1.75rem;">
+     Fixes in this Release
+    </span>
+   </h3>
+   <div class="new_release_cont">
+    <ul>
+     <li>
+      Ensure Environment reservation dialog is not case sensitive for DB2
+     </li>
+     <li>
+      Remove options for users to create old built in integrations
+     </li>
+     <li>
+      Fixed dependency count on task row to keep value after opening task dialog
+     </li>
+     <li>
+      Fixed issue with editing maintenance settings
+     </li>
+     <li>
+      Ensure segments deleted from a deployment plan also clean up references to its tasks
+     </li>
+     <li>
+      Improved performance of removing a scheduled deployment from an enterprise deployment
+     </li>
+     <li>
+      Fixed issues around estimated end time of a segment
+     </li>
+     <li>
+      Fixed countdown for wait for time tasks
+     </li>
+     <li>
+      Ensure wait for time tasks do not start after a deployment is aborted
+     </li>
+     <li>
+      Ensure notification tasks show assigned user
+     </li>
+     <li>
+      Ensure utf-8 is used for plugin integrations to support special characters
+     </li>
+     <li>
+      Stop plug-ins from creating world writable files
+     </li>
+     <li>
+      Fixed issues with countdown widget
+     </li>
+     <li>
+      Recalculate milestone dates when editing a release’s date
+     </li>
+    </ul>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Plan &amp; Prepare
+    </h3>
+    For supported platforms and requirements, see the reports that can be dynamically generated using the
+    <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener noreferrer" target="_blank">
+     Software Product Compatibility Reports (SPCR)
+    </a>
+    tool.
+    <strong>
+     Note:
+    </strong>
+    Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
 
-<hr />
+To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.2/com.ibm.urelease.doc/topics/install_ov.html">
+     installation guide
+    </a>
+    .
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Install the server
+    </h3>
+    This release is available for download from
+    <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=all&amp;source=fc" rel="noopener noreferrer" target="_blank">
+     Fix Central
+    </a>
+    and
+    <a href="https://www.ibm.com/software/howtobuy/passportadvantage/paocustomer" rel="noopener noreferrer" target="_blank">
+     Passport Advantage
+    </a>
+    , requiring authentication.
 
-<h3>Hover help available for initiatives imported from RTC</h3>
-Hovering over a work item imported from RTC displays in a preview window some details of the work item.
-<h3>Task Dependency graph for deployment plans</h3>
-You can now view a Dependency Graph of a deployment plan. This complements the Scheduled Deployment Dependency graphs that were already available in an earlier release.
+Information for installing the server, see the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.2/com.ibm.urelease.doc/topics/install_ov.html" rel="noopener noreferrer" target="_blank">
+     Installing server
+    </a>
+    section in the product documentation.
 
-<a href="task_dependency_graph.jpg"><img class="size-full wp-image-36859" src="task_dependency_graph.jpg" sizes="(max-width: 602px) 100vw, 602px" srcset="task_dependency_graph.jpg 602w, task_dependency_graph-300x136.jpg 300w" alt="Graph showing task dependencies" width="602" height="273" /></a>
-<h3>Improved auditing for scheduled deployments</h3>
-The Change History tab of a scheduled deployment now list more events during the execution of a deployment.
-<h3>Allow editing of failed task</h3>
-Failed task description can be edited allowing you to update instructions that would need to be synced with the deployment plan for future deployments.
-<h3>Allow manual versions to be created from the Application and Versions tabs of a scheduled deployment</h3>
-Manual versions that can be used for manually created applications can be created directly create from the Scheduled Deployment page.
+For information on installing licenses, see
+    <a href="https://www.ibm.com/support/knowledgecenter/SS4GCC_6.2.1/com.ibm.urelease.doc/topics/licenseManage.html" rel="noopener noreferrer" target="_blank">
+     Managing Licenses
+    </a>
+    .
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Learn
+    </h3>
+    To learn more about IBM UrbanCode Release, see the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.2/com.ibm.urelease.doc/ucr_version_welcome.html" rel="noopener noreferrer" target="_blank">
+     documentation
+    </a>
+    .
 
-<a href="manual_version.jpg"><img class="size-full wp-image-36864" src="manual_version.jpg" alt="" width="627" height="556" /></a>
-<h3>Task owners can be changed while the task is executing</h3>
-If multiple users work (for example, a shift change occurs while the task is executing) are working on the same task that is in progress, they can assign the task to each other while the task is in progress. Switching users is audited.
-<h3>Permission to lock and unlock deployments</h3>
-Permissions have been added locking and unlocking deployments. There is one permission to lock and another one to unlock a deployment.
+For help installing or using IBM UrbanCode Release, contact
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener noreferrer" target="_blank">
+     support
+    </a>
+    .
 
-<a href="lock_permissions-1.jpg"><img class="size-full wp-image-36882" src="lock_permissions-1.jpg" sizes="(max-width: 606px) 100vw, 606px" srcset="lock_permissions-1.jpg 606w, lock_permissions-1-300x64.jpg 300w" alt="" width="606" height="129" /></a>
-<h3>Permission to edit release dates</h3>
-New permission available to allow you to edit release dates.
-
-<a href="release_date_permission.jpg"><img class="alignnone size-full wp-image-36892" src="release_date_permission.jpg" alt="" width="243" height="79" /></a>
-<h3>New notification rules</h3>
-Additional notification rules are now available. For example: Task Re-Opened or when Comments are added to Tasks.
-<h3>Performance and usability improvements</h3>
-<ul>
- 	<li>Search functionality in “Copy From” field in “Create New Deployment Plan” dialog</li>
- 	<li>Performance improved on the Environment Reservation dialog</li>
-</ul>
-
-<hr />
-
-</div>
-<div class="new_release_cont">
-<h2>Beta features</h2>
-The following features have been added as a Beta feature. These features require the enabling of a feature flag to use.
-<h3>Ability to archive started scheduled deployments using the Rest API</h3>
-In previous versions, only scheduled deployment not started can be removed from the user interface. This beta feature provides a rest endpoint so that in progress or completed deployments can be be cleaned up.
-<h3>Reset Approval On Version Change</h3>
-If a scheduled deployment has been approved and later versions selected changed then the approval will be reset and a new approval will be required for the deployment to start
-<h3>Ability to act on a task from an email</h3>
-It is now possible to start and complete tasks from emails. Buttons for each action can be added to the email notification templates. It simplifies the user experience and facilitate on-boarding
-
-<a href="email_task.jpg"><img class="size-full wp-image-36867" src="email_task.jpg" alt="" width="627" height="556" /></a>
-
-&lt;/h3"&gt;
-
-</div>
-</p></body>
+To suggest an enhancement to the product, visit the
+    <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener noreferrer" target="_blank">
+     RFE Community
+    </a>
+    .
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Get support
+    </h3>
+    For information from support, including FAQs, visit the
+    <a href="https://www.ibm.com/support/home" rel="noopener noreferrer" target="_blank">
+     IBM Support portal.
+    </a>
+    You can configure the support portal to view information about specific products.
+   </div>
+  </p>
+ </body>
 </html>

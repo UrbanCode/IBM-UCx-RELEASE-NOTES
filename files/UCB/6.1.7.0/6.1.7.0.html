@@ -1,37 +1,270 @@
 <!DOCTYPE html>
-<html><head><title>6.1.7.0</title></head>
-<body>
-<p><b>This article was originaly published in 2020.09.24</b></p>
-<p><h1>6.1.7.0</h1></p>
-<p>This release of IBM UrbanCode Build is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
-
-<h2>New Features</h2>
-
-<h3>User interface improvement</h3>​
-The drag and drop feature now applies to all template types.  
-
-<h3>New System Setting</h3>
-The <strong>Audit User</strong> system setting added to the Security settings. When enabled user logon and logout events are recorded in the audit log.
-
-<h3>Cleanup Policy</h3>
-Multiple cleanup policies can be created. Policies that you create can be deleted and the default policy can be disabled.
-
-<img src="cleanuppolicy.png" alt="" width="950" height="482" class="alignnone size-full wp-image-1005497" />
-
-<h3>Agent and Agent Pool enhancements</h3>
-The location of the agent CodeStation cache is now configurable. You can specify the location to use instead of the default location.
-<img src="codestationcache.png" alt="" width="919" height="248" class="alignnone size-full wp-image-1005496" />
-
-A new section <strong>In Use by</strong> has been added to the detail window for an agent pool to view the projects attached to the pool. 
+<html>
+ <head>
+  <title>
+   6.1.7.0
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2020.09.24
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.7.0
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Build is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <h2>
+    New Features
+   </h2>
+   <h3>
+    User interface improvement
+   </h3>
+   ​
+The drag and drop feature now applies to all template types.
+   <h3>
+    New System Setting
+   </h3>
+   The
+   <strong>
+    Audit User
+   </strong>
+   system setting added to the Security settings. When enabled user logon and logout events are recorded in the audit log.
+   <h3>
+    Cleanup Policy
+   </h3>
+   Multiple cleanup policies can be created. Policies that you create can be deleted and the default policy can be disabled.
+   <img alt="" class="alignnone size-full wp-image-1005497" height="482" src="cleanuppolicy.png" width="950"/>
+   <h3>
+    Agent and Agent Pool enhancements
+   </h3>
+   The location of the agent CodeStation cache is now configurable. You can specify the location to use instead of the default location.
+   <img alt="" class="alignnone size-full wp-image-1005496" height="248" src="codestationcache.png" width="919"/>
+   A new section
+   <strong>
+    In Use by
+   </strong>
+   has been added to the detail window for an agent pool to view the projects attached to the pool. 
 
 The detail page for a build life now includes the agent used by the build processes.
-
-<h3>Nested properties</h3>
-You can nest properties to create more specific output. Create a nested property by combining multiple properties. 
-
-<h3>Support added to use configuration file as a job step</h3>
-The new Job as Code plug-in allows you to configure a job step as a JSON or YAML file.
-
-<img src="jobascode.png" alt="" width="923" height="376" class="alignnone size-full wp-image-1005495" />
-</p></body>
+   <h3>
+    Nested properties
+   </h3>
+   You can nest properties to create more specific output. Create a nested property by combining multiple properties.
+   <h3>
+    Support added to use configuration file as a job step
+   </h3>
+   The new Job as Code plug-in allows you to configure a job step as a JSON or YAML file.
+   <img alt="" class="alignnone size-full wp-image-1005495" height="376" src="jobascode.png" width="923"/>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Nested properties supported
+    </li>
+    <li>
+     Multiple clean-up policies added
+    </li>
+    <li>
+     Configure job step as YAML or Json file
+    </li>
+    <li>
+     Security enhancements
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   For information on documentation and support resources, software and hardware requirements and installation steps, click the
+   <strong>
+    Getting Started
+   </strong>
+   tab.
+   <h3>
+    New features and enhancements
+   </h3>
+   <ul>
+   </ul>
+   <h3>
+    Fixes
+   </h3>
+   <table border="0" rules="" width="100%">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH26798" target="_blank">
+        PH26798
+       </a>
+      </td>
+      <td valign="bottom">
+       Fixed the improper listing of branch names in SonarQube plugin.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH27529" target="_blank">
+        PH27529
+       </a>
+      </td>
+      <td valign="bottom">
+       Fixed the restart issue with a secondary process.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH27962" target="_blank">
+        PH27962
+       </a>
+      </td>
+      <td valign="bottom">
+       Fixed the issue under Miscellaneous step type to save checkbox field changes.​
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH29017" target="_blank">
+        PH29017
+       </a>
+      </td>
+      <td valign="bottom">
+       Popup overflow during the report creation, due to resolution overflow
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h3>
+    RFEs
+   </h3>
+   <ul>
+    <li>
+     RFE 143018 - Job-as-Code: Load and execute job steps defined in a JSON/YAML file
+    </li>
+    <li>
+     RFE 143150 - Flexible sorting of Project Properties
+    </li>
+    <li>
+     RFE 142349 - Move workflows between projects
+    </li>
+    <li>
+     RFE 138970 - Project level cleanup policies
+    </li>
+    <li>
+     RFE 135144 - Show which projects use an agent for builds (identify idle agents)
+    </li>
+    <li>
+     RFE 92796 - Support for specifying Agent’s CodeStation cache directory
+    </li>
+    <li>
+     RFE 118437 - Nested property resolution
+    </li>
+    <li>
+     RFE 84650 - Option to control whether step fails due to missing artifact sets while
+    </li>
+    <li>
+     RFE 133677 - Included user logon and logout events in audit logs
+    </li>
+    <li>
+     Build Containers on Demand: A new type of Agent pool where the server can spin up a container as UrbanCode Build Agent for performing build tasks
+    </li>
+   </ul>
+   <h3>
+    Improvements
+   </h3>
+   <ul>
+    <li>
+     Security: Introduced account-lockout policy to restrict mutiple failed login attempts (CWE-307)
+    </li>
+    <li>
+     Security: Added a support to configure secret key for AJP Connector (CVE-2020-1938)
+    </li>
+    <li>
+     Improved Agent UI, to show the number of jobs run by an Agent
+    </li>
+    <li>
+     Provided a checkbox in the Git plug-in step to disable build requests for draft pull requests
+    </li>
+    <li>
+     Improved JUnit plug-in to prevent out-of-memory error by parsing only the required data into DOM
+    </li>
+   </ul>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan and Prepare
+   </h2>
+   For supported platforms and requirements, see the reports that can be dynamically generated using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener noreferrer" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <strong>
+    Note:
+   </strong>
+   Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+   <p>
+    To get started quickly, IBM UrbanCode Build is shipped with an Apache Derby database. Apache Derby is not supported for production environments. As you plan your production topology, review the product documentation.
+   </p>
+   <p>
+    IBM UrbanCode Build supports integrations with many different tools in the form of job steps. Each IBM UrbanCode Build plug-in is a separate download and installation available on our
+    <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/" target="_blank">
+     plug-in page
+    </a>
+    .
+   </p>
+   <h3>
+    Learn
+   </h3>
+   <p>
+    To learn more about new enhancements in this release, click the
+    <strong>
+     What’s New
+    </strong>
+    tab.
+   </p>
+   <p>
+    To learn more about IBM UrbanCode Build, see the product
+    <a href="https://www.ibm.com/support/knowledgecenter/SS8NMD" target="_blank">
+     documentation
+    </a>
+    .
+   </p>
+   <p>
+    For help installing or using IBM UrbanCode Build, post your questions in the
+    <a href="https://developer.ibm.com/answers?community=urbancode" target="_blank">
+     forums
+    </a>
+    or contact
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+     support
+    </a>
+    .
+   </p>
+   <p>
+    To suggest an enhancement to the product, visit the
+    <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+     RFE Community
+    </a>
+    .
+   </p>
+   <h3>
+    Get support
+   </h3>
+   <p>
+    For information from support, including FAQs, visit the
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+     IBM Support portal.
+    </a>
+    You can configure the support portal to view information about specific products.
+   </p>
+  </p>
+ </body>
 </html>

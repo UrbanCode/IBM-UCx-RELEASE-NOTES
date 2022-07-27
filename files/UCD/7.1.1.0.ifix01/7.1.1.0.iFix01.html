@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html><head><title>7.1.1.0.ifix01</title></head>
-<body>
-<p><b>This article was originaly published in 2020.11.06</b></p>
-<p><h1>7.1.1.0.iFix01</h1></p>
-<p>This release replaces the Urbancode Deploy version 7.1.1.0 release. It includes all updates made in the 7.1.1..0 release. Version 7.1.1.0 has been removed and not available to download. If you have installed version 7.1.1.0, install this iFix to prevent potential problems.
-<dl>
- 	<dt>Loading component table</dt>
- 	<dd>The following error message is displayed when the component table attempts to load information about a component that is currently importing a version.
-
-<code>com.urbancode.ds.web.rest.mappers.RuntimeExceptionMapper -
+<html>
+ <head>
+  <title>
+   7.1.1.0.ifix01
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2020.11.06
+   </b>
+  </p>
+  <p>
+   <h1>
+    7.1.1.0.iFix01
+   </h1>
+  </p>
+  <p>
+   This release replaces the Urbancode Deploy version 7.1.1.0 release. It includes all updates made in the 7.1.1..0 release. Version 7.1.1.0 has been removed and not available to download. If you have installed version 7.1.1.0, install this iFix to prevent potential problems.
+   <dl>
+    <dt>
+     Loading component table
+    </dt>
+    <dd>
+     The following error message is displayed when the component table attempts to load information about a component that is currently importing a version.
+     <code>
+      com.urbancode.ds.web.rest.mappers.RuntimeExceptionMapper -
 java.lang.String cannot be cast to [Ljava.lang.Object;
 java.lang.ClassCastException: java.lang.String cannot be cast to
 [Ljava.lang.Object;
@@ -23,37 +40,315 @@ com.urbancode.ds.web.rest.config.ComponentResource_$$_jvst492_3.
 _d44getComponentsWithDetails(ComponentResource_$$_jvst492_3.java
 )
     at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
- </code>
-</dd>
-	</dl>
-
-<h2>7.1.1.0</h2>
-Version 7.1.1.0 release is a maintenance release and includes the following bug fixes and enhancements. 
-
-<h3>Key Features and Enhancements</h3>
-<dl>
- 	<dt>Processes as code</dt>
- 	<dd>Application and component processes can now be modeled in the new custom Process as Code (PAC) format.
+     </code>
+    </dd>
+   </dl>
+   <h2>
+    7.1.1.0
+   </h2>
+   Version 7.1.1.0 release is a maintenance release and includes the following bug fixes and enhancements.
+   <h3>
+    Key Features and Enhancements
+   </h3>
+   <dl>
+    <dt>
+     Processes as code
+    </dt>
+    <dd>
+     Application and component processes can now be modeled in the new custom Process as Code (PAC) format.
 
 You can use the bundled Process-as-Code Compiler to convert existing processes into the PAC format and then modify them using your text editor. The modified PAC files can then be translated and uploaded back into the server for use in your deployments.
 
-The PAC utility, which includes a detailed guide to the new syntax, can be downloaded from the dashboard. Click <strong>Help</strong> > <strong>Tools</strong> > <strong>Process-as-code Compiler</strong> to download.
-</dd>
-</dl>
-<dl>
- 	<dt>Tag management</dt>
- 	<dd>The <strong>Settings</strong> tab now includes a Tag page that facilitates central management of all tags that have been created on the UrbanCode Deploy server. Users with the new <strong>Manage Tags</strong> permission can edit the name, color, and description of existing tags. When a tag is modified from the Tag page it is modified on all objects that are tagged with the tag.</dd>
- 	<dt>Email approvals</dt>
- 	<dd>Users who are assigned to an approval task can follow a URL in the email notification they receive to approve the task. The URL links to a mobile responsive page that allows the user to only review, and approve or reject the specified task.</dd>
- 	<dt>CLI enhancements</dt>
- 	<dd>This release continues the extension of the CLI  API began in previous releases. Several actions that previously could only be done in the web UI can now be done using the API. These actions includes activities like importing and exporting objects, deleting objects, and removing users from roles.</dd>
- 	<dd><strong>Redesign of the Get Started page</strong></dd>
- 	<dd>The revised Get Started page can now be accessed from the <strong>Help</strong> menu or by clicking the UrbanCode Deploy segment of the navigation bar. This page includes quick links to documentation, tutorials, release notes, and more.</dd>
- 	<dd><strong>License usage improvements</strong></dd>
- 	<dd>License configuration has moved from the System Settings view into a new License Management page. The new License Management page is where the license server connection and automatic agent license type can be configured. After a connection is made, information is displayed about the available licenses and license consumption.</dd>
-         <dd>Usage metrics for a license server now includes consumed versus available metrics.
-<img src="licensemetrics.png" alt="" width="637" height="251" class="alignnone size-full wp-image-1005595" />
-      </dd> 
-</dl>
-</p></body>
+The PAC utility, which includes a detailed guide to the new syntax, can be downloaded from the dashboard. Click
+     <strong>
+      Help
+     </strong>
+     &gt;
+     <strong>
+      Tools
+     </strong>
+     &gt;
+     <strong>
+      Process-as-code Compiler
+     </strong>
+     to download.
+    </dd>
+   </dl>
+   <dl>
+    <dt>
+     Tag management
+    </dt>
+    <dd>
+     The
+     <strong>
+      Settings
+     </strong>
+     tab now includes a Tag page that facilitates central management of all tags that have been created on the UrbanCode Deploy server. Users with the new
+     <strong>
+      Manage Tags
+     </strong>
+     permission can edit the name, color, and description of existing tags. When a tag is modified from the Tag page it is modified on all objects that are tagged with the tag.
+    </dd>
+    <dt>
+     Email approvals
+    </dt>
+    <dd>
+     Users who are assigned to an approval task can follow a URL in the email notification they receive to approve the task. The URL links to a mobile responsive page that allows the user to only review, and approve or reject the specified task.
+    </dd>
+    <dt>
+     CLI enhancements
+    </dt>
+    <dd>
+     This release continues the extension of the CLI  API began in previous releases. Several actions that previously could only be done in the web UI can now be done using the API. These actions includes activities like importing and exporting objects, deleting objects, and removing users from roles.
+    </dd>
+    <dd>
+     <strong>
+      Redesign of the Get Started page
+     </strong>
+    </dd>
+    <dd>
+     The revised Get Started page can now be accessed from the
+     <strong>
+      Help
+     </strong>
+     menu or by clicking the UrbanCode Deploy segment of the navigation bar. This page includes quick links to documentation, tutorials, release notes, and more.
+    </dd>
+    <dd>
+     <strong>
+      License usage improvements
+     </strong>
+    </dd>
+    <dd>
+     License configuration has moved from the System Settings view into a new License Management page. The new License Management page is where the license server connection and automatic agent license type can be configured. After a connection is made, information is displayed about the available licenses and license consumption.
+    </dd>
+    <dd>
+     Usage metrics for a license server now includes consumed versus available metrics.
+     <img alt="" class="alignnone size-full wp-image-1005595" height="251" src="licensemetrics.png" width="637"/>
+    </dd>
+   </dl>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Required fix
+    </li>
+    <li>
+     Processes as code
+    </li>
+    <li>
+     Tag management enhancements
+    </li>
+    <li>
+     Email approvals
+    </li>
+    <li>
+     License usage improvements
+    </li>
+    <li>
+     CLI enhancements
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h2>
+    Fixes
+   </h2>
+   A cumulative list of fixes in this release, and any future fix packs can be found in the
+   <a href="https://www.urbancode.com/whats-new/deployfixlist/" rel="noopener" target="_blank">
+    Fixlist
+   </a>
+   document.
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+    <h3>
+     7.1.1.0.iFix01
+    </h3>
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH31361" rel="noopener" target="_blank">
+        PH31361
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       COMPONENT LIST WILL NOT LOAD IF A COMPONENT THAT WOULD SHOW UP
+ON THE TABLE IS CURRENTLY IMPORTING A VERSION.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h3>
+    7.1.1.0
+   </h3>
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH29644" rel="noopener" target="_blank">
+        PH29644
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       AUTH TOKENS ARE NOT ACCEPTED FOR REST METHODS WITH DUPLICATE QUERY PARAMETERS.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH28841" rel="noopener" target="_blank">
+        PH28841
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       SNAPSHOT NOT DEPLOYING CORRECTLY WHEN APPLICATION VERSION PRESET IS SPECIFIED
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH27920" rel="noopener" target="_blank">
+        PH27920
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UCD SERVER INCORRECTLY SHOWS UNLICENSED DESPITE THE LICENSE SERVER HOSTING AN 'IBMUCD_SS_AGENT_Z' LICENSE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH26573" rel="noopener" target="_blank">
+        PH26573
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       THE DATABASE PASSWORD IS VISIBLE ON CONSOLE DURING UCD INSTALLATION AND MIGRATING DB FROM DERBY TO OTHER DATABASES.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH24278" rel="noopener" target="_blank">
+        PH24278
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       FROM AN APPLICATION PROCESS, A RUN COMPONENT PROCESS'S IGNORE FAILURE PROPERTY MAY DISPLAY UNCHECKED EVEN WHEN CHECKED
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH20874" rel="noopener" target="_blank">
+        PH20874
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       MAINFRAME (ZOS) AGENT IN DIFFERENT TIMEZONE THAN SERVER INCORRECTLY REPORTS LASTMODIFIED TIMESTAMP OF RESOURCES
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h4>
+    RFEs
+   </h4>
+   <ul>
+    <li>
+     Tag details displayed for CLI resources
+    </li>
+    <li>
+     API Command for Exporting/Importing Components and Applications
+    </li>
+    <li>
+     API to edit description fields of system properties and agents
+    </li>
+    <li>
+     CLI to modify PropDefs in component templates
+    </li>
+    <li>
+     CLI to Remove a Role from team member
+    </li>
+    <li>
+     CLI to delete application and component
+    </li>
+    <li>
+     CLI to retrieve properties associated with an Application Process Request
+    </li>
+    <li>
+     CLI to set and change the basic properties on Component
+    </li>
+    <li>
+     Update tags and central management location for tags
+    </li>
+   </ul>
+   <h2>
+    Known problems and workarounds
+   </h2>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   For supported platforms and requirements, see the reports that can be dynamically generated using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <strong>
+    Note:
+   </strong>
+   Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+
+To get started quickly, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+   <a href="https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Rational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    Fix Central
+   </a>
+   , requiring authentication.
+
+Information for installing the server, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_7.1.1/com.ibm.udeploy.install.doc/topics/install_ch.html" rel="noopener" target="_blank">
+    Installing server
+   </a>
+   section in the product documentation.
+
+For information on installing licenses, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SS4GSP_7.1.1/com.ibm.udeploy.doc/topics/licenseManage.html" rel="noopener" target="_blank">
+    Managing Licenses
+   </a>
+   .
+   <h3>
+    Learn
+   </h3>
+   To learn more about IBM UrbanCode Deploy, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_7.1.1/com.ibm.udeploy.doc/ucd_version_welcome.html" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using IBM UrbanCode Deploy, post your questions in the
+   <a href="https://community.ibm.com/community/user/middleware/communities/community-home?CommunityKey=9adfe6b6-2e23-4895-8b27-38b93b5e152c" rel="noopener" target="_blank">
+    forums
+   </a>
+   or contact
+   <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+    support
+   </a>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   .
+   <h3>
+    Get support
+   </h3>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

@@ -1,34 +1,99 @@
 <!DOCTYPE html>
-<html><head><title>1.4.3</title></head>
-<body>
-<p><b>This article was originaly published in 2020.01.10</b></p>
-<p><h1>1.4.3</h1></p>
-<p>Starting with the March 1, 2019 release, UrbanCode Velocity is using semantic versioning for product releases. The semantic versioning contains a three-part version number: major version, minor version, and patch. At any given time, only the latest two releases are available. Always download the latest version. For download information, see the <strong>Getting Started</strong> tab.
-<b>Note:</b> UrbanCode Deploy v7+ users, please review the release note titled "UrbanCode Deploy Integration Creating Large Audit Database Entries" in the v1.4.3 release.
-<div class="horizontal-rule"></div>
-<h2>Key Features in 1.4.3</h2>
-<h3>UrbanCode Deploy Integration Creating Large Audit Database Entries</h3>
-APAR PI99803 identified a significant performance issue where the UrbanCode Deploy Integration was creating a large amount of login requests when gathering deployment information. If using UrbanCode Deploy v7.0.0.0 or greater, it is highly recommended that you contact the L2 support team to obtain a performance related patch.
-<h3>Last Sync Integration Notification</h3>
-Resolved issue where the Integration's last sync was not updating properly.
-<h2>Key Features in 1.4.2</h2>
-<h3>Email Notifications</h3>
-Notify the user in the header of the remaining days in the Trial. New properties are now available such as: <code>${release.name}</code>, <code>${deployment.startTime}</code>, <code>${deployment.status}</code>, <code>${deployment.versions}</code>, and <code>${deployment.task}</code>.
-<h3>Community and Trial Edition Updates</h3>
-Notify the user in the header of the remaining days in the Trial.
-<h3>Various Bug Fixes</h3>
-Properties are now considered optional when configuring a Jenkins Job. The Default value defined in Jenkins will be ignored.
-<h2>Key Features in 1.4.1</h2>
-<h3>Various Bug Fixes</h3>
-Remove stale, lingering sessions from the database.
-<h2>Key Features in 1.4.0</h2>
-The following enhancements are included in each release. In addition to various bug fixes.
-<h3>New Community Edition</h3>
-In UrbanCode Velocity v1.4.0, we have reimagined our Community Edition. Now, the IBM UrbanCode Velocity Community Edition is combined into the primary install to create a simplified experience. Instead of being limited to the UrbanCode Deploy Audit Reports, the Community Edition opens the entire product, limited to two users, for free.
-
-<strong>Note:</strong> This Community Edition version replaces the original Community Edition. The older version is no longer supported. You must migrate to the new version.
-
-<!--
+<html>
+ <head>
+  <title>
+   1.4.3
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2020.01.10
+   </b>
+  </p>
+  <p>
+   <h1>
+    1.4.3
+   </h1>
+  </p>
+  <p>
+   Starting with the March 1, 2019 release, UrbanCode Velocity is using semantic versioning for product releases. The semantic versioning contains a three-part version number: major version, minor version, and patch. At any given time, only the latest two releases are available. Always download the latest version. For download information, see the
+   <strong>
+    Getting Started
+   </strong>
+   tab.
+   <b>
+    Note:
+   </b>
+   UrbanCode Deploy v7+ users, please review the release note titled "UrbanCode Deploy Integration Creating Large Audit Database Entries" in the v1.4.3 release.
+   <div class="horizontal-rule">
+   </div>
+   <h2>
+    Key Features in 1.4.3
+   </h2>
+   <h3>
+    UrbanCode Deploy Integration Creating Large Audit Database Entries
+   </h3>
+   APAR PI99803 identified a significant performance issue where the UrbanCode Deploy Integration was creating a large amount of login requests when gathering deployment information. If using UrbanCode Deploy v7.0.0.0 or greater, it is highly recommended that you contact the L2 support team to obtain a performance related patch.
+   <h3>
+    Last Sync Integration Notification
+   </h3>
+   Resolved issue where the Integration's last sync was not updating properly.
+   <h2>
+    Key Features in 1.4.2
+   </h2>
+   <h3>
+    Email Notifications
+   </h3>
+   Notify the user in the header of the remaining days in the Trial. New properties are now available such as:
+   <code>
+    ${release.name}
+   </code>
+   ,
+   <code>
+    ${deployment.startTime}
+   </code>
+   ,
+   <code>
+    ${deployment.status}
+   </code>
+   ,
+   <code>
+    ${deployment.versions}
+   </code>
+   , and
+   <code>
+    ${deployment.task}
+   </code>
+   .
+   <h3>
+    Community and Trial Edition Updates
+   </h3>
+   Notify the user in the header of the remaining days in the Trial.
+   <h3>
+    Various Bug Fixes
+   </h3>
+   Properties are now considered optional when configuring a Jenkins Job. The Default value defined in Jenkins will be ignored.
+   <h2>
+    Key Features in 1.4.1
+   </h2>
+   <h3>
+    Various Bug Fixes
+   </h3>
+   Remove stale, lingering sessions from the database.
+   <h2>
+    Key Features in 1.4.0
+   </h2>
+   The following enhancements are included in each release. In addition to various bug fixes.
+   <h3>
+    New Community Edition
+   </h3>
+   In UrbanCode Velocity v1.4.0, we have reimagined our Community Edition. Now, the IBM UrbanCode Velocity Community Edition is combined into the primary install to create a simplified experience. Instead of being limited to the UrbanCode Deploy Audit Reports, the Community Edition opens the entire product, limited to two users, for free.
+   <strong>
+    Note:
+   </strong>
+   This Community Edition version replaces the original Community Edition. The older version is no longer supported. You must migrate to the new version.
+   <!--
 <h3>Work Type Distribution and Throughput</h3>
 Two metrics have been added to the Value Streams and Insights dashboards.
 <ul>
@@ -36,5 +101,138 @@ Two metrics have been added to the Value Streams and Insights dashboards.
  	<li><strong>Throughout</strong> - The number of items that have reached a specified stage in a given amount of time.</li>
 </ul>
 -->
-</p></body>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Integration Last Sync Notification
+    </li>
+    <li>
+     APAR PI99803: UrbanCode Deploy Integration Creating Large Number of UCD Audit Log Entries
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   None
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h3>
+    Prepare
+   </h3>
+   For supported platforms and requirements you can dynamically generate a system requirements report using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <h3>
+    Install the server
+   </h3>
+   There are two option to obtaining the installation package: online installer and offline installer. Both options will require a master license key, which can be acquired from:
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    IBM Passport Advantage
+   </a>
+   - Use this option if you have purchased IBM UrbanCode Velocity
+   <a href="https://www.uc-velocity.com/" rel="noopener" target="_blank">
+    Trial Installation
+   </a>
+   - Use this option if you would like to try IBM UrbanCode Velocity
+   <h3>
+    Online installer
+   </h3>
+   The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
+
+Download the online installer package depending on the platform, the product is being installed.
+   <ul>
+    <li>
+     <a href="https://public.dhe.ibm.com/software/products/UrbanCode/Velocity/latest/velocity-se-ibm-install-latest-linux" rel="noopener" target="_blank">
+      Linux
+     </a>
+    </li>
+    <li>
+     <a href="https://public.dhe.ibm.com/software/products/UrbanCode/Velocity/latest/velocity-se-ibm-install-latest-macos" rel="noopener" target="_blank">
+      Mac OS
+     </a>
+    </li>
+    <li>
+     <a href="https://public.dhe.ibm.com/software/products/UrbanCode/Velocity/latest/velocity-se-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+      Windows
+     </a>
+    </li>
+   </ul>
+   After the download completes, start the executable file to begin the install process.
+   <h3>
+    Offline installer
+   </h3>
+   The offline installer process allows for installation of product without an internet connection. You'll need a connection only to download the product image. All containers needed to successfully install the product are included. For this reason, the images requires more space when downloading.
+
+The installation package is available from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Velocity&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    IBM FixCentral
+   </a>
+   <a>
+    . Search and select the installation package appropriate for the installation platform.
+   </a>
+   After downloading the the installation package, decompress the contents into two directories, one for Kubernetes and the other for Docker Compose. The instructions for installing the server are located in the product documentation, see the
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_1.4.x/com.ibm.uvelocity.doc/topics/c_install_se_roadmap.html" rel="noopener" target="_blank">
+    Installation
+   </a>
+   topic.
+
+To obtain the product license key you must agree to the terms and condition statements provided on Passport Advantage. The license key is required to start the install process for the initial and future installations.
+   <h3>
+    Installation
+   </h3>
+   The download package includes the installation program for both Docker Compose and Kubernetes. To obtain the license key you must first agree to the terms and condition statements provided on Passport Advantage. The license key is required to start the install process for the initial and future installations.
+
+Before you can install the product, visit the
+   <a href="https://www.uc-velocity.com/" rel="noopener" target="_blank">
+    Request access key
+   </a>
+   page to complete a customer profile and obtain an access key. The access key will be sent to your email and need to be included to complete the installation.
+
+Detail instructions for installing the product is located in the
+   <a href="http://www.ibm.com/support/knowledgecenter/SSCKX6_1.4.x/com.ibm.insights.doc/topics/c_install_roadmap.html" rel="noopener" target="_blank">
+    Installation roadmap
+   </a>
+   section in the product documentation.
+   <h3>
+    Learn
+   </h3>
+   To learn more about IBM UrbanCode Velcoity, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SSCKX6_1.4.x" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using IBM UrbanCode Velocity, post your questions in the
+   <a href="https://developer.ibm.com/answers/topics/velocity.html" rel="noopener" target="_blank">
+    UrbanCode forums
+   </a>
+   . Tag your question with
+   <strong>
+    velocity
+   </strong>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target='"_blank'>
+    RFE Community
+   </a>
+   .
+   <h3>
+    Get support
+   </h3>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   . You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

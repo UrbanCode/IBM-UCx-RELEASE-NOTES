@@ -1,22 +1,252 @@
 <!DOCTYPE html>
-<html><head><title>6.1.7.1</title></head>
-<body>
-<p><b>This article was originaly published in 2020.12.18</b></p>
-<p><h1>6.1.7.1</h1></p>
-<p>This release of IBM UrbanCode Build is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
-
-<h3>Team User Management role enhancement</h3>
-Feature flag added to allow users with Team User Management role to add users to all roles within the team, with the exception of the Admin role. To use this feature, update the following feature flag in the <code>installed.properties</code> file. The default value is <code>false</code>.
-<br>
-<code>manage.all.roles.enabled=true</code>. 
-
-<h3>Software updates</h3>​
+<html>
+ <head>
+  <title>
+   6.1.7.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2020.12.18
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.7.1
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Build is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <h3>
+    Team User Management role enhancement
+   </h3>
+   Feature flag added to allow users with Team User Management role to add users to all roles within the team, with the exception of the Admin role. To use this feature, update the following feature flag in the
+   <code>
+    installed.properties
+   </code>
+   file. The default value is
+   <code>
+    false
+   </code>
+   .
+   <br/>
+   <code>
+    manage.all.roles.enabled=true
+   </code>
+   .
+   <h3>
+    Software updates
+   </h3>
+   ​
 This release of UrbanCode Build includes support for upgrading of the following:
-<ul>
-<li>Support added for SQL Server 2014 and SQL Server 2016</li>
-<li>Added Support for Oracle 18c and Oracle 19c</li>
-<li>Added Support for Java version greater than Java 8</li>
-<li>Upgrade the Dojo Library to 1.16.3</li>
-</ul>
-</p></body>
+   <ul>
+    <li>
+     Support added for SQL Server 2014 and SQL Server 2016
+    </li>
+    <li>
+     Added Support for Oracle 18c and Oracle 19c
+    </li>
+    <li>
+     Added Support for Java version greater than Java 8
+    </li>
+    <li>
+     Upgrade the Dojo Library to 1.16.3
+    </li>
+   </ul>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Enhanced the Team User Management role
+    </li>
+    <li>
+     Software updates
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h3>
+    APARS
+   </h3>
+   <table border="0" rules="" width="100%">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH29229" target="_blank">
+        PH29229
+       </a>
+      </td>
+      <td valign="bottom">
+       Behavioural change in Team User Management permissions.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH31296" target="_blank">
+        PH31296
+       </a>
+      </td>
+      <td valign="bottom">
+       Issue during re-ordering of properties in Urban Code Build.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH32642" target="_blank">
+        PH32642
+       </a>
+      </td>
+      <td valign="bottom">
+       Fixed the inconsistencies in the variable expansions of nested properties.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <br/>
+   <h3>
+    Additional fixes
+   </h3>
+   <ul>
+    <li>
+     Solved cacheable HTTPS response issue
+    </li>
+    <li>
+     Fixed several text translation errors
+    </li>
+   </ul>
+   <h3>
+    RFEs
+   </h3>
+   <ul>
+    <li>
+     RFE 144224 - Added Support for Java 11
+    </li>
+    <li>
+     RFE 141804 - Enhanced UrbanCode Deploy Plug-in for deploying multiple component versions
+    </li>
+    <li>
+     RFE:144796 - Added method to reduce duplicate committer license usage by individual for Git repositories
+    </li>
+   </ul>
+   <h3>
+    Improvements
+   </h3>
+   <ul>
+    <li>
+     <strong>
+      Success
+     </strong>
+     tag added to the JUnit plug- in
+     <strong>
+      Publish report
+     </strong>
+     step.
+    </li>
+    <li>
+     Added more granular logging for the
+     <strong>
+      Replace Tokens
+     </strong>
+     step in the File-Utils plug-in.
+    </li>
+    <li>
+     Renamed the label on the button from
+     <strong>
+      Select
+     </strong>
+     to
+     <strong>
+      Save
+     </strong>
+     when moving processes to different project.
+    </li>
+    <li>
+     Restrict the current project name from being populated while moving processes to a different project.
+    </li>
+   </ul>
+   <h3>
+    Known problems and workarounds
+   </h3>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan and Prepare
+   </h2>
+   For supported platforms and requirements, see the reports that can be dynamically generated using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener noreferrer" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <strong>
+    Note:
+   </strong>
+   Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+   <p>
+    To get started quickly, IBM UrbanCode Build is shipped with an Apache Derby database. Apache Derby is not supported for production environments. As you plan your production topology, review the product documentation.
+   </p>
+   <p>
+    IBM UrbanCode Build supports integrations with many different tools in the form of job steps. Each IBM UrbanCode Build plug-in is a separate download and installation available on our
+    <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/" target="_blank">
+     plug-in page
+    </a>
+    .
+   </p>
+   <h3>
+    Learn
+   </h3>
+   <p>
+    To learn more about new enhancements in this release, click the
+    <strong>
+     What’s New
+    </strong>
+    tab.
+   </p>
+   <p>
+    To learn more about IBM UrbanCode Build, see the product
+    <a href="https://www.ibm.com/support/knowledgecenter/SS8NMD" target="_blank">
+     documentation
+    </a>
+    .
+   </p>
+   <p>
+    For help installing or using IBM UrbanCode Build, post your questions in the
+    <a href="https://developer.ibm.com/answers?community=urbancode" target="_blank">
+     forums
+    </a>
+    or contact
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+     support
+    </a>
+    .
+   </p>
+   <p>
+    To suggest an enhancement to the product, visit the
+    <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+     RFE Community
+    </a>
+    .
+   </p>
+   <h3>
+    Get support
+   </h3>
+   <p>
+    For information from support, including FAQs, visit the
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+     IBM Support portal.
+    </a>
+    You can configure the support portal to view information about specific products.
+   </p>
+  </p>
+ </body>
 </html>

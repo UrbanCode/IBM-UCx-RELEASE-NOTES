@@ -1,63 +1,306 @@
 <!DOCTYPE html>
-<html><head><title>2.0.1</title></head>
-<body>
-<p><b>This article was originaly published in 2020.07.07</b></p>
-<p><h1>2.0.1</h1></p>
-<p>The following enhancements are included in each release. In addition to various bug fixes.
-<h2><strong>Key Features/Enhancements in 2.0.1</strong></h2>
-<ul>
- 	<li>Added deployment plan visibility into task pre-requisites and dependencies.</li>
- 	<li>Improved UI to display LDAP and SSO user list.</li>
- 	<li>The UCD Status Task was improved to only list UCD integration statuses participating in the deployment plan</li>
-</ul>
-<h2>Bug Fixes</h2>
-<ul>
- 	<li>Fixed issue with reporting consumer service reconnecting to database.</li>
- 	<li>Fixed issue with defaultValue for plugin SDK custom properties not displaying in configuration UI.</li>
- 	<li>Fixed an issue where a Jenkins deployment would use the previous stage version rather than a selected version.</li>
- 	<li>Fixed an issue where Jenkins jobs might remain in progress if multiple jobs were being run in parallel.</li>
- 	<li>Fixed an issue with pipeline scheduled deployments where the select all applications would not deploy all applications.</li>
- 	<li>Fixed a problem with VSM issue filters causing an incorrect issue count displayed in the stage context menu.</li>
- 	<li>Removed duplicate events from VSM history.</li>
-</ul>
-&nbsp;
-<div>
-<h2><strong>Key Features/Enhancements in 2.0.0
-</strong></h2>
-<div></div>
-</div>
-<h3>Scalability of services</h3>
-The main UrbanCode Velocity services can now scale to handle larger installations and greater amounts of data.
-<h3>Locking of releases</h3>
-The release manger can change a release status to lock. No changes can be made to the release after it is locked. Request for changes must be This gives the release manager control over last minute changes and ensures no changes are made after a final review. The lock is set on the Release Overflow page.
-<h3>Environment gating</h3>
-Users can now manually approve versions and gate environments based on approvals. The gate fails if approval requirements are not met. If a version does not pass all approvals the release manager can override the deployment. This feature provides for governance and compliance of open source tools and fragmented tools. This feature is located on the Environment Overflow page.
-<h3>Built in reports</h3>
-A new State of Sprint report allows for gathering statics of the value stream in relationship to a sprint. This report is helpful to a scrum master or manager in reducing risk of the current sprint and look at older sprints. You can access the report on the Reports page.
-<h3>Plug-in SDK</h3>
-Using the plug-in SDK you can create your own plug-ins and upload them to UrbanCode Velocity. To access to the plug-in SDK, click <strong>Settings</strong> &gt; <strong>Integrations</strong> &gt; <strong>Download Plugin SDK</strong>.
-<h3>Bottleneck detection</h3>
-Using machine learning, the model looks at current and previous state of a value stream to determine which stage the user should focus on first. This algorithm is always updating with new information to locate the next largest bottleneck. Types of bottlenecks include:
-<ul>
- 	<li>Long Wait Time - the average time of stage is longer than any other by a substantial amount</li>
- 	<li>Batching - items pile up then are released at the same time</li>
- 	<li>In-Flow and out-flow mismatch</li>
-</ul>
-See the Value Stream page <strong>Metrics Bar</strong> or <strong>Metrics Table</strong> fields.
-<h3>Contributor and Load Metrics</h3>
-Two new metrics are now available: Contributor Count and Load Count
-<ul>
- 	<li>Contributor count shows how many users are working on items in the Value Stream. The metric is based off the stages in Lead Time (work select -&gt; customer) and counts how many unique individual owned items in those stages. Allows the tool to compare other metrics to rationalize about other metrics.</li>
- 	<li>Load is also based off Lead Time and is a count of all the items in the stages at any given time. This allows you to see if there is a correlation of how much work is truly in progress vs how much is getting done. Usually there is a sweet spot to not give too much work and get the right amount out. With both our metrics are in a state where we can start rationalizing about different strategies without customers and how to use them correctly. See the Value Stream page <strong>Metrics Bar</strong> or <strong>Metrics Table</strong> fields.</li>
-</ul>
-&nbsp;
-
-<hr />
-
-<h1></h1>
-<h3><strong>Upgrade Requirements
-</strong></h3>
-UrbanCode Velocity v2.0.0 supports MongoDB server versions: 3.6, 4.0, and 4.2.
+<html>
+ <head>
+  <title>
+   2.0.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2020.07.07
+   </b>
+  </p>
+  <p>
+   <h1>
+    2.0.1
+   </h1>
+  </p>
+  <p>
+   The following enhancements are included in each release. In addition to various bug fixes.
+   <h2>
+    <strong>
+     Key Features/Enhancements in 2.0.1
+    </strong>
+   </h2>
+   <ul>
+    <li>
+     Added deployment plan visibility into task pre-requisites and dependencies.
+    </li>
+    <li>
+     Improved UI to display LDAP and SSO user list.
+    </li>
+    <li>
+     The UCD Status Task was improved to only list UCD integration statuses participating in the deployment plan
+    </li>
+   </ul>
+   <h2>
+    Bug Fixes
+   </h2>
+   <ul>
+    <li>
+     Fixed issue with reporting consumer service reconnecting to database.
+    </li>
+    <li>
+     Fixed issue with defaultValue for plugin SDK custom properties not displaying in configuration UI.
+    </li>
+    <li>
+     Fixed an issue where a Jenkins deployment would use the previous stage version rather than a selected version.
+    </li>
+    <li>
+     Fixed an issue where Jenkins jobs might remain in progress if multiple jobs were being run in parallel.
+    </li>
+    <li>
+     Fixed an issue with pipeline scheduled deployments where the select all applications would not deploy all applications.
+    </li>
+    <li>
+     Fixed a problem with VSM issue filters causing an incorrect issue count displayed in the stage context menu.
+    </li>
+    <li>
+     Removed duplicate events from VSM history.
+    </li>
+   </ul>
+   <div>
+    <h2>
+     <strong>
+      Key Features/Enhancements in 2.0.0
+     </strong>
+    </h2>
+    <div>
+    </div>
+   </div>
+   <h3>
+    Scalability of services
+   </h3>
+   The main UrbanCode Velocity services can now scale to handle larger installations and greater amounts of data.
+   <h3>
+    Locking of releases
+   </h3>
+   The release manger can change a release status to lock. No changes can be made to the release after it is locked. Request for changes must be This gives the release manager control over last minute changes and ensures no changes are made after a final review. The lock is set on the Release Overflow page.
+   <h3>
+    Environment gating
+   </h3>
+   Users can now manually approve versions and gate environments based on approvals. The gate fails if approval requirements are not met. If a version does not pass all approvals the release manager can override the deployment. This feature provides for governance and compliance of open source tools and fragmented tools. This feature is located on the Environment Overflow page.
+   <h3>
+    Built in reports
+   </h3>
+   A new State of Sprint report allows for gathering statics of the value stream in relationship to a sprint. This report is helpful to a scrum master or manager in reducing risk of the current sprint and look at older sprints. You can access the report on the Reports page.
+   <h3>
+    Plug-in SDK
+   </h3>
+   Using the plug-in SDK you can create your own plug-ins and upload them to UrbanCode Velocity. To access to the plug-in SDK, click
+   <strong>
+    Settings
+   </strong>
+   &gt;
+   <strong>
+    Integrations
+   </strong>
+   &gt;
+   <strong>
+    Download Plugin SDK
+   </strong>
+   .
+   <h3>
+    Bottleneck detection
+   </h3>
+   Using machine learning, the model looks at current and previous state of a value stream to determine which stage the user should focus on first. This algorithm is always updating with new information to locate the next largest bottleneck. Types of bottlenecks include:
+   <ul>
+    <li>
+     Long Wait Time - the average time of stage is longer than any other by a substantial amount
+    </li>
+    <li>
+     Batching - items pile up then are released at the same time
+    </li>
+    <li>
+     In-Flow and out-flow mismatch
+    </li>
+   </ul>
+   See the Value Stream page
+   <strong>
+    Metrics Bar
+   </strong>
+   or
+   <strong>
+    Metrics Table
+   </strong>
+   fields.
+   <h3>
+    Contributor and Load Metrics
+   </h3>
+   Two new metrics are now available: Contributor Count and Load Count
+   <ul>
+    <li>
+     Contributor count shows how many users are working on items in the Value Stream. The metric is based off the stages in Lead Time (work select -&gt; customer) and counts how many unique individual owned items in those stages. Allows the tool to compare other metrics to rationalize about other metrics.
+    </li>
+    <li>
+     Load is also based off Lead Time and is a count of all the items in the stages at any given time. This allows you to see if there is a correlation of how much work is truly in progress vs how much is getting done. Usually there is a sweet spot to not give too much work and get the right amount out. With both our metrics are in a state where we can start rationalizing about different strategies without customers and how to use them correctly. See the Value Stream page
+     <strong>
+      Metrics Bar
+     </strong>
+     or
+     <strong>
+      Metrics Table
+     </strong>
+     fields.
+    </li>
+   </ul>
+   <hr/>
+   <h1>
+   </h1>
+   <h3>
+    <strong>
+     Upgrade Requirements
+    </strong>
+   </h3>
+   UrbanCode Velocity v2.0.0 supports MongoDB server versions: 3.6, 4.0, and 4.2.
 Docker Compose installations automatically upgrade to 3.6. Helm installations require manual upgrade or installation of the MongoDB server to 3.6 or later. New Helm installations use MongoDB 4.2 according to the Helm chart.
-</p></body>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Added deployment plan visibility into task pre-requisites and dependencies.
+    </li>
+    <li>
+     Improved UI to display LDAP and SSO user list.
+    </li>
+    <li>
+     The UCD Status Task was improved to only list UCD integration statuses participating in the deployment plan
+    </li>
+    <li>
+     Multiple bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h2>
+    Fixes in this release
+   </h2>
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99806
+      </td>
+      <td valign="bottom" width="80%">
+       Velocity 1.5.1 Upgrade could Prevent Access to Deployment Plans and Reports (Fixed with v1.5.2)
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99805
+      </td>
+      <td valign="bottom" width="80%">
+       Fixed Jenkins plugin that could break Jenkins Server
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99803
+      </td>
+      <td valign="bottom" width="80%">
+       Fixes a performance issue that could occur when integrating with an UrbanCode Deploy version older than v7.0.5.1
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan &amp; Prepare
+   </h2>
+   For supported platforms and requirements you can dynamically generate a system requirements report using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <h2>
+    Install the server
+   </h2>
+   There are two option to obtaining the installation package: online installer and offline installer. Both options require a master license key, which can be acquired from
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    IBM Passport Advantage
+   </a>
+   .
+   <h2>
+    Online installer
+   </h2>
+   The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
+
+Download the online installer package depending on the platform, the product is being installed.
+   <ul>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-linux" rel="noopener" target="_blank">
+      Linux
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-macos" rel="noopener" target="_blank">
+      Mac OS
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+      Windows
+     </a>
+    </li>
+   </ul>
+   After the download completes, start the executable file to begin the install process.
+   <h2>
+    Offline installer
+   </h2>
+   Use the offline installer to install Velocity without internet connection. You will still need internet connection at some point to download the installer itself. Once downloaded, the installer will include all containers needed to successfully install the product. For this reason, the offline installer is larger than the online installer and will require more time/bandwidth and disk space when downloading.
+
+The installation package is available from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Velocity&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    IBM Fix Central
+   </a>
+   . Search and select the installation package appropriate for the installation platform.
+
+After downloading the installation package, decompress the contents into two directories: one for Kubernetes and the other for Docker Compose. See the
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.0.x/com.ibm.uvelocity.doc/topics/c_install_se_roadmap.html">
+    documentation section on installation
+   </a>
+   for instructions about how to install the server.
+
+A product license key is required to install the product. To obtain a key, you must agree to the terms and conditions provided on Passport Advantage.
+   <h2>
+    Learn
+   </h2>
+   To learn more about UrbanCode Velocity, see
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SSCKX6_2.0.0" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using UrbanCode Velocity, post your questions in the
+   <a href="https://developer.ibm.com/answers/topics/velocity.html" rel="noopener" target="_blank">
+    UrbanCode forums
+   </a>
+   . Tag your question with
+   <strong>
+    velocity
+   </strong>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   <h2>
+    Get support
+   </h2>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

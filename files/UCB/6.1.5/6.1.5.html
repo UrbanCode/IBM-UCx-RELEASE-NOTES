@@ -1,32 +1,386 @@
 <!DOCTYPE html>
-<html><head><title>6.1.5</title></head>
-<body>
-<p><b>This article was originaly published in 2019.07.01</b></p>
-<p><h1>6.1.5</h1></p>
-<p>IBM UrbanCode Build 6.1.5 continues to deliver a template-driven system to configure and run builds.
-
-<div class="new_release_cont">
-<div class="inline-block"><img alt="" src="features_multiple_env.png" /></div>
-<h2>Agent support for IBM z/OS</h2><br>
-UrbanCode Build 6.1.5 agents can be installed in IBM z/OS machines to provide the capability to build on mainframe.
-</div>
-
-<div class="new_release_cont">
-<div class="inline-block"><img alt="" src="integration.png" /></div>
-<h2>Integrate with UrbanCode Velocity</h2><br>
-With the new UrbanCode Velocity integration, build information and metrics data can be uploaded to UrbanCode Velocity.
-</div>
-
-<div class="new_release_cont">
-<div class="inline-block"><img alt="" src="integration.png" /></div>
-<h2>Integrate with Salesforce</h2><br>
-Perform file-based deployment of metadata changes and Apex classes to Salesforce servers.
-</div>
-
-<div class="new_release_cont">
-<div class="inline-block"><img alt="" src="integration.png" /></div>
-<h2>Enhanced UrbanCode Deploy integration</h2><br>
-UrbanCode Build can now create, use, and delete user auth tokens in UrbanCode Deploy to offer better traceability when integrating these two products. Additionally, UrbanCode Build can now optionally wait on the result of deployments that have been launched, before carrying on with the rest of the build steps.
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.5
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2019.07.01
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.5
+   </h1>
+  </p>
+  <p>
+   IBM UrbanCode Build 6.1.5 continues to deliver a template-driven system to configure and run builds.
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="features_multiple_env.png"/>
+    </div>
+    <h2>
+     Agent support for IBM z/OS
+    </h2>
+    <br/>
+    UrbanCode Build 6.1.5 agents can be installed in IBM z/OS machines to provide the capability to build on mainframe.
+   </div>
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="integration.png"/>
+    </div>
+    <h2>
+     Integrate with UrbanCode Velocity
+    </h2>
+    <br/>
+    With the new UrbanCode Velocity integration, build information and metrics data can be uploaded to UrbanCode Velocity.
+   </div>
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="integration.png"/>
+    </div>
+    <h2>
+     Integrate with Salesforce
+    </h2>
+    <br/>
+    Perform file-based deployment of metadata changes and Apex classes to Salesforce servers.
+   </div>
+   <div class="new_release_cont">
+    <div class="inline-block">
+     <img alt="" src="integration.png"/>
+    </div>
+    <h2>
+     Enhanced UrbanCode Deploy integration
+    </h2>
+    <br/>
+    UrbanCode Build can now create, use, and delete user auth tokens in UrbanCode Deploy to offer better traceability when integrating these two products. Additionally, UrbanCode Build can now optionally wait on the result of deployments that have been launched, before carrying on with the rest of the build steps.
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Agent Support for IBM z/OS
+    </li>
+    <li>
+     UrbanCode Velocity Integration
+    </li>
+    <li>
+     Salesforce Integration
+    </li>
+    <li>
+     Enhanced UrbanCode Deploy Integration
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, click the
+    <strong>
+     Getting Started
+    </strong>
+    tab.
+   </div>
+   <div class="key-features">
+    <div class="new_release_cont">
+     <div class="subtitle">
+      New features and enhancements
+     </div>
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=96562">
+          RFE 96562
+         </a>
+        </td>
+        <td valign="bottom">
+         Agent support for IBM z/OS
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=130215">
+          RFE 130215
+         </a>
+        </td>
+        <td valign="bottom">
+         Create/Delete UCD user auth tokens from UCB via the UCD plugin
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=131604">
+          RFE 131604
+         </a>
+        </td>
+        <td valign="bottom">
+         Add support for nested LDAP groups
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=130443">
+          RFE 130443
+         </a>
+        </td>
+        <td valign="bottom">
+         Use filtering combobox input widgets in dialog for copying properties
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=123552">
+          RFE 123552
+         </a>
+        </td>
+        <td valign="bottom">
+         New plugin for Salesforce
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <br>
+      <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+       <tbody>
+        <tr valign="top">
+         <td valign="bottom">
+          New UrbanCode Velocity plugin
+         </td>
+        </tr>
+        <tr valign="top">
+         <td valign="bottom">
+          Ability to optionally wait on the result of deployments when using the UCD plugin
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </br>
+    </div>
+    <div class="new_release_cont">
+     <div class="subtitle">
+      <strong>
+       Fixes
+      </strong>
+     </div>
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH10608" target="_blank">
+          PH10608
+         </a>
+        </td>
+        <td valign="bottom">
+         Adding a repository alias to any user causes ELException
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH13033" target="_blank">
+          PH13033
+         </a>
+        </td>
+        <td valign="bottom">
+         Unable to find previous successful build for quiet period
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH10603" target="_blank">
+          PH10603
+         </a>
+        </td>
+        <td valign="bottom">
+         Unable to use agent pool properties when configuring jobs in the process definition tab
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH10676" target="_blank">
+          PH10676
+         </a>
+        </td>
+        <td valign="bottom">
+         Wrong description length check in property popup window
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH10867" target="_blank">
+          PH10867
+         </a>
+        </td>
+        <td valign="bottom">
+         Harvest plugin does not provide an argument for the -s flag when running quiet period changelogs
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH10934" target="_blank">
+          PH10934
+         </a>
+        </td>
+        <td valign="bottom">
+         Clearcase UCM plugin does not parse/aggregate changelog data correctly
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH12517" target="_blank">
+          PH12517
+         </a>
+        </td>
+        <td valign="bottom">
+         Entering label name in the Label step as a script leaves the script unresolved
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH14074" target="_blank">
+          PH14074
+         </a>
+        </td>
+        <td valign="bottom">
+         NullPointerException when running builds or viewing a plugin's page when using Microsoft SQL Server with JDBC driver version 7.0 (needs JDBC driver jar update)
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <div class="subtitle">
+      <br/>
+     </div>
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom">
+         Unsafe method invocations in default value formatter function of process template properties
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         Restarting job executions/steps from buildlife page requires WORKFLOW_RUN permission
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         When copying steps, the target location input only shows 25 most recently created job templates
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         JUnit plugin can fail to publish reports for test suites without a name
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         Unable to unset date string in Populate Workspace or Start Stamp Pattern in Get Changelog step
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom">
+         NPE caused by adding a new property to process via BaseProcessJSONRenderer
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For supported platforms and requirements, see the reports that can be dynamically generated using the
+     <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener noreferrer" target="_blank">
+      Software Product Compatibility Reports (SPCR)
+     </a>
+     tool.
+    </p>
+    <p>
+     <strong>
+      Note:
+     </strong>
+     Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly, IBM UrbanCode Build is shipped with an Apache Derby database. Apache Derby is not supported for production environments. As you plan your production topology, review the product documentation.
+    </p>
+    <p>
+     IBM UrbanCode Build supports integrations with many different tools in the form of job steps. Each IBM UrbanCode Build plug-in is a separate download and installation available on our
+     <a href="https://developer.ibm.com/urbancode/plugins/ibm-urbancode-build/" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="key-features">
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, click the
+     <strong>
+      What’s New
+     </strong>
+     tab.
+    </p>
+    <p>
+     To learn more about IBM UrbanCode Build, see the
+     <a href="https://www.ibm.com/support/knowledgecenter/SS8NMD" target="_blank">
+      documentation
+     </a>
+     .
+    </p>
+    <p>
+     For help installing or using IBM UrbanCode Build, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     .
+    </p>
+    <p>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

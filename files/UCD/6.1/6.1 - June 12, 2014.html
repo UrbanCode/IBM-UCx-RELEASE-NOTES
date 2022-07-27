@@ -1,55 +1,509 @@
 <!DOCTYPE html>
-<html><head><title>6.1</title></head>
-<body>
-<p><b>This article was originaly published in 2014.06.12</b></p>
-<p><h1>6.1 - June 12, 2014</h1></p>
-<p><p class="new_release_cont">IBM UrbanCode Release 6.1 delivers new capabilities for enterprise release planning and execution. This release also includes features added in the previous fix pack releases 6.0.1.1 through 6.0.1.4.</p>
-<p class="new_release_cont">For a video demo of the new features from 6.0 through 6.1, please view the <a href="https://developer.ibm.com/urbancode/docs/whats-new-ibm-urbancode-release/">What’s New in UrbanCode Release webinar</a>.</p>
-<div class="new_release_cont">
-<h2>Schedule events on a single, enterprise release calendar</h2>
-<p><a href="release_new_calendar_feature.jpg"><img alt="release_calendar_feature" class="alignright size-medium wp-image-681 screenshot" src="release_new_calendar_feature.jpg" width="300"/></a>The ability to schedule and publish financial black-out dates, holidays, and enterprise release dates as well as custom event types in a single calendar enable users to create a cadence for software delivery across multiple lines of business. Clients can quickly display event details and filter the calendar by release, environment, or event types to provide more flexibility while analyzing and reporting on release and deployment activities.</p>
-<div class="clear"></div>
-</div>
-<div class="new_release_cont">
-<h2>Environment reservation capabilities to better manage environment usage across multiple release efforts and activities</h2>
-<p><a href="release_environment_reservation_feature.jpg"><img alt="release_environment_reservation_feature" class="alignright size-medium wp-image-5949 screenshot" height="159" sizes="(max-width: 300px) 100vw, 300px" src="release_environment_reservation_feature.jpg" srcset="release_environment_reservation_feature-300x159.jpg 300w, release_environment_reservation_feature-1024x544.jpg 1024w" width="300"/></a></p>
-<p>Users can quickly identify available environments and reserve one or more for a specific phase of a release or activities, such as testing or infrastructure maintenance over a range of dates. If a conflict is detected for a reservation, a warning will be displayed to the user, detailing the potential conflicts. Real-time status of environment availability and dependencies among release efforts will improve control of utilization and help minimize unnecessary delays caused by environment contention across project teams and release.</p>
-<div class="clear"></div>
-</div>
-<div class="new_release_cont">
-<h2>Reuse process checklist templates to efficiently plan multiple releases</h2>
-<p><a href="release_process_checklist_feature2.jpg"><img alt="release_process_checklist_feature2" class="alignright size-medium wp-image-5952 screenshot" height="121" sizes="(max-width: 300px) 100vw, 300px" src="release_process_checklist_feature2.jpg" srcset="release_process_checklist_feature2-300x121.jpg 300w, release_process_checklist_feature2-1024x415.jpg 1024w" width="300"/></a><br/>
-In many cases, organizations will have standard checkpoints that are applicable to more than one release and want to easily define and apply to multiple releases at a time. Templates are introduced to allow release process checkpoints to be harvested and reused across multiple releases without repeat data entry thus minimizing the amount of manual rework needed to setup releases across the entire enterprise.</p>
-</div>
-<div class="new_release_cont">
-<h2>Improved task comments log</h2>
-<p><a href="release_task_comment_feature.jpg"><img alt="release_task_comment_feature" class="alignright size-medium wp-image-5952 screenshot" height="193" src="release_task_comment_feature.jpg" width="300"/></a></p>
-<p>Comments for a task in a deployment process can now be filtered to show only log statements related to automation. Log statements are now displayed based on the UrbanCode Deploy application environment to which they apply.</p>
-<div class="clear"></div>
-</div>
-<div class="new_release_cont">
-<h2>JIRA integration improvements</h2>
-<p>The JIRA integration has been rewritten to use the JIRA REST API rather than the older JIRA SOAP API. Various usability and logging improvements have also been made.</p>
-</div>
-<div class="new_release_cont">
-<h2>Support high availability through clustering</h2>
-<p>As clients deploy many thousands of users, high availability becomes more critical. UrbanCode Release 6.1 now supports the ability to set up multiple servers in a clustered configuration through the use of a load balancer to distribute traffic between the servers.</p>
-</div>
-<div class="new_release_cont">
-<h2>Full multicultural and translation support</h2>
-<p><a href="release_process_multicultural_feature.jpg"><img alt="release_process_multicultural_feature" class="alignright size-medium wp-image-5953 screenshot" height="164" sizes="(max-width: 300px) 100vw, 300px" src="release_process_multicultural_feature.jpg" srcset="release_process_multicultural_feature-300x164.jpg 300w, release_process_multicultural_feature-1024x560.jpg 1024w, release_process_multicultural_feature.jpg 1567w" width="300"/></a></p>
-<p>UrbanCode Deploy and UrbanCode Release 6.1 are available in the following languages: English, Traditional Chinese, Simplified Chinese, French, German, Italian, Japanese, Korean, Brazilian Portuguese, Russian, and Spanish.</p>
-<div class="clear"></div>
-</div>
-<div class="new_release_cont">
-<h2>FIPS Compliance</h2>
-<p><a href="release_fips_feature.jpg"><img alt="release_fips_feature" class="alignright size-medium wp-image-5950 screenshot" height="211" sizes="(max-width: 300px) 100vw, 300px" src="release_fips_feature.jpg" srcset="release_fips_feature-300x211.jpg 300w, release_fips_feature.jpg 999w" width="300"/></a></p>
-<p>UrbanCode Release can now be installed using security standards that meet Federal Information Processing Standards (FIPS).</p>
-<div class="clear"></div>
-</div>
-<div class="new_release_cont">
-<h2>DB2 Support</h2>
-<p>IBM DB2 is now a supported database for use with UrbanCode Release 6.1.</p>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2014.06.12
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1 - June 12, 2014
+   </h1>
+  </p>
+  <p>
+   <p class="new_release_cont">
+    IBM UrbanCode Release 6.1 delivers new capabilities for enterprise release planning and execution. This release also includes features added in the previous fix pack releases 6.0.1.1 through 6.0.1.4.
+   </p>
+   <p class="new_release_cont">
+    For a video demo of the new features from 6.0 through 6.1, please view the
+    <a href="https://developer.ibm.com/urbancode/docs/whats-new-ibm-urbancode-release/">
+     What’s New in UrbanCode Release webinar
+    </a>
+    .
+   </p>
+   <div class="new_release_cont">
+    <h2>
+     Schedule events on a single, enterprise release calendar
+    </h2>
+    <p>
+     <a href="release_new_calendar_feature.jpg">
+      <img alt="release_calendar_feature" class="alignright size-medium wp-image-681 screenshot" src="release_new_calendar_feature.jpg" width="300"/>
+     </a>
+     The ability to schedule and publish financial black-out dates, holidays, and enterprise release dates as well as custom event types in a single calendar enable users to create a cadence for software delivery across multiple lines of business. Clients can quickly display event details and filter the calendar by release, environment, or event types to provide more flexibility while analyzing and reporting on release and deployment activities.
+    </p>
+    <div class="clear">
+    </div>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Environment reservation capabilities to better manage environment usage across multiple release efforts and activities
+    </h2>
+    <p>
+     <a href="release_environment_reservation_feature.jpg">
+      <img alt="release_environment_reservation_feature" class="alignright size-medium wp-image-5949 screenshot" height="159" sizes="(max-width: 300px) 100vw, 300px" src="release_environment_reservation_feature.jpg" srcset="release_environment_reservation_feature-300x159.jpg 300w, release_environment_reservation_feature-1024x544.jpg 1024w" width="300"/>
+     </a>
+    </p>
+    <p>
+     Users can quickly identify available environments and reserve one or more for a specific phase of a release or activities, such as testing or infrastructure maintenance over a range of dates. If a conflict is detected for a reservation, a warning will be displayed to the user, detailing the potential conflicts. Real-time status of environment availability and dependencies among release efforts will improve control of utilization and help minimize unnecessary delays caused by environment contention across project teams and release.
+    </p>
+    <div class="clear">
+    </div>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Reuse process checklist templates to efficiently plan multiple releases
+    </h2>
+    <p>
+     <a href="release_process_checklist_feature2.jpg">
+      <img alt="release_process_checklist_feature2" class="alignright size-medium wp-image-5952 screenshot" height="121" sizes="(max-width: 300px) 100vw, 300px" src="release_process_checklist_feature2.jpg" srcset="release_process_checklist_feature2-300x121.jpg 300w, release_process_checklist_feature2-1024x415.jpg 1024w" width="300"/>
+     </a>
+     <br/>
+     In many cases, organizations will have standard checkpoints that are applicable to more than one release and want to easily define and apply to multiple releases at a time. Templates are introduced to allow release process checkpoints to be harvested and reused across multiple releases without repeat data entry thus minimizing the amount of manual rework needed to setup releases across the entire enterprise.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Improved task comments log
+    </h2>
+    <p>
+     <a href="release_task_comment_feature.jpg">
+      <img alt="release_task_comment_feature" class="alignright size-medium wp-image-5952 screenshot" height="193" src="release_task_comment_feature.jpg" width="300"/>
+     </a>
+    </p>
+    <p>
+     Comments for a task in a deployment process can now be filtered to show only log statements related to automation. Log statements are now displayed based on the UrbanCode Deploy application environment to which they apply.
+    </p>
+    <div class="clear">
+    </div>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     JIRA integration improvements
+    </h2>
+    <p>
+     The JIRA integration has been rewritten to use the JIRA REST API rather than the older JIRA SOAP API. Various usability and logging improvements have also been made.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Support high availability through clustering
+    </h2>
+    <p>
+     As clients deploy many thousands of users, high availability becomes more critical. UrbanCode Release 6.1 now supports the ability to set up multiple servers in a clustered configuration through the use of a load balancer to distribute traffic between the servers.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Full multicultural and translation support
+    </h2>
+    <p>
+     <a href="release_process_multicultural_feature.jpg">
+      <img alt="release_process_multicultural_feature" class="alignright size-medium wp-image-5953 screenshot" height="164" sizes="(max-width: 300px) 100vw, 300px" src="release_process_multicultural_feature.jpg" srcset="release_process_multicultural_feature-300x164.jpg 300w, release_process_multicultural_feature-1024x560.jpg 1024w, release_process_multicultural_feature.jpg 1567w" width="300"/>
+     </a>
+    </p>
+    <p>
+     UrbanCode Deploy and UrbanCode Release 6.1 are available in the following languages: English, Traditional Chinese, Simplified Chinese, French, German, Italian, Japanese, Korean, Brazilian Portuguese, Russian, and Spanish.
+    </p>
+    <div class="clear">
+    </div>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     FIPS Compliance
+    </h2>
+    <p>
+     <a href="release_fips_feature.jpg">
+      <img alt="release_fips_feature" class="alignright size-medium wp-image-5950 screenshot" height="211" sizes="(max-width: 300px) 100vw, 300px" src="release_fips_feature.jpg" srcset="release_fips_feature-300x211.jpg 300w, release_fips_feature.jpg 999w" width="300"/>
+     </a>
+    </p>
+    <p>
+     UrbanCode Release can now be installed using security standards that meet Federal Information Processing Standards (FIPS).
+    </p>
+    <div class="clear">
+    </div>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     DB2 Support
+    </h2>
+    <p>
+     IBM DB2 is now a supported database for use with UrbanCode Release 6.1.
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Globally distributed artifact caching
+    </li>
+    <li>
+     Full z/OS deployment support
+    </li>
+    <li>
+     More specific permissions control
+    </li>
+    <li>
+     Exporting complete applications and snapshots
+    </li>
+    <li>
+     And so much more...
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     This release of UrbanCode Deploy contains new features, quality improvements, and updates to supported platforms, as described in the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+      system requirements
+     </a>
+    </p>
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="../getting-started">
+      Getting Started
+     </a>
+     page.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     All agents and agent relays will need to be upgraded in order to take advantage of improved agent/server communication scalability and artifact distribution techniques. Otherwise, all existing configuration will continue to function as-is – no manual updates are required.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release, and any future fix packs can be found
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038759#601" target="_blank">
+      in this document
+     </a>
+     .
+    </p>
+    <table border="0" cellpadding="0" cellspacing="0" class="ibm-data-table ibm-alternate" role="presentation" rules="">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        APAR
+       </td>
+       <td valign="bottom" width="80%">
+        Description
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI09997" target="_blank">
+         PI09997
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ATTEMPTS TO USE AN ARTIFACT ID WITH .(DOTS) THE MAVEN RESOLVE
+        <br>
+         STEP RESULTS IN THE WRONG URL BEING GENERATED
+        </br>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI13094" target="_blank">
+         PI13094
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        MISSING DOC ON HOW TO MODIFY UCDEPLOY CONTEXT ROOT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI13811" target="_blank">
+         PI13811
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        RUNNING UDCLIENT RESULTS IN DISPLAYING A JSON REPRESENTATION WIT
+        <br>
+         H GARBLED CHARACTERS IF ANY RESPONSES FROM UCD CONTAINS any DBCS
+        </br>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI13910" target="_blank">
+         PI13910
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        THE DOCUMENTATION OF THE COMMAND PROVISIONENVIRONMENT MISSING
+        <br/>
+        INFORMATION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI15103" target="_blank">
+         PI15103
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        GRAY ENVIRONMENT COLOR MAKES IT HARD TO SEE TWISTIE ON LEFT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI15316" target="_blank">
+         PI15316
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DOCUMENTATION FOR INIT.D NEEDS CHKCONFIG –ADD
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI15408" target="_blank">
+         PI15408
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DEPLOYMENT AVERAGE DURATION REPORT RUNS VERY SLOWLY
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI15531" target="_blank">
+         PI15531
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        THE SCROLLBAR IS NOT RENDERING PROPERLY IN THE DEPLOYMENT COUNT
+        <br/>
+        WINDOW WHEN THERE ARE MANY ENTRIES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI15877" target="_blank">
+         PI15877
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        INSTALLER FAILS WHEN DATABASE PASSWORD CONTAINS A $
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI16249" target="_blank">
+         PI16249
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        THE TABLE PL_SOURCE_CONFIG_EXECUTION KEEPS INCREASING IN SIZE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI16732" target="_blank">
+         PI16732
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        STEPS SHOW MULTIPLE TIMES IN EXECUTION LOG WHEN REFRESHING
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI16878" target="_blank">
+         PI16878
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        HOW TO ADD A TEAM TO AN APPLICATION IS NOT DOCUMENTED.  THE PERM
+        <br/>
+        ISSIONS REQUIRED TO PERFORM THE ACTION IS NOT IN THE INFOCENTER.
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI18145" target="_blank">
+         PI18145
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DOCUMENT THE USE OF PROPERTIES IN THE COMMAND CREATECOMPONENT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI18166" target="_blank">
+         PI18166
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        MISSING HIBERNATE POOL SIZE INFORMATION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI18784" target="_blank">
+         PI18784
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CONTENTS OF THE VAR/CONFIG DIRECTORY HAS BEEN MIGRATED TO THE
+        <br/>
+        DATABASE SERVER
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+   </div>
+   <p>
+    To search for additional post-release issues that IBM Rational Support documented, visit the
+    <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+     IBM Support portal.
+    </a>
+   </p>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=installing" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     For advanced enterprise deployments that require high availability, review our options in the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.0" target="_blank">
+      information center.
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Deploy supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+     <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release is available for download for Passport Advantage and Passport Advantage Express clients, requiring authentication. This download is
+     <a href="https://www-112.ibm.com/software/howtobuy/softwareandservices/passportadvantage" target="_blank">
+      available here.
+     </a>
+    </p>
+    <p>
+     Information for installing the server, see the
+     <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=installing">
+      Installing servers and agents
+     </a>
+     section in the product documentation.
+    </p>
+    <p>
+     For information on installing and managing licenses, see
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.0/com.ibm.udeploy.install.doc/topics/licenseManage.html">
+      Managing licenses
+     </a>
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="..">
+      What’s New
+     </a>
+    </p>
+    <p>
+     To learn more about IBM UrbanCode Deploy, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.0" target="_blank">
+      documentation
+     </a>
+    </p>
+    <p>
+     For help installing or using IBM UrbanCode Deploy, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+    </p>
+    <p>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

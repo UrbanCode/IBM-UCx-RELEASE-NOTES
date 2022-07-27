@@ -1,24 +1,215 @@
 <!DOCTYPE html>
-<html><head><title>2.4.0</title></head>
-<body>
-<p><b>This article was originaly published in 2021.06.23</b></p>
-<p><h1>2.4.0</h1></p>
-<p>The following key features, enhancements, and bug fix are included in this release. This release is recommended for all customers.
-<h4>Value stream update</h4>
-Added the <code>IN</code> operator to the DevOps query language.
-<h4>Pipeline updates</h4>
-<ul>
- 	<li>On the Pipeline page, open pipeline deployment allows you to directly deploy and launch applications in Azure DevOps.</li>
- 	<li>API-driven pipeline applications enable you to effectively populate the pipeline and move dots through the system solely through build and deployment uploads. You can use either the <strong>Create new application</strong> or <strong>Use existing application</strong> options to perform the aforementioned functions.</li>
- 	<li>On the Pipeline page, improved UI layout features for the join release modal windows.</li>
-</ul>
-<h4>Auto-generated user access keys</h4>
-Integrations support the capability to auto-generate the required user access keys that is implemented on a plug-in by plug-in basis. Refer to the plug-in documentation <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS">page</a> for the latest updates.
-<h4>Security</h4>
-Set administrator password at install. Existing installations via upgrades are not affected.
-<h4>Reporting</h4>
-On the Insights page, removed the <strong>UrbanCode Deploy Reports</strong> tab deprecated since version 2.0 and replaced with a combination of Insights dashboards and reports.
+<html>
+ <head>
+  <title>
+   2.4.0
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2021.06.23
+   </b>
+  </p>
+  <p>
+   <h1>
+    2.4.0
+   </h1>
+  </p>
+  <p>
+   The following key features, enhancements, and bug fix are included in this release. This release is recommended for all customers.
+   <h4>
+    Value stream update
+   </h4>
+   Added the
+   <code>
+    IN
+   </code>
+   operator to the DevOps query language.
+   <h4>
+    Pipeline updates
+   </h4>
+   <ul>
+    <li>
+     On the Pipeline page, open pipeline deployment allows you to directly deploy and launch applications in Azure DevOps.
+    </li>
+    <li>
+     API-driven pipeline applications enable you to effectively populate the pipeline and move dots through the system solely through build and deployment uploads. You can use either the
+     <strong>
+      Create new application
+     </strong>
+     or
+     <strong>
+      Use existing application
+     </strong>
+     options to perform the aforementioned functions.
+    </li>
+    <li>
+     On the Pipeline page, improved UI layout features for the join release modal windows.
+    </li>
+   </ul>
+   <h4>
+    Auto-generated user access keys
+   </h4>
+   Integrations support the capability to auto-generate the required user access keys that is implemented on a plug-in by plug-in basis. Refer to the plug-in documentation
+   <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS">
+    page
+   </a>
+   for the latest updates.
+   <h4>
+    Security
+   </h4>
+   Set administrator password at install. Existing installations via upgrades are not affected.
+   <h4>
+    Reporting
+   </h4>
+   On the Insights page, removed the
+   <strong>
+    UrbanCode Deploy Reports
+   </strong>
+   tab deprecated since version 2.0 and replaced with a combination of Insights dashboards and reports.
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Value stream update
+    </li>
+    <li>
+     Pipeline updates
+    </li>
+    <li>
+     User access keys
+    </li>
+    <li>
+     Security
+    </li>
+    <li>
+     Reporting
+    </li>
+    <li>
+     Bug fix
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <!-- A cumulative list of fixes in this release, and any future fix packs can be found in the <a href="https://www.urbancode.com/whats-new/velocity-fixlist/" target="_blank" rel="noopener">Fixlist</a> document. -->
+   The following table is a cumulative list of fixes in the 2.4.0 version.
+   <table>
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the Value Streams page when you click on a commit dot, corrected
+       <strong>
+        Invalid date
+       </strong>
+       in the
+       <strong>
+        Age in stage
+       </strong>
+       field.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan and prepare
+   </h2>
+   For supported platforms and requirements you can dynamically generate a system requirements report using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <h2>
+    Install the server
+   </h2>
+   There are two option to obtaining the installation package: online installer and offline installer. Both options require a master license key, which can be acquired from
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    IBM Passport Advantage
+   </a>
+   .
+   <h2>
+    Online installer
+   </h2>
+   The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
 
-&nbsp;
-</p></body>
+Download the online installer package depending on the platform, the product is being installed.
+   <ul>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-linux" rel="noopener" target="_blank">
+      Linux
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-macos" rel="noopener" target="_blank">
+      Mac OS
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+      Windows
+     </a>
+    </li>
+   </ul>
+   After the download completes, start the executable file to begin the install process.
+   <h2>
+    Offline installer
+   </h2>
+   Use the offline installer to install Velocity without internet connection. You will still need internet connection at some point to download the installer itself. Once downloaded, the installer will include all containers needed to successfully install the product. For this reason, the offline installer is larger than the online installer and will require more time/bandwidth and disk space when downloading.
+
+The installation package is available from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Velocity&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    IBM Fix Central
+   </a>
+   . Search and select the installation package appropriate for the installation platform.
+
+After downloading the installation package, decompress the contents into two directories: one for Kubernetes and the other for Docker Compose. See the
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.3.x/com.ibm.uvelocity.doc/topics/c_install_se_roadmap.html" rel="noopener" target="_blank">
+    documentation section on installation
+   </a>
+   for instructions about how to install the server.
+
+A product license key is required to install the product. To obtain a key, you must agree to the terms and conditions provided on Passport Advantage.
+   <h2>
+    Learn
+   </h2>
+   To learn more about UrbanCode Velocity, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using UrbanCode Velocity, post your questions in the
+   <a href="https://community.ibm.com/community/user/middleware/communities/community-home?CommunityKey=9adfe6b6-2e23-4895-8b27-38b93b5e152c" rel="noopener" target="_blank">
+    UrbanCode forums
+   </a>
+   . Tag your question with
+   <strong>
+    velocity
+   </strong>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="https://www.ibm.com/developerworks/rfe/" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   <h2>
+    Get support
+   </h2>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

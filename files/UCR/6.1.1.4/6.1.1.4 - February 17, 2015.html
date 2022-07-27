@@ -1,21 +1,277 @@
 <!DOCTYPE html>
-<html><head><title>6.1.1.4</title></head>
-<body>
-<p><b>This article was originaly published in 2015.02.17</b></p>
-<p><h1>6.1.1.4 - February 17, 2015</h1></p>
-<p><div class="new_release_cont">This release of IBM UrbanCode Release is a maintenance release containing performance improvements and <a href="./release-notes/">bug fixes</a>.</div>
-<div class="new_release_cont">
-<h2>Performance Improvement</h2>
-<ul>
-<li>Pipeline loads scheduled deployments and version inventory much more quickly.</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<h2>Experimental Feature: Task View</h2>
-<p>	This view located in the Federated Deployment Dashboard allows you to view and execute tasks in a release event where multiple business units are participating, each with their own scheduled deployment. Enterprise release managers can view status of specific types or groups of tasks, such as installation or quality assurance activities happening within many different application teams and business units.This view helps visualize like tasks across multiple deployments based on tag filtering.<br/>
-<a href="tasktagview.png"></a></p><a href="tasktagview.png">
-</a><p><a href="tasktagview.png"><img alt="TaskTagView" class="alignnone size-large wp-image-15108" height="409" sizes="(max-width: 980px) 100vw, 980px" src="tasktagview.png" srcset="TaskTagView-1024x428.png 1024w, TaskTagView-300x125.png 300w" style="margin-top: 10px;" width="980"/></a></p>
-<p>To activate this feature place the property <b>feature.task.view.enabled=yes</b> in the server.properties file.</p>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.1.4
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2015.02.17
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.1.4 - February 17, 2015
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Release is a maintenance release containing performance improvements and
+    <a href="./release-notes/">
+     bug fixes
+    </a>
+    .
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Performance Improvement
+    </h2>
+    <ul>
+     <li>
+      Pipeline loads scheduled deployments and version inventory much more quickly.
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Experimental Feature: Task View
+    </h2>
+    <p>
+     This view located in the Federated Deployment Dashboard allows you to view and execute tasks in a release event where multiple business units are participating, each with their own scheduled deployment. Enterprise release managers can view status of specific types or groups of tasks, such as installation or quality assurance activities happening within many different application teams and business units.This view helps visualize like tasks across multiple deployments based on tag filtering.
+     <br/>
+     <a href="tasktagview.png">
+     </a>
+    </p>
+    <a href="tasktagview.png">
+    </a>
+    <p>
+     <a href="tasktagview.png">
+      <img alt="TaskTagView" class="alignnone size-large wp-image-15108" height="409" sizes="(max-width: 980px) 100vw, 980px" src="tasktagview.png" srcset="TaskTagView-1024x428.png 1024w, TaskTagView-300x125.png 300w" style="margin-top: 10px;" width="980"/>
+     </a>
+    </p>
+    <p>
+     To activate this feature place the property
+     <b>
+      feature.task.view.enabled=yes
+     </b>
+     in the server.properties file.
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Pipeline view performance improvement
+    </li>
+    <li>
+     Experimental Feature: Task View
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started/">
+     Getting Started
+    </a>
+    page.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Installation Notes
+    </div>
+    <p>
+     No new installation notes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     No major behavioral changes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Fixes in this Release
+     </div>
+     <p>
+      A cumulative list of fixes in this release, and any future fix packs will be available.
+     </p>
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         APAR/defect
+        </td>
+        <td valign="bottom" width="78%">
+         Description
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         PI30128
+        </td>
+        <td valign="bottom" width="78%">
+         PERFORMANCE ISSUES WITH PIPELINE VIEW PAGE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         PI32956
+        </td>
+        <td valign="bottom" width="78%">
+         CREATION OF NEW GROUP FROM UI NOT SUCCESSFUL
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         PI31883
+        </td>
+        <td valign="bottom" width="78%">
+         ADDING ACTIVE DIRECTORY USER TO TEAM CAUSES ERROR
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         PI34886
+        </td>
+        <td valign="bottom" width="78%">
+         Recurring Deployment – Deployment Plan drop down just says “loading…” and then items are not clickable
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+        </td>
+        <td valign="bottom" width="78%">
+         Unable to create a new Environment Activity due to the Save button’s position (in the background)
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+        </td>
+        <td valign="bottom" width="78%">
+         Prevented duplicate notifications from appearing on the calendar page, under some circumstances.
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Known Problems and Workarounds
+     </div>
+     <p>
+      To search for additional post-release issues that IBM Rational Support documented, visit the
+      <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+     </p>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes/">
+      release notes
+     </a>
+     . For supported platforms and requirements, see the
+     <a href="http://www-03.ibm.com/software/products/en/ucrel#tab_othertab1" target="_blank">
+      system requirements
+     </a>
+     . To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/topics/install_ov.html">
+      installation guide
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release requires IBM Installation Manager version 1.8.0 or later for installation. See
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg24036814">
+      download document
+     </a>
+     for details on this download. This release is available for download on Fix Central for current customers, requiring authentication. This download is
+     <a href="http://www-933.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=fixId&amp;fixids=6.1.1.4-UrbanCode-Release&amp;includeRequisites=1&amp;includeSupersedes=0&amp;downloadMethod=http">
+      available here.
+     </a>
+     Information for installing the server, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/topics/install_ov.html">
+      Installing server
+     </a>
+     section in the product documentation.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="../">
+      What’s New
+     </a>
+     To learn more about IBM UrbanCode Release, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/ucr61_welcome.html" target="_blank">
+      documentation
+     </a>
+     For help installing or using IBM UrbanCode Release, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

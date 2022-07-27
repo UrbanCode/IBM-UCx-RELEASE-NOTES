@@ -1,34 +1,229 @@
 <!DOCTYPE html>
-<html><head><title>1.1.8</title></head>
-<body>
-<p><b>This article was originaly published in 2019.04.09</b></p>
-<p><h1>1.1.8 - April 9, 2019</h1></p>
-<p><p>Starting with the March 1, 2019 release, UrbanCode Velocity is using semantic versioning for product releases. The semantic versioning contains a three-part version number: major version, minor version, and patch. At any given time, only the latest two releases are available. Always download the latest version. For download information, see the <a href="https://www.ibm.com/docs/en/urbancode-velocity/2.6.x?topic=overview-getting-started">Getting Started</a> page.</p>
-<p>The following enhancements are included in each release. In addition to various bug fixes.</p>
-<div class="horizontal-rule"></div>
-<h2>Key Features in 1.1.7</h2>
-<div class="key-features">
-
-<p>Improvements to UrbanCode Deploy integrations</p>
-<p>Remove duplicate roles in the UrbanCode Team Sync.</p>
-</div>
-<div class="horizontal-rule"></div>
-<h2>Key Features in 1.1.5</h2>
-<div class="key-features">
-
-<p>Improvements to UrbanCode Deploy integrations.</p>
-<p>There is now one install program to install both trial and normal product versions.</p>
-<p>Problem with the Docker Compose volume mount permissions fixed.</p>
-</div>
-<div class="horizontal-rule"></div>
-<h2>Key Features in 1.1.4</h2>
-<div class="key-features">
-
-<p>Fixes added to installation upgrade program.</p>
-</div>
-<div class="horizontal-rule"></div>
-<h2>Key Features in 1.1.3</h2>
-<p>This is a private Beta release.</p>
-<p>OpenShift update utility added to the install program.</p>
-</p></body>
+<html>
+ <head>
+  <title>
+   1.1.8
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2019.04.09
+   </b>
+  </p>
+  <p>
+   <h1>
+    1.1.8 - April 9, 2019
+   </h1>
+  </p>
+  <p>
+   <p>
+    Starting with the March 1, 2019 release, UrbanCode Velocity is using semantic versioning for product releases. The semantic versioning contains a three-part version number: major version, minor version, and patch. At any given time, only the latest two releases are available. Always download the latest version. For download information, see the
+    <a href="https://www.ibm.com/docs/en/urbancode-velocity/2.6.x?topic=overview-getting-started">
+     Getting Started
+    </a>
+    page.
+   </p>
+   <p>
+    The following enhancements are included in each release. In addition to various bug fixes.
+   </p>
+   <div class="horizontal-rule">
+   </div>
+   <h2>
+    Key Features in 1.1.7
+   </h2>
+   <div class="key-features">
+    <p>
+     Improvements to UrbanCode Deploy integrations
+    </p>
+    <p>
+     Remove duplicate roles in the UrbanCode Team Sync.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <h2>
+    Key Features in 1.1.5
+   </h2>
+   <div class="key-features">
+    <p>
+     Improvements to UrbanCode Deploy integrations.
+    </p>
+    <p>
+     There is now one install program to install both trial and normal product versions.
+    </p>
+    <p>
+     Problem with the Docker Compose volume mount permissions fixed.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <h2>
+    Key Features in 1.1.4
+   </h2>
+   <div class="key-features">
+    <p>
+     Fixes added to installation upgrade program.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <h2>
+    Key Features in 1.1.3
+   </h2>
+   <p>
+    This is a private Beta release.
+   </p>
+   <p>
+    OpenShift update utility added to the install program.
+   </p>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Various bug fixes and performance improvements
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For supported platforms and requirements you can dynamically generate a system requirements report using the
+     <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" target="_blank">
+      Software Product Compatibility Reports (SPCR)
+     </a>
+     tool.
+    </p>
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     There are two option to obtaining the installation package: online installer and offline installer. Both options will require a master license key, which can be acquired from:
+    </p>
+    <ul>
+     <li>
+      <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+       IBM Passport Advantage
+      </a>
+      – Use this option if you have purchased IBM UrbanCode Velocity.
+     </li>
+     <li>
+      <a href="https://www.uc-velocity.com/" rel="noopener" target="_blank">
+       Trial Installation
+      </a>
+      – Use this option if you would like to try IBM UrbanCode Velocity.
+     </li>
+    </ul>
+    <div class="subtitle">
+     Online installer
+    </div>
+    <p>
+     The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
+    </p>
+    <p>
+     Download the online installer package depending on the platform, the product is being installed.
+     <br>
+      –
+      <a href="https://public.dhe.ibm.com/software/products/UrbanCode/Velocity/latest/velocity-se-ibm-install-latest-linux" rel="noopener" target="_blank">
+       Linux
+      </a>
+      <br>
+       –
+       <a href="https://public.dhe.ibm.com/software/products/UrbanCode/Velocity/latest/velocity-se-ibm-install-latest-macos" rel="noopener" target="_blank">
+        Mac OS
+       </a>
+       <br/>
+       –
+       <a href="https://public.dhe.ibm.com/software/products/UrbanCode/Velocity/latest/velocity-se-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+        Windows
+       </a>
+      </br>
+     </br>
+    </p>
+    <p>
+     After the download completes, start the executable file to begin the install process.
+    </p>
+    <div class="subtitle">
+     Offline installer
+    </div>
+    <p>
+     The offline installer process allows for installation of product without an internet connection. You’ll need a connection only to download the product image. All containers needed to successfully install the product are included. For this reason, the images requires more space when downloading.
+    </p>
+    <p>
+     The installation package is available from
+     <a href="https://www-945.ibm.com/support/fixcentral" rel="noopener" target="_blank">
+      IBM FixCentral
+     </a>
+     . Search and select the installation package appropriate for the installation platform.
+    </p>
+    <p>
+     After downloading the the installation package, decompress the contents into two directories, one for Kubernetes and the other for Docker Compose. The instructions for installing the server are located in the product documentation, see the
+     <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_1.0.0/com.ibm.velocity.doc/topics/c_install_se_roadmap.html" target="_blank">
+      Installation
+     </a>
+     topic.
+    </p>
+    <p>
+     To obtain the product license key you must agree to the terms and condition statements provided on Passport Advantage. The license key is required to start the install process for the initial and future installations.
+    </p>
+   </div>
+   <p>
+   </p>
+   <div class="key-features">
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about IBM UrbanCode Velcoity, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SSCKX6_1.0.0" target="_blank">
+      documentation
+     </a>
+     .
+    </p>
+    <p>
+     For help installing or using IBM UrbanCode Velocity, post your questions in the
+     <a href="https://developer.ibm.com/answers/topics/velocity.html" target="_blank">
+      UrbanCode forums
+     </a>
+     .Tag your question with
+     <strong>
+      velocity
+     </strong>
+     .
+    </p>
+    <p>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="https://www.ibm.com/support/home" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   None
+  </p>
+ </body>
 </html>

@@ -1,65 +1,479 @@
 <!DOCTYPE html>
-<html><head><title>6.0.1.1</title></head>
-<body>
-<p><b>This article was originaly published in 2014.02.13</b></p>
-<p><h1>6.0.1.1 - February 13, 2014</h1></p>
-<p><div class="new_release_cont">
-This release of IBM UrbanCode Release is a maintenance release containing bug fixes and a few minor enhancements.  This release is recommended for all customers.
-</div>
-<div class="new_release_cont">
-<h2>Automatically Select Versions and/or Start Manually Scheduled Deployments</h2>
-<p><a href="autostartdeployments.png"><img alt="Deployment Request Dialog with Auto-Start Options" class="alignright size-medium wp-image-3384" height="250" sizes="(max-width: 300px) 100vw, 300px" src="autostartdeployments.png" srcset="AutoStartDeployments-300x250.png 300w, autostartdeployments.png 445w" width="300"/></a></p>
-<p>Deployments that are requested manually can now be configured to automatically select deployment contents using the latest application versions that pass quality criteria, also known as “gates” on the lifecycles page, or via a matching pattern on version names.  It is also possible to start the deployment automatically at the selected start time.  These features were previously available only for deployments created via recurring deployment rules.
-</p></div>
-<div class="new_release_cont">
-<h2>Copy Releases</h2>
-<p><a href="releasecopy.png"><img alt="ReleaseCopy" class="alignright size-full wp-image-3386" height="109" src="releasecopy.png" width="248"/></a></p>
-<p>It is now possible to copy an existing release from the release list page.  Copied releases are configured with the same applications, release environments, approvals, deployment plans, and milestones as the original release.  Milestone are reset to the “Not Started” status.
-</p></div>
-<div class="new_release_cont">
-<h2>Hide Tasks that are Not Applicable</h2>
-<p><a href="hidenotapplicable.png"><img alt="HideNotApplicable" class="alignright size-medium wp-image-3385" height="118" sizes="(max-width: 300px) 100vw, 300px" src="hidenotapplicable.png" srcset="HideNotApplicable-300x118.png 300w, hidenotapplicable.png 396w" width="300"/></a></p>
-<p>Hide all tasks that are not applicable to the current environment or selected deployment contents with a single click on the deployment details page.
-</p></div>
-<div class="new_release_cont">
-<h2>Improved Integration Performance with UrbanCode Deploy</h2>
-<p>For customers with large installations, data will synchronize from UrbanCode Deploy to UrbanCode Release in significantly less time than with past releases.  Note that this improvement also requires the use of UrbanCode Deploy 6.0.1.1 or higher.
-</p></div>
-<div class="new_release_cont">
-<h2>Improved Performance on the All Deployments Tab</h2>
-<p>Performance of the “All” tab in the Deployments section has been significantly improved.
-</p></div>
-<div class="new_release_cont">
-<h2>More Editing Operations</h2>
-<p>Applications that were created within UrbanCode Release can now be edited and deleted. (However, applications synchronized with UrbanCode Deploy cannot be deleted within UrbanCode Release.) Deployment plans can be deleted, if they are not actively being used in a release phase or a scheduled deployment that has not yet been started.
-</p></div>
-<p></p>
-<div class="new_release_cont">
-<h1>Experimental Features</h1>
-<p>The following features are experimental, and are available only if a special product configuration is enabled.  They are offered for testing and feedback, without support, and are not guaranteed to continue in any form in a future release.  Please consider enabling these features in a testing environment and provide feedback via the developerWorks Q&amp;A forum.
-</p></div>
-<div class="new_release_cont">
-<h2>{Experimental} New Segment Dependency Graph View in Federated Deployment Dashboards</h2>
-<p>Federated deployment dashboards can now have an alternate view, which displays segments on a timeline similar to a Gantt chart.  Status information about segments and tasks is available via color, position, and a detail box displayed on mouse hover.</p>
-<p><a href="segmentdependencygraph.png"><img alt="Segment Dependency Graph View" class="alignnone size-medium wp-image-3387" height="107" sizes="(max-width: 300px) 100vw, 300px" src="segmentdependencygraph.png" srcset="SegmentDependencyGraph-300x107.png 300w, segmentdependencygraph.png 809w" width="300"/></a></p>
-<p>To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory:</p>
-<p>feature.segment.dependency.graph.enabled=yes
-</p></div>
-<div class="new_release_cont">
-<h2>{Experimental} Release Target Date &amp; Milestone Sequences</h2>
-<p>With this experimental feature enabled, releases can now be configured with a target date, e.g. for the expected date of production deployment.</p>
-<p>Milestone sequences allow release milestones to be reused across multiple releases without repeat data entry.  A milestone sequence is composed of milestone templates, and each milestone template can be scheduled for a specified number of days before or after the release target date.  </p>
-<p>A lifecycle can be configured to include a milestone sequence, and each new release created with the lifecycle will automatically be configured with the full milestone sequence.  </p>
-<p>A milestone sequence can also be applied to a release on the release detail page.</p>
-<p>To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory:</p>
-<p>feature.milestone.template.enabled=yes
-</p></div>
-<div class="new_release_cont">
-<h2>{Experimental} Environment Reservations &amp; Active Release for Environment</h2>
-<p>This experimental feature allows a release environment to be reserved for use for a specific phase of a release over a range of dates.  More than one reservation can be placed, allowing for multiple date ranges.  If a conflict is detected for a release environment reservation, a warning will be displayed to the user, detailing the potential conflicts.</p>
-<p>In addition to the new user interface, this feature also provides a new integration with UrbanCode Deploy.  Using a new plugin for UrbanCode Deploy, a component deployment process can be configured to detect the currently-active release for the destination application environment of the deployment.  This information can then be used for other component process steps, such as creating a snapshot with a name that includes the targeted release name.</p>
-<p>To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory:</p>
-<p>feature.environment.reservation.enabled=yes
-</p></div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.0.1.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2014.02.13
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.0.1.1 - February 13, 2014
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Release is a maintenance release containing bug fixes and a few minor enhancements.  This release is recommended for all customers.
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Automatically Select Versions and/or Start Manually Scheduled Deployments
+    </h2>
+    <p>
+     <a href="autostartdeployments.png">
+      <img alt="Deployment Request Dialog with Auto-Start Options" class="alignright size-medium wp-image-3384" height="250" sizes="(max-width: 300px) 100vw, 300px" src="autostartdeployments.png" srcset="AutoStartDeployments-300x250.png 300w, autostartdeployments.png 445w" width="300"/>
+     </a>
+    </p>
+    <p>
+     Deployments that are requested manually can now be configured to automatically select deployment contents using the latest application versions that pass quality criteria, also known as “gates” on the lifecycles page, or via a matching pattern on version names.  It is also possible to start the deployment automatically at the selected start time.  These features were previously available only for deployments created via recurring deployment rules.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Copy Releases
+    </h2>
+    <p>
+     <a href="releasecopy.png">
+      <img alt="ReleaseCopy" class="alignright size-full wp-image-3386" height="109" src="releasecopy.png" width="248"/>
+     </a>
+    </p>
+    <p>
+     It is now possible to copy an existing release from the release list page.  Copied releases are configured with the same applications, release environments, approvals, deployment plans, and milestones as the original release.  Milestone are reset to the “Not Started” status.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Hide Tasks that are Not Applicable
+    </h2>
+    <p>
+     <a href="hidenotapplicable.png">
+      <img alt="HideNotApplicable" class="alignright size-medium wp-image-3385" height="118" sizes="(max-width: 300px) 100vw, 300px" src="hidenotapplicable.png" srcset="HideNotApplicable-300x118.png 300w, hidenotapplicable.png 396w" width="300"/>
+     </a>
+    </p>
+    <p>
+     Hide all tasks that are not applicable to the current environment or selected deployment contents with a single click on the deployment details page.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Improved Integration Performance with UrbanCode Deploy
+    </h2>
+    <p>
+     For customers with large installations, data will synchronize from UrbanCode Deploy to UrbanCode Release in significantly less time than with past releases.  Note that this improvement also requires the use of UrbanCode Deploy 6.0.1.1 or higher.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Improved Performance on the All Deployments Tab
+    </h2>
+    <p>
+     Performance of the “All” tab in the Deployments section has been significantly improved.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     More Editing Operations
+    </h2>
+    <p>
+     Applications that were created within UrbanCode Release can now be edited and deleted. (However, applications synchronized with UrbanCode Deploy cannot be deleted within UrbanCode Release.) Deployment plans can be deleted, if they are not actively being used in a release phase or a scheduled deployment that has not yet been started.
+    </p>
+   </div>
+   <p>
+   </p>
+   <div class="new_release_cont">
+    <h1>
+     Experimental Features
+    </h1>
+    <p>
+     The following features are experimental, and are available only if a special product configuration is enabled.  They are offered for testing and feedback, without support, and are not guaranteed to continue in any form in a future release.  Please consider enabling these features in a testing environment and provide feedback via the developerWorks Q&amp;A forum.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     {Experimental} New Segment Dependency Graph View in Federated Deployment Dashboards
+    </h2>
+    <p>
+     Federated deployment dashboards can now have an alternate view, which displays segments on a timeline similar to a Gantt chart.  Status information about segments and tasks is available via color, position, and a detail box displayed on mouse hover.
+    </p>
+    <p>
+     <a href="segmentdependencygraph.png">
+      <img alt="Segment Dependency Graph View" class="alignnone size-medium wp-image-3387" height="107" sizes="(max-width: 300px) 100vw, 300px" src="segmentdependencygraph.png" srcset="SegmentDependencyGraph-300x107.png 300w, segmentdependencygraph.png 809w" width="300"/>
+     </a>
+    </p>
+    <p>
+     To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory:
+    </p>
+    <p>
+     feature.segment.dependency.graph.enabled=yes
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     {Experimental} Release Target Date &amp; Milestone Sequences
+    </h2>
+    <p>
+     With this experimental feature enabled, releases can now be configured with a target date, e.g. for the expected date of production deployment.
+    </p>
+    <p>
+     Milestone sequences allow release milestones to be reused across multiple releases without repeat data entry.  A milestone sequence is composed of milestone templates, and each milestone template can be scheduled for a specified number of days before or after the release target date.
+    </p>
+    <p>
+     A lifecycle can be configured to include a milestone sequence, and each new release created with the lifecycle will automatically be configured with the full milestone sequence.
+    </p>
+    <p>
+     A milestone sequence can also be applied to a release on the release detail page.
+    </p>
+    <p>
+     To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory:
+    </p>
+    <p>
+     feature.milestone.template.enabled=yes
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     {Experimental} Environment Reservations &amp; Active Release for Environment
+    </h2>
+    <p>
+     This experimental feature allows a release environment to be reserved for use for a specific phase of a release over a range of dates.  More than one reservation can be placed, allowing for multiple date ranges.  If a conflict is detected for a release environment reservation, a warning will be displayed to the user, detailing the potential conflicts.
+    </p>
+    <p>
+     In addition to the new user interface, this feature also provides a new integration with UrbanCode Deploy.  Using a new plugin for UrbanCode Deploy, a component deployment process can be configured to detect the currently-active release for the destination application environment of the deployment.  This information can then be used for other component process steps, such as creating a snapshot with a name that includes the targeted release name.
+    </p>
+    <p>
+     To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory:
+    </p>
+    <p>
+     feature.environment.reservation.enabled=yes
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Recommended fixes for UrbanCode Release 6.0.1
+    </li>
+    <li>
+     Automatically Select Versions For Deployments
+    </li>
+    <li>
+     Copy Releases
+    </li>
+    <li>
+     Hide Not Applicable Tasks
+    </li>
+    <li>
+     Improved Integration with UrbanCode Deploy
+    </li>
+    <li>
+     New Experimental Features...
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="http://developer.ibm.com/urbancode/products/urbancode-release/whats-new/whats-new-in-urbancode-release-6-0-1-1/#getting-started">
+      Getting Started
+     </a>
+     page.
+    </p>
+    <p>
+     This release has been superseded. We recommend installing the latest fix pack to ensure you have all known fixes.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     A deployment plan that contains a failed task is now considered to be in progress until explicitly
+aborted.  Deployments that are configured to start automatically will retain the previous behavior,
+in which the plan as a whole is considered to be failed if any task within it has failed.
+    </p>
+    <p>
+     The lifecycles page now uses a horizontal master-detail layout similar to the applications page,
+rather than the previous vertical layout.
+    </p>
+    <p>
+     It is no longer possible to create more than one deployment plan for the same release with the same
+name.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release, and any future fix packs can be found
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27039116" target="_blank">
+      in this document
+     </a>
+     .
+    </p>
+    <table border="0" cell-padding="0" class="ibm-data-table ibm-alternate" role="list" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+        APAR
+       </td>
+       <td valign="bottom" width="78%">
+        Description
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI11314" target="_blank">
+         PI11314
+        </a>
+       </td>
+       <td valign="bottom" width="78%">
+        ATTEMPTS TO VIEW REQUESTS RESULTS IN THE PAGE NOT LOADING
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI10952" target="_blank">
+         PI10952
+        </a>
+       </td>
+       <td valign="bottom" width="78%">
+        IF APPLICATION ENVIRONMENT IS RENAMED IN DEPLOY, DATA SYNC WITH RELEASE WILL FAIL
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Customer reported issues when using SQL Server 2012 database
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Inactive UCD Applications should not be imported as UCR Applications
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Inactive UCD Environments should not be imported as UCR Application Environments
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Duplicate Application Versons are being created by UCR-UCD integration
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Sequential enforced status is not exported for segments
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Tasks that become n/a after the segment starts are never closed
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        When opening the notifications form, role drop down should not be visible
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Incorrect help link in Release 6.0.1
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Can not retrieve RTC timelines if more there are more than 100 are present
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Associating Application with a new Team causes JavaScript error
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        UCR allows you to duplicate a deployment plan using same name and same release.
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Status Detail page breaks when attachment is not given a description
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Menu bar displayed incorrect section text on status details page
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <br>
+    <br>
+     <div class="horizontal-rule">
+     </div>
+     <div class="key-features">
+      <div class="subtitle">
+       Known Problems and Workarounds
+      </div>
+      <p>
+       In case of communication failure between UrbanCode Release and UrbanCode Deploy, some data corruption was possible.  This has now been corrected in
+       <a href="http://developer.ibm.com/urbancode/products/urbancode-release/whats-new/whats-new-urbancode-release-6-0-1-2">
+        UrbanCode Release 6.0.1.2
+       </a>
+       , and no customer data loss has been reported.
+      </p>
+     </div>
+     To search for additional post-release issues that IBM Rational Support documented, visit the
+     <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     <h2>
+      Getting Started
+     </h2>
+     <br/>
+     <div class="key-features">
+      <div class="subtitle">
+       Plan &amp; Prepare
+      </div>
+      <p>
+       For fixes contained in this release, and any known issues, review the
+       <a href="http://developer.ibm.com/urbancode/products/urbancode-release/whats-new/whats-new-in-urbancode-release-6-0-1-1/#release-notes">
+        release notes
+       </a>
+       .
+      </p>
+      <p>
+       For supported platforms and requirements, see the
+       <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27039115" target="_blank">
+        system requirements
+       </a>
+       .
+      </p>
+      <p>
+       To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+       <a href="http://pic.dhe.ibm.com/infocenter/ucrel/v6r0m1/topic/com.ibm.urelease.doc/topics/install_ch.html" target="_blank">
+        installation guide
+       </a>
+      </p>
+     </div>
+     <div class="horizontal-rule">
+     </div>
+     <div class="key-features">
+      <div class="subtitle">
+       Install the server
+      </div>
+      <p>
+       This release requires IBM Installation Manager version 1.7 or later for installation.  See
+       <a href="http://www-01.ibm.com/support/docview.wss?uid=swg24035049">
+        download document
+       </a>
+       for details on this download.
+      </p>
+      <p>
+       This release is available for download on Fix Central for current customers, requiring authentication. This download is
+       <a href="http://www-933.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Rational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=all">
+        available here.
+       </a>
+      </p>
+      <p>
+       Information for installing the server, see the
+       <a href="http://pic.dhe.ibm.com/infocenter/ucrel/v6r0m1/topic/com.ibm.urelease.doc/topics/install_ch.html">
+        Installing server
+       </a>
+       section in the product documentation.
+      </p>
+      <div class="horizontal-rule">
+      </div>
+      <div class="subtitle">
+       Learn
+      </div>
+      <p>
+       To learn more about new enhancements in this release, see
+       <a href="http://developer.ibm.com/urbancode/products/urbancode-release/whats-new/whats-new-in-urbancode-release-6-0-1-1/#whats-new">
+        What’s New
+       </a>
+      </p>
+      <p>
+       To learn more about IBM UrbanCode Release, see the
+       <a href="http://pic.dhe.ibm.com/infocenter/ucrel/v6r0m1/topic/com.ibm.urelease.doc/topics/c_node_overview.html" target="_blank">
+        documentation
+       </a>
+      </p>
+      <p>
+       For help installing or using IBM UrbanCode Release, post your questions in the
+       <a href="https://developer.ibm.com/answers?community=urbancode">
+        forums
+       </a>
+       or contact
+       <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+        support
+       </a>
+      </p>
+      <p>
+       To suggest an enhancement to the product, visit the
+       <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+        RFE Community
+       </a>
+      </p>
+     </div>
+     <div class="horizontal-rule">
+     </div>
+     <div class="key-features">
+      <div class="subtitle">
+       Get support
+      </div>
+      <p>
+       For information from support, including FAQs, visit the
+       <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+        IBM Support portal.
+       </a>
+       You can configure the support portal to view information about specific products.
+      </p>
+     </div>
+    </br>
+   </br>
+  </p>
+ </body>
 </html>

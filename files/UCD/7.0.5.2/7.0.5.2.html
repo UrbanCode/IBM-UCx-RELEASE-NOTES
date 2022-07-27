@@ -1,12 +1,216 @@
 <!DOCTYPE html>
-<html><head><title>7.0.5.2</title></head>
-<body>
-<p><b>This article was originaly published in 2020.03.17</b></p>
-<p><h1>7.0.5.2</h1></p>
-<p>The following enhancements are included in each release. In addition to various bug fixes.
-<h4>Permission for setting version statuses</h4>
-The new <strong>Manage Versions</strong> permission allows you to manage which users can assign a status to a version.
+<html>
+ <head>
+  <title>
+   7.0.5.2
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2020.03.17
+   </b>
+  </p>
+  <p>
+   <h1>
+    7.0.5.2
+   </h1>
+  </p>
+  <p>
+   The following enhancements are included in each release. In addition to various bug fixes.
+   <h4>
+    Permission for setting version statuses
+   </h4>
+   The new
+   <strong>
+    Manage Versions
+   </strong>
+   permission allows you to manage which users can assign a status to a version.
+   <img alt="" class="alignnone size-full wp-image-1003842" height="286" src="ucd7052_newfeature_setting.png" width="252"/>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     New permission to assign users for setting version status
+    </li>
+    <li>
+     Recommended fixes for UrbanCode Deploy
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   For information on documentation and support resources, software and hardware requirements and installation steps, click the
+   <strong>
+    Getting Started
+   </strong>
+   tab.
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h2>
+     Fixes
+    </h2>
+    A cumulative list of fixes in this release, and any future fix packs can be found in the
+    <a href="https://www.urbancode.com/whats-new/deployfixlist/" rel="noopener" target="_blank">
+     Fixlist
+    </a>
+    document.
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH20028" rel="noopener" target="_blank">
+         PH20028
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Importing Component Template with Tags as an Upgrade Fails with Constraint Violation
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH18680" rel="noopener" target="_blank">
+         PH18680
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Slow Start of Deployment Processes using many component tags
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH18402" rel="noopener" target="_blank">
+         PH18402
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        User without “manage approval processes” permission can exempt environments from needing an approval before running deployments
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH15748" rel="noopener" target="_blank">
+         PH15748
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        VC Caching Raises Security Exception When Restoring From Cache
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH18758" rel="noopener" target="_blank">
+         PH18758
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Unlicensed Authorized agents not being refreshed after updating server license connection
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   For fixes contained in this release, and any known issues, click the
+   <strong>
+    Release Notes
+   </strong>
+   tab.
 
-<img class="alignnone size-full wp-image-1003842" src="ucd7052_newfeature_setting.png" alt="" width="252" height="286" />
-</p></body>
+For supported platforms and requirements, see the reports that can be dynamically generated using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <strong>
+    Note:
+   </strong>
+   Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+
+To get started quickly, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+   <a href="http://www.ibm.com/support/knowledgecenter/SS4GSP_7.0.5/com.ibm.udeploy.install.doc/topics/install_ch.html" rel="noopener" target="_blank">
+    installation guide
+   </a>
+   .
+   <div class="horizontal-rule">
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h2>
+     Install the server
+    </h2>
+    This release is available for download from
+    <a href="https://www-945.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=7.0.5.2&amp;platform=All&amp;function=fixId&amp;fixids=7.0.5.2-IBM-UrbanCode-Deploy&amp;includeRequisites=1&amp;includeSupersedes=0&amp;downloadMethod=http" rel="noopener" target="_blank">
+     Fix Central
+    </a>
+    , requiring authentication.
+
+Information for installing the server, see the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_7.0.5/com.ibm.udeploy.install.doc/topics/install_ch.html" rel="noopener" target="_blank">
+     Installing server
+    </a>
+    section in the product documentation.
+
+For information on installing licenses, see
+    <a href="https://www.ibm.com/support/knowledgecenter/SS4GSP_7.0.5/com.ibm.udeploy.doc/topics/licenseManage.html" rel="noopener" target="_blank">
+     Managing Licenses
+    </a>
+    .
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h2>
+     Learn
+    </h2>
+    To learn more about new enhancements in this release, click the
+    <strong>
+     What’s New
+    </strong>
+    tab.
+
+To learn more about IBM UrbanCode Deploy, see the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_7.0.5/com.ibm.udeploy.doc/ucd_version_welcome.html" rel="noopener" target="_blank">
+     documentation
+    </a>
+    .
+
+For help installing or using IBM UrbanCode Deploy, post your questions in the
+    <a href="https://developer.ibm.com/answers?community=urbancode" rel="noopener" target="_blank">
+     forums
+    </a>
+    or contact
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+     support
+    </a>
+    .
+
+To suggest an enhancement to the product, visit the
+    <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+     RFE Community
+    </a>
+    .
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h2>
+     Get support
+    </h2>
+    For information from support, including FAQs, visit the
+    <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+     IBM Support portal.
+    </a>
+    You can configure the support portal to view information about specific products.
+   </div>
+  </p>
+ </body>
 </html>

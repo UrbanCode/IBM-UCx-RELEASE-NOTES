@@ -1,40 +1,331 @@
 <!DOCTYPE html>
-<html><head><title>6.1</title></head>
-<body>
-<p><b>This article was originaly published in 2014.11.01</b></p>
-<p><h1>6.1 - November, 2014</h1></p>
-<p><p>This is the initial release of IBM UrbanCode Build, formerly known as uBuild.</p>
-<div class="new_release_cont">
-<h2>Template support for build configuration</h2>
-<ul>
-<li>Reduce time to onboard by leveraging templates that can be shared across teams, reducing duplicate configuration</li>
-<li>Ability to create templates at the project, process, source configuration, workflow and job levels</li>
-<li>Leverage properties to parameterize builds for ease of reuse</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<h2>Dependency Management</h2>
-<ul>
-<li>Quickly and easily configure dependencies between projects from within the UI.</li>
-<li>Leverage dependencies stored within the internal artifact repository</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<h2>Security and Compliance</h2>
-<ul>
-<li>UrbanCode Build enables security and compliance through the configuration of teams and roles.</li>
-<li>Individuals or groups are assigned roles to specify what permissions those individuals would have.</li>
-<li>Add individuals or groups to teams to configure what data those individuals can see within the interface.</li>
-<li>Track activity within the server to maintain audit-ready stature, including who and what</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<h2>Integrations</h2>
-<ul>
-<li>Open plugable framework with dozens of integration points for IBM and non-IBM software.</li>
-<li>Seamless integration with UrbanCode Deploy to enhance your continuous delivery pipeline</li>
-<li>Integrations with numerous quality management and testing tools enabling you to run tests during your build, and upload resulting reports</li>
-</ul>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2014.11.01
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1 - November, 2014
+   </h1>
+  </p>
+  <p>
+   <p>
+    This is the initial release of IBM UrbanCode Build, formerly known as uBuild.
+   </p>
+   <div class="new_release_cont">
+    <h2>
+     Template support for build configuration
+    </h2>
+    <ul>
+     <li>
+      Reduce time to onboard by leveraging templates that can be shared across teams, reducing duplicate configuration
+     </li>
+     <li>
+      Ability to create templates at the project, process, source configuration, workflow and job levels
+     </li>
+     <li>
+      Leverage properties to parameterize builds for ease of reuse
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Dependency Management
+    </h2>
+    <ul>
+     <li>
+      Quickly and easily configure dependencies between projects from within the UI.
+     </li>
+     <li>
+      Leverage dependencies stored within the internal artifact repository
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Security and Compliance
+    </h2>
+    <ul>
+     <li>
+      UrbanCode Build enables security and compliance through the configuration of teams and roles.
+     </li>
+     <li>
+      Individuals or groups are assigned roles to specify what permissions those individuals would have.
+     </li>
+     <li>
+      Add individuals or groups to teams to configure what data those individuals can see within the interface.
+     </li>
+     <li>
+      Track activity within the server to maintain audit-ready stature, including who and what
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Integrations
+    </h2>
+    <ul>
+     <li>
+      Open plugable framework with dozens of integration points for IBM and non-IBM software.
+     </li>
+     <li>
+      Seamless integration with UrbanCode Deploy to enhance your continuous delivery pipeline
+     </li>
+     <li>
+      Integrations with numerous quality management and testing tools enabling you to run tests during your build, and upload resulting reports
+     </li>
+    </ul>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Initial Release
+    </li>
+    <li>
+     More information...
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     This release of UrbanCode Build contains new features, quality improvements, and updates to supported platforms, as described in the
+     <a href="http://www.ibm.com/support/docview.wss?uid=swg27044198" target="_blank">
+      system requirements
+     </a>
+    </p>
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="../getting-started">
+      Getting Started
+     </a>
+     page.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     We recommend updating all agents and plugins when upgrading to this version due to changes related to SSLv3. Your agent upgrading is mandatory.  Refer to
+     <a href="https://developer.ibm.com/urbancode/docs/upgrading-ibm-ubuild-5-0-1-3-earlier/">
+      this page
+     </a>
+     for more details.
+    </p>
+    <p>
+     Licensing transitions in this release to Rational Common Licensing. You will be required to install and configure Rational Common Licensing. During initial installation, a 60-day evaluation period can be used while setting up the licensing server.
+    </p>
+    <p>
+     Templates have been decoupled so that they can be configured independently of each other.
+    </p>
+    <p>
+     The Eclipse plugin has been updated to work with build processes that have user-overridable properties. The new version can be downloaded to Eclipse via the URL listed on the Tools page.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release:
+    </p>
+    <table border="0" cellpadding="0" cellspacing="0" class="ibm-data-table ibm-alternate" rules="">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        APAR
+       </td>
+       <td valign="bottom" width="80%">
+        Description
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        PI25368
+       </td>
+       <td valign="bottom" width="80%">
+        ARTIFACTS.ZIP CONTAINS 0 BYTE FILES NAMED AFTER DIRECTORIES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        PI26993
+       </td>
+       <td valign="bottom" width="80%">
+        UBUILD’S UC DEPLOY PLUGIN IS PASSING A SPACE BETWEEN THE DASHES AND TOKEN IN THE CMD LINE PARAMETERS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        PI27354
+       </td>
+       <td valign="bottom" width="80%">
+        ATTEMPTING TO ADD A TEMPLATE PROPERTY RESULTS IN A PERSISTENCE EXCEPTION OR EXTREMELY LONG DELAYS
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+   </div>
+   <ul>
+    <li>
+     Can not create process template properties
+    </li>
+    <li>
+     Can not upgrade from 5.x server because the upgrade to separate templates fails
+    </li>
+    <li>
+     Jobs that use source plugin steps show the steps out of order
+    </li>
+    <li>
+     Jobs that use source plugin steps show incorrect logs for the steps
+    </li>
+   </ul>
+   <p>
+    To search for additional post-release issues that IBM Rational Support documented, visit the
+    <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+     IBM Support portal.
+    </a>
+   </p>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www.ibm.com/support/docview.wss?uid=swg27044198" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Build is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/#!/SS8NMD_6.1.0/com.ibm.ucbuild.doc/topics/arch_ch.html" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     For advanced enterprise deployments that require high availability, review our options in the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/#!/SS8NMD_6.1.0/com.ibm.ucbuild.doc/topics/arch_ha.html" target="_blank">
+      information center.
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Build supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+     <a href="https://developer.ibm.com/urbancode/plugins/ubuild/" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release is available for download for Passport Advantage and Passport Advantage Express clients, requiring authentication. This download is
+     <a href="https://www-112.ibm.com/software/howtobuy/softwareandservices/passportadvantage" target="_blank">
+      available here.
+     </a>
+    </p>
+    <p>
+     Information for installing the server, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/#!/SS8NMD_6.1.0/com.ibm.ucbuild.doc/topics/install_ch.html">
+      Installing servers and agents
+     </a>
+     section in the product documentation.
+    </p>
+    <p>
+     For information on installing and managing licenses, see
+     <a href="http://www-01.ibm.com/support/knowledgecenter/#!/SS8NMD_6.1.0/com.ibm.ucbuild.doc/topics/licenseManage.html">
+      Managing licenses
+     </a>
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="..">
+      What’s New
+     </a>
+    </p>
+    <p>
+     To learn more about IBM UrbanCode Build, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/#!/SS8NMD_6.1.0/com.ibm.ucbuild.doc/ucb61_welcome.html" target="_blank">
+      documentation
+     </a>
+    </p>
+    <p>
+     For help installing or using IBM UrbanCode Build, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+    </p>
+    <p>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

@@ -1,32 +1,502 @@
 <!DOCTYPE html>
-<html><head><title>2.5.3</title></head>
-<body>
-<p><b>This article was originaly published in 2022.02.14</b></p>
-<p><h1>2.5.3</h1></p>
-<p>This release of IBM UrbanCode Velocity is a maintenance release and includes bug fixes. This release is recommended for all customers.
-<h4>Releases</h4>
-On the <b>Releases</b> page, when you perform the following:
-<ul>
- 	<li>Click a release activity.</li>
- 	<li>Click a deployment plan.</li>
- 	<li>Click the <b>Create task</b> button.</li>
- 	<li>Click the <b>Type</b> drop-down and select <b>Email</b>.</li>
- 	<li>In the <b>Create task</b> window, fill in the required fields.</li>
- 	<li>Click the <b>Save</b> button.</li>
- 	<li>For the <b>Email</b> task, click the <b>Start task</b> icon.</li>
- 	<li>Receive the email and either click the <b>Approve</b> or <b>Reject</b> button. The default function is no security enforcement via login before task is accepted or rejected.</li>
-</ul>
-To enable the feature flag for this functionality, perform the following:
-<ul>
- 	<li>In a browser window, enter <code>HTTPS://hostname:port/featureflags</code></li>
- 	<li>In the <b>Enter a feature name to enable it</b> text field enter authorized-approval.</li>
- 	<li>Click the <b>Enable</b> button.</li>
-</ul>
-<h4>Ingress controller</h4>
-Installation issues for Kubernetes version 1.22 and later are resolved and upgrading from previous versions is recommended. Starting with Kubernetes version 1.19, the new resource type <code>IngressClass</code> is available. If your Ingress controller utilizes the <code>IngressClass</code> functionality, the default setting of <code>ingress.className="nginx"</code> works with the <code>IngressClass</code> functionality out of the box. If your Ingress controller does not utilizes the <code>IngressClass</code> functionality, specify <code>--set ingress.className=""</code> for it to properly function. <strong>Note:</strong> For Kubernetes version 1.19, the <code>networking.k8s.io/v1</code> API was added for the Ingress resource and is utilized for the IBM&#x2122; UrbanCode Velocity Ingress installation. For Kubernetes version 1.22, the previous <code>networking.k8s.io/v1beta1</code> API is deprecated and removed. For details on the differences between the <code>networking.k8s.io/v1</code> API and <code>networking.k8s.io/v1beta1</code> API, see this <a href="https://docs.konghq.com/kubernetes-ingress-controller/1.3.x/concepts/ingress-versions/">page</a>.
-<h4>OpenShift template to Helm migration</h4>
-The OpenShift template to Helm migration is planned for IBM UrbanCode Velocity version 2.5.4 when the OpenShift template installation is no longer available. At your earliest opportunity, make the required preparations for the migration to Helm. If you require additional assistance, contact <a href="https://www.ibm.com/mysupport/s/?language=en_US">support</a>.
-<h4>Security</h4>
-Fixed security vulnerability.
-</p></body>
+<html>
+ <head>
+  <title>
+   2.5.3
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2022.02.14
+   </b>
+  </p>
+  <p>
+   <h1>
+    2.5.3
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Velocity is a maintenance release and includes bug fixes. This release is recommended for all customers.
+   <h4>
+    Releases
+   </h4>
+   On the
+   <b>
+    Releases
+   </b>
+   page, when you perform the following:
+   <ul>
+    <li>
+     Click a release activity.
+    </li>
+    <li>
+     Click a deployment plan.
+    </li>
+    <li>
+     Click the
+     <b>
+      Create task
+     </b>
+     button.
+    </li>
+    <li>
+     Click the
+     <b>
+      Type
+     </b>
+     drop-down and select
+     <b>
+      Email
+     </b>
+     .
+    </li>
+    <li>
+     In the
+     <b>
+      Create task
+     </b>
+     window, fill in the required fields.
+    </li>
+    <li>
+     Click the
+     <b>
+      Save
+     </b>
+     button.
+    </li>
+    <li>
+     For the
+     <b>
+      Email
+     </b>
+     task, click the
+     <b>
+      Start task
+     </b>
+     icon.
+    </li>
+    <li>
+     Receive the email and either click the
+     <b>
+      Approve
+     </b>
+     or
+     <b>
+      Reject
+     </b>
+     button. The default function is no security enforcement via login before task is accepted or rejected.
+    </li>
+   </ul>
+   To enable the feature flag for this functionality, perform the following:
+   <ul>
+    <li>
+     In a browser window, enter
+     <code>
+      HTTPS://hostname:port/featureflags
+     </code>
+    </li>
+    <li>
+     In the
+     <b>
+      Enter a feature name to enable it
+     </b>
+     text field enter authorized-approval.
+    </li>
+    <li>
+     Click the
+     <b>
+      Enable
+     </b>
+     button.
+    </li>
+   </ul>
+   <h4>
+    Ingress controller
+   </h4>
+   Installation issues for Kubernetes version 1.22 and later are resolved and upgrading from previous versions is recommended. Starting with Kubernetes version 1.19, the new resource type
+   <code>
+    IngressClass
+   </code>
+   is available. If your Ingress controller utilizes the
+   <code>
+    IngressClass
+   </code>
+   functionality, the default setting of
+   <code>
+    ingress.className="nginx"
+   </code>
+   works with the
+   <code>
+    IngressClass
+   </code>
+   functionality out of the box. If your Ingress controller does not utilizes the
+   <code>
+    IngressClass
+   </code>
+   functionality, specify
+   <code>
+    --set ingress.className=""
+   </code>
+   for it to properly function.
+   <strong>
+    Note:
+   </strong>
+   For Kubernetes version 1.19, the
+   <code>
+    networking.k8s.io/v1
+   </code>
+   API was added for the Ingress resource and is utilized for the IBM™ UrbanCode Velocity Ingress installation. For Kubernetes version 1.22, the previous
+   <code>
+    networking.k8s.io/v1beta1
+   </code>
+   API is deprecated and removed. For details on the differences between the
+   <code>
+    networking.k8s.io/v1
+   </code>
+   API and
+   <code>
+    networking.k8s.io/v1beta1
+   </code>
+   API, see this
+   <a href="https://docs.konghq.com/kubernetes-ingress-controller/1.3.x/concepts/ingress-versions/">
+    page
+   </a>
+   .
+   <h4>
+    OpenShift template to Helm migration
+   </h4>
+   The OpenShift template to Helm migration is planned for IBM UrbanCode Velocity version 2.5.4 when the OpenShift template installation is no longer available. At your earliest opportunity, make the required preparations for the migration to Helm. If you require additional assistance, contact
+   <a href="https://www.ibm.com/mysupport/s/?language=en_US">
+    support
+   </a>
+   .
+   <h4>
+    Security
+   </h4>
+   Fixed security vulnerability.
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Releases
+    </li>
+    <li>
+     Ingress controller
+    </li>
+    <li>
+     OpenShift template to Helm migration
+    </li>
+    <li>
+     Security
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <!-- A cumulative list of fixes in this release, and any future fix packs can be found in the <a href="https://www.urbancode.com/whats-new/velocity-fixlist/" target="_blank" rel="noopener">Fixlist</a> document. -->
+   The following table is a cumulative list of fixes in the 2.5.3 version.
+   <table>
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <b>
+        Insights
+       </b>
+       page, when you perform the following:
+       <ul>
+        <li>
+         Click the
+         <b>
+          All dashboards
+         </b>
+         or
+         <b>
+          My favorites
+         </b>
+         tab.
+        </li>
+        <li>
+         Click the required dashboard.
+        </li>
+        <li>
+         Click the Add charts icon.
+        </li>
+        <li>
+         For the required chart, click the
+         <b>
+          +Add
+         </b>
+         button.
+        </li>
+        <li>
+         For the added chart, when you click the filters icon, all of the available filters for the chart are properly displayed and functioning.
+        </li>
+       </ul>
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       For deployment plans run on either the
+       <b>
+        Pipeline
+       </b>
+       or
+       <b>
+        Releases
+       </b>
+       pages, resolved issues where tasks were restarting due to parallelization of prior tasks.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <b>
+        Releases
+       </b>
+       page, when you perform the following:
+       <ul>
+        <li>
+         Click a release activity.
+        </li>
+        <li>
+         Click a deployment plan.
+        </li>
+        <li>
+         Click the
+         <b>
+          Create task
+         </b>
+         button.
+        </li>
+        <li>
+         Click the
+         <b>
+          Type
+         </b>
+         drop-down and select
+         <b>
+          Wait for approval
+         </b>
+         .
+        </li>
+        <li>
+         In the
+         <b>
+          Create task
+         </b>
+         window, fill in the required fields.
+        </li>
+        <li>
+         Click the
+         <b>
+          Save
+         </b>
+         button.
+        </li>
+        <li>
+         For the
+         <b>
+          Wait for approval
+         </b>
+         task, click the
+         <b>
+          Start task
+         </b>
+         icon.
+        </li>
+        <li>
+         Receive the email and click the
+         <b>
+          Approve
+         </b>
+         button.
+        </li>
+        <li>
+         If the email address of the approver matches the user logged into IBM™ UrbanCode Velocity, the message
+         <b>
+          You have approved this request.
+         </b>
+         is displayed.
+        </li>
+        <li>
+         If the email address of the approver does not match the user logged into IBM™ UrbanCode Velocity, the message
+         <b>
+          Your action could not be completed. Please contact support if the problem persists.
+         </b>
+         is displayed.
+        </li>
+       </ul>
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <b>
+        Releases
+       </b>
+       page, when you perform the following:
+       <ul>
+        <li>
+         Click the overflow menu for a required release activity and then click
+         <b>
+          Archive
+         </b>
+         .
+        </li>
+        <li>
+         The release activity is archived after it is clicked once.
+        </li>
+       </ul>
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       On the
+       <b>
+        Releases
+       </b>
+       page, click the following:
+       <ul>
+        <li>
+         Release activity
+        </li>
+        <li>
+         Deployment plan
+        </li>
+        <li>
+         Edit icon and the
+         <b>
+          Automatically approve the deployment
+         </b>
+         checkbox does not appear in the
+         <b>
+          Edit plan
+         </b>
+         window.
+        </li>
+       </ul>
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+      </td>
+      <td valign="bottom" width="80%">
+       Fixed security vulnerability.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan and prepare
+   </h2>
+   For supported platforms and requirements you can dynamically generate a system requirements report using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <h2>
+    Install the server
+   </h2>
+   There are two option to obtaining the installation package: online installer and offline installer. Both options require a master license key, which can be acquired from
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    IBM Passport Advantage
+   </a>
+   .
+   <h2>
+    Online installer
+   </h2>
+   The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
+
+Download the online installer package depending on the platform, the product is being installed.
+   <ul>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-linux" rel="noopener" target="_blank">
+      Linux
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-macos" rel="noopener" target="_blank">
+      Mac OS
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+      Windows
+     </a>
+    </li>
+   </ul>
+   After the download completes, start the executable file to begin the install process.
+   <h2>
+    Offline installer
+   </h2>
+   Use the offline installer to install Velocity without internet connection. You will still need internet connection at some point to download the installer itself. Once downloaded, the installer will include all containers needed to successfully install the product. For this reason, the offline installer is larger than the online installer and will require more time/bandwidth and disk space when downloading.
+
+The installation package is available from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Velocity&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    IBM Fix Central
+   </a>
+   . Search and select the installation package appropriate for the installation platform.
+
+After downloading the installation package, decompress the contents into two directories: one for Kubernetes and the other for Docker Compose. See the
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.3.x/com.ibm.uvelocity.doc/topics/c_install_se_roadmap.html" rel="noopener" target="_blank">
+    documentation section on installation
+   </a>
+   for instructions about how to install the server.
+
+A product license key is required to install the product. To obtain a key, you must agree to the terms and conditions provided on Passport Advantage.
+   <h2>
+    Learn
+   </h2>
+   To learn more about UrbanCode Velocity, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using UrbanCode Velocity, post your questions in the
+   <a href="https://community.ibm.com/community/user/middleware/communities/community-home?CommunityKey=9adfe6b6-2e23-4895-8b27-38b93b5e152c" rel="noopener" target="_blank">
+    UrbanCode forums
+   </a>
+   . Tag your question with
+   <strong>
+    velocity
+   </strong>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="https://www.ibm.com/developerworks/rfe/" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   <h2>
+    Get support
+   </h2>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

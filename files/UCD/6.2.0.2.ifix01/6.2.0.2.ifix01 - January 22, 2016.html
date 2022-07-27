@@ -1,10 +1,535 @@
 <!DOCTYPE html>
-<html><head><title>6.2.0.2.ifix01</title></head>
-<body>
-<p><b>This article was originaly published in 2016.01.22</b></p>
-<p><h1>6.2.0.2.ifix01 - January 22, 2016</h1></p>
-<p><div class="new_release_cont">
-This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.2.0.2.ifix01
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2016.01.22
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.0.2.ifix01 - January 22, 2016
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Recommended fixes for UrbanCode Deploy 6.2
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="../getting-started">
+      Getting Started
+     </a>
+     page.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Agent Compatibility Note
+    </div>
+    <ul>
+     <li>
+      Agents used to import new component versions will need to be upgraded to agent version 6.1.0.4. If older agents are used, version import tasks will fail with the following error:
+      <pre>Exception in thread "main" java/nio/charset/IllegalCharsetNameException: ${DS_SYSTEM_ENCODING}</pre>
+     </li>
+     <li>
+      Due to changes in communication, if you leverage the integration with the Rational Team Concert build, you must first upgrade your RTC server to 5.0.2.
+     </li>
+    </ul>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Agent Status Tracking Improvements
+    </div>
+    <p>
+     This release improves agent status tracking for agents connection through agent relays and in HA environments. For best results, it is necessary to upgrade agent relays. Without these upgrades, agent status tracking for agents connected through relays is unreliable.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     This release contains an updated version of the File Utils plugin. If you use the Middleware Configuration for WebSphere Application Server plugin, please ensure you upgrade to version 8.141002 of the plugin.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release, and any future fix packs can be found
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038759" target="_blank">
+      in this document
+     </a>
+     .
+    </p>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI35697" target="_blank">
+         PI35697
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ENVIRONMENT COMPARE FILE DIFFERENCE DOES NOT SHOW CORRECT RESULTS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI37889" target="_blank">
+         PI37889
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        GENERIC PROCESS REQUEST STARTED NOTIFICATION MISSING DATA
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI41304" target="_blank">
+         PI41304
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO SEE PLUGIN STEP OUTPUT WHEN THE AGENT CHANGES ENCODING BEFORE UPLOAD
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI42049" target="_blank">
+         PI42049
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PERFORMANCE DELAYS WHEN EDITING DEFAULT VALUES FOR PROPERTY DEFINITIONS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI42102" target="_blank">
+         PI42102
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ROLLBACK USING “REPLACE WITH LAST DEPLOYED” REINSTALLS INCREMENTAL VERSIONS IN WRONG ORDER
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI43232" target="_blank">
+         PI43232
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ORACLE ERROR “MAXIMUM NUMBER OF EXPRESSIONS IN A LIST IS 1000” WHEN RUNNING REPORTS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI46081" target="_blank">
+         PI46081
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PLUGIN STEP FAILS WITH NPE WHEN USING IMPERSONATION AFTER UPGRADE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI47018" target="_blank">
+         PI47018
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PERFORMANCE DELAYS WITH DATA RETRIEVAL OF SECURITY CONFIGURATIONS OR RESOURCES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI47380" target="_blank">
+         PI47380
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        NETWORKING FAILURES DURING UPGRADE TO 6.1.1.7
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI47479" target="_blank">
+         PI47479
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PLUGINS FAIL AFTER UCD URL CHANGES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI48512" target="_blank">
+         PI48512
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SPACES IN INSTALLED.PROPERTIES FROM PROPERTY VALUES CAUSE ERRORS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI49350" target="_blank">
+         PI49350
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO EXPORT A REPORT INCLUDING MULTIPLE APPLICATIONS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI49454" target="_blank">
+         PI49454
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CANCELING VERSION IMPORT DOES NOT CAUSE NEXT VERSION IMPORT TO BE STARTED
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI49565" target="_blank">
+         PI49565
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CREATING AN ENVIRONMENT FROM A BLUEPRINT FAILS WITH SQL ERROR SQLSTATE=22018
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI50051" target="_blank">
+         PI50051
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CANNOT DISTINGUISH BETWEEN MULTIPLE VERSIONS OF PATTERNS IN UCD-IPAS INTEGRATION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI50127" target="_blank">
+         PI50127
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PERFORMANCE ISSUES WHEN EDITING A PROCESS STEP WITH MANY PROPERTIES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI50304" target="_blank">
+         PI50304
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        OFFLINE AGENTS PASS CONNECTIVITY TEST AND CAN BE RESTARTED
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI50792" target="_blank">
+         PI50792
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        HIGH SERVER CPU CAUSED BY AGENT RELAY ARTIFACT CACHING
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI50946" target="_blank">
+         PI50946
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DEFAULT PARAMETERS NOT OVERRIDDEN WHEN PROVISIONING A VSYS.NEXT PATTERN
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI51084" target="_blank">
+         PI51084
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        HIGH CPU USAGE WHEN ACCESSING ENVIRONMENT RESOURCE TREE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI51601" target="_blank">
+         PI51601
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        AGENT RELAY CANNOT BE UPDATED WHEN KEYSTORE PROPERTIES ARE SET
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI51893" target="_blank">
+         PI51893
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO SET AGENT INSTALL COMPONENT ON AGENTS USING TAGS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI52147" target="_blank">
+         PI52147
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO USE SILENT INSTALL TO SET UP HIGH AVAILABILITY SERVER
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI52611" target="_blank">
+         PI52611
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SLOW PERFORMANCE OF SNAPSHOT COMPONENT VERSION PAGE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI52651" target="_blank">
+         PI52651
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SECURE DEFAULT PROPERTIES IN CLOUD INTEGRATIONS ARE OVERWRITTEN
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI53088" target="_blank">
+         PI53088
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        RABBIT.CONF.TEMPLATE IS MISSING SECTIONS THAT IS CAUSING MESSAGES TO PRINT IN RELAY LOG
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI53325" target="_blank">
+         PI53325
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ERRORS CREATING OBJECTS IN UCD
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI53939" target="_blank">
+         PI53939
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PREVIEWING SNAPSHOTS CAN NOT SHOW CHANGES PER COMPONENT AND CHANGES PER RESOURCE
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+   </div>
+   <p>
+    To search for additional post-release issues that IBM Rational Support documented, visit the
+    <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+     IBM Support portal.
+    </a>
+   </p>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.0/com.ibm.udeploy.install.doc/topics/install_ch.html" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     For advanced enterprise deployments that require high availability, review our options in the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.0" target="_blank">
+      information center.
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Deploy supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+     <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     If you’re upgrading from 6.0…
+    </div>
+    <p>
+     UrbanCode Deploy 6.1 introduced scalability enhancements to agent/server communication.
+     <strong>
+      All agent relays must be upgraded before running any deployments.
+     </strong>
+     All existing agents will continue to work without an upgrade, but they should be upgraded using the Upgrade action on the agent list in the web UI as soon as possible after upgrading.
+     <strong>
+      Any newly installed agents must be version 6.1.
+     </strong>
+     The latest agent and agent relay installers will be available on your UrbanCode Deploy server’s Tools page (in the Help menu) after the server is upgraded.
+    </p>
+    <p>
+     UrbanCode Deploy 6.1 also includes a more scalable artifact storage system. After upgrading your server, a background process will migrate artifacts into the new format. You can continue to access and deploy artifacts during this process, but
+     <strong>
+      there will need to be at least as much free disk space in the server’s var/repository directory as is currently being used by that directory
+     </strong>
+     . (If you currently have 25GB of artifacts, you need 25GB of additional free disk space.) The extra disk space is no longer needed after all artifacts have been migrated.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Install the server
+     </div>
+     <p>
+      This release is available for download from FixCentral, requiring authentication. This download is available
+      <a href="http://www.ibm.com/support/fixcentral/swg/quickorder?parent=ibm~Rational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=6.2.0.0&amp;platform=All&amp;function=all&amp;source=fc">
+       here
+      </a>
+      .
+     </p>
+     <p>
+      Information for installing the server, see the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.0/com.ibm.udeploy.install.doc/topics/install_ch.html">
+       Installing servers and agents
+      </a>
+      section in the product documentation.
+     </p>
+     <p>
+      For information on installing and managing licenses, see
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.3/com.ibm.udeploy.install.doc/topics/licenseManage.html">
+       Managing licenses
+      </a>
+     </p>
+     <div class="horizontal-rule">
+     </div>
+     <div class="subtitle">
+      Learn
+     </div>
+     <p>
+      To learn more about new enhancements in this release, see
+      <a href="..">
+       What’s New
+      </a>
+     </p>
+     <p>
+      To learn more about IBM UrbanCode Deploy, see the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.0" target="_blank">
+       documentation
+      </a>
+     </p>
+     <p>
+      For help installing or using IBM UrbanCode Deploy, post your questions in the
+      <a href="https://developer.ibm.com/answers?community=urbancode">
+       forums
+      </a>
+      or contact
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       support
+      </a>
+     </p>
+     <p>
+      To suggest an enhancement to the product, visit the
+      <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+       RFE Community
+      </a>
+     </p>
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Get support
+     </div>
+     <p>
+      For information from support, including FAQs, visit the
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+      You can configure the support portal to view information about specific products.
+     </p>
+    </div>
+   </div>
+  </p>
+ </body>
 </html>

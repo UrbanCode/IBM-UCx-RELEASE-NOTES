@@ -1,13 +1,467 @@
 <!DOCTYPE html>
-<html><head><title>7.0.2.0</title></head>
-<body>
-<p><b>This article was originaly published in 2019.02.12</b></p>
-<p><h1>7.0.2.0 - February 12, 2019</h1></p>
-<p><h3>Safe Edit</h3>
-UrbanCode Deploy 7.0.2.0 announces Safe Edit functionality. Safe Edit allows users to add change management controls to automation design. Now users can create draft processes which can be used to test a processes functionality before promoting the draft to an official version. Optionally, users can require an approval process as part of the promotion process.
+<html>
+ <head>
+  <title>
+   7.0.2.0
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2019.02.12
+   </b>
+  </p>
+  <p>
+   <h1>
+    7.0.2.0 - February 12, 2019
+   </h1>
+  </p>
+  <p>
+   <h3>
+    Safe Edit
+   </h3>
+   UrbanCode Deploy 7.0.2.0 announces Safe Edit functionality. Safe Edit allows users to add change management controls to automation design. Now users can create draft processes which can be used to test a processes functionality before promoting the draft to an official version. Optionally, users can require an approval process as part of the promotion process.
+   <strong>
+    For more information, check out our
+    <a href="https://youtu.be/5qCAGc60ubo">
+     Safe Edit Overview video.
+    </a>
+   </strong>
+   <h3>
+    Java 11
+   </h3>
+   UrbanCode Deploy 7.0.2.0 now supports Java 11. As part of this support, we have also upgraded our Groovy libraries to 2.4.15
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Safe Edit
+    </li>
+    <li>
+     Java 11
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <span style="font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 1.75rem;">
+    Fixes in this Release
+   </span>
+   <div class="key-features">
+    A cumulative list of fixes in this release, and any future fix packs can be found
+    <a href="/urbancode/products/urbancode-deploy/whats-new/fix-list/" rel="noopener" target="_blank">
+     in this document
+    </a>
+    .
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH08701" rel="noopener" target="_blank">
+         PH08701
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        INSTALL AGENT USING “WEB” COMMUNICATION FAILS WITH ERROR JAVA.LANG.INDEXOUTOFBOUNDSEXCEPTION ON ZOS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH07944" rel="noopener" target="_blank">
+         PH07944
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CIPHER SUITES SHOULD BE CONFIGURED TO USE NEW ECLIPSE JETTY
+UPDATE IN 7.0.1.2
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH05713" rel="noopener" target="_blank">
+         PH05713
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        /{ROLE}/ACTIONMAPPINGS “GET” REST ENDPOINT IS SHOWING
+ALSO INFORMATION OF DELETED TYPES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH05675" rel="noopener" target="_blank">
+         PH05675
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ON ANY UCD OBJECT CONFIGURATION, USER IS ARE ABLE TO ADD ALL
+CONFIGURATION TYPES.
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH04193" rel="noopener" target="_blank">
+         PH04193
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        RESOURCE FILE COMPARISON DEFAULTS TO FILE DIFF ON EMPTY PROPERTY
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH03367" rel="noopener" target="_blank">
+         PH03367
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        THE TOOLTIP FOR REQUIRED ROLE ON AN APPLICATION PROCESS IS
+MISLEADING
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH02711" rel="noopener" target="_blank">
+         PH02711
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        A REQUIRED ROLE FOR A PROCESS FROM A COMPONENT TEMPLATE IS NOT
+EXPORTED/IMPORTED
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH02289" rel="noopener" target="_blank">
+         PH02289
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PROPERTIES NOT CREATED BY /CLI/PROCESS/CREATE AND
+CREATEGENERICPROCESS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH01979" rel="noopener" target="_blank">
+         PH01979
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        MULTIPLE COMPONENT ROLLBACK ON 2ND ATTEMPT ROLLS BACK TO CURRENT
+VERSION BEING DEPLOYED
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH01822" rel="noopener" target="_blank">
+         PH01822
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        NULL POINTER EXCEPTION ON THE LOCK PAGE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH01603" rel="noopener" target="_blank">
+         PH01603
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ERRORS IN THE CLI ARE SENT TO SYSTEM OUT RATHER THAN SYSTEM
+ERROR
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH01438" rel="noopener" target="_blank">
+         PH01438
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PERFORMANCE ISSUES WITH LARGE NUMBER OF BASE RESOURCES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI87950" rel="noopener" target="_blank">
+         PI87950
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        EXECUTING UNZIP STEP ON UCD AGENT ON A .ZIP FILE LARGER THAN
+4GB FAILS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI60348" rel="noopener" target="_blank">
+         PI60348
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DOWNLOAD ARTIFACTS FAILS WHEN ARTIFACT SET IS VERY LARGE AND
+USING AGENT RELAY
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h3>
+    </h3>
+    <h3>
+     Known Problems and Workarounds
+    </h3>
+    To search for additional post-release issues that IBM Rational Support documented, visit the
+    <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" rel="noopener" target="_blank">
+     IBM Support portal.
+    </a>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Upgrade Notes
+   </h2>
+   <h3>
+    Starting in 7.0.2.0
+   </h3>
+   All customers should note that with the UrbanCode Deploy 7.0.2.0 release,
+   <strong>
+    we are officially announcing end of support for Java 6 and Java 7 on February 17th, 2020
+   </strong>
+   UrbanCode Deploy now supports Java 11, and as part of that support we upgraded the version of Groovy we support from 1.8.8 to 2.4.15. If you have customer plugins that statically reference the groovy libraries shipped within the UrbanCode product, you will need to update those references or else your plugin steps will fail on newly installed agents.
 
-<strong>For more information, check out our <a href="https://youtu.be/5qCAGc60ubo">Safe Edit Overview video.</a></strong>
-<h3>Java 11</h3>
-UrbanCode Deploy 7.0.2.0 now supports Java 11. As part of this support, we have also upgraded our Groovy libraries to 2.4.15
-</p></body>
+For customers who are planning to upgrade to Java 11: If you choose to move off of Oracle Java and move to AdoptOpenJDK, you will need to modify the set_env file to remove the “endorsed dir” entry, as it is not supported in the AdoptOpenJDK JVM.
+
+Also, we would like to let our customers know that in our testing we discovered that users who are using MariaDB can no longer use MySQL drivers due to a change between MySQL and MariaDB. Please ensure you are using the correct database drivers.
+   <h3>
+    Starting in 7.0.1.0
+   </h3>
+   UrbanCode Deploy 7.0.1.0 introduces the concept of Agent Configuration Templates (which are used in migrating agents from JMS communication to the new WEB communication). This upgrade did not grant the System Team access to Agent Configuration Templates. Users will need to grant these permissions to if users on that team wish to access the functionality.
+
+It should also be noted that some of the servers code station metadata has been migrated to the database. Specifically, it is the content of the $APPDATA/var/repository/ptr directory. This stores the association between component versions and artifact blob files. This resolves some server-side performance issues that negatively impacted relay codestation cache cleanup. The old data files are preserved without modification to support upgrade rollback. However, they are not updated going forward. This means that a later rollback would break new, post-upgrade version artifact associations (blobs files would remain but would be inaccessible).
+   <h3>
+    Starting in 7.0.0.0
+   </h3>
+   UrbanCode Deploy 7.0 introduces new functionality that allows you to add process change management to your deployment processes. This functionality is still in BETA, and we are actively looking for customer feedback. If you would like to access a cloud instance of UCD, to use and provide feedback without having to set it up, please reach out to your IBM representative and let them know!
+
+UrbanCode Deploy 7.0 also introduces new server/agent communication protocols.
+   <ul>
+    <li style="margin-left: 30px;">
+     For new installations of the Deploy server users will be prompted for additional information unconditionally (all new installs will default to the web socket protocol).
+    </li>
+    <li style="margin-left: 30px;">
+     When installing new Deploy agents, users will be asked for their preference, either JMS or web sockets. The default is web.
+    </li>
+    <li style="margin-left: 30px;">
+     When upgrading the Deploy server, the user will be prompted for additional information to support the web socket protocol, however, no agents will change communication protocols as part of the upgrade.
+    </li>
+    <li style="margin-left: 30px;">
+     An interactive (manual) upgrade of an agent will also prompt for new information to support the web sockets protocol. Upgrading through the web-ui will upgrade existing agents and keep them on the current server/agent communication (JMS)
+    </li>
+    <li style="margin-left: 30px;">
+     It should be noted that in all scenarios, UrbanCode Deploy supports running both the new agent communication (web sockets) with the older model (JMS) in parallel.
+    </li>
+   </ul>
+   <h3>
+    Starting in 6.2.7.1
+   </h3>
+   API-breaking changes have been made to the supported REST endpoints that set properties in UCD, affecting the following endpoints:
+   <ul>
+    <li style="margin-left: 30px;">
+     setAgentProperty
+    </li>
+    <li style="margin-left: 30px;">
+     setApplicationProperty
+    </li>
+    <li style="margin-left: 30px;">
+     setComponentEnvironmentProperty
+    </li>
+    <li style="margin-left: 30px;">
+     setComponentProperty
+    </li>
+    <li style="margin-left: 30px;">
+     setEnvironmentProperty
+    </li>
+    <li style="margin-left: 30px;">
+     setResourceProperty
+    </li>
+    <li style="margin-left: 30px;">
+     setSystemProperty
+    </li>
+    <li style="margin-left: 30px;">
+     setVersionProperty
+    </li>
+   </ul>
+   Any scripts that need to set properties on components, agents, the system, processes, process requests, applications, or environments will need to be adjusted. Previously, the request parameters could be specified on the command line as parameters,
+   <strong>
+    but now we no longer accept request parameters for security reasons
+   </strong>
+   . Instead, the correct behavior now is now to pass a JSON file containing the specified parameters with the command. Consult the
+   <a href="https://www.ibm.com/support/knowledgecenter/SS4GSP_6.2.7/com.ibm.udeploy.api.doc/topics/rest_cli_environment_propvalue_put.html" rel="noopener" target="_blank">
+    documentation
+   </a>
+   for the new syntax.
+
+Also, because of these API changes, the plugins that set properties in UCD are not backwards compatible. In the following list of plugins, any plugin version before the version listed is not compatible with UCD 6.2.7.1 or later, and and any plugin version after the version listed is not compatible with 6.2.7.0 or earlier. On upgrading to UCD 6.2.7.1, the plugins will automatically be updated to a supported version. However, using old versions of processes that are locked in snapshots or downgrading the UCD plugin version may cause steps to fail.
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="50%">
+       Plugin
+      </td>
+      <td valign="bottom" width="50%">
+       6.2.7.1+ compatible versions
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="50%">
+       IBM UrbanCode Deploy Applications
+      </td>
+      <td valign="bottom" width="50%">
+       77+
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="50%">
+       IBM UrbanCode Deploy Components
+      </td>
+      <td valign="bottom" width="50%">
+       71+
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="50%">
+       IBM UrbanCode Deploy Environments
+      </td>
+      <td valign="bottom" width="50%">
+       77+
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="50%">
+       IBM UrbanCode Deploy Resources
+      </td>
+      <td valign="bottom" width="50%">
+       74+
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h3>
+    <b>
+    </b>
+    Starting in 6.2.5.2
+   </h3>
+   Starting the server for the first time may take longer than usual. For very large installations, allow an extra hour for the first server startup. Subsequent startups will take the regular amount of time.
+
+Users now do not receive notifications based on their membership in a role on the System Team. Users will have to be added to the correct role on a different team as well to receive notifications.
+
+The server now deletes all contents of the var/temp directory on server startup.
+   <h3>
+    Starting in 6.2.5.1
+   </h3>
+   Process requests from deleted environments will now be deleted. To keep process requests from deleted environments, add this property to the installed.properties file: com.urbancode.ds.cleanup.HistoryCleanup.disableDeletedEnvironmentCleanup=true
+   <h3>
+    Starting in 6.2.5.0
+   </h3>
+   The UCD_SESSION_KEY header has been renamed to UCD_CSRF_TOKEN. The previous name is also accepted until 6.3 when it will be removed from the product.
+
+Users now require the “Execute” permission on agents in order to run processes against them. All existing user roles will receive this permission when upgrading from a version before 6.2.5.0. When upgrading, ensure that any user that needs to execute processes is on the same team as the agents required to run those processes.
+   <h3>
+    Starting in 6.2.4.0
+   </h3>
+   You must upgrade Agent Relays when upgrading from a version below 6.2.4.0. Also, the TLS protocol 3DES is no longer supported.
+
+After upgrading from before 6.2.4.0, users will not be able to view or delete agent relays until they have been granted permission to those relays. Relays that existed before the upgrade are only added to the System Team by default. For users to view agent relays, a user with Manage Security permission should give the correct roles the new For relays that existed before the upgrade, a user with Manage Security permissions will have to add the agent relays to the correct teams and give the correct roles the Agent Relay view and edit permissions.
+
+When upgrading an IBM UrbanCode Deploy agent, end-to-end JMS encryption will automatically be enabled on all agents. In order for agent communication to function properly with end-to-end encryption enabled, the IBM UrbanCode Deploy server and agent clocks need to be synchronized to within a few minutes. To disable this feature, add the line
+   <code>
+    agent.jms.disable_full_encryption=true
+   </code>
+   ” to the agent’s
+   <code>
+    conf/agent/installed.properties
+   </code>
+   file before upgrading the agent.
+   <h3>
+    Starting in 6.2.3.0
+   </h3>
+   If you are upgrading from version 6.2.3.0 and earlier, servers and relays must be upgraded at the same time. Agents connected through relays may not connect successfully until both server and relay are upgraded. This is due to an incompatibility between versions of an library used by UCD.
+
+Starting in 6.2.3.0, authentication tokens will be obfuscated in the UI and REST API after their initial creation. Scripts and users will only be able to retrieve the full authentication token immediately after creating it.
+
+The silent install of the IBM UrbanCode Deploy server hangs when prompting for the value of the server installation directory (
+   <code>
+    install.server.dir
+   </code>
+   ). To workaround the problem, run the following instead of calling
+   <code>
+    ./install-server.sh
+   </code>
+   directly:
+   <code>
+    echo "" &gt; answerFile.txt echo "" &gt;&gt; answerFile.txt ./install-server.sh &lt; answerFile.txt (or install-server.bat &lt; answerFile.txt for Windows installations)
+   </code>
+   <h3>
+    Starting in 6.2.2.0
+   </h3>
+   The IBM UrbanCode Deploy server and agent relays now require a Java Runtime Environment (JRE) or Java Development Kit (JDK) version 8. If you are updating or changing the JRE to the latest version, see
+   <a href="http://www.ibm.com/support/knowledgecenter/en/SS4GSP_6.2.4/com.ibm.udeploy.doc/topics/jre_change.html#jre_change" rel="noopener" target="_blank">
+    Changing or updating the JRE of servers
+   </a>
+   and
+   <a href="http://www.ibm.com/support/knowledgecenter/en/SS4GSP_6.2.4/com.ibm.udeploy.doc/topics/update_JRE_agent_relays.html#update_JRE_agent_relays" rel="noopener" target="_blank">
+    Updating the JRE location for agent relays
+   </a>
+   for instructions. For documentation on the IBM JRE, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SSYKE2/welcome_javasdk_family.html" rel="noopener" target="_blank">
+    IBM SDK, Java Technology Edition
+   </a>
+   .
+   <h3>
+    Starting in 6.2.1.1
+   </h3>
+   To ensure that all secure property values are obscured, the values of all properties in the history for existing deployments are obscured. In the deployment history for deployments that you run after you upgrade, only secure properties are obscured in the logs.
+
+New security features erase old component version import logs to hide secure information. If you want to keep the logs, in the installed.properties file, set the
+   <strong>
+    com.urbancode.ds.cleanup.sourceConfig.fullCleanupSkip
+   </strong>
+   property to
+   <strong>
+    true
+   </strong>
+   .
+   <h3>
+    Plan &amp; Prepare
+   </h3>
+   For fixes contained in this release, and any known issues, review the
+   <a href="../release-notes">
+    release notes
+   </a>
+   .
+
+For supported platforms and requirements, see the reports that can be dynamically generated using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <strong>
+    Note:
+   </strong>
+   Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+
+To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_7.0.2/com.ibm.udeploy.install.doc/topics/install_ch.html">
+    installation guide
+   </a>
+   .
+  </p>
+ </body>
 </html>

@@ -1,35 +1,260 @@
 <!DOCTYPE html>
-<html><head><title>2.6.0</title></head>
-<body>
-<p><b>This article was originaly published in 2022.06.01</b></p>
-<p><h1>2.6.0</h1></p>
-<p>This release of IBM UrbanCode Velocity is a major release and includes bug fixes. This release is recommended for all customers.
-<h4>Value streams</h4>
-<ul>
- 	<li><strong>Background service:</strong> Kubernetes and OpenShift installations can see the significant change in performance and stability of the application. Segregating the value stream metrics calculation based on the data complexity helped to improve the performance and stability.</li>
-	<li><strong>Quick filters search:</strong> You can use search bar for searching through <strong>Releases</strong>, <strong>Sprints</strong>, <strong>Types</strong>, and <strong>Priority</strong>.</li>
+<html>
+ <head>
+  <title>
+   2.6.0
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2022.06.01
+   </b>
+  </p>
+  <p>
+   <h1>
+    2.6.0
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Velocity is a major release and includes bug fixes. This release is recommended for all customers.
+   <h4>
+    Value streams
+   </h4>
+   <ul>
+    <li>
+     <strong>
+      Background service:
+     </strong>
+     Kubernetes and OpenShift installations can see the significant change in performance and stability of the application. Segregating the value stream metrics calculation based on the data complexity helped to improve the performance and stability.
+    </li>
+    <li>
+     <strong>
+      Quick filters search:
+     </strong>
+     You can use search bar for searching through
+     <strong>
+      Releases
+     </strong>
+     ,
+     <strong>
+      Sprints
+     </strong>
+     ,
+     <strong>
+      Types
+     </strong>
+     , and
+     <strong>
+      Priority
+     </strong>
+     .
+    </li>
+   </ul>
+   <h4>
+    Pipelines
+   </h4>
+   <ul>
+    <li>
+     Improved performance to handle large data in pipelines.
+    </li>
+   </ul>
+   <h4>
+    Releases
+   </h4>
+   <ul>
+    <li>
+     <strong>
+      RabbitMQ:
+     </strong>
+     Improved various RabbitMQ request to improve performance in Releases and Deployment plan.
+    </li>
+    <li>
+     <strong>
+      Approving wait for approval task:
+     </strong>
+     Wait for approval task can be approved or rejected by designated or not designated user. For more information, see this
+     <a href="https://www.ibm.com/docs/en/urbancode-velocity/2.6.x?topic=tasks-creating-wait-approval" rel="noopener" target="_blank">
+      page
+     </a>
+     .
+    </li>
+    <li>
+     <strong>
+      Release stories:
+     </strong>
+     Release stories are removed temporarily for the enhancement purpose. You can used
+     <strong>
+      Release readiness report
+     </strong>
+     for viewing the issues of the releases.
+    </li>
+   </ul>
+   <h4>
+    MongoDB
+   </h4>
+   <ul>
+    <li>
+     MongoDB version 4.0 is no longer supported. For Docker Compose, MongoDB version 4.2 is installed and upgraded automatically. For Kubernetes and OpenShift installations, you need to install or upgrade MongoDB to a supported version separately.
+    </li>
+   </ul>
+   <h4>
+    OpenShift installation using service template
+   </h4>
+   <ul>
+    OpenShift installation using service template is no longer supported and removed from installer. You can migrate your OpenShift installation to Helm charts during your upgrade to version 2.6.0. or later. For more information, see this
+    <a href="https://www.ibm.com/docs/en/urbancode-velocity/2.6.x?topic=migrating-openshift-template-installation-helm-charts" rel="noopener" target="_blank">
+     page
+    </a>
+    . For assistance with migration, contact
+    <a href="https://www.ibm.com/mysupport" rel="noopener" target="_blank">
+     support
+    </a>
+    .
+   </ul>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Value streams
+    </li>
+    <li>
+     Pipelines
+    </li>
+    <li>
+     Releases
+    </li>
+    <li>
+     MongoDB
+    </li>
+    <li>
+     OpenShift installation using service template
+     <li>
+      Bug fixes
+     </li>
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   The following table is a cumulative list of fixes in the 2.6.0 version.
+   <table>
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI99877">
+        PI99877
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       CR-UI SERVER CRASHING.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h3>
+    Known problems and workarounds
+   </h3>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www.ibm.com/mysupport/s/?language=en_US" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan and prepare
+   </h2>
+   For supported platforms and requirements you can dynamically generate a system requirements report using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <h2>
+    Install the server
+   </h2>
+   There are two option to obtaining the installation package: online installer and offline installer. Both options require a master license key, which can be acquired from
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    IBM Passport Advantage
+   </a>
+   .
+   <h2>
+    Online installer
+   </h2>
+   The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
 
- 	
-</ul>
-<h4>Pipelines</h4>
-<ul>
- 	<li>Improved performance to handle large data in pipelines.</li>
-</ul>
+Download the online installer package depending on the platform, the product is being installed.
+   <ul>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-linux" rel="noopener" target="_blank">
+      Linux
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-macos" rel="noopener" target="_blank">
+      Mac OS
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+      Windows
+     </a>
+    </li>
+   </ul>
+   After the download completes, start the executable file to begin the install process.
+   <h2>
+    Offline installer
+   </h2>
+   Use the offline installer to install Velocity without internet connection. You will still need internet connection at some point to download the installer itself. Once downloaded, the installer will include all containers needed to successfully install the product. For this reason, the offline installer is larger than the online installer and will require more time/bandwidth and disk space when downloading.
 
-<h4>Releases</h4>
-<ul>
- 	<li><strong>RabbitMQ:</strong> Improved various RabbitMQ request to improve performance in Releases and Deployment plan.</li>
-	<li><strong>Approving wait for approval task:</strong> Wait for approval task can be approved or rejected by designated or not designated user. For more information, see this <a href="https://www.ibm.com/docs/en/urbancode-velocity/2.6.x?topic=tasks-creating-wait-approval" rel="noopener" target="_blank">page</a> .</li>
-	<li><strong>Release stories:</strong> Release stories are removed temporarily for the enhancement purpose. You can used <strong>Release readiness report</strong> for viewing the issues of the releases.</li>
-</ul>
+The installation package is available from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Velocity&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    IBM Fix Central
+   </a>
+   . Search and select the installation package appropriate for the installation platform.
 
-<h4>MongoDB</h4>
-<ul>	<li>MongoDB version 4.0 is no longer supported. For Docker Compose, MongoDB version 4.2 is installed and upgraded automatically. For Kubernetes and OpenShift installations, you need to install or upgrade MongoDB to a supported version separately.</li>
+After downloading the installation package, decompress the contents into two directories: one for Kubernetes and the other for Docker Compose. See the
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.3.x/com.ibm.uvelocity.doc/topics/c_install_se_roadmap.html" rel="noopener" target="_blank">
+    documentation section on installation
+   </a>
+   for instructions about how to install the server.
 
-</ul>
+A product license key is required to install the product. To obtain a key, you must agree to the terms and conditions provided on Passport Advantage.
+   <h2>
+    Learn
+   </h2>
+   To learn more about UrbanCode Velocity, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
 
-<h4>OpenShift installation using service template</h4>
+For help installing or using UrbanCode Velocity, post your questions in the
+   <a href="https://community.ibm.com/community/user/middleware/communities/community-home?CommunityKey=9adfe6b6-2e23-4895-8b27-38b93b5e152c" rel="noopener" target="_blank">
+    UrbanCode forums
+   </a>
+   . Tag your question with
+   <strong>
+    velocity
+   </strong>
+   .
 
-<ul> OpenShift installation using service template is no longer supported and removed from installer. You can migrate your OpenShift installation to Helm charts during your upgrade to version 2.6.0. or later. For more information, see this <a href="https://www.ibm.com/docs/en/urbancode-velocity/2.6.x?topic=migrating-openshift-template-installation-helm-charts" target="_blank" rel="noopener">page</a>. For assistance with migration, contact <a href="https://www.ibm.com/mysupport" target="_blank" rel="noopener">support</a>.</ul>
-</p></body>
+To suggest an enhancement to the product, visit the
+   <a href="https://www.ibm.com/developerworks/rfe/" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   <h2>
+    Get support
+   </h2>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

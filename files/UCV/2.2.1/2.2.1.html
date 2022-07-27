@@ -1,38 +1,280 @@
 <!DOCTYPE html>
-<html><head><title>2.2.1</title></head>
-<body>
-<p><b>This article was originaly published in 2021.01.14</b></p>
-<p><h1>2.2.1</h1></p>
-<p>This release of IBM UrbanCode Velocity is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
-<h2>Key Features and Enhancements</h2>
-<dl>
- 	<dt>Documentation improvement</dt>
- 	<dd>Documentation for several Insight metric as been updated for clarity. See <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.1.x/com.ibm.uvelocity.doc/topics/port_interpretdata.html" target="_blank" rel="noopener">Insights metric chart reference</a>.</dd>
-</dl>
-<!-- issue 2079 -->
-<dl>
- 	<dt>Software updates</dt>
- 	<dd>
-<ul>
- 	<li>RabbitMQ upgraded to version 3.8.9</li>
- 	<li>Nginx upgraded to version 1.19</li>
-</ul>
-</dd>
- 	<dt>Bug fixes</dt>
- 	<dd>
-<ul>
- 	<li>All associated applications are deleted when deleting a pipeline.</li>
- 	<li>When deleting an integration, a confirmation dialogue is displayed before the deletion is completed.</li>
- 	<li>The The pre-install.yaml file has been renamed to pre-install-for-cluster.yml.</li>
- 	<li>When copying a release all templates are copied.</li>
- 	<li>When installing on OpenShift version 4.4 and later, the OpenShift templates no longer need to be manually modified prior to installation.</li>
- 	<li>Performance improvements made for faster loading of the Home page.</li>
- 	<li>Selecting versions for a deployment template displays its own values versus those of a previously selected version.</li>
- 	<li>LDAP connections timing out corrected with added reconnect setting to the client.</li>
- 	<li>Permission needed to create cluster resources and to create resources at the namespace level permission is needed at the namespace level.</li>
-</ul>
-</dd>
-</dl>
-<strong>Note:</strong> Red Hat dropped support for OpenShift version 4.3 in December 2020. Beginning with this release, it is no longer supported in UrbanCode Velocity.
-</p></body>
+<html>
+ <head>
+  <title>
+   2.2.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2021.01.14
+   </b>
+  </p>
+  <p>
+   <h1>
+    2.2.1
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Velocity is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <h2>
+    Key Features and Enhancements
+   </h2>
+   <dl>
+    <dt>
+     Documentation improvement
+    </dt>
+    <dd>
+     Documentation for several Insight metric as been updated for clarity. See
+     <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.1.x/com.ibm.uvelocity.doc/topics/port_interpretdata.html" rel="noopener" target="_blank">
+      Insights metric chart reference
+     </a>
+     .
+    </dd>
+   </dl>
+   <!-- issue 2079 -->
+   <dl>
+    <dt>
+     Software updates
+    </dt>
+    <dd>
+     <ul>
+      <li>
+       RabbitMQ upgraded to version 3.8.9
+      </li>
+      <li>
+       Nginx upgraded to version 1.19
+      </li>
+     </ul>
+    </dd>
+    <dt>
+     Bug fixes
+    </dt>
+    <dd>
+     <ul>
+      <li>
+       All associated applications are deleted when deleting a pipeline.
+      </li>
+      <li>
+       When deleting an integration, a confirmation dialogue is displayed before the deletion is completed.
+      </li>
+      <li>
+       The The pre-install.yaml file has been renamed to pre-install-for-cluster.yml.
+      </li>
+      <li>
+       When copying a release all templates are copied.
+      </li>
+      <li>
+       When installing on OpenShift version 4.4 and later, the OpenShift templates no longer need to be manually modified prior to installation.
+      </li>
+      <li>
+       Performance improvements made for faster loading of the Home page.
+      </li>
+      <li>
+       Selecting versions for a deployment template displays its own values versus those of a previously selected version.
+      </li>
+      <li>
+       LDAP connections timing out corrected with added reconnect setting to the client.
+      </li>
+      <li>
+       Permission needed to create cluster resources and to create resources at the namespace level permission is needed at the namespace level.
+      </li>
+     </ul>
+    </dd>
+   </dl>
+   <strong>
+    Note:
+   </strong>
+   Red Hat dropped support for OpenShift version 4.3 in December 2020. Beginning with this release, it is no longer supported in UrbanCode Velocity.
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     RabbitMQ upgraded to version 3.8.9
+    </li>
+    <li>
+     Nginx upgraded to version 1.19
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   The following table is a cumulative list of fixes in the 2.0.x
+version stream.
+   <table>
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99806
+      </td>
+      <td valign="bottom" width="80%">
+       Velocity 1.5.1 Upgrade could Prevent Access to Deployment Plans and Reports (Fixed with v1.5.2)
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99820
+      </td>
+      <td valign="bottom" width="80%">
+       Delete app option in release pipeline deletes all other apps
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99820
+      </td>
+      <td valign="bottom" width="80%">
+       Deployment template tasks get deleted when pipeline app is deleted
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99811
+      </td>
+      <td valign="bottom" width="80%">
+       Add initContainer to kube config so release-events-api is last to start
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99814
+      </td>
+      <td valign="bottom" width="80%">
+       Force lowercase for emails imported from UCD – AMF
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99817
+      </td>
+      <td valign="bottom" width="80%">
+       Can schedule or join a release on pipeline of Jenkins apps if any of the deploy stage app have not yet run cell
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99809
+      </td>
+      <td valign="bottom" width="80%">
+       Safely downgrade customers from CE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99805
+      </td>
+      <td valign="bottom" width="80%">
+       Fixed Jenkins plugin that could break Jenkins Server
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99803
+      </td>
+      <td valign="bottom" width="80%">
+       Fixes a performance issue that could occur when integrating with an UrbanCode Deploy version older than v7.0.5.1
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan and prepare
+   </h2>
+   For supported platforms and requirements you can dynamically
+generate a system requirements report using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <h2>
+    Install the server
+   </h2>
+   There are two option to obtaining the installation package: online installer and offline installer. Both options require a master license key, which can be acquired from
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    IBM Passport Advantage
+   </a>
+   .
+   <h2>
+    Online installer
+   </h2>
+   The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
+
+Download the online installer package depending on the platform, the product is being installed.
+   <ul>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-linux" rel="noopener" target="_blank">
+      Linux
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-macos" rel="noopener" target="_blank">
+      Mac OS
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+      Windows
+     </a>
+    </li>
+   </ul>
+   After the download completes, start the executable file to begin the install process.
+   <h2>
+    Offline installer
+   </h2>
+   Use the offline installer to install Velocity without internet connection. You will still need internet connection at some point to download the installer itself. Once downloaded, the installer will include all containers needed to successfully install the product. For this reason, the offline installer is larger than the online installer and will require more time/bandwidth and disk space when downloading.
+
+The installation package is available from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Velocity&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    IBM Fix Central
+   </a>
+   . Search and select the installation package appropriate for the installation platform.
+
+After downloading the installation package, decompress the contents into two directories: one for Kubernetes and the other for Docker Compose. See the
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.1.x/com.ibm.uvelocity.doc/topics/c_install_se_roadmap.html">
+    documentation section on installation
+   </a>
+   for instructions about how to install the server.
+
+A product license key is required to install the product. To obtain a key, you must agree to the terms and conditions provided on Passport Advantage.
+   <h2>
+    Learn
+   </h2>
+   To learn more about UrbanCode Velocity, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using UrbanCode Velocity, post your questions in the
+   <a href="https://community.ibm.com/community/user/middleware/communities/community-home?CommunityKey=9adfe6b6-2e23-4895-8b27-38b93b5e152c" rel="noopener" target="_blank">
+    UrbanCode forums
+   </a>
+   . Tag your question with
+   <strong>
+    velocity
+   </strong>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="https://www.ibm.com/developerworks/rfe/" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   <h2>
+    Get support
+   </h2>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

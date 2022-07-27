@@ -1,38 +1,428 @@
 <!DOCTYPE html>
-<html><head><title>7.1.0</title></head>
-<body>
-<p><b>This article was originaly published in 2020.06.18</b></p>
-<p><h1>7.1.0</h1></p>
-<p>This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
-<h3>Deployment triggers</h3>
-On the Environment configuration page, you can configure deployment triggers on an environment. The deployment trigger causes the specified App Proc Request to run whenever a specified component imports a new version. This results in deploying the newly imported version automatically to all environments that have configured triggers.
+<html>
+ <head>
+  <title>
+   7.1.0
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2020.06.18
+   </b>
+  </p>
+  <p>
+   <h1>
+    7.1.0
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Deploy is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <h3>
+    Deployment triggers
+   </h3>
+   On the Environment configuration page, you can configure deployment triggers on an environment. The deployment trigger causes the specified App Proc Request to run whenever a specified component imports a new version. This results in deploying the newly imported version automatically to all environments that have configured triggers.
+   <iframe allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/v5iwRvhI8P8" width="560">
+   </iframe>
+   This feature replaces the run process after version import functionality on a component.
+   <h3>
+   </h3>
+   <h3>
+    External approval process
+   </h3>
+   The external approval process is a pre-deployment process that allows or prevents the deployment from running based on the status of the external approval process. The process runs on an agent and has access to all plug-in steps. This feature can be used for or reaching out to change management systems. Access to the feature is on the Environment Configuration page under Require approvals.
+   <iframe allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/bPu2iEYioAo" width="560">
+   </iframe>
+   <h3>
+   </h3>
+   <h3>
+    Server cluster management improvements
+   </h3>
+   Server to server communication now uses the new websocket communication technology. Front end servers are now displayed on the Networks tab. Additionally, connectivity status for all servers in a cluster can be viewed on the Networks tab.
+   <h3>
+   </h3>
+   <h3>
+    Resource tree performance improvements
+   </h3>
+   The performance when loading many resources has been improved.
+   <h3>
+   </h3>
+   <h3>
+    Merge z/OS Version
+   </h3>
+   Incremental z/OS versions can be consolidated into a single version. The most recent files are kept and older files of the same name/extension are replaced by the most recent version. Only version that follow the new z/OS package format can be merged. Merge versions can be accessed through the Snapshots page.
+   <h3>
+   </h3>
+   <h3>
+    Deployment Wizard
+   </h3>
+   The new Deployment Dialog page improves the process of requesting an application. The page includes four sections: Process + property selection, version selection, scheduling, and review. The final review section allows you to verify all inputs before starting your deployment.
+   <h3>
+   </h3>
+   <h3>
+    Enhancements to containers
+   </h3>
+   The following enhancements added to UrbanCode Deploy containers.
+   <ul>
+    <li>
+     Kubernetes Operator Models for Agent, Relay, and Server
+    </li>
+    <li>
+     Helm V3 support (no need for Tiller!)
+    </li>
+    <li>
+     You can now configure the file system group ID used when accessing persistent storage required for deployment of the UrbanCode Deploy server, agent and agent relays.  This support is important for multi-cloud environments where the persistent storage support may differ in implementation and require the use of a specific file system group ID.
+    </li>
+    <li>
+     The Openshift plug-in now supports OpenShift Container Platform 4.x. In addition, new plug-in steps have been added to provide a complete integration scenario.
+    </li>
+   </ul>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Deployment triggers
+    </li>
+    <li>
+     Resource tree performance improvements
+    </li>
+    <li>
+     External approval process
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h2>
+    Fixes
+   </h2>
+   A cumulative list of fixes in this release, and any future fix packs can be found in the
+   <a href="https://www.urbancode.com/whats-new/deployfixlist/" rel="noopener" target="_blank">
+    Fixlist
+   </a>
+   document.
+   <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH25819" rel="noopener" target="_blank">
+        PH25819
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       WHEN USING JAVA 11 NOTIFICATION EMAILS ARE NOT SENT
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH24868" rel="noopener" target="_blank">
+        PH24868
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       EDITING CONFIGURATION ON AGENT RESOURCES FROM A NON-ADMIN ACCOUNT FAILS WITH THE ERROR ‘TX IS NOT ACTIVE’
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH24747" rel="noopener" target="_blank">
+        PH24747
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       MERGING INCREMENTAL ZOS COMPONENT VERSIONS FAILS WITH XMLSTREAMEXCEPTION
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH24083" rel="noopener" target="_blank">
+        PH24083
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       BINARY CONFIG ZOS AGENTS FAIL TO RESTART AFTER THE UPGRADE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH23051" rel="noopener" target="_blank">
+        PH23051
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       "INHERIT TEAMS FROM PARENT” ON RESOURCE TREE KEEPS TEAMS EDITABLE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH22980" rel="noopener" target="_blank">
+        PH22980
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       When creating a component, the DIALOG DOES NOT ALLOW USERS TO ASSIGN THE CORRECT TEAMS IF CREATING FROM A TEMPLATE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH22889" rel="noopener" target="_blank">
+        PH22889
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       Removing entry in Cluster Members Configuration required restart of other servers in cluster
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH22782" rel="noopener" target="_blank">
+        PH22782
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       TOPOLOGY SYNC DOES NOT EXCLUDE GHOSTED AGENTS
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH21970" rel="noopener" target="_blank">
+        PH21970
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       COMPONENT DEPLOYMENT HISTORY CLEANUP RECORDS END DATE NEVER SET
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH21828" rel="noopener" target="_blank">
+        PH21828
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       COMPONENT PROCESS PROPERTY’S SECURE VALUES ARE OUTPUT AS ***** IN PLACE OF TEXT WHEN RUN VIA APP =&gt; COMPONENT =&gt; RUN PROCESS
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH21351" rel="noopener" target="_blank">
+        PH21351
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       VALIDATION FOR COMPONENT PROCESS NAME IS FAILING DUE TO TAB CHARACTER.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH20030" rel="noopener" target="_blank">
+        PH20030
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UNABLE TO ADD THE VERSION STATUS WITH “/” IN THE NAME TO A COMPONENT VERSION
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH19492" rel="noopener" target="_blank">
+        PH19492
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       LARGE NUMBER OF APPLICATION TEMPLATE VERSIONS MAKES LOADING THE COMBOBOX VERY SLOW TO SELECT VERSION FOR EDITING APPLICATION
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH19472" rel="noopener" target="_blank">
+        PH19472
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UPGRADE OF UCD FAILS IF THE ‘MANAGE PROPERTIES’ PERMISSION ALREADY EXISTS ON THE ‘UC AUTO DISCOVERY’ ROLE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH19280" rel="noopener" target="_blank">
+        PH19280
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       COMPONENT PROCESS SAVED WITH PROCESS TYPE THAT REQUIRES INVENTORY STATUS IS ABLE TO BE SAVED WITHOUT INVENTORY STATUS
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH19199" rel="noopener" target="_blank">
+        PH19199
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       ARTIFACT UPLOAD FAILS DUE TO FAILURE TO DELETE TEMPORARY STAGING DIRECTORY
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH17403" rel="noopener" target="_blank">
+        PH17403
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       URBANCODE DEPLOY SNAPSHOT ADD COMPONENT VERSION FILTERING NOT WORKING.
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH17107" rel="noopener" target="_blank">
+        PH17107
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       UCD database is growing quickly with JMS Agent records in the VC_PERSISTENT_RECORD TABLE
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH16457" rel="noopener" target="_blank">
+        PH16457
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       “INSTALL TEMPLATE” OF UCD CONFIGURATION MANAGEMENT PLUGIN GIVES NULLPOINTER WHEN NO CONFIG TEMPLATE IS PRESENT
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH08897" rel="noopener" target="_blank">
+        PH08897
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       RUN PROCESS AFTER A VERSION IS CREATED WILL RUN THE PROCESS AS ADMIN AND CANNOT BE RESTRICTED
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH01547" rel="noopener" target="_blank">
+        PH01547
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       LONG VERSION NAMES CAN NOT BE DELETED FROM THE COMPONENT VERSIONS SELECTION
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH91434" rel="noopener" target="_blank">
+        PH91434
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       PH91434 UCD WINDOWS SERVICE START FAILS: ‘…JAVA.LANG.UNSATISFIEDLINKERROR: RCL_IBMRATL (NOT FOUND IN JAVA.LIBRARY.PATH)’
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH163236" rel="noopener" target="_blank">
+        PH163236
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       LAUNCHING PROCESSES SLOW ON DB2
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH157054" rel="noopener" target="_blank">
+        PH157054
+       </a>
+      </td>
+      <td valign="bottom" width="80%">
+       COMPONENT OR APPLICATION PROCESS DESIGN PRINT PREVIEW GIVES BLANK TAB IN BROWSER IE11
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   For fixes contained in this release, and any known issues, click the
+   <strong>
+    Release Notes
+   </strong>
+   tab.
 
-<iframe src="https://www.youtube.com/embed/v5iwRvhI8P8" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-This feature replaces the run process after version import functionality on a component.
-<h3></h3>
-<h3>External approval process</h3>
-The external approval process is a pre-deployment process that allows or prevents the deployment from running based on the status of the external approval process. The process runs on an agent and has access to all plug-in steps. This feature can be used for or reaching out to change management systems. Access to the feature is on the Environment Configuration page under Require approvals.
-<iframe src="https://www.youtube.com/embed/bPu2iEYioAo" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-<h3></h3>
-<h3>Server cluster management improvements</h3>
-Server to server communication now uses the new websocket communication technology. Front end servers are now displayed on the Networks tab. Additionally, connectivity status for all servers in a cluster can be viewed on the Networks tab.
-<h3></h3>
-<h3>Resource tree performance improvements</h3>
-The performance when loading many resources has been improved.
-<h3></h3>
-<h3>Merge z/OS Version</h3>
-Incremental z/OS versions can be consolidated into a single version. The most recent files are kept and older files of the same name/extension are replaced by the most recent version. Only version that follow the new z/OS package format can be merged. Merge versions can be accessed through the Snapshots page.
-<h3></h3>
-<h3>Deployment Wizard</h3>
-The new Deployment Dialog page improves the process of requesting an application. The page includes four sections: Process + property selection, version selection, scheduling, and review. The final review section allows you to verify all inputs before starting your deployment.
-<h3></h3>
-<h3>Enhancements to containers</h3>
-The following enhancements added to UrbanCode Deploy containers.
-<ul>
- 	<li>Kubernetes Operator Models for Agent, Relay, and Server</li>
- 	<li>Helm V3 support (no need for Tiller!)</li>
- 	<li>You can now configure the file system group ID used when accessing persistent storage required for deployment of the UrbanCode Deploy server, agent and agent relays.  This support is important for multi-cloud environments where the persistent storage support may differ in implementation and require the use of a specific file system group ID.</li>
- 	<li>The Openshift plug-in now supports OpenShift Container Platform 4.x. In addition, new plug-in steps have been added to provide a complete integration scenario.</li>
-</ul>
-</p></body>
+For supported platforms and requirements, see the reports that can be dynamically generated using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <strong>
+    Note:
+   </strong>
+   Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+
+To get started quickly, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+   <a href="https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Rational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    Fix Central
+   </a>
+   , requiring authentication.
+
+Information for installing the server, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_7.1.0/com.ibm.udeploy.install.doc/topics/install_ch.html" rel="noopener" target="_blank">
+    Installing server
+   </a>
+   section in the product documentation.
+
+For information on installing licenses, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SS4GSP_7.1.0/com.ibm.udeploy.doc/topics/licenseManage.html" rel="noopener" target="_blank">
+    Managing Licenses
+   </a>
+   .
+   <h3>
+    Learn
+   </h3>
+   To learn more about new enhancements in this release, click the
+   <strong>
+    What’s New
+   </strong>
+   tab.
+
+To learn more about IBM UrbanCode Deploy, see the
+   <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_7.1.0/com.ibm.udeploy.doc/ucd_version_welcome.html" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using IBM UrbanCode Deploy, post your questions in the
+   <a href="https://developer.ibm.com/answers?community=urbancode" rel="noopener" target="_blank">
+    forums
+   </a>
+   or contact
+   <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+    support
+   </a>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   .
+   <h3>
+    Get support
+   </h3>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

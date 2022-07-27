@@ -1,18 +1,262 @@
 <!DOCTYPE html>
-<html><head><title>6.1.1.11</title></head>
-<body>
-<p><b>This article was originaly published in 2015.08.31</b></p>
-<p><h1>6.1.1.11 - August 31, 2015</h1></p>
-<p><div class="new_release_cont">This release of IBM UrbanCode Release is a maintenance release containing bug fixes and performance improvements.</div>
-<div class="new_release_cont">
-<h2>Improved Scheduled Deployments Caching Strategy (Server Side)</h2>
-<p>Scheduled Deployments are cached on the server side and will load faster. The first load of a scheduled deployment will load the data from the database and save it in the cache. Subsequent loads should get the data from the cache. Any changes made to the plan will trigger a refresh of the cache and all users will load the new version of the scheduled deployment plan directly from the cache.<br/>
-Now even plans with hundreds of tasks should load quickly and UCR will scale far better for  large number of users. This will significantly improve the user experience and save resources by limiting expensive load of data.</p>
-<p> </p>
-<h2>Faster Load of Scheduled Deployments (Client Side)</h2>
-<p>Segments are now drawn asynchronously in order to display scheduled deployment plans faster.</p>
-<p><a href="asynchronousloading.png"><img alt="asynchronousloading" class="alignnone wp-image-18675 " height="469" sizes="(max-width: 576px) 100vw, 576px" src="asynchronousloading.png" srcset="asynchronousloading-1024x833.png 1024w, asynchronousloading-300x244.png 300w, asynchronousloading.png 1116w" width="576"/></a></p>
-</div>
-<p> </p>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.1.11
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2015.08.31
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.1.11 - August 31, 2015
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Release is a maintenance release containing bug fixes and performance improvements.
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Improved Scheduled Deployments Caching Strategy (Server Side)
+    </h2>
+    <p>
+     Scheduled Deployments are cached on the server side and will load faster. The first load of a scheduled deployment will load the data from the database and save it in the cache. Subsequent loads should get the data from the cache. Any changes made to the plan will trigger a refresh of the cache and all users will load the new version of the scheduled deployment plan directly from the cache.
+     <br/>
+     Now even plans with hundreds of tasks should load quickly and UCR will scale far better for  large number of users. This will significantly improve the user experience and save resources by limiting expensive load of data.
+    </p>
+    <p>
+    </p>
+    <h2>
+     Faster Load of Scheduled Deployments (Client Side)
+    </h2>
+    <p>
+     Segments are now drawn asynchronously in order to display scheduled deployment plans faster.
+    </p>
+    <p>
+     <a href="asynchronousloading.png">
+      <img alt="asynchronousloading" class="alignnone wp-image-18675" height="469" sizes="(max-width: 576px) 100vw, 576px" src="asynchronousloading.png" srcset="asynchronousloading-1024x833.png 1024w, asynchronousloading-300x244.png 300w, asynchronousloading.png 1116w" width="576"/>
+     </a>
+    </p>
+   </div>
+   <p>
+   </p>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Performance Improvements
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started/">
+     Getting Started
+    </a>
+    page.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Installation Notes
+    </div>
+    <p>
+     No new installation notes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     No major behavioral changes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Fixes in this Release
+     </div>
+     <p>
+      A cumulative list of fixes in this release, and any future fix packs will be available.
+     </p>
+    </div>
+    <div class="key-features">
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         APAR/defect
+        </td>
+        <td valign="bottom" width="78%">
+         Description
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI47644" target="_blank">
+          PI47644
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         UPDATING THE RECURRING RULE TIME WON’T BE REFLECTED ON THE CALENDAR
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI47634" target="_blank">
+          PI47634
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         EDITING THE PHASE NAME OR DESCRIPTION FOR A LIFECYCLE CAN CHANGE THE ORDER OF THE PHASES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI47639" target="_blank">
+          PI47639
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         ADDING A GATE ON A NEWLY CREATED PHASE ON A LIFECYCLE CAN ADD PHASES FROM OTHER LIFECYCLES TO THE CURRENT LIFECYCLE
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+        </td>
+        <td valign="bottom" width="78%">
+         PERFORMANCE IMPROVED ON APPLICATION PROCESS IMPORT WITH THE DEPLOY INTEGRATION PLUGIN
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+        </td>
+        <td valign="bottom" width="78%">
+         IF AN APPLICATION PROCESS USED IN SOME DEPLOYMENTS HAS BEEN REMOVED IN DEPLOY, THEY WILL BE DISPLAYED AS NOT APPLICABLE AND WON’T BE RUNNABLE ANYMORE
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+     </div>
+     <div class="subtitle">
+      Known Problems and Workarounds
+     </div>
+     <p>
+      To search for additional post-release issues that IBM Rational Support documented, visit the
+      <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+     </p>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes/">
+      release notes
+     </a>
+     . For supported platforms and requirements, see the
+     <a href="http://www-03.ibm.com/software/products/en/ucrel#tab_othertab1" target="_blank">
+      system requirements
+     </a>
+     . To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/topics/install_ov.html">
+      installation guide
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release requires IBM Installation Manager version 1.8.0 or later for installation. See
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg24036814">
+      download document
+     </a>
+     for details on this download. This release is available for download on Fix Central for current customers, requiring authentication. This download is
+     <a href="http://www-933.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=fixId&amp;fixids=6.1.1.11-UrbanCode-Release&amp;includeRequisites=1&amp;includeSupersedes=0&amp;downloadMethod=http">
+      available here.
+     </a>
+     Information for installing the server, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/topics/install_ov.html">
+      Installing server
+     </a>
+     section in the product documentation.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="../">
+      What’s New
+     </a>
+     To learn more about IBM UrbanCode Release, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/ucr61_welcome.html" target="_blank">
+      documentation
+     </a>
+     For help installing or using IBM UrbanCode Release, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

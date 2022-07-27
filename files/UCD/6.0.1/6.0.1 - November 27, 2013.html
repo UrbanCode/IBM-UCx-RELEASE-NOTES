@@ -1,44 +1,617 @@
 <!DOCTYPE html>
-<html><head><title>6.0.1</title></head>
-<body>
-<p><b>This article was originaly published in 2013.11.27</b></p>
-<p><h1>6.0.1 - November 27, 2013</h1></p>
-<p><p>IBM UrbanCode Deploy 6.0.1, formally uDeploy, provides a number of key new features and capabilities alongside significant usability enhancements.</p>
-<div class="new_release_cont">
-<h2>New and Updated Integrations</h2>
-<ul>
-<li><strong>z/OS support</strong>: This release is begins our work integrating UrbanCode Deploy with z/OS. This expanded z/OS support using Rexx scripts to extend deployable target environments of your multi-tier applications</li>
-<li><strong>More flavors of WebSphere: </strong>Portal, BPM, and Liberty Profile plugins were all released alongside updates to the core WebSphere Application Server plugin.</li>
-<li><strong></strong><strong>WebSphere Configuration:</strong> A new plugin delivers capabilities focused on capturing, comparing and promoting WebSphere configuration alongside applications.</li>
-<li><strong><b>Other notable updated integrations: </b></strong>JBoss, ServiceNow, Windows Failover Clusters, and Rational Team Concert (Work Items) integrations all received updates.</li>
-</ul>
-</div>
-<div class="new_release_cont">
-<h2>Property Autocomplete</h2>
-<p><img alt="Property Autocomplete" class="alignright size-medium wp-image-681 screenshot" height="270" src="autocomplete.png" width="266"/></p>
-<p>In UrbanCode Deploy, properties are a big deal. They help us parameterize things so that a process works on various targets or environment or versions. Ever forget the capitalization used in the property name? Or its scope? Or whether words were separated by a dash or period?</p>
-<p>Now you don’t have to worry about typos or forgetting the name of something. With autocomplete, simply start typing a reference to a property and a number of suggestions will appear. This is simple, and very nice change to the experience of using UrbanCode Deploy.</p>
-</div>
-<div class="new_release_cont">
-<h2>Historical Inventory</h2>
-<p>What was in QA last week? Answering that question used to take a bit of snooping around. You would basically look at the history of deployments into QA and could reverse engineer the state at any time.</p>
-<p>The IBM UrbanCode Team thought that the tool could do that work for you and provide a clear historical view of what versions of any component where in which application environments when. It looks like this:</p>
-<p><a href="historical-inventory.png"><img alt="historical-inventory" class="alignleft size-medium wp-image-4614" height="172" sizes="(max-width: 300px) 100vw, 300px" src="historical-inventory.png" srcset="historical-inventory-300x172.png 300w, historical-inventory-1024x590.png 1024w, historical-inventory.png 1541w" width="300"/></a><br/> This view can always provide some insights into how versions tend to flow through environments. Altogether less work than piecing it together yourself.</p>
-</div>
-<div class="new_release_cont">
-<h2>More and Better Comparisons</h2>
-<p>A big focus in IBM UrbanCode Deploy is keeping track of what is where. Our clients love to compare various elements and we are regularly adding more comparisons views. 6.0.1 brings the latest batch of new view.</p>
-<p>When comparing environments or snapshots, it’s now easier to view differences in properties at various scopes. The deeper property comparisons extends to deployment previews as well. It’ll now show which properties on which resources (deployment targets) will be updated as part of the deployment.</p>
-<p><a href="comparisons.png"><img alt="comparisons" class="alignleft size-medium wp-image-4615" height="228" sizes="(max-width: 300px) 100vw, 300px" src="comparisons.png" srcset="comparisons-300x228.png 300w, comparisons-1024x780.png 1024w, comparisons.png 1298w" width="300"/></a></p>
-<p>Finally, we’ve taken the environment level File comparison to the next level. While it’s identified which files changed in the past, UrbanCode Deploy will now provide a graphical diff for text files.</p>
-</div>
-<div class="new_release_cont">
-<h2>Tagging support for applications, components, and agents</h2>
-<p>To provide additional flexibility to your deployments, we have now enhanced UrbanCode Deploy to allow for tags to be added to applications, components and agents. You can then define your process to deploy based on applied tags. For more ideas on how to leverage this capability, <a href="https://developer.ibm.com/urbancode/docs/blue-green-deployments-using-tags-ibm-urbancode-deploy/">review this doc</a>.</p>
-</div>
-<div class="new_release_cont">
-<h2>Artifact Sources are now Plugins</h2>
-<p>We’re excited that now the “source configs” that define how IBM UrbanCode Deploy discovers and imports files to deploy are now plugins just like automation steps. The easy wins are the standard plugin benefits. New versions of the integrations can be loaded without upgrading the application or restarting and our customers can create their own source types. The work of checking for new versions of components has also been offloaded away from the master server and onto the agents.</p>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.0.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2013.11.27
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.0.1 - November 27, 2013
+   </h1>
+  </p>
+  <p>
+   <p>
+    IBM UrbanCode Deploy 6.0.1, formally uDeploy, provides a number of key new features and capabilities alongside significant usability enhancements.
+   </p>
+   <div class="new_release_cont">
+    <h2>
+     New and Updated Integrations
+    </h2>
+    <ul>
+     <li>
+      <strong>
+       z/OS support
+      </strong>
+      : This release is begins our work integrating UrbanCode Deploy with z/OS. This expanded z/OS support using Rexx scripts to extend deployable target environments of your multi-tier applications
+     </li>
+     <li>
+      <strong>
+       More flavors of WebSphere:
+      </strong>
+      Portal, BPM, and Liberty Profile plugins were all released alongside updates to the core WebSphere Application Server plugin.
+     </li>
+     <li>
+      <strong>
+      </strong>
+      <strong>
+       WebSphere Configuration:
+      </strong>
+      A new plugin delivers capabilities focused on capturing, comparing and promoting WebSphere configuration alongside applications.
+     </li>
+     <li>
+      <strong>
+       <b>
+        Other notable updated integrations:
+       </b>
+      </strong>
+      JBoss, ServiceNow, Windows Failover Clusters, and Rational Team Concert (Work Items) integrations all received updates.
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Property Autocomplete
+    </h2>
+    <p>
+     <img alt="Property Autocomplete" class="alignright size-medium wp-image-681 screenshot" height="270" src="autocomplete-296x300.png" width="266"/>
+    </p>
+    <p>
+     In UrbanCode Deploy, properties are a big deal. They help us parameterize things so that a process works on various targets or environment or versions. Ever forget the capitalization used in the property name? Or its scope? Or whether words were separated by a dash or period?
+    </p>
+    <p>
+     Now you don’t have to worry about typos or forgetting the name of something. With autocomplete, simply start typing a reference to a property and a number of suggestions will appear. This is simple, and very nice change to the experience of using UrbanCode Deploy.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Historical Inventory
+    </h2>
+    <p>
+     What was in QA last week? Answering that question used to take a bit of snooping around. You would basically look at the history of deployments into QA and could reverse engineer the state at any time.
+    </p>
+    <p>
+     The IBM UrbanCode Team thought that the tool could do that work for you and provide a clear historical view of what versions of any component where in which application environments when. It looks like this:
+    </p>
+    <p>
+     <a href="historical-inventory.png">
+      <img alt="historical-inventory" class="alignleft size-medium wp-image-4614" height="172" sizes="(max-width: 300px) 100vw, 300px" src="historical-inventory.png" srcset="historical-inventory-300x172.png 300w, historical-inventory-1024x590.png 1024w, historical-inventory.png 1541w" width="300"/>
+     </a>
+     <br/>
+     This view can always provide some insights into how versions tend to flow through environments. Altogether less work than piecing it together yourself.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     More and Better Comparisons
+    </h2>
+    <p>
+     A big focus in IBM UrbanCode Deploy is keeping track of what is where. Our clients love to compare various elements and we are regularly adding more comparisons views. 6.0.1 brings the latest batch of new view.
+    </p>
+    <p>
+     When comparing environments or snapshots, it’s now easier to view differences in properties at various scopes. The deeper property comparisons extends to deployment previews as well. It’ll now show which properties on which resources (deployment targets) will be updated as part of the deployment.
+    </p>
+    <p>
+     <a href="comparisons.png">
+      <img alt="comparisons" class="alignleft size-medium wp-image-4615" height="228" sizes="(max-width: 300px) 100vw, 300px" src="comparisons.png" srcset="comparisons-300x228.png 300w, comparisons-1024x780.png 1024w, comparisons.png 1298w" width="300"/>
+     </a>
+    </p>
+    <p>
+     Finally, we’ve taken the environment level File comparison to the next level. While it’s identified which files changed in the past, UrbanCode Deploy will now provide a graphical diff for text files.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Tagging support for applications, components, and agents
+    </h2>
+    <p>
+     To provide additional flexibility to your deployments, we have now enhanced UrbanCode Deploy to allow for tags to be added to applications, components and agents. You can then define your process to deploy based on applied tags. For more ideas on how to leverage this capability,
+     <a href="https://developer.ibm.com/urbancode/docs/blue-green-deployments-using-tags-ibm-urbancode-deploy/">
+      review this doc
+     </a>
+     .
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Artifact Sources are now Plugins
+    </h2>
+    <p>
+     We’re excited that now the “source configs” that define how IBM UrbanCode Deploy discovers and imports files to deploy are now plugins just like automation steps. The easy wins are the standard plugin benefits. New versions of the integrations can be loaded without upgrading the application or restarting and our customers can create their own source types. The work of checking for new versions of components has also been offloaded away from the master server and onto the agents.
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Autocomplete properties
+    </li>
+    <li>
+     Visualize the historical inventory of environments
+    </li>
+    <li>
+     z/OS deployments leveraging Rexx scripts
+    </li>
+    <li>
+     And so much more...
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     This release of UrbanCode Deploy 6.0.1 contains new features, quality improvements, and updates to supported platforms, as described in the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+      system requirements
+     </a>
+    </p>
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="https://www.ibm.com/cloud/urbancodewhats-new/whats-new-6-0-1/#getting-started">
+      Getting Started
+     </a>
+     page.
+    </p>
+    <p>
+     This release has been superseded. We recommend installing the latest fix pack to ensure you have all known fixes.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     Source configs have been extracted from the server and now run on the agents. Most continue to be installed by default with the server, but to ensure you have the latest fixes, review the
+     <a href="http://developer.ibm.com/urbancode/plugins/ibm-urbancode-deploy/">
+      Plug-ins page
+     </a>
+     for the latest versions.
+    </p>
+    <p>
+     When upgrading from IBM UrbanCode Deploy v6.0, the install topology now requires the IBM License Key Server.  Please see the installation documentation for this release for details.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    A cumulative list of fixes in this release, and any future fix packs can be found
+    <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038759#601" target="_blank">
+     in this document
+    </a>
+    .
+    <table border="0" cellpadding="0" cellspacing="0" class="ibm-data-table ibm-alternate" role="list" rules="">
+     <thead>
+     </thead>
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        APAR
+       </td>
+       <td valign="bottom" width="80%">
+        Description
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI04903" target="_blank">
+         PI04903
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CreateEnvironmentProperty requires the application even with environment ID
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        17602
+       </td>
+       <td valign="bottom" width="80%">
+        Attempts to change (add, edit, delete) teams for top level resource groups are not saved
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        17926
+       </td>
+       <td valign="bottom" width="80%">
+        Error "Javax.net.ssl.sslpeerunverifiedexception: peer not authenticated" after upgrade
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        18066
+       </td>
+       <td valign="bottom" width="80%">
+        Attempts to expand the approvals on the approval process tab results in the approvals not expanding
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        18474
+       </td>
+       <td valign="bottom" width="80%">
+        Security configuration does not propagate to resources in the group
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        18489
+       </td>
+       <td valign="bottom" width="80%">
+        Attempts to deploy a file whose name consists of double byte characters results in garbled file name
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        19392
+       </td>
+       <td valign="bottom" width="80%">
+        Running a report results in null pointer exception
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        19491
+       </td>
+       <td valign="bottom" width="80%">
+        Resource group read and execute permissions are not inherited by resources in the group
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        19914
+       </td>
+       <td valign="bottom" width="80%">
+        Attempts to open a template component process after upgrading to uDeploy 5.0 results in a null pointer exception
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        26008
+       </td>
+       <td valign="bottom" width="80%">
+        User without read permissions on resource sees "An error has occurred" on dashboard when generic process is running
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        26030
+       </td>
+       <td valign="bottom" width="80%">
+        Deleting a role required to make an approval breaks work items tab
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        26978
+       </td>
+       <td valign="bottom" width="80%">
+        Prompting unnecessarily for non-required properties
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        27619
+       </td>
+       <td valign="bottom" width="80%">
+        Clean up results in java exception errors "Error removing reference for SHA-256{DF8448DFB2***C7D820}
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28349
+       </td>
+       <td valign="bottom" width="80%">
+        Windows failover clusters v.3.343297 reports success even when cluster resource fails to come online
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28373
+       </td>
+       <td valign="bottom" width="80%">
+        Environment component properties are being set to default value during import of application
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28375
+       </td>
+       <td valign="bottom" width="80%">
+        Download artifacts throws "Blob not found for HASH SHA-XXXXXXXXXX
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28391
+       </td>
+       <td valign="bottom" width="80%">
+        Attempts to view a component's property results in the properties current value being returned, not the value during deployment
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28470
+       </td>
+       <td valign="bottom" width="80%">
+        Even if the preference is selected as UK for the locale settings, date format stays in the US format
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28526
+       </td>
+       <td valign="bottom" width="80%">
+        DS_SA_message constraint violation
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28527
+       </td>
+       <td valign="bottom" width="80%">
+        Servers in HA can't handle version file import session failover
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28529
+       </td>
+       <td valign="bottom" width="80%">
+        Removing a user is somehow deleting the row instead of setting the ghosted date
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28584
+       </td>
+       <td valign="bottom" width="80%">
+        Two lockable objects can be created with the same name
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28591
+       </td>
+       <td valign="bottom" width="80%">
+        Resource property inheritance is incorrect
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28621
+       </td>
+       <td valign="bottom" width="80%">
+        The output of a component export is incomplete
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28721
+       </td>
+       <td valign="bottom" width="80%">
+        Agent status reported incorrectly when an agent relay goes offline
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28722
+       </td>
+       <td valign="bottom" width="80%">
+        CLI requestapplicationprocess command cannot schedule for 12:00 PM to 1:00 PM
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        28733
+       </td>
+       <td valign="bottom" width="80%">
+        Duplicate emails being sent for application process success
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        29252
+       </td>
+       <td valign="bottom" width="80%">
+        Component template process design configuration tab missing options to configure basic process settings
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        29356
+       </td>
+       <td valign="bottom" width="80%">
+        uDeploy starts up but web UI service ports intermittently not showing up on uDeploy server
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        29411
+       </td>
+       <td valign="bottom" width="80%">
+        Special characters in fields prevent components and environments from loading
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        29570
+       </td>
+       <td valign="bottom" width="80%">
+        Role configuration is not persistent
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        29775
+       </td>
+       <td valign="bottom" width="80%">
+        Exporting a component template that contains the run component process step causes a null pointer exception
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        30877
+       </td>
+       <td valign="bottom" width="80%">
+        Application process runs indefinitely after rejecting manual task
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        31073
+       </td>
+       <td valign="bottom" width="80%">
+        Clicking on the audit link causes java out of memory errors
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+    <p>
+     Some upgrade issues have been identified and fixed in later fixpacks. If you are starting to plan your upgrade, please select the latest fixpack.
+    </p>
+   </div>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="https://www.ibm.com/cloud/urbancodewhats-new/whats-new-6-0-1/#release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://pic.dhe.ibm.com/infocenter/ucdeploy/v6r0m1/index.jsp" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     For advanced enterprise deployments that require high availability, review our options in the
+     <a href="http://pic.dhe.ibm.com/infocenter/ucdeploy/v6r0m1/index.jsp" target="_blank">
+      information center.
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Deploy supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+     <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release is available for download for Passport Advantage and Passport Advantage Express clients, requiring authentication. This download is
+     <a href="https://www-112.ibm.com/software/howtobuy/softwareandservices/passportadvantage" target="_blank">
+      available here.
+     </a>
+    </p>
+    <p>
+     Information for installing the server, see the
+     <a href="http://pic.dhe.ibm.com/infocenter/ucdeploy/v6r0m1/topic/com.ibm.udeploy.install.doc/topics/install_ch.html">
+      Installing servers and agents
+     </a>
+     section in the product documentation.
+    </p>
+    <p>
+     For information on installing and managing licenses, see
+     <a href="http://pic.dhe.ibm.com/infocenter/ucdeploy/v6r0m1/topic/com.ibm.udeploy.install.doc/topics/licenseManage.html">
+      Managing licenses
+     </a>
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    To learn more about new enhancements in this release, see
+    <a href="https://www.ibm.com/cloud/urbancodewhats-new/whats-new-6-0-1/#whats-new">
+     What’s New
+    </a>
+    <p>
+    </p>
+    <p>
+     To learn more about IBM UrbanCode Deploy, see the
+     <a href="http://pic.dhe.ibm.com/infocenter/ucdeploy/v6r0m1/index.jsp" target="_blank">
+      documentation
+     </a>
+    </p>
+    <p>
+     For help installing or using IBM UrbanCode Deploy, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+    </p>
+    <p>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

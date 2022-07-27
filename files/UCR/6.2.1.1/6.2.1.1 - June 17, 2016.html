@@ -1,21 +1,327 @@
 <!DOCTYPE html>
-<html><head><title>6.2.1.1</title></head>
-<body>
-<p><b>This article was originaly published in 2016.06.17</b></p>
-<p><h1>6.2.1.1 - June 17, 2016</h1></p>
-<p><div class="new_release_cont">IBM UrbanCode Release 6.2.1.1 is a <span>Fix Pack release containing performance improvements and bug fixes.</span></div>
-<div class="new_release_cont">
-<h2>Force Redeployment Option</h2>
-<p>A new option is available for both scheduled deployments and recurring deployments called “Force Redeployment”.  Deployments that autoselect versions will no longer select a version if the latest version passing gates and matching filters is the currently deployed version.  It will now select nothing instead.  If you enable the new force redeployment option, the deployment will select the latest version as it did in prior versions of IBM UrbanCode Release.  All existing deployments will have force redeployment enabled but this option will be disabled by default for all newly created deployments.  Along with this new option when creating a deployment, you can also see who selected each version from the Applications &amp; Versions tab. </p>
-<h2>Additional timing information on Scheduled Deployments</h2>
-<p>After a deployment is completed, the clock widget displays the end time as well as the total time<br/>
-Example dashboard:<br/>
-<a href="6211-timing.png"><img alt="UCR 6211 timing" class="alignnone size-medium wp-image-24472" sizes="(max-width: 1262px) 100vw, 1262px" src="6211-timing.png" srcset="6211-timing.png 1262w, 6211-timing-300x44.png 300w, 6211-timing-1024x151.png 1024w"/></a></p>
-<h2>Version Creation Date on Pipeline</h2>
-<p>Versions on the pipeline view will now display when they were created.<br/>
-<a href="6211-pipeline.png"><img alt="UCR 6.2.1.1 Pipeline Versions" class="alignnone size-medium wp-image-24473" sizes="(max-width: 946px) 100vw, 946px" src="6211-pipeline.png" srcset="6211-pipeline.png 946w, 6211-pipeline-300x159.png 300w"/></a></p>
-<h2>Auto refresh on related deployments</h2>
-<p>Widgets on the related deployment dashboard will refresh automatically.
-</p></div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.2.1.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2016.06.17
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.1.1 - June 17, 2016
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    IBM UrbanCode Release 6.2.1.1 is a
+    <span>
+     Fix Pack release containing performance improvements and bug fixes.
+    </span>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Force Redeployment Option
+    </h2>
+    <p>
+     A new option is available for both scheduled deployments and recurring deployments called “Force Redeployment”.  Deployments that autoselect versions will no longer select a version if the latest version passing gates and matching filters is the currently deployed version.  It will now select nothing instead.  If you enable the new force redeployment option, the deployment will select the latest version as it did in prior versions of IBM UrbanCode Release.  All existing deployments will have force redeployment enabled but this option will be disabled by default for all newly created deployments.  Along with this new option when creating a deployment, you can also see who selected each version from the Applications &amp; Versions tab.
+    </p>
+    <h2>
+     Additional timing information on Scheduled Deployments
+    </h2>
+    <p>
+     After a deployment is completed, the clock widget displays the end time as well as the total time
+     <br/>
+     Example dashboard:
+     <br/>
+     <a href="6211-timing.png">
+      <img alt="UCR 6211 timing" class="alignnone size-medium wp-image-24472" sizes="(max-width: 1262px) 100vw, 1262px" src="6211-timing.png" srcset="6211-timing.png 1262w, 6211-timing-300x44.png 300w, 6211-timing-1024x151.png 1024w"/>
+     </a>
+    </p>
+    <h2>
+     Version Creation Date on Pipeline
+    </h2>
+    <p>
+     Versions on the pipeline view will now display when they were created.
+     <br/>
+     <a href="6211-pipeline.png">
+      <img alt="UCR 6.2.1.1 Pipeline Versions" class="alignnone size-medium wp-image-24473" sizes="(max-width: 946px) 100vw, 946px" src="6211-pipeline.png" srcset="6211-pipeline.png 946w, 6211-pipeline-300x159.png 300w"/>
+     </a>
+    </p>
+    <h2>
+     Auto refresh on related deployments
+    </h2>
+    <p>
+     Widgets on the related deployment dashboard will refresh automatically.
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Force Redeployment Option
+    </li>
+    <li>
+     Performance Improvements
+    </li>
+    <li>
+     Bug Fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started/">
+     Getting Started
+    </a>
+    page.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Installation Notes
+    </div>
+    <p>
+     No new installation notes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     No major behavioral changes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Fixes in this Release
+     </div>
+     <p>
+      A cumulative list of fixes in this release, and any future fix packs will be available.
+     </p>
+    </div>
+    <div class="key-features">
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         APAR/defect
+        </td>
+        <td valign="bottom" width="78%">
+         Description
+        </td>
+       </tr>
+       <tr valign="top">
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI63764" target="_blank">
+          PI63764
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fix security vulnerabilities
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI61833" target="_blank">
+          PI61833
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fix failure to execute recurring deployments duplicated in startup
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI63668" target="_blank">
+          PI63668
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Task drop down not displaying after deployment is started
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI15784" target="_blank">
+          PI15784
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Don’t allow deployments to be scheduled to a deleted release environment
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI56148" target="_blank">
+          PI56148
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Don’t display blank page when switching between enterprise views
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI50037" target="_blank">
+          PI50037
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Improved performance on environment reservation creation
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI60638" target="_blank">
+          PI60638
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Load list of environments faster in environment reservation dialog
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI62649" target="_blank">
+          PI62649
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Fix tasks imported from application process templates
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI63585" target="_blank">
+          PI63585
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         Prevent list of version quality statuses from being staled due to caching
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+     </div>
+     <div class="subtitle">
+      Known Problems and Workarounds
+     </div>
+     <p>
+      To search for additional post-release issues that IBM Rational Support documented, visit the
+      <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+     </p>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes/">
+      release notes
+     </a>
+     . For supported platforms and requirements, see the
+     <a href="http://www-03.ibm.com/software/products/en/ucrel#tab_othertab1" target="_blank">
+      system requirements
+     </a>
+     . To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.1/com.ibm.urelease.doc/topics/install_ov.html">
+      installation guide
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release requires IBM Installation Manager version 1.8.0 or later for installation. See
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg24036814">
+      download document
+     </a>
+     for details on this download. This release is available for download on Fix Central for current customers, requiring authentication. This download is
+     <a href="http://www-933.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=fixId&amp;fixids=6.2.1.1-UrbanCode-Release&amp;includeRequisites=1&amp;includeSupersedes=0&amp;downloadMethod=http">
+      available here.
+     </a>
+     Information for installing the server, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.1/com.ibm.urelease.doc/topics/install_ov.html">
+      Installing server
+     </a>
+     section in the product documentation.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="../">
+      What’s New
+     </a>
+     To learn more about IBM UrbanCode Release, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.2.1/com.ibm.urelease.doc/ucr_version_welcome.html" target="_blank">
+      documentation
+     </a>
+     For help installing or using IBM UrbanCode Release, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

@@ -1,25 +1,428 @@
 <!DOCTYPE html>
-<html><head><title>6.1.1.2</title></head>
-<body>
-<p><b>This article was originaly published in 2015.02.20</b></p>
-<p><h1>6.1.1.2 - February 20, 2015</h1></p>
-<p><div class="new_release_cont">
-<strong><em>Beta</em></strong> <p></p>
-<h2>Discover, Compare, and Apply Middleware Configuration<br/>
-</h2>
-<p>Using the new WAS Configuration plugin, configuration of a WebSphere Application Server cell can be imported into the resource tree. Once the configuration has been discovered, users can create or modify objects or apply a template to create standardized configuration. Configuration in the resource tree can also be compared with live configuration in WAS and applied back to the WAS instance to update the live configuration.
-</p>
-<p><b>Getting Started:</b> Install an agent on a machine running the WAS Deployment Manager, then add that agent to the resource tree. The running WAS instance should be discovered and added as a child resource automatically. Edit this new resource and fill in values for any required properties, then save and use the “Configure using WebSphere Configuration Discovery” action on it to populate it with all available configuration from WAS. Use the “Compare using WebSphere Configuration Discovery” action on resources to show a comparison of the configuration in the resource tree with the live configuration in WAS. The “Apply using WebSphere Configuration Discovery” action will update the live configuration of WAS according to the configuration in the resource tree.
-</p>
-</div>
-<div class="new_release_cont">
-<strong><em>Beta</em></strong><p></p>
-<h2>Resource Templates for Middleware Configuration<br/>
-</h2>
-<p>Configuration in the resource tree representing a WebSphere Application Server cell can now be copied into a resource template and applied to other parts of the resource tree to standardize cell configuration. Templates can be created from and applied to any level of the resource tree, allowing them to represent configuration for cells, clusters, individual nodes, or any other WebSphere objects. These templates can also be parameterized. On applying a template, the user will be prompted for any properties defined on the template. The properties can be referenced by resources inside the template, where the value given by the user will be inserted as the new value for resources created based on the template.
-</p>
-<p><b>Getting Started:</b> Using previously discovered configuration from a WebSphere Deployment Manager, find a resource to use as the basis for a new template and use the “Define New Template” action on it. This will create a global resource template with a copy of the source resource’s configuration. Use the Property Definitions pane on the configuration of the template to define new properties which users will enter when applying the template to a resource. Edit resources in the template or convert them to prototype resources to make the template more flexible.
-</p>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.1.2
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2015.02.20
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.1.2 - February 20, 2015
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    <strong>
+     <em>
+      Beta
+     </em>
+    </strong>
+    <p>
+    </p>
+    <h2>
+     Discover, Compare, and Apply Middleware Configuration
+     <br/>
+    </h2>
+    <p>
+     Using the new WAS Configuration plugin, configuration of a WebSphere Application Server cell can be imported into the resource tree. Once the configuration has been discovered, users can create or modify objects or apply a template to create standardized configuration. Configuration in the resource tree can also be compared with live configuration in WAS and applied back to the WAS instance to update the live configuration.
+    </p>
+    <p>
+     <b>
+      Getting Started:
+     </b>
+     Install an agent on a machine running the WAS Deployment Manager, then add that agent to the resource tree. The running WAS instance should be discovered and added as a child resource automatically. Edit this new resource and fill in values for any required properties, then save and use the “Configure using WebSphere Configuration Discovery” action on it to populate it with all available configuration from WAS. Use the “Compare using WebSphere Configuration Discovery” action on resources to show a comparison of the configuration in the resource tree with the live configuration in WAS. The “Apply using WebSphere Configuration Discovery” action will update the live configuration of WAS according to the configuration in the resource tree.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <strong>
+     <em>
+      Beta
+     </em>
+    </strong>
+    <p>
+    </p>
+    <h2>
+     Resource Templates for Middleware Configuration
+     <br/>
+    </h2>
+    <p>
+     Configuration in the resource tree representing a WebSphere Application Server cell can now be copied into a resource template and applied to other parts of the resource tree to standardize cell configuration. Templates can be created from and applied to any level of the resource tree, allowing them to represent configuration for cells, clusters, individual nodes, or any other WebSphere objects. These templates can also be parameterized. On applying a template, the user will be prompted for any properties defined on the template. The properties can be referenced by resources inside the template, where the value given by the user will be inserted as the new value for resources created based on the template.
+    </p>
+    <p>
+     <b>
+      Getting Started:
+     </b>
+     Using previously discovered configuration from a WebSphere Deployment Manager, find a resource to use as the basis for a new template and use the “Define New Template” action on it. This will create a global resource template with a copy of the source resource’s configuration. Use the Property Definitions pane on the configuration of the template to define new properties which users will enter when applying the template to a resource. Edit resources in the template or convert them to prototype resources to make the template more flexible.
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Discover, Compare, and Apply Middleware Configuration
+    </li>
+    <li>
+     Resource Templates for Middleware Configuration
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="../getting-started">
+      Getting Started
+     </a>
+     page.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Agent Compatibility Note
+    </div>
+    <ul>
+     <li>
+      Agents used to import new component versions will need to be upgraded to agent version 6.1.0.4. If older agents are used, version import tasks will fail with the following error:
+      <pre>Exception in thread "main" java/nio/charset/IllegalCharsetNameException: ${DS_SYSTEM_ENCODING}</pre>
+     </li>
+     <li>
+      Due to changes in communication, if you leverage the integration with the Rational Team Concert build, you must first upgrade your RTC server to 5.0.2.
+     </li>
+    </ul>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     This release contains an updated version of the File Utils plugin. If you use the Middleware Configuration for WebSphere Application Server plugin, please ensure you upgrade to version 8.141002 of the plugin.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release, and any future fix packs can be found
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038759" target="_blank">
+      in this document
+     </a>
+     .
+    </p>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI26069" target="_blank">
+         PI26069
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        COMPONENT TEMPLATES ALWAYS SHOW PROPERTIES FOR THE LATEST COMPONENT TEMPLATE VERSION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI31639" target="_blank">
+         PI31639
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        APPLICATION PROCESS PROPERTIES CANNOT BE SET THROUGH THE CLI, REST, OR CREATE APPLICATION PROCESS STEP
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI31641" target="_blank">
+         PI31641
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ENVIRONMENT INVENTORY SHOWS SNAPSHOT DEPLOYED REGARDLESS OF NON-SNAPSHOT DEPLOYMENTS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI31992" target="_blank">
+         PI31992
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ERROR OCCURS IMPORTING USING AUTOMATIC VERSION CLEANUP
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI32175" target="_blank">
+         PI32175
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        COPIED STEPS WITH INVALID REFERENCES NOT ABLE TO LOAD INTO STEP PALETTE IN PROCESS EDITORS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI32854" target="_blank">
+         PI32854
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        INTERMITTENT FAILURES DURING APPROVAL PROCESS IN HIGH-AVAILABILITY ENVIRONMENT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI33747" target="_blank">
+         PI33747
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        AGENT RELAY JAVA KEYSTORE PASSWORD FAILS TO WORK AFTER CHANGING FROM DEFAULT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI33915" target="_blank">
+         PI33915
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        AUTH TOKEN CLEANUP FAILS WITH “SQLEXCEPTION: LOCK WAIT TIMEOUT EXCEEDED; TRY RESTARTING TRANSACTION”
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI34268" target="_blank">
+         PI34268
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        INCORRECT PATH FOR TFS_SCM EXECUTABLE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI34410" target="_blank">
+         PI34410
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        MISSING NOTIFICATION EMAILS WHEN PROCESS CONTAINS STEPS THAT ARE NOT EXECUTED (NPE IN LOGS)
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI34464" target="_blank">
+         PI34464
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SSL FOR AGENT RELAY CODESTATION SERVICE DOES NOT DETECT INVALID CERTIFICATE NAMES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI34532" target="_blank">
+         PI34532
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        APPLICATION SNAPSHOT CONFIGURATION ONLY ALLOWS ONE COMPONENT VERSION TO BE ADDED AT A TIME
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI34537" target="_blank">
+         PI34537
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO CANCEL AUTOMATIC VERSION IMPORT PROCESSES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI35417" target="_blank">
+         PI35417
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CREATEAPPLICATIONPROCESS CLI COMMAND RESULTS IN NULL POINTER
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+   </div>
+   <p>
+    To search for additional post-release issues that IBM Rational Support documented, visit the
+    <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+     IBM Support portal.
+    </a>
+   </p>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=installing" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     For advanced enterprise deployments that require high availability, review our options in the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.1" target="_blank">
+      information center.
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Deploy supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+     <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     If you’re upgrading from 6.0…
+    </div>
+    <p>
+     UrbanCode Deploy 6.1 introduced scalability enhancements to agent/server communication.
+     <strong>
+      All agent relays must be upgraded before running any deployments.
+     </strong>
+     All existing agents will continue to work without an upgrade, but they should be upgraded using the Upgrade action on the agent list in the web UI as soon as possible after upgrading.
+     <strong>
+      Any newly installed agents must be version 6.1.
+     </strong>
+     The latest agent and agent relay installers will be available on your UrbanCode Deploy server’s Tools page (in the Help menu) after the server is upgraded.
+    </p>
+    <p>
+     UrbanCode Deploy 6.1 also includes a more scalable artifact storage system. After upgrading your server, a background process will migrate artifacts into the new format. You can continue to access and deploy artifacts during this process, but
+     <strong>
+      there will need to be at least as much free disk space in the server’s var/repository directory as is currently being used by that directory
+     </strong>
+     . (If you currently have 25GB of artifacts, you need 25GB of additional free disk space.) The extra disk space is no longer needed after all artifacts have been migrated.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Install the server
+     </div>
+     <p>
+      This release is available for download from Fix Central, requiring authentication. This download is
+      <a href="http://www.ibm.com/support/fixcentral/swg/quickorder?parent=ibm~Rational&amp;product=ibm/Rational/IBM+UrbanCode+Deploy&amp;release=6.1.1.0&amp;platform=All&amp;function=all&amp;source=fc" target="_blank">
+       available here.
+      </a>
+     </p>
+     <p>
+      Information for installing the server, see the
+      <a href="https://www.ibm.com/docs/en/urbancode-deploy/7.2.3?topic=installing">
+       Installing servers and agents
+      </a>
+      section in the product documentation.
+     </p>
+     <p>
+      For information on installing and managing licenses, see
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.1/com.ibm.udeploy.install.doc/topics/licenseManage.html">
+       Managing licenses
+      </a>
+     </p>
+     <div class="horizontal-rule">
+     </div>
+     <div class="subtitle">
+      Learn
+     </div>
+     <p>
+      To learn more about new enhancements in this release, see
+      <a href="..">
+       What’s New
+      </a>
+     </p>
+     <p>
+      To learn more about IBM UrbanCode Deploy, see the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.1" target="_blank">
+       documentation
+      </a>
+     </p>
+     <p>
+      For help installing or using IBM UrbanCode Deploy, post your questions in the
+      <a href="https://developer.ibm.com/answers?community=urbancode">
+       forums
+      </a>
+      or contact
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       support
+      </a>
+     </p>
+     <p>
+      To suggest an enhancement to the product, visit the
+      <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+       RFE Community
+      </a>
+     </p>
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Get support
+     </div>
+     <p>
+      For information from support, including FAQs, visit the
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+      You can configure the support portal to view information about specific products.
+     </p>
+    </div>
+   </div>
+  </p>
+ </body>
 </html>

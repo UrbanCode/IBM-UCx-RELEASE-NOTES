@@ -1,26 +1,203 @@
 <!DOCTYPE html>
-<html><head><title>2.3.3</title></head>
-<body>
-<p><b>This article was originaly published in 2021.04.26</b></p>
-<p><h1>2.3.3</h1></p>
-<p>This release of IBM UrbanCode Velocity is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+<html>
+ <head>
+  <title>
+   2.3.3
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2021.04.26
+   </b>
+  </p>
+  <p>
+   <h1>
+    2.3.3
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Velocity is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <h2>
+    Key Features and Enhancements
+   </h2>
+   <dl>
+    <dt>
+     User interface updated for Value Streams page
+    </dt>
+    <dd>
+     Value Streams page updated to improve usability for small-size screens. The table view  screens. The table allows for viewing more than three metrics in a clear layout and truncation of data. You can scroll the page left and right to view lengthy data.
+    </dd>
+    <dt>
+     Bug fixes
+    </dt>
+    <dd>
+     Refresh of job parameters often do not display on a pipeline has been fixed.
+    </dd>
+    <dd>
+     Fixed errors related to GraphQL Shield process.
+    </dd>
+    <dd>
+     Create a Value Stream page updated to show expanded legend and toggle icon to collapse and expand the legend.
+    </dd>
+    <dd>
+     User interface updated to allow selection of only one process to add to a pipeline.
+    </dd>
+    <dd>
+     Log out process updated to ensure proper processing when logged in using different web browsers and multiple tabs on same web browser.
+    </dd>
+    <dd>
+     Improve VSM page usability for small screens.
+    </dd>
+    <dd>
+     Additional search for sprint and release information performed to locate information.
+    </dd>
+    <dd>
+     User interface updated to ensure formatting consistency across the user interface.
+    </dd>
+    <dd>
+     Fixed when reloading VSM page to ensure that filters selected before the reload are persistent.
+    </dd>
+   </dl>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     User interface improvements for small screens
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <!-- A cumulative list of fixes in this release, and any future fix packs can be found in the <a href="https://www.urbancode.com/whats-new/velocity-fixlist/" target="_blank" rel="noopener">Fixlist</a> document. -->
+   The following table is a cumulative list of fixes in the 2.3.x version stream.
+   <table>
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99836
+      </td>
+      <td valign="bottom" width="80%">
+       Initiator of a Jenkins job is reported as "Jenkins" instead of the specific user
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99853
+      </td>
+      <td valign="bottom" width="80%">
+       Configure Parameters feature for Jenkins jobs occasionally causes the UI to crash
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom" width="20%">
+       PI99850
+      </td>
+      <td valign="bottom" width="80%">
+       Error message displayed when uploading a VSM JSON file does not have enough details.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan and prepare
+   </h2>
+   For supported platforms and requirements you can dynamically generate a system requirements report using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <h2>
+    Install the server
+   </h2>
+   There are two option to obtaining the installation package: online installer and offline installer. Both options require a master license key, which can be acquired from
+   <a href="https://www.ibm.com/software/passportadvantage/" rel="noopener" target="_blank">
+    IBM Passport Advantage
+   </a>
+   .
+   <h2>
+    Online installer
+   </h2>
+   The online installer option for installing the product requires an internet connection for the entire process. It requires minimum storage for the downloaded package. The downloaded image contains only the Helm charts used to pull the product Docker images from a GitHub location. This is our recommended installation method.
 
-<h2>Key Features and Enhancements</h2>
-<dl>
-<dt>User interface updated for Value Streams page</dt>
-<dd>
-Value Streams page updated to improve usability for small-size screens. The table view  screens. The table allows for viewing more than three metrics in a clear layout and truncation of data. You can scroll the page left and right to view lengthy data.
-</dd>
-<dt>Bug fixes</dt>
-<dd>Refresh of job parameters often do not display on a pipeline has been fixed.</dd>
-<dd>Fixed errors related to GraphQL Shield process.</dd>
-<dd>Create a Value Stream page updated to show expanded legend and toggle icon to collapse and expand the legend.</dd>
-<dd>User interface updated to allow selection of only one process to add to a pipeline.</dd>
-<dd>Log out process updated to ensure proper processing when logged in using different web browsers and multiple tabs on same web browser.</dd>
-<dd>Improve VSM page usability for small screens.</dd> 
-<dd>Additional search for sprint and release information performed to locate information.</dd>
-<dd>User interface updated to ensure formatting consistency across the user interface.</dd>
-<dd>Fixed when reloading VSM page to ensure that filters selected before the reload are persistent.</dd>
-</dl>
-</p></body>
+Download the online installer package depending on the platform, the product is being installed.
+   <ul>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-linux" rel="noopener" target="_blank">
+      Linux
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-macos" rel="noopener" target="_blank">
+      Mac OS
+     </a>
+    </li>
+    <li>
+     <a href="https://www.urbancode.com/uc-downloads/Velocity/latest/velocity-ibm-install-latest-win.exe" rel="noopener" target="_blank">
+      Windows
+     </a>
+    </li>
+   </ul>
+   After the download completes, start the executable file to begin the install process.
+   <h2>
+    Offline installer
+   </h2>
+   Use the offline installer to install Velocity without internet connection. You will still need internet connection at some point to download the installer itself. Once downloaded, the installer will include all containers needed to successfully install the product. For this reason, the offline installer is larger than the online installer and will require more time/bandwidth and disk space when downloading.
+
+The installation package is available from
+   <a href="https://www-945.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm%7ERational&amp;product=ibm/Rational/IBM+UrbanCode+Velocity&amp;release=All&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+    IBM Fix Central
+   </a>
+   . Search and select the installation package appropriate for the installation platform.
+
+After downloading the installation package, decompress the contents into two directories: one for Kubernetes and the other for Docker Compose. See the
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6_2.3.x/com.ibm.uvelocity.doc/topics/c_install_se_roadmap.html" target="_blank">
+    documentation section on installation
+   </a>
+   for instructions about how to install the server.
+
+A product license key is required to install the product. To obtain a key, you must agree to the terms and conditions provided on Passport Advantage.
+   <h2>
+    Learn
+   </h2>
+   To learn more about UrbanCode Velocity, see
+   <a href="https://www.ibm.com/support/knowledgecenter/SSCKX6" rel="noopener" target="_blank">
+    documentation
+   </a>
+   .
+
+For help installing or using UrbanCode Velocity, post your questions in the
+   <a href="https://community.ibm.com/community/user/middleware/communities/community-home?CommunityKey=9adfe6b6-2e23-4895-8b27-38b93b5e152c" rel="noopener" target="_blank">
+    UrbanCode forums
+   </a>
+   . Tag your question with
+   <strong>
+    velocity
+   </strong>
+   .
+
+To suggest an enhancement to the product, visit the
+   <a href="https://www.ibm.com/developerworks/rfe/" rel="noopener" target="_blank">
+    RFE Community
+   </a>
+   <h2>
+    Get support
+   </h2>
+   For information from support, including FAQs, visit the
+   <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   You can configure the support portal to view information about specific products.
+  </p>
+ </body>
 </html>

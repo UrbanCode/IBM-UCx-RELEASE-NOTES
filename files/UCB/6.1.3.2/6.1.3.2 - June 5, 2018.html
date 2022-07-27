@@ -1,9 +1,471 @@
 <!DOCTYPE html>
-<html><head><title>6.1.3.2</title></head>
-<body>
-<p><b>This article was originaly published in 2018.06.05</b></p>
-<p><h1>6.1.3.2 - June 5, 2018</h1></p>
-<p><div class="new_release_cont">This release of IBM UrbanCode Build is a maintenance release and contains a number of new features, feature enhancements and bug fixes. This release is recommended for all customers.</div>
-For a detailed list of feature enhancements and bug fixes, please refer to the <a href="https://github.com/UrbanCode/IBM-UCx-RELEASE-NOTES">release notes tab.</a>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.3.2
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2018.06.05
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.3.2 - June 5, 2018
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Build is a maintenance release and contains a number of new features, feature enhancements and bug fixes. This release is recommended for all customers.
+   </div>
+   For a detailed list of feature enhancements and bug fixes, please refer to the
+   <a href="https://github.com/UrbanCode/IBM-UCx-RELEASE-NOTES">
+    release notes tab.
+   </a>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     New Features and Enhancements
+    </li>
+    <li>
+     Recommended Fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h3 class="horizontal-rule">
+    <span style="font-size: 1rem;">
+     New Features and Enhancements
+    </span>
+   </h3>
+   <div class="key-features">
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom">
+        Add support for Microsoft SQL Server 2016
+       </td>
+       <td valign="bottom">
+        <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID= 115144" rel="noopener" target="_blank">
+         RFE 115144
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Add ability to change the Authentication Realm of existing users via UI
+       </td>
+       <td valign="bottom">
+        <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=93059" rel="noopener" target="_blank">
+         RFE 93059
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Add table view of downstream dependencies of a process
+       </td>
+       <td valign="bottom">
+        <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=87845" rel="noopener" target="_blank">
+         RFE 87845
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Add support for triggering pre-flight builds for GitHub’s pull request events
+       </td>
+       <td valign="bottom">
+        <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=110845" rel="noopener" target="_blank">
+         RFE 110845
+        </a>
+        and
+        <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=110870" rel="noopener" target="_blank">
+         RFE 110870
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Add option for asynchronous license initialization during server’s startup
+       </td>
+       <td valign="bottom">
+        <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=111200" rel="noopener" target="_blank">
+         RFE 111200
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Expand REST API to obtain team information from project
+       </td>
+       <td valign="bottom">
+        <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=117694" rel="noopener" target="_blank">
+         RFE 117694
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Enhanced UI for process templates tab
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Enhanced UI for job templates tab
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Enhanced UI for source template page
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Overhaul process dependency configuration page UI
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Display long default values and descriptions of plugin properties via a popup window
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Use “filtering scroll select” widget for selecting jobs
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Improve description for secured objects’ team selection
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Add option for cleaning up preflight builds
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Add external web URL to plugin cmd context
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Fixes
+    </h3>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom">
+        Intermittent appearance of “GroovyRuntimeException: Exception while reading process stream” in command output of the Git plugin
+       </td>
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI89973" rel="noopener" target="_blank">
+         PI89973
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Interval schedules do not seem to consider start time
+       </td>
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI94456" rel="noopener" target="_blank">
+         PI94456
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Cannot start Urbancode Build as a Windows service
+       </td>
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI75205" rel="noopener" target="_blank">
+         PI75205
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Error encountered in changelog step of RTC SCM plugin
+       </td>
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI98929" rel="noopener" target="_blank">
+         PI98929
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        “Deploy Component Version” step of the UCD plugin in UCB fails if the Component Process in UCD has required properties
+       </td>
+       <td valign="bottom">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI89762" rel="noopener" target="_blank">
+         PI89762
+        </a>
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix 2 bugs that cause the maven caching feature to fail
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix an error when attempting to save global reports in UCB
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Set appropriate hibernate dialect during server upgrade, when using Oracle 12
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix bug when saving the “Get Changelog” step config
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix an issue that caused selected-disabled radio inputs to appear nonselected-disabled
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Prevent built-in users from having authentication realm changed
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix warning message when generating application WADL
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Add padding around stamp span elements
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Handle unauthorized view of process dashboard gracefully
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix an issue in RestUtil#getFullContentRange
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Minor tweaks to icon CSS to reduce spacing
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix NullPointerException when lacking sufficient permission to view a build life
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix job config templates table filtering
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Lower the level of logged stacktraces for unknown license type exceptions to debug
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix ambiguous resource paths in WorkDirScriptCollectionResource
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Check for duplicate names when creating source config props
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix an off-by-one error in computation for displaying license information
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom">
+        Fix NullPointerException in cleanup page when setting keepLockableResources or keepPreflightBuilds
+       </td>
+       <td valign="bottom">
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Known Problems and Workarounds
+    </h3>
+    Due to
+    <a href="https://github.com/Microsoft/mssql-jdbc/issues/681">
+     a bug in Microsoft SQL Server’s JDBC driver that appears to have been introduced in MSSQL JDBC 6.3.3
+    </a>
+    , upgrading UrbanCode Build to version 6.1.3.2 may fail. This bug has been fixed in MSSQL JDBC 6.5.3 (
+    <a href="https://github.com/Microsoft/mssql-jdbc/releases">
+     preview version at the time of this writing
+    </a>
+    ). We highly suggest users of Microsoft SQL Server to use a version of the MSSQL JDBC driver that has this fix.
+
+To search for additional post-release issues that IBM Rational Support documented, visit the
+    <a href="https://www.ibm.com/support/home" rel="noopener" target="_blank">
+     IBM Support portal.
+    </a>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Plan &amp; Prepare
+    </h3>
+    For fixes contained in this release, and any known issues, review the
+    <a href="https://github.com/UrbanCode/IBM-UCx-RELEASE-NOTES">
+     release notes
+    </a>
+    .
+
+For supported platforms and requirements, see the
+    <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27044198" rel="noopener" target="_blank">
+     system requirements
+    </a>
+    . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+
+To get started quickly to try the software, IBM UrbanCode Build is shipped with an Apache Derby database. Apache Derby is not supported for production environments. As you plan your production topology, review the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.2/com.ibm.ucbuild.doc/topics/install_ch.html" rel="noopener" target="_blank">
+     installation guide
+    </a>
+    IBM UrbanCode Build supports integrations with many different tools in the form of job steps. Each IBM UrbanCode Build plug-in is a separate download and installation available on our
+    <a href="http://www.urbancodelabs.com/plugins/" rel="noopener" target="_blank">
+     plug-in page
+    </a>
+    .
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Install the server
+    </h3>
+    This release is available for download from Fix Central, requiring authentication. This download is
+    <a href="http://www-933.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Rational&amp;product=ibm/Rational/UrbanCode+Build&amp;release=6.1.2.0&amp;platform=All&amp;function=all" rel="noopener" target="_blank">
+     available here.
+    </a>
+    Information for installing the server, see the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.2/com.ibm.ucbuild.doc/topics/install_ch.html">
+     Installing
+    </a>
+    section in the product documentation.
+
+For information on installing and managing licenses, see
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.2/com.ibm.ucbuild.doc/topics/licenseManage.html">
+     License Management
+    </a>
+    <div class="horizontal-rule">
+    </div>
+    <h3 class="subtitle">
+     Learn
+    </h3>
+    To learn more about IBM UrbanCode Build, see the
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.2" rel="noopener" target="_blank">
+     documentation
+    </a>
+    For help installing or using IBM UrbanCode Build, contact
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+     support
+    </a>
+    To suggest an enhancement to the product, visit the
+    <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" rel="noopener" target="_blank">
+     RFE Community
+    </a>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <h3 class="subtitle">
+     Get support
+    </h3>
+    For information from support, including FAQs, visit the
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" rel="noopener" target="_blank">
+     IBM Support portal.
+    </a>
+    You can configure the support portal to view information about specific products.
+   </div>
+  </p>
+ </body>
 </html>

@@ -1,53 +1,397 @@
 <!DOCTYPE html>
-<html><head><title>6.1.0.2</title></head>
-<body>
-<p><b>This article was originaly published in 2014.09.05</b></p>
-<p><h1>6.1.0.2 - September 5, 2014</h1></p>
-<p><div class="new_release_cont">This release of IBM UrbanCode Release is a maintenance release containing bug fixes and experimental features. This release is recommended for all customers.</div>
-<div class="new_release_cont">
-<h2>Improved Performance</h2>
-<p>Improved speed of assigning Application Environments to Release Environments.</p>
-<p>Improved loading speed for dropdowns used for bulk updates to changes</p>
-<p>Improved load time of Initiatives page.</p>
-<p>Improved Calendar Page load speed.</p>
-</div>
-<div class="new_release_cont">
-<h2>Display Change progress for each Application in a Release</h2>
-<p>It’s easier to track what changes are associated with each Application in your Release in the Application Table at the top of the Release Detail page.</p>
-</div>
-<div class="new_release_cont">
-<h1>Experimental Features</h1>
-<p>The following features are experimental, and are available only if a special product configuration is enabled. They are offered for testing and feedback, without support, and are not guaranteed to continue in any form in a future release. Please consider enabling these features in a testing environment and provide feedback via the developerWorks Q&amp;A forum.</p>
-</div>
-<div class="new_release_cont">
-<h2>{Experimental} Third-party Plugin Support</h2>
-<p>We have a new and improved system for building your own plug-ins to work with UrbanCode Release!</p>
-<p>To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory: <code>feature.integration.plugin=yes</code></p>
-<p>If you are familiar with writing plug-ins for IBM UrbanCode Deploy, writing plug-ins for IBM UrbanCode Release will be straight forward. It consists of defining the UI and steps in a plugin.xml and use groovy scripts to handle the integration.</p>
-<p>A demo plug-in is available as an example here: <a href="com.urbancode.plugin.google.calendar_1.zip">Google Calendar Demo Plug-in for IBM UrbanCode Release</a></p>
-<p>This plug-in can be uploaded as it is (zip) on the Integration Provider page by clicking on the Upload Plug-in button. Once imported you can select the plug-in as an Integration Provider type when creating a new Integration.</p>
-<p>The IBM Installation Manager provides Groovy 2.1.9 which is necessary to write your own plug-ins.</p>
-<p><strong>/!\</strong> For some linux environments an extra manual step might be needed to setup the GROOVY_HOME on the environment path:</p>
-<p>It can be done by running the following command =&gt; export GROOVY_HOME=$GROOVY_HOME: /ucr…location<em>/</em>UCRelease/groovy-2.1.9/</p>
-<p>In the /ucr..location<em>/</em>UCRelease/groovy-2.1.9/bin/startGroovy script, make sure that the line #270  includes the argument  $JAVA_OPTS  and looks like the following   exec “$JAVACMD” $JAVA_OPTS \</p>
-<p>Make sure that the Groovy folder has executable permissions: <code>chmod -R 755 groovy-2.1.9/</code></p>
-</div>
-<div class="new_release_cont">
-<h2>{Experimental} RTC integration synchronizes defect severity</h2>
-<p>You can now synchronize Severities in RTC to track Severity 1 or Severity 2 defects in UrbanCode Release.  The count of S1 and S2 defects associated with an Application on a Release can now be seen on the release detail page.</p>
-<p><a href="image3adb13197e914679.jpg"><img alt="IMAGE$3ADB13197E914679" class="alignnone wp-image-7064 size-large" height="139" sizes="(max-width: 980px) 100vw, 980px" src="image3adb13197e914679.jpg" srcset="IMAGE3ADB13197E914679-1024x146.jpg 1024w, IMAGE3ADB13197E914679-300x43.jpg 300w" width="980"/></a></p>
-<p>To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory: <code>feature.severity.rtc.integration=yes</code></p>
-</div>
-<div class="new_release_cont">
-<h2>{Experimental} Map RTC Work Items to Initiatives</h2>
-<p>When setting up an integration with RTC, you can choose work item types that you want to be synchronized as Initiatives, rather than Changes, in UrbanCode Release.  Work Items that are children of Work Items that are integrated as Initiatives will become Changes assigned to those Initiatives in UrbanCodeRelease.</p>
-<p>To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory: <code>feature.initiative.rtc.integration=yes</code></p>
-</div>
-<div class="new_release_cont">
-<h2>{Experimental} Updated Timeline View</h2>
-<p>Timeline view has been updated to show a navigational overview of all deployments, with adjustable detail view to show any length of time within that span.</p>
-<p><a href="screen-shot-2014-07-23-at-17.46.20.png"><img alt="Screen Shot 2014-07-23 at 17.46.20" class="alignnone wp-image-7062 size-large" height="565" sizes="(max-width: 980px) 100vw, 980px" src="screen-shot-2014-07-23-at-17.46.20.png" srcset="Screen-Shot-2014-07-23-at-17.46.20-1024x591.png 1024w, Screen-Shot-2014-07-23-at-17.46.20-300x173.png 300w" width="980"/></a></p>
-<p>To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory: <code>feature.segment.dependency.graph.enabled=yes</code></p>
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.0.2
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2014.09.05
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.0.2 - September 5, 2014
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Release is a maintenance release containing bug fixes and experimental features. This release is recommended for all customers.
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Improved Performance
+    </h2>
+    <p>
+     Improved speed of assigning Application Environments to Release Environments.
+    </p>
+    <p>
+     Improved loading speed for dropdowns used for bulk updates to changes
+    </p>
+    <p>
+     Improved load time of Initiatives page.
+    </p>
+    <p>
+     Improved Calendar Page load speed.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Display Change progress for each Application in a Release
+    </h2>
+    <p>
+     It’s easier to track what changes are associated with each Application in your Release in the Application Table at the top of the Release Detail page.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h1>
+     Experimental Features
+    </h1>
+    <p>
+     The following features are experimental, and are available only if a special product configuration is enabled. They are offered for testing and feedback, without support, and are not guaranteed to continue in any form in a future release. Please consider enabling these features in a testing environment and provide feedback via the developerWorks Q&amp;A forum.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     {Experimental} Third-party Plugin Support
+    </h2>
+    <p>
+     We have a new and improved system for building your own plug-ins to work with UrbanCode Release!
+    </p>
+    <p>
+     To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory:
+     <code>
+      feature.integration.plugin=yes
+     </code>
+    </p>
+    <p>
+     If you are familiar with writing plug-ins for IBM UrbanCode Deploy, writing plug-ins for IBM UrbanCode Release will be straight forward. It consists of defining the UI and steps in a plugin.xml and use groovy scripts to handle the integration.
+    </p>
+    <p>
+     A demo plug-in is available as an example here:
+     <a href="com.urbancode.plugin.google.calendar_1.zip">
+      Google Calendar Demo Plug-in for IBM UrbanCode Release
+     </a>
+    </p>
+    <p>
+     This plug-in can be uploaded as it is (zip) on the Integration Provider page by clicking on the Upload Plug-in button. Once imported you can select the plug-in as an Integration Provider type when creating a new Integration.
+    </p>
+    <p>
+     The IBM Installation Manager provides Groovy 2.1.9 which is necessary to write your own plug-ins.
+    </p>
+    <p>
+     <strong>
+      /!\
+     </strong>
+     For some linux environments an extra manual step might be needed to setup the GROOVY_HOME on the environment path:
+    </p>
+    <p>
+     It can be done by running the following command =&gt; export GROOVY_HOME=$GROOVY_HOME: /ucr…location
+     <em>
+      /
+     </em>
+     UCRelease/groovy-2.1.9/
+    </p>
+    <p>
+     In the /ucr..location
+     <em>
+      /
+     </em>
+     UCRelease/groovy-2.1.9/bin/startGroovy script, make sure that the line #270  includes the argument  $JAVA_OPTS  and looks like the following   exec “$JAVACMD” $JAVA_OPTS \
+    </p>
+    <p>
+     Make sure that the Groovy folder has executable permissions:
+     <code>
+      chmod -R 755 groovy-2.1.9/
+     </code>
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     {Experimental} RTC integration synchronizes defect severity
+    </h2>
+    <p>
+     You can now synchronize Severities in RTC to track Severity 1 or Severity 2 defects in UrbanCode Release.  The count of S1 and S2 defects associated with an Application on a Release can now be seen on the release detail page.
+    </p>
+    <p>
+     <a href="image3adb13197e914679.jpg">
+      <img alt="IMAGE$3ADB13197E914679" class="alignnone wp-image-7064 size-large" height="139" sizes="(max-width: 980px) 100vw, 980px" src="image3adb13197e914679.jpg" srcset="IMAGE3ADB13197E914679-1024x146.jpg 1024w, IMAGE3ADB13197E914679-300x43.jpg 300w" width="980"/>
+     </a>
+    </p>
+    <p>
+     To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory:
+     <code>
+      feature.severity.rtc.integration=yes
+     </code>
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     {Experimental} Map RTC Work Items to Initiatives
+    </h2>
+    <p>
+     When setting up an integration with RTC, you can choose work item types that you want to be synchronized as Initiatives, rather than Changes, in UrbanCode Release.  Work Items that are children of Work Items that are integrated as Initiatives will become Changes assigned to those Initiatives in UrbanCodeRelease.
+    </p>
+    <p>
+     To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory:
+     <code>
+      feature.initiative.rtc.integration=yes
+     </code>
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     {Experimental} Updated Timeline View
+    </h2>
+    <p>
+     Timeline view has been updated to show a navigational overview of all deployments, with adjustable detail view to show any length of time within that span.
+    </p>
+    <p>
+     <a href="screen-shot-2014-07-23-at-17.46.20.png">
+      <img alt="Screen Shot 2014-07-23 at 17.46.20" class="alignnone wp-image-7062 size-large" height="565" sizes="(max-width: 980px) 100vw, 980px" src="screen-shot-2014-07-23-at-17.46.20.png" srcset="Screen-Shot-2014-07-23-at-17.46.20-1024x591.png 1024w, Screen-Shot-2014-07-23-at-17.46.20-300x173.png 300w" width="980"/>
+     </a>
+    </p>
+    <p>
+     To enable this feature for testing, add this line to the server.properties file in the UrbanCode Release product configuration directory:
+     <code>
+      feature.segment.dependency.graph.enabled=yes
+     </code>
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Bug Fixes and Improved Performance: Initiatives, Environments, Changes &amp; more...
+    </li>
+    <li>
+     Experimental Features:
+    </li>
+    <li>
+     Applications in a Release now show development progress
+    </li>
+    <li>
+     RTC Integration now syncs Initiatives and Defect Severity
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="http://developer.ibm.com/urbancode/products/urbancode-release/whats-new/whats-new-urbancode-release-6-1-0-2/getting-started/">
+      Getting Started
+     </a>
+     page.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     There are no known behavioral changes.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release, and any future fix packs will be available.
+    </p>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+        APAR
+       </td>
+       <td valign="bottom" width="78%">
+        Description
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+        PI15606
+       </td>
+       <td valign="bottom" width="78%">
+        ENVIRONMENTS PAGE LOCKS UP WHEN ADDING OR REMOVING SEVERAL APP ENVIRONMENTS FOR A RELEASE ENVIRONMENT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+        PI24583
+       </td>
+       <td valign="bottom" width="78%">
+        PERFORMANCE ISSUES COPYING A LARGE NUMBER OF APPLICATION ENVIRONMENTS TO A RELEASE ENVIRONMENT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+        PI24721
+       </td>
+       <td valign="bottom" width="78%">
+        INCORRECT HANDLING OF TASK STATUS WHEN EDITED BY MULTIPLE USERS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+        PI24764
+       </td>
+       <td valign="bottom" width="78%">
+        DATABASE ERROR ON DB2 ON STARTUP
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+        PI24962
+       </td>
+       <td valign="bottom" width="78%">
+        PERFORMANCE ISSUE WHEN ACCESSING https:///INITIATIVES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Fixed Task Status Reverting When Edited by Multiple Users
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Integration halts on Integration Provider Frequency Change
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Add Automated Task dialog shows tasks’ Applications
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="22%">
+       </td>
+       <td valign="bottom" width="78%">
+        Change fields populated through an integration are now protected from user edits
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+    <p>
+     To search for additional post-release issues that IBM Rational Support documented, visit the
+     <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+    </p>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="http://developer.ibm.com/urbancode/products/urbancode-release/whats-new/whats-new-urbancode-release-6-1-0-2/release-notes/">
+      release notes
+     </a>
+     . For supported platforms and requirements, see the
+     <a href="http://www-03.ibm.com/software/products/en/ucrel#tab_othertab1" target="_blank">
+      system requirements
+     </a>
+     . To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.0/com.ibm.urelease.doc/topics/install_ch.html" target="_blank">
+      installation guide
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release requires IBM Installation Manager version 1.7.2 or later for installation. See
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg24036814">
+      download document
+     </a>
+     for details on this download. This release is available for download on Fix Central for current customers, requiring authentication. This download is
+     <a href="http://www-933.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Rational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=all">
+      available here.
+     </a>
+     Information for installing the server, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.0/com.ibm.urelease.doc/topics/install_intro.html">
+      Installing server
+     </a>
+     section in the product documentation.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="../">
+      What’s New
+     </a>
+     To learn more about IBM UrbanCode Release, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.0/com.ibm.urelease.doc/ucr61_welcome.html" target="_blank">
+      documentation
+     </a>
+     For help installing or using IBM UrbanCode Release, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

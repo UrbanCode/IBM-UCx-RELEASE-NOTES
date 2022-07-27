@@ -1,11 +1,206 @@
 <!DOCTYPE html>
-<html><head><title>6.1.7.2</title></head>
-<body>
-<p><b>This article was originaly published in 2021.06.28</b></p>
-<p><h1>6.1.7.2</h1></p>
-<p>This release of IBM UrbanCode Build is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
-
-<h3>Apache Tomcat server upgraded</h3>
-The Tomcat Server shipped with the product has been upgraded to version 8.5.64.
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.7.2
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2021.06.28
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.7.2
+   </h1>
+  </p>
+  <p>
+   This release of IBM UrbanCode Build is a maintenance release and includes various bug fixes and enhancements. This release is recommended for all customers.
+   <h3>
+    Apache Tomcat server upgraded
+   </h3>
+   The Tomcat Server shipped with the product has been upgraded to version 8.5.64.
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     TomCat upgraded to 8.5.64
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <h3>
+    APARS
+   </h3>
+   <table border="0" rules="" width="100%">
+    <tbody>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1 PH34616" target="_blank">
+        PH34616
+       </a>
+      </td>
+      <td valign="bottom">
+       Fixed issue with Groovy plug-in v12 throwing an error after upgrade
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH36533" target="_blank">
+        PH36533
+       </a>
+      </td>
+      <td valign="bottom">
+       Added a source configuration to the workflow throws an error
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH34614" target="_blank">
+        PH34614
+       </a>
+      </td>
+      <td valign="bottom">
+       Clicking Move on the project's secondary process results in an error
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH33697" target="_blank">
+        PH33697
+       </a>
+      </td>
+      <td valign="bottom">
+       UrbanCode Build servers that run on Java 8 and above throws an error during startup and shutdown
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH36806" target="_blank">
+        PH36806
+       </a>
+      </td>
+      <td valign="bottom">
+       UrbanCode Build Git plug-in does not work with gitlab webhook API
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH33694" target="_blank">
+        PH33694
+       </a>
+      </td>
+      <td valign="bottom">
+       UrbanCode Deploy plug-in Create Component Version step crashes with a null pointer exception
+      </td>
+     </tr>
+     <tr valign="top">
+      <td valign="bottom">
+       <a href="http://www.ibm.com/support/docview.wss?uid=swg1PH38062" target="_blank">
+        PH38062
+       </a>
+      </td>
+      <td valign="bottom">
+       The Publish Report step fails with a null pointer exception
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h3>
+    RFEs
+   </h3>
+   <ul>
+    <li>
+     RFE 148120 - Changed the Scripting API to return empty instead of throwing  the following exception: MissingPropertyException
+    </li>
+   </ul>
+   <h3>
+    Known problems and workarounds
+   </h3>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" rel="noopener" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <h2>
+    Plan and Prepare
+   </h2>
+   For supported platforms and requirements, see the reports that can be dynamically generated using the
+   <a href="https://www.ibm.com/software/reports/compatibility/clarity/index.html" rel="noopener noreferrer" target="_blank">
+    Software Product Compatibility Reports (SPCR)
+   </a>
+   tool.
+   <strong>
+    Note:
+   </strong>
+   Some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+   <p>
+    To get started quickly, IBM UrbanCode Build is shipped with an Apache Derby database. Apache Derby is not supported for production environments. As you plan your production topology, review the product documentation.
+   </p>
+   <p>
+    IBM UrbanCode Build supports integrations with many different tools in the form of job steps. Each IBM UrbanCode Build plug-in is a separate download and installation available on our
+    <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/" target="_blank">
+     plug-in page
+    </a>
+    .
+   </p>
+   <h3>
+    Learn
+   </h3>
+   <p>
+    To learn more about new enhancements in this release, click the
+    <strong>
+     What’s New
+    </strong>
+    tab.
+   </p>
+   <p>
+    To learn more about IBM UrbanCode Build, see the product
+    <a href="https://www.ibm.com/support/knowledgecenter/SS8NMD" target="_blank">
+     documentation
+    </a>
+    .
+   </p>
+   <p>
+    For help installing or using IBM UrbanCode Build, post your questions in the
+    <a href="https://developer.ibm.com/answers?community=urbancode" target="_blank">
+     forums
+    </a>
+    or contact
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+     support
+    </a>
+    .
+   </p>
+   <p>
+    To suggest an enhancement to the product, visit the
+    <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+     RFE Community
+    </a>
+    .
+   </p>
+   <h3>
+    Get support
+   </h3>
+   <p>
+    For information from support, including FAQs, visit the
+    <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+     IBM Support portal.
+    </a>
+    You can configure the support portal to view information about specific products.
+   </p>
+  </p>
+ </body>
 </html>

@@ -1,10 +1,287 @@
 <!DOCTYPE html>
-<html><head><title>6.1.2.3</title></head>
-<body>
-<p><b>This article was originaly published in 2016.12.01</b></p>
-<p><h1>6.1.2.3 - December, 2016</h1></p>
-<p><div class="new_release_cont">
-This release of IBM UrbanCode Build is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.
-</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.2.3
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2016.12.01
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.2.3 - December, 2016
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Build is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Recommended fixes for UrbanCode Build 6.1.2.3
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started">
+     Getting Started
+    </a>
+    page.
+    <p>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     We recommend updating all agents and plugins when upgrading to this version.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release, and any future fix packs can be found
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27043657" target="_blank">
+      in this document
+     </a>
+     .
+    </p>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI68834" target="_blank">
+         PI68834
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Remove the magnifying glass in dashboard’s stamp column for processes that have no build lives
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65921" target="_blank">
+         PI65921
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Users with only view permissions can still view the create and import buttons in dashboard
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI66337" target="_blank">
+         PI66337
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Fix NullPointerException when deleting an offline agent from a dynamic agent pool
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65644" target="_blank">
+         PI65644
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Inactive build lives prevent deleting a process
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI65065" target="_blank">
+         PI65065
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Unable to delete inactive processes that have inactive build configurations
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI64976" target="_blank">
+         PI64976
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Foreign key constraint prevents deleting build lives in MySQL 5.7+
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI73009" target="_blank">
+         PI73009
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Fix run_agent.cmd script to be able to run the agent process if it is executed from outside the agent/bin directory in Windows machines
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI67700" target="_blank">
+         PI67700
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Use of rational common licensing API’s to collect license availability information may crash if there are too many checkouts
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI71758" target="_blank">
+         PI71758
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Codestation project individual artifacts cannot be downloaded due to incorrect URL
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+    <p>
+     To search for additional post-release issues that IBM Rational Support documented, visit the
+     <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+    </p>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27044198" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Build is shipped with an Apache Derby database. Apache Derby is not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.2/com.ibm.ucbuild.doc/topics/install_ch.html" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Build supports integrations with many different tools in the form of job steps. Each IBM UrbanCode Build plug-in is a separate download and installation available on our
+     <a href="https://developer.ibm.com/urbancode/plugins/ibm-urbancode-build/" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release is available for download from Fix Central, requiring authentication. This download is
+     <a href="http://www-933.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Rational&amp;product=ibm/Rational/UrbanCode+Build&amp;release=6.1.2.0&amp;platform=All&amp;function=all" target="_blank">
+      available here.
+     </a>
+     <br>
+      Information for installing the server, see the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.2/com.ibm.ucbuild.doc/topics/install_ch.html" target="_blank">
+       Installing
+      </a>
+      section in the product documentation.
+     </br>
+    </p>
+    <p>
+     For information on installing and managing licenses, see
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.2/com.ibm.ucbuild.doc/topics/licenseManage.html" target="_blank">
+      License Management
+     </a>
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="..">
+      What’s New
+     </a>
+    </p>
+    <p>
+     To learn more about IBM UrbanCode Build, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.2" target="_blank">
+      documentation
+     </a>
+    </p>
+    <p>
+     For help installing or using IBM UrbanCode Build, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+    </p>
+    <p>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

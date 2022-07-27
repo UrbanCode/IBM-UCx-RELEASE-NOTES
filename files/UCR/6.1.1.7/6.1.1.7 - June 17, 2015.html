@@ -1,26 +1,285 @@
 <!DOCTYPE html>
-<html><head><title>6.1.1.7</title></head>
-<body>
-<p><b>This article was originaly published in 2015.06.17</b></p>
-<p><h1>6.1.1.7 - June 17, 2015</h1></p>
-<p><div class="new_release_cont">This release of IBM UrbanCode Release is a maintenance release containing new features, and bug fixes.</div>
-<div class="new_release_cont">
-<h2>Single Sign On Support</h2>
-<p>You can now create authorization realms of type Single Sign-on.<br/>
-The following fields are required: User Header Name, Email Header Name, and Logout URL<br/>
-When a user logs in using their SSO credentials, they will be automatically logged in to the Release server.
-</p></div>
-<div class="new_release_cont">
-<h2>Notifications can be sent to groups</h2>
-<p>Users can now configure notifications to be sent to groups in the same selection as roles.
-</p></div>
-<div class="new_release_cont">
-<h2>Manual Task Overrides</h2>
-<p>With the Override Manual Task States permission, users can update the status of a manual task on behalf of another user.
-</p></div>
-<div class="new_release_cont">
-<h2>Enhanced Security for Task Tags</h2>
-<p>There is a new permission for managing and applying task tags.
-</p></div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.1.7
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2015.06.17
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.1.7 - June 17, 2015
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Release is a maintenance release containing new features, and bug fixes.
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Single Sign On Support
+    </h2>
+    <p>
+     You can now create authorization realms of type Single Sign-on.
+     <br/>
+     The following fields are required: User Header Name, Email Header Name, and Logout URL
+     <br/>
+     When a user logs in using their SSO credentials, they will be automatically logged in to the Release server.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Notifications can be sent to groups
+    </h2>
+    <p>
+     Users can now configure notifications to be sent to groups in the same selection as roles.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Manual Task Overrides
+    </h2>
+    <p>
+     With the Override Manual Task States permission, users can update the status of a manual task on behalf of another user.
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Enhanced Security for Task Tags
+    </h2>
+    <p>
+     There is a new permission for managing and applying task tags.
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Single Sign-on Support
+    </li>
+    <li>
+     Notifications to Groups
+    </li>
+    <li>
+     Manual Task Overrides
+    </li>
+    <li>
+     Enhanced Security for Task Tags
+    </li>
+    <li>
+     Bug fixes
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started/">
+     Getting Started
+    </a>
+    page.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Installation Notes
+    </div>
+    <p>
+     No new installation notes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     No major behavioral changes.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Fixes in this Release
+     </div>
+     <p>
+      A cumulative list of fixes in this release, and any future fix packs will be available.
+     </p>
+     <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+      <tbody>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         APAR/defect
+        </td>
+        <td valign="bottom" width="78%">
+         Description
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI43075" target="_blank">
+          PI43075
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         INACTIVE TASKS ARE INCLUDED WHEN IMPORTING A DEPLOYMENT PLAN
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI42398" target="_blank">
+          PI42398
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         SSL COMMUNICATION FAILS BETWEEN PLUGINS AND THE RELEASE SERVER
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+         <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI43019" target="_blank">
+          PI43019
+         </a>
+        </td>
+        <td valign="bottom" width="78%">
+         CAN START DEPLOYMENT EVEN IF VERSION FAILS TO PASS THE GATES
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+        </td>
+        <td valign="bottom" width="78%">
+         USERS CAN EDIT ENVIRONMENT RESERVATIONS WITH ONLY ‘VIEW RELEASE’ PERMISSION
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+        </td>
+        <td valign="bottom" width="78%">
+         USERS WITH READ-ONLY PERMISSION CANNOT EXPAND SEGMENTS ON THE DEPLOYMENT PLAN
+        </td>
+       </tr>
+       <tr valign="top">
+        <td valign="bottom" width="22%">
+        </td>
+        <td valign="bottom" width="78%">
+         TASK COUNT WIDGET AND DEPLOYMENT PROGRESS BAR SOMETIMES DISPLAYS THE WRONG COUNTS
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Known Problems and Workarounds
+     </div>
+     <p>
+      To search for additional post-release issues that IBM Rational Support documented, visit the
+      <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+     </p>
+    </div>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes/">
+      release notes
+     </a>
+     . For supported platforms and requirements, see the
+     <a href="http://www-03.ibm.com/software/products/en/ucrel#tab_othertab1" target="_blank">
+      system requirements
+     </a>
+     . To get started quickly to try the software, IBM UrbanCode Release is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/topics/install_ov.html">
+      installation guide
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release requires IBM Installation Manager version 1.8.0 or later for installation. See
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg24036814">
+      download document
+     </a>
+     for details on this download. This release is available for download on Fix Central for current customers, requiring authentication. This download is
+     <a href="http://www-933.ibm.com/support/fixcentral/swg/downloadFixes?parent=ibm%7ERational&amp;product=ibm/Rational/UrbanCode+Release&amp;release=All&amp;platform=All&amp;function=fixId&amp;fixids=6.1.1.7-UrbanCode-Release&amp;includeRequisites=1&amp;includeSupersedes=0&amp;downloadMethod=http">
+      available here.
+     </a>
+     Information for installing the server, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/topics/install_ov.html">
+      Installing server
+     </a>
+     section in the product documentation.
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="../">
+      What’s New
+     </a>
+     To learn more about IBM UrbanCode Release, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GCC_6.1.1/com.ibm.urelease.doc/ucr61_welcome.html" target="_blank">
+      documentation
+     </a>
+     For help installing or using IBM UrbanCode Release, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>

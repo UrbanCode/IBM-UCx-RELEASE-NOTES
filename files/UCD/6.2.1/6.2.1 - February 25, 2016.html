@@ -1,92 +1,869 @@
 <!DOCTYPE html>
-<html><head><title>6.2.1</title></head>
-<body>
-<p><b>This article was originaly published in 2016.02.25</b></p>
-<p><h1>6.2.1 - February 25, 2016</h1></p>
-<p><div class="new_release_cont">
-<h2>Agent to Agent Relay Topology View</h2>
-<p>
-The new Agent Relays view shows the relationship between agents and the relays
+<html>
+ <head>
+  <title>
+   6.2.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2016.02.25
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.2.1 - February 25, 2016
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    <h2>
+     Agent to Agent Relay Topology View
+    </h2>
+    <p>
+     The new Agent Relays view shows the relationship between agents and the relays
 that they use. This view shows each relay's connectivity status and the number
 of agents that use the relay. It also shows the status of the agents that use
 the relay, including the last time each agent contacted the relay and their
 individual connectivity status.
-</p>
-
-</div>
-
-<div class="new_release_cont">
-<h2>Application Template Improvements</h2>
-	
-<ul>
-        <li>Sleek redesign of the application template wizard's environments page makes adding environments to an application template easier than ever</li>
-	<li>A centralized tool administrator now has complete control over adding environments to an application template, being able to create as many environments from each environment template as desired</li>
-        <li>Additional support for operational processes as part of an application template</li>
-
-
-</ul>
-
-</div>
-
-<div class="new_release_cont">
-<h2>Getting Started Page</h2>
-<p>
-Getting oriented with UrbanCode Deploy is easier than ever, thanks to the new
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Application Template Improvements
+    </h2>
+    <ul>
+     <li>
+      Sleek redesign of the application template wizard's environments page makes adding environments to an application template easier than ever
+     </li>
+     <li>
+      A centralized tool administrator now has complete control over adding environments to an application template, being able to create as many environments from each environment template as desired
+     </li>
+     <li>
+      Additional support for operational processes as part of an application template
+     </li>
+    </ul>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Getting Started Page
+    </h2>
+    <p>
+     Getting oriented with UrbanCode Deploy is easier than ever, thanks to the new
 Getting Started page that a user sees the first time they log in. The page
 provides helpful links to IBM's extensive supply of tutorials, instructional
 videos, FAQs, and documentation. In addition, system administrators can opt
 to change these links to point to other resources they deem more appropriate
 to their particular configuration.
-</p>
-</div>
-
-<div class="new_release_cont">
-<h2>Azure Support for the Blueprint Designer</h2>
-<p>
-If you use the blueprint designer, you can now provision blueprints to Microsoft ® Azure clouds. You can register and provision any Linux images that are configured with <code>cloud-init</code> that are in the Azure marketplace. See <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.edt.doc/topics/cloud_connect_azure.html" target="_blank" rel="noopener noreferrer">Connecting to Microsoft Azure</a>.
-</p>
-</div>
-
-<div class="new_release_cont">
-<h2>PostgreSQL Support for the Blueprint Designer</h2>
-<p>
-If you are starting out with the blueprint design server, you can install a PostgreSQL database to use with it. See <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.udeploy.install.doc/topics/install_database_postgresql_bds.html" target="_blank" rel="noopener noreferrer">Installing a PostgreSQL database for the blueprint design server</a>.
-</p>
-</div>
-
-<div class="new_release_cont">
-<h2>Apply Changes to Provisioned Environments from the Blueprint Designer</h2>
-<p>
-After you provision a blueprint, you can apply many changes to the running environments, including adding or removing components to an image, adding images to a network, and deleting images or components. See <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.edt.doc/topics/blueprint_apply.html" target="_blank" rel="noopener noreferrer">Applying changes to a provisioned environment</a>.
-</p>
-</div>
-
-<div class="new_release_cont">
-<h2>Referenced Resources for the Blueprint Designer</h2>
-<p>
-By using referenced resources you can create one blueprint that you can provision to multiple clouds or environments. You can create referenced resources for  the  images, networks, routers, storage volumes, security groups, and components that you use in your blueprints. The referenced resources are generic when you add them to a blueprint, and you specify the details when you provision them to a cloud. See <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.edt.doc/topics/blueprint_ref_resources.html" target="_blank" rel="noopener noreferrer">Modeling environments with reference resources</a>.
-</p>
-</div>
-
-<div class="new_release_cont">
-<h2>Customizing Timeouts for the Blueprint Designer</h2>
-<p>
-If you run into timeout errors, now you can set timeouts to allow more time for the IBM UrbanCode Deploy server or SoftLayer cloud to respond. See <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.udeploy.doc/topics/timeout_config.html" target="_blank" rel="noopener noreferrer">Creating a IBM UrbanCode Deploy timeout configuration file</a> and <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.edt.doc/topics/softlayer_timeout.html" target="_blank" rel="noopener noreferrer">Configuring the SoftLayer timeout value</a>.
-</p>
-</div>
-
-<div class="new_release_cont">
-<h2>Chef Validator Key for the Blueprint Designer</h2>
-<p>
-If you provision blueprints that contain Chef roles from the blueprint designer, the blueprint design server passes the Chef validator key to your Chef server. You no longer need to host the validator key at a separate URL. After you upgrade your blueprint design server, you can modify your blueprints to use the new validator key handling. See <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.edt.doc/topics/chef_validator.html" target="_blank" rel="noopener noreferrer">Modifying blueprints to access the Chef validator key in version 6.2.1 and later</a>.
-</p>
-</div>
-<div class="new_release_cont">
-<h2>New Plug-in Versions</h2>
-<p>
-Many new versions of plug-ins are available, including plug-ins for the following products and applications: Cognos, Siebel, Informatica, IBM Security AppScan Enterprise, IBM Aspera, IBM BigFix, IBM MQ, IBM InfoSphere DataStage, and Docker Compose. For information on the latest versions of all IBM UrbanCode Deploy plug-ins, see the <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" target="_blank" rel="noopener noreferrer">Plug-ins page on Developer Center</a>.
-</p> 
-
-</div>
-</p></body>
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Azure Support for the Blueprint Designer
+    </h2>
+    <p>
+     If you use the blueprint designer, you can now provision blueprints to Microsoft ® Azure clouds. You can register and provision any Linux images that are configured with
+     <code>
+      cloud-init
+     </code>
+     that are in the Azure marketplace. See
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.edt.doc/topics/cloud_connect_azure.html" rel="noopener noreferrer" target="_blank">
+      Connecting to Microsoft Azure
+     </a>
+     .
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     PostgreSQL Support for the Blueprint Designer
+    </h2>
+    <p>
+     If you are starting out with the blueprint design server, you can install a PostgreSQL database to use with it. See
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.udeploy.install.doc/topics/install_database_postgresql_bds.html" rel="noopener noreferrer" target="_blank">
+      Installing a PostgreSQL database for the blueprint design server
+     </a>
+     .
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Apply Changes to Provisioned Environments from the Blueprint Designer
+    </h2>
+    <p>
+     After you provision a blueprint, you can apply many changes to the running environments, including adding or removing components to an image, adding images to a network, and deleting images or components. See
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.edt.doc/topics/blueprint_apply.html" rel="noopener noreferrer" target="_blank">
+      Applying changes to a provisioned environment
+     </a>
+     .
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Referenced Resources for the Blueprint Designer
+    </h2>
+    <p>
+     By using referenced resources you can create one blueprint that you can provision to multiple clouds or environments. You can create referenced resources for  the  images, networks, routers, storage volumes, security groups, and components that you use in your blueprints. The referenced resources are generic when you add them to a blueprint, and you specify the details when you provision them to a cloud. See
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.edt.doc/topics/blueprint_ref_resources.html" rel="noopener noreferrer" target="_blank">
+      Modeling environments with reference resources
+     </a>
+     .
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Customizing Timeouts for the Blueprint Designer
+    </h2>
+    <p>
+     If you run into timeout errors, now you can set timeouts to allow more time for the IBM UrbanCode Deploy server or SoftLayer cloud to respond. See
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.udeploy.doc/topics/timeout_config.html" rel="noopener noreferrer" target="_blank">
+      Creating a IBM UrbanCode Deploy timeout configuration file
+     </a>
+     and
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.edt.doc/topics/softlayer_timeout.html" rel="noopener noreferrer" target="_blank">
+      Configuring the SoftLayer timeout value
+     </a>
+     .
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     Chef Validator Key for the Blueprint Designer
+    </h2>
+    <p>
+     If you provision blueprints that contain Chef roles from the blueprint designer, the blueprint design server passes the Chef validator key to your Chef server. You no longer need to host the validator key at a separate URL. After you upgrade your blueprint design server, you can modify your blueprints to use the new validator key handling. See
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.1/com.ibm.edt.doc/topics/chef_validator.html" rel="noopener noreferrer" target="_blank">
+      Modifying blueprints to access the Chef validator key in version 6.2.1 and later
+     </a>
+     .
+    </p>
+   </div>
+   <div class="new_release_cont">
+    <h2>
+     New Plug-in Versions
+    </h2>
+    <p>
+     Many new versions of plug-ins are available, including plug-ins for the following products and applications: Cognos, Siebel, Informatica, IBM Security AppScan Enterprise, IBM Aspera, IBM BigFix, IBM MQ, IBM InfoSphere DataStage, and Docker Compose. For information on the latest versions of all IBM UrbanCode Deploy plug-ins, see the
+     <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" rel="noopener noreferrer" target="_blank">
+      Plug-ins page on Developer Center
+     </a>
+     .
+    </p>
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     Agent to Agent Relay Topology View
+    </li>
+    <li>
+     Application Template Improvements
+    </li>
+    <li>
+     Getting Started Page
+    </li>
+    <li>
+     Azure Support for the Blueprint Designer
+    </li>
+    <li>
+     and many more...
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    For information on documentation and support resources, software and hardware requirements and installation steps, see the
+    <a href="../getting-started">
+     Getting Started
+    </a>
+    page.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Agent Compatibility Note
+    </div>
+    <ul>
+     <li>
+      Agents used to import new component versions will need to be upgraded to agent version 6.1.0.4. If older agents are used, version import tasks will fail with the following error:
+      <pre>Exception in thread "main" java/nio/charset/IllegalCharsetNameException: ${DS_SYSTEM_ENCODING}</pre>
+     </li>
+     <li>
+      Due to changes in communication, if you leverage the integration with the Rational Team Concert build, you must first upgrade your RTC server to 5.0.2.
+     </li>
+    </ul>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Agent to Agent Relay Topology View Usage Note
+    </div>
+    To make full use of the new agent relay view, make sure to upgrade all agent relays to version 6.2.1. While agent relays older than version 6.2.1 can be used with the new view, most of their useful information cannot be displayed in the UrbanCode Deploy UI. Instead, a name will be generated for them based on their UUID, and any other necessary information is generated similarly.
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Features in this Release
+    </div>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=52572" target="_blank">
+         52572
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Provide ability for users with agent edit access to rename agents through UI
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=60415" target="_blank">
+         60415
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Deploy Topology View
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=78175" target="_blank">
+         78175
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Allow Property to be used for Max # Concurrent Jobs in Application Process Step
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=81772" target="_blank">
+         81772
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        The queue for the deployment packages - locked process should continue in FIFO
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    A cumulative list of fixes in this release, and any future fix packs can be found
+    <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038759" target="_blank">
+     in this document
+    </a>
+    .
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI33772" target="_blank">
+         PI33772
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CHANGES TO THE MAIL SERVER SETTINGS DO NOT TAKE EFFECT UNTIL THE SERVER IS RESTARTED
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI34108" target="_blank">
+         PI34108
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        AGENT STARTUP SCRIPT DOES NOT SPECIFY MAXIMUM HEAP MEMORY FOR THE AGENTMONITOR PROCESS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI35530" target="_blank">
+         PI35530
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SLOW PERFORMANCE WHEN REQUESTING APPLICATION DEPLOYMENT WITH MANY COMPONENTS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI47833" target="_blank">
+         PI47833
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        APPLICATION PROCESS TRIGGERING TWICE ON VERSION IMPORT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI49758" target="_blank">
+         PI49758
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        HIGH CPU DUE TO SUBOPTIMAL HIBERNATE FLUSH MODE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI50580" target="_blank">
+         PI50580
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DEPLOYMENTS CAN BE RUN WITHOUT REQUIRED PROPERTIES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI51080" target="_blank">
+         PI51080
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        IN UCD IPAS INTEGRATION, GENERATED AGENT NAME CONVERTS CERTAIN CHARACTERS TO UNDERSCORES
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI51743" target="_blank">
+         PI51743
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PERFORMANCE ISSUES WITH RESOURCE TREE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI52065" target="_blank">
+         PI52065
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        OUT OF CONTROL LOG FROM PROCESS ON TEST ENVIRONMENT MAKING SERVER UNUSABLE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI52485" target="_blank">
+         PI52485
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        LARGE NUMBERS OF AGENTS MAY NOT GET PAST "CONNECTED" IF A SINGLE AGENT FAILS IP VALIDATION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI53576" target="_blank">
+         PI53576
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        LDAP TIMEOUT SETTINGS NOT CONFIGURABLE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI53683" target="_blank">
+         PI53683
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CUNCLEAR ERROR MESSAGE WHEN A BAD RESOURCE PATH IS PASSED TO A GENERIC PROCESS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI53812" target="_blank">
+         PI53812
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CREATING COMPONENT RESOURCES THROUGH THE RESOURCES PLUGIN OR UDCLIENT CAN RESULT IN 'COMPONENT NOT MAPPED'
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54035" target="_blank">
+         PI54035
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ISSUES WITH REMOVE DESIRED INVENTORY SERVICE REST CALL
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54211" target="_blank">
+         PI54211
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        APPLICATION PROCESS STARTS EVEN IF THE AGENT IS OFFLINE AND THE PROCESS FINISHES WITH SUCCESS STATUS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54475" target="_blank">
+         PI54475
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        LDAP USER/GROUPS IMPORT FAIL AFTER UPGRADE TO 6.2.0.1
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54608" target="_blank">
+         PI54608
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        AUTH TOKENS ARE NOT SEARCHABLE IN THE UI
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54610" target="_blank">
+         PI54610
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UPGRADE FROM 6.1.0.0 TO 6.2.0.2 FAILS FOR DERBY DUE TO REFUSED CONNECTION
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54632" target="_blank">
+         PI54632
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ISSUES USING IMPORT OF "UNINSTALL MULTIPLE COMPONENTS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54737" target="_blank">
+         PI54737
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PERFORMANCE DELAYS WITH UCD SERVER DUE TO LDAP
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54863" target="_blank">
+         PI54863
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CANNOT IMPORT COMPONENTS WHEN A PROPERTY NAME OVERRIDES A COMPONENT TEMPLATE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54948" target="_blank">
+         PI54948
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ENVIRONMENT COMPLIANCY REPORTS SLOW
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54954" target="_blank">
+         PI54954
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        PERFORMANCE DELAYS WHEN LOADING RESOURCE TREE PAGE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55272" target="_blank">
+         PI55272
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CANNOT IMPORT AN APPLICATION WHERE 'RUN IF COMPONENTS CHANGE' DOES NOT SPECIFY A COMPONENT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55350" target="_blank">
+         PI55350
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        BLUEPRINT DESIGNER COULD NOT CAPTURE UCD COMPONENT ENVIRONMENT PROPERTIES' VALUE. (TEXT AREA TYPE)
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55483" target="_blank">
+         PI55483
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CANNOT DEPLOY UCD COMPONENTS OPERATIONAL PROCESS (WITH NO VERSION REQUIRED).
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55612" target="_blank">
+         PI55612
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CANNOT DELETE PROVISIONED SL ENVIRONMENTS: NAMEERROR: GLOBAL NAME 'EX' IS NOT DEFINED
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55817" target="_blank">
+         PI55817
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DAST TOOLS REPORT ERRORS WHEN RUN AGAINST UCD
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55935" target="_blank">
+         PI55935
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        KEEP ME LOGGED IN BUTTON NOT FUNCTIONING
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55945" target="_blank">
+         PI55945
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        VERY SLOW SERVER RESPONSE ON SELECTING AND FILTERING COMP VERSIONS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI56227" target="_blank">
+         PI56227
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ISSUES HANDLING PUBLIC_SUBNET_ID VARIABLE NAME IN OPENSTACK TEMPLATE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI56496" target="_blank">
+         PI56496
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UDCLIENT COMMAND REQUESTAPPLICATIONPROCESS DOES NOT RESOLVE
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI57073" target="_blank">
+         PI57073
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        KEYWORD "LATEST", "LATESTVERSION" OR "NEWEST"
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI45314" target="_blank">
+         PI45314
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UCDP ENVIRONMENT PAGE FAILS TO SHOW THE HEAT TEMPLATE STATUS
+CORRECTLY
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI46810" target="_blank">
+         PI46810
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        USAGE OF CHEF VALIDATOR KEY URL CAN CAUSE ISSUES WITH UCDP WEB
+DESIGNER
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI51074" target="_blank">
+         PI51074
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO SPECIFY DISK PARAMETER IN BLUEPRINT
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI51075" target="_blank">
+         PI51075
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        UNABLE TO USE CLUSTERS/FOLDERS AS OPTION VS. RESOURCE -VCENTER
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI51078" target="_blank">
+         PI51078
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        INCORRECT POLICY.JSON IN HEAT LAYER
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI52807" target="_blank">
+         PI52807
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        ATTEMPTS TO LOG ON THE UCD BLUEPRINT DESIGNER USING A VALID USER
+ID MAY RESULT IN THE ERROR "INVALID USER OR PASSWORD"
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI54481" target="_blank">
+         PI54481
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        BLUEPRINT DESIGNER MAY THROW "401 UNAUTHORIZED" ERROR WHEN
+KEYSTONE V3 DOMAINS CONFIGURED FOR CLOUD PROJECTS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55350" target="_blank">
+         PI55350
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        BLUEPRINT DESIGNER COULD NOT CAPTURE UCD COMPONENT ENVIRONMENT
+PROPERTIES' VALUE. (TEXT AREA TYPE)
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55483" target="_blank">
+         PI55483
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CANNOT DEPLOY UCD COMPONENTS OPERATIONAL PROCESS (WITH NO VERSION REQUIRED).
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www-01.ibm.com/support/docview.wss?uid=swg1PI55612" target="_blank">
+         PI55612
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        CANNOT DELETE PROVISIONED SL ENVIRONMENTS: NAMEERROR: GLOBAL
+NAME 'EX' IS NOT DEFINED
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+   </div>
+   To search for additional post-release issues that IBM Rational Support documented, visit the
+   <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+    IBM Support portal.
+   </a>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27038801" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Deploy is shipped with an Apache Derby database. Apache Derby deployments are not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.0/com.ibm.udeploy.install.doc/topics/install_ch.html" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     For advanced enterprise deployments that require high availability, review our options in the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.0" target="_blank">
+      information center.
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Deploy supports integrations with many different tools available from both IBM as well as other vendors in the form of component process steps. Each IBM UrbanCode Deploy plug-in is a separate download and installation available on our
+     <a href="https://urbancode.github.io/IBM-UCx-PLUGIN-DOCS/UCD" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     If you're upgrading from 6.0...
+    </div>
+    <p>
+     UrbanCode Deploy 6.1 introduced scalability enhancements to agent/server communication.
+     <strong>
+      All agent relays must be upgraded before running any deployments.
+     </strong>
+     All existing agents will continue to work without an upgrade, but they should be upgraded using the Upgrade action on the agent list in the web UI as soon as possible after upgrading.
+     <strong>
+      Any newly installed agents must be version 6.1.
+     </strong>
+     The latest agent and agent relay installers will be available on your UrbanCode Deploy server's Tools page (in the Help menu) after the server is upgraded.
+    </p>
+    <p>
+     UrbanCode Deploy 6.1 also includes a more scalable artifact storage system. After upgrading your server, a background process will migrate artifacts into the new format. You can continue to access and deploy artifacts during this process, but
+     <strong>
+      there will need to be at least as much free disk space in the server's var/repository directory as is currently being used by that directory
+     </strong>
+     . (If you currently have 25GB of artifacts, you need 25GB of additional free disk space.) The extra disk space is no longer needed after all artifacts have been migrated.
+    </p>
+    http://www-01.ibm.com/support/docview.wss?uid=swg2C1000116
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Installation
+     </div>
+     <p>
+      Version 6.2.1 is available to download from
+      <a href="http://www.ibm.com/support/docview.wss?uid=swg2C4000038" target="_blank">
+       here.
+      </a>
+     </p>
+     <p>
+      The download location has been updated to include the required updates to the issues described in this
+      <a href="http://www-01.ibm.com/support/docview.wss?uid=swg2C1000116" target="_blank">
+       technote.
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      For information on installing and managing licenses, see
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.3/com.ibm.udeploy.install.doc/topics/licenseManage.html">
+       Managing licenses
+      </a>
+     </p>
+     <div class="horizontal-rule">
+     </div>
+     <div class="subtitle">
+      Learn
+     </div>
+     <p>
+      To learn more about new enhancements in this release, see
+      <a href="..">
+       What’s New
+      </a>
+     </p>
+     <p>
+      To learn more about IBM UrbanCode Deploy, see the
+      <a href="http://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.2.0" target="_blank">
+       documentation
+      </a>
+     </p>
+     <p>
+      For help installing or using IBM UrbanCode Deploy, post your questions in the
+      <a href="https://developer.ibm.com/answers?community=urbancode">
+       forums
+      </a>
+      or contact
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       support
+      </a>
+     </p>
+     <p>
+      To suggest an enhancement to the product, visit the
+      <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+       RFE Community
+      </a>
+     </p>
+     <p>
+     </p>
+    </div>
+    <div class="horizontal-rule">
+    </div>
+    <div class="key-features">
+     <div class="subtitle">
+      Get support
+     </div>
+     <p>
+      For information from support, including FAQs, visit the
+      <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+       IBM Support portal.
+      </a>
+      You can configure the support portal to view information about specific products.
+     </p>
+    </div>
+   </div>
+  </p>
+ </body>
 </html>

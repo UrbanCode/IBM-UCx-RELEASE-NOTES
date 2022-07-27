@@ -1,8 +1,315 @@
 <!DOCTYPE html>
-<html><head><title>6.1.1.1</title></head>
-<body>
-<p><b>This article was originaly published in 2015.11.01</b></p>
-<p><h1>6.1.1.1 - November, 2015</h1></p>
-<p><div class="new_release_cont">This release of IBM UrbanCode Build is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.</div>
-</p></body>
+<html>
+ <head>
+  <title>
+   6.1.1.1
+  </title>
+ </head>
+ <body>
+  <p>
+   <b>
+    This article was originaly published in 2015.11.01
+   </b>
+  </p>
+  <p>
+   <h1>
+    6.1.1.1 - November, 2015
+   </h1>
+  </p>
+  <p>
+   <div class="new_release_cont">
+    This release of IBM UrbanCode Build is a maintenance release and includes various bug fixes and performance enhancements. This release is recommended for all customers.
+   </div>
+   <h2>
+    Release Summary
+   </h2>
+   <br/>
+   <ul>
+    <li>
+     REST services to manage agents
+    </li>
+    <li>
+     Recommended fixes for UrbanCode Build 6.1.1
+    </li>
+   </ul>
+   <h2>
+    Release Notes
+   </h2>
+   <br/>
+   <div class="key-features">
+    <p>
+     For information on documentation and support resources, software and hardware requirements and installation steps, see the
+     <a href="../getting-started">
+      Getting Started
+     </a>
+     page.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Behavioral Changes
+    </div>
+    <p>
+     We recommend updating all agents and plugins when upgrading to this version.
+    </p>
+    <p>
+     Several pages in the IBM UrbanCode Build UI now dynamically update. Notable examples include the build life page and the dashboard pages for projects and processes.
+    </p>
+    <p>
+     This release also contains an updated version of the
+     <a href="https://developer.ibm.com/urbancode/plugin/codestation-ubuild/" target="_blank">
+      CodeStation
+     </a>
+     plugin.
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Features in this Release
+    </div>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+       </td>
+       <td valign="bottom" width="80%">
+        Retrieve inactive build lives through a REST API
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+       </td>
+       <td valign="bottom" width="80%">
+        Dynamic refreshing of the build life and dashboard pages
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=74030" target="_blank">
+         74030
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Manage build agents through a REST API
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=78776" target="_blank">
+         78776
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Retrieve build agent statuses through a REST API
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="https://www.ibm.com/developerworks/rfe/execute?use_case=viewRfe&amp;CR_ID=75261" target="_blank">
+         75261
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        Add a color for the “Waiting for Agents” status to the Information Radiator
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Fixes in this Release
+    </div>
+    <p>
+     A cumulative list of fixes in this release, and any future fix packs can be found
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27043657" target="_blank">
+      in this document
+     </a>
+     .
+    </p>
+    <table border="0" class="ibm-data-table ibm-alternate" rules="" width="100%">
+     <tbody>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI47827" target="_blank">
+         PI47827
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        THE BUILD LIFE ANALYTICS TAB NO LONGER SHOWS FINDING INFORMATION UNDER THE CHARTS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI51346" target="_blank">
+         PI51346
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        INFORMATION RADIATOR SHOWS TIME SINCE BUILD AND BUILD DURATION VALUES ON THE SAME LINE IN IE11
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI47548" target="_blank">
+         PI47548
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        BUILDLIFE PROPERTIES STORED IN WRONG DB COLUMN EVEN WHEN OVER 255 CHARACTERS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI46710" target="_blank">
+         PI46710
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        SOURCE STEP LOGS POINT TO THE WRONG LOGS WHEN USING MULTIPLE SOURCE CONFIGS
+       </td>
+      </tr>
+      <tr valign="top">
+       <td valign="bottom" width="20%">
+        <a href="http://www.ibm.com/support/docview.wss?uid=swg1PI38648" target="_blank">
+         PI38648
+        </a>
+       </td>
+       <td valign="bottom" width="80%">
+        DATABASE ISSUES WITH LARGE NUMBER OF SCHEDULED BUILDS
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Known Problems and Workarounds
+    </div>
+    <p>
+     To search for additional post-release issues that IBM Rational Support documented, visit the
+     <a href="https://www-947.ibm.com/support/entry/myportal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+    </p>
+   </div>
+   <h2>
+    Getting Started
+   </h2>
+   <br/>
+   <div class="key-features">
+    <div class="subtitle">
+     Plan &amp; Prepare
+    </div>
+    <p>
+     For fixes contained in this release, and any known issues, review the
+     <a href="../release-notes">
+      release notes
+     </a>
+     .
+    </p>
+    <p>
+     For supported platforms and requirements, see the
+     <a href="http://www-01.ibm.com/support/docview.wss?uid=swg27044198" target="_blank">
+      system requirements
+     </a>
+     . Note that some supported plug-ins have system requirements that vary from the core product. Information on system requirements for individual plug-ins is available on the download page for that plug-in.
+    </p>
+    <p>
+     To get started quickly to try the software, IBM UrbanCode Build is shipped with an Apache Derby database. Apache Derby is not supported for production environments. As you plan your production topology, review the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.1/com.ibm.ucbuild.doc/topics/install_ch.html" target="_blank">
+      installation guide
+     </a>
+    </p>
+    <p>
+     IBM UrbanCode Build supports integrations with many different tools in the form of job steps. Each IBM UrbanCode Build plug-in is a separate download and installation available on our
+     <a href="https://developer.ibm.com/urbancode/plugins/ibm-urbancode-build/" target="_blank">
+      plug-in page
+     </a>
+     .
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Install the server
+    </div>
+    <p>
+     This release is available for download from Fix Central, requiring authentication. This download is
+     <a href="http://www-933.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Rational&amp;product=ibm/Rational/UrbanCode+Build&amp;release=6.1.1.0&amp;platform=All&amp;function=all" target="_blank">
+      available here.
+     </a>
+    </p>
+    <p>
+     Information for installing the server, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.1/com.ibm.ucbuild.doc/topics/install_ch.html">
+      Installing
+     </a>
+     section in the product documentation.
+    </p>
+    <p>
+     For information on installing and managing licenses, see
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.0/com.ibm.ucbuild.doc/topics/licenseManage.html">
+      License Management
+     </a>
+    </p>
+    <div class="horizontal-rule">
+    </div>
+    <div class="subtitle">
+     Learn
+    </div>
+    <p>
+     To learn more about new enhancements in this release, see
+     <a href="..">
+      What’s New
+     </a>
+    </p>
+    <p>
+     To learn more about IBM UrbanCode Build, see the
+     <a href="http://www-01.ibm.com/support/knowledgecenter/SS8NMD_6.1.1" target="_blank">
+      documentation
+     </a>
+    </p>
+    <p>
+     For help installing or using IBM UrbanCode Build, post your questions in the
+     <a href="https://developer.ibm.com/answers?community=urbancode">
+      forums
+     </a>
+     or contact
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      support
+     </a>
+    </p>
+    <p>
+     To suggest an enhancement to the product, visit the
+     <a href="http://www.ibm.com/developerworks/rfe/execute?use_case=submitRfe" target="_blank">
+      RFE Community
+     </a>
+    </p>
+   </div>
+   <div class="horizontal-rule">
+   </div>
+   <div class="key-features">
+    <div class="subtitle">
+     Get support
+    </div>
+    <p>
+     For information from support, including FAQs, visit the
+     <a href="http://www-947.ibm.com/support/entry/portal/support?brandind=Rational" target="_blank">
+      IBM Support portal.
+     </a>
+     You can configure the support portal to view information about specific products.
+    </p>
+   </div>
+  </p>
+ </body>
 </html>
